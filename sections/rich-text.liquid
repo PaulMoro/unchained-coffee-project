@@ -4,6 +4,9 @@
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    {% if section.settings.color_custom %}
+      background-color: {{ section.settings.background_color }};
+    {% endif %}
   }
 
   @media screen and (min-width: 750px) {
@@ -14,15 +17,40 @@
   }
 {%- endstyle -%}
 
-<div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
-  <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
+<div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}" id="section-{{ section.id }}">
+  <div class="rich-text content-container {% unless section.settings.color_custom %} color-{{ section.settings.color_scheme }} gradient{% endunless %}{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
     <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
       <div class="rich-text__blocks {{ section.settings.content_alignment }}">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when 'heading' -%}
+              {%- style -%}
+                #section-{{ section.id }} .rich-text__heading--{{ forloop.index0 }} {
+                  font-size: {{ block.settings.size_font }}px;
+                  color: {{ block.settings.color_text }};
+                  position: relative;
+                  z-index: 3;
+                  display: inline;
+                }
+                #section-{{ section.id }} .rich-text__heading--{{ forloop.index0 }}::after {
+                  position: absolute;
+                  width: calc(100% + 40px);
+                  height: 100%;
+                  bottom: 50%;
+                  left: calc(50% - 10px);
+                  z-index: -1;
+                  content: "";
+                  background-color: {{ block.settings.highlight_color }};
+                  transform: rotateZ(1deg) translate(calc(10px - 50%), 60%);
+                }
+                @media screen and (max-width: 749px) {
+                  #section-{{ section.id }} .rich-text__heading--{{ forloop.index0 }} {
+                    font-size: {{ block.settings.size_font | times: 0.8 }}px;
+                  }
+                }
+              {%- endstyle -%}
               <h2
-                class="rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                class="rich-text__heading rich-text__heading--{{ forloop.index0 }} rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} text-{{ block.settings.font | downcase }}"
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
@@ -31,20 +59,84 @@
               >
                 {{ block.settings.heading }}
               </h2>
-            {%- when 'caption' -%}
-              <p
-                class="rich-text__caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                {{ block.shopify_attributes }}
-                {% if settings.animations_reveal_on_scroll %}
-                  data-cascade
-                  style="--animation-order: {{ forloop.index }};"
-                {% endif %}
-              >
-                {{ block.settings.caption | escape }}
-              </p>
-            {%- when 'text' -%}
+          {%- endcase -%}
+        {%- endfor -%}
+              {%- style -%}
+                #section-{{ section.id }} .rich-text__steps {
+                  display: flex;
+                  width: 100%;
+                  justify-content: center;
+                  flex-wrap: wrap;
+                }
+                #section-{{ section.id }} .rich-text__step {
+                  position: relative;
+                  margin-right: 10px;
+                  margin-bottom: 20px;
+                  display: flex;
+                  align-items: center;
+                  line-height: 1;
+                }
+                #section-{{ section.id }} .rich-text__step-arrow {
+                  margin-left: 10px;
+                }
+              {%- endstyle -%}
               <div
-                class="rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                class="rich-text__steps"
+              >
+                {%- for block in section.blocks -%}
+                  {%- case block.type -%}
+                    {%- when 'caption' -%}
+                      {% if block.settings.cross_out %}
+                      {%- style -%}
+                        #section-{{ section.id }} .rich-text__step.cross-out--{{ forloop.index0 }}::before {
+                          position: absolute;
+                          width: calc(100% - 10px);
+                          height: 2px;
+                          top: 75%;
+                          left: -8px;
+                          content: "";
+                          background-color: {{ block.settings.color_cross_out }};
+                          transform: rotateZ(10deg);
+                          transform-origin: right;
+                        }
+                      {%- endstyle -%}
+                      {% endif %}
+                      <span
+                        class="
+                          rich-text__step 
+                          rich-text__caption--{{ block.settings.text_style }} 
+                          {% if block.settings.cross_out %}cross-out--{{ forloop.index0 }}{% endif %}
+                          {% if block.settings.arrow %}arrow--{{ forloop.index0 }}{% endif %}
+                          rich-text__caption--{{ block.settings.text_size }}
+                          {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                        {{ block.shopify_attributes }}
+                        {% if settings.animations_reveal_on_scroll %}
+                          data-cascade
+                          style="--animation-order: {{ forloop.index }};color: {{ block.settings.color_text }};"
+                        {% endif %}
+                      >
+                        {{ block.settings.caption | replace: ' ', '<br>' }}
+                        {% if block.settings.arrow %}
+                          <span class="rich-text__step-arrow" aria-hidden="true">→</span>
+                        {% endif %}
+                      </span>
+                  {%- endcase -%}
+                {%- endfor -%}
+              </div>
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'text' -%}
+              {%- style -%}
+                #section-{{ section.id }} .rich-text__text--{{ forloop.index0 }} {
+                  color: {{ block.settings.color_text }};
+                  font-weight: 600;
+                }
+                #section-{{ section.id }} .rich-text__text--{{ forloop.index0 }} strong {
+                  color: {{ block.settings.color_text_bold }};
+                }
+              {%- endstyle -%}
+              <div
+                class="rich-text__text rich-text__text--{{ forloop.index0 }} rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
@@ -54,6 +146,12 @@
                 {{ block.settings.text }}
               </div>
             {%- when 'button' -%}
+              {%- style -%}
+                #section-{{ section.id }} .button{% if block.settings.button_style_secondary_1 %}.button--secondary{% else %}.button--primary{% endif %} {
+                  min-height: calc(3rem + var(--buttons-border-width) * 2);
+                  font-weight: 700;
+                }
+              {%- endstyle -%}
               <div
                 class="rich-text__buttons{% if block.settings.button_label != blank and block.settings.button_label_2 != blank %} rich-text__buttons--multiple{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {{ block.shopify_attributes }}
@@ -70,6 +168,7 @@
                       href="{{ block.settings.button_link }}"
                     {% endif %}
                     class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                    style="color: {{ block.settings.color_text }}; background-color: {{ block.settings.color_bg }};"
                   >
                     {{- block.settings.button_label | escape -}}
                   </a>
@@ -151,6 +250,18 @@
     },
     {
       "type": "checkbox",
+      "id": "color_custom",
+      "default": true,
+      "label": "Seleccionar Color Custom"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "checkbox",
       "id": "full_width",
       "default": true,
       "label": "t:sections.rich-text.settings.full_width.label"
@@ -219,55 +330,86 @@
           ],
           "default": "h1",
           "label": "t:sections.all.heading_size.label"
+        },
+        {
+          "type": "select",
+          "id": "font",
+          "options": [
+            {
+              "value": "permanent",
+              "label": "Permanent Marker"
+            },
+            {
+              "value": "modesto",
+              "label": "Modesto Text"
+            },
+            {
+              "value": "barlow",
+              "label": "Barlow"
+            }
+          ],
+          "default": "modesto",
+          "label": "Fuente"
+        },
+        {
+          "type": "number",
+          "id": "size_font",
+          "label": "Tamaño de Fuente (px)",
+          "default": 36
+        },
+        {
+          "type": "color",
+          "id": "color_text",
+          "label": "Color Texto",
+          "default": "#262624"
+        },
+        {
+          "type": "checkbox",
+          "id": "bg_highlight",
+          "default": true,
+          "label": "backgrountd Highlight"
+        },
+        {
+          "type": "color",
+          "id": "highlight_color",
+          "label": "Color Highlight",
+          "default": "#fdda24"
         }
       ]
     },
     {
       "type": "caption",
-      "name": "t:sections.rich-text.blocks.caption.name",
-      "limit": 3,
+      "name": "Pasos",
       "settings": [
         {
-          "type": "text",
+          "type": "inline_richtext",
           "id": "caption",
-          "default": "t:sections.rich-text.blocks.caption.settings.text.default",
-          "label": "t:sections.rich-text.blocks.caption.settings.text.label"
+          "default": "Producer",
+          "label": "Texto para paso"
         },
         {
-          "type": "select",
-          "id": "text_style",
-          "options": [
-            {
-              "value": "subtitle",
-              "label": "t:sections.rich-text.blocks.caption.settings.text_style.options__1.label"
-            },
-            {
-              "value": "caption-with-letter-spacing",
-              "label": "t:sections.rich-text.blocks.caption.settings.text_style.options__2.label"
-            }
-          ],
-          "default": "caption-with-letter-spacing",
-          "label": "t:sections.rich-text.blocks.caption.settings.text_style.label"
+          "type": "color",
+          "id": "color_text",
+          "label": "Color Texto",
+          "default": "#F4F3EF"
         },
         {
-          "type": "select",
-          "id": "text_size",
-          "options": [
-            {
-              "value": "small",
-              "label": "t:sections.rich-text.blocks.caption.settings.caption_size.options__1.label"
-            },
-            {
-              "value": "medium",
-              "label": "t:sections.rich-text.blocks.caption.settings.caption_size.options__2.label"
-            },
-            {
-              "value": "large",
-              "label": "t:sections.rich-text.blocks.caption.settings.caption_size.options__3.label"
-            }
-          ],
-          "default": "medium",
-          "label": "t:sections.rich-text.blocks.caption.settings.caption_size.label"
+          "type": "color",
+          "id": "color_cross_out",
+          "label": "Color Tachado",
+          "default": "#fdda24"
+        },
+        {
+          "type": "checkbox",
+          "id": "cross_out",
+          "label": "Tachar Texto",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "arrow",
+          "label": "Flecha a la Derecha",
+          "default": true
         }
       ]
     },
@@ -281,6 +423,18 @@
           "id": "text",
           "default": "t:sections.rich-text.blocks.text.settings.text.default",
           "label": "t:sections.rich-text.blocks.text.settings.text.label"
+        },
+        {
+          "type": "color",
+          "id": "color_text",
+          "label": "Color de Texto",
+          "default": "#F4F3EF"
+        },
+        {
+          "type": "color",
+          "id": "color_text_bold",
+          "label": "Color de Texto Negrita",
+          "default": "#fdda24"
         }
       ]
     },
@@ -289,6 +443,18 @@
       "name": "t:sections.rich-text.blocks.buttons.name",
       "limit": 2,
       "settings": [
+        {
+          "type": "color",
+          "id": "color_text",
+          "label": "Color Texto",
+          "default": "#262624"
+        },
+        {
+          "type": "color",
+          "id": "color_bg",
+          "label": "Color Fondo",
+          "default": "#F4F3EF"
+        },
         {
          "type": "header",
          "content": "t:sections.rich-text.blocks.buttons.settings.header_button1.content"

@@ -29,7 +29,30 @@
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
-
+  {% unless section.settings.show_info_product %}
+    .section-{{ section.id }}-padding .quick-add__submit {
+      background-image: url('{{ section.settings.image_cta | image_url }}');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-top: -30px;
+      background-color: transparent;
+      font-weight: 600;
+    }
+    .section-{{ section.id }}-padding .quick-add__submit:not([disabled]):hover {
+      transition: transform 0.3s ease;
+      transform: scale(1.1);
+    }
+    .section-{{ section.id }}-padding .quick-add__submit:not([disabled]):hover:after {
+      box-shadow: none;
+    }
+    .quick-add {
+      margin: 0;
+    }
+    .card__content {
+      padding: 0;
+    }
+  {% endunless %}
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -74,7 +97,10 @@
   >
     <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
       {%- if section.settings.title != blank -%}
-        <h2 class="title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        <h2 
+          class="title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          style="letter-spacing: 5px;font-weight: 500;"
+        >
           {{ section.settings.title }}
         </h2>
       {%- endif -%}
@@ -127,7 +153,9 @@
                   show_rating: section.settings.show_rating,
                   skip_styles: skip_card_product_styles,
                   section_id: section.id,
-                  quick_add: section.settings.quick_add
+                  quick_add: section.settings.quick_add,
+                  show_info_product: section.settings.show_info_product,
+                  text_cta: section.settings.text_cta
                 %}
               </li>
               {%- assign skip_card_product_styles = true -%}
@@ -370,6 +398,12 @@
       "content": "t:sections.featured-collection.settings.header.content"
     },
     {
+      "type": "checkbox",
+      "id": "show_info_product",
+      "label": "Monstrar información de Producto",
+      "default": false
+    },
+    {
       "type": "select",
       "id": "image_ratio",
       "options": [
@@ -467,6 +501,17 @@
           "label": "t:sections.main-collection-product-grid.settings.quick_add.options.option_3"
         }
       ]
+    },
+    {
+      "type": "image_picker",
+      "id": "image_cta",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "text_cta",
+      "label": "Text CTA",
+      "default": "Shop Now"
     },
     {
       "type": "header",

@@ -12,6 +12,15 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  @media screen and (min-width: 990px) {
+    .image-with-text__content {
+      padding: 0px;
+      padding-top: 6rem;
+    }
+    .image-with-text__content--v2 {
+      padding: 0 7rem 7rem;
+    }
+  }
 {%- endstyle -%}
 
 {%- liquid
@@ -68,11 +77,16 @@
               {% case block.type %}
                 {%- when 'heading' -%}
                   <h2
-                    class="image-with-text__heading inline-richtext {{ block.settings.heading_size }}"
+                    class="image-with-text__heading inline-richtext {{ block.settings.heading_size }}" style="letter-spacing: 5px;font-weight: 500;"
                     {{ block.shopify_attributes }}
                   >
                     {{ block.settings.heading }}
                   </h2>
+              {%- endcase -%}
+            {%- endfor -%}
+            <div class="image-with-text__content--v2">
+            {%- for block in section.blocks -%}
+              {% case block.type %}
                 {%- when 'caption' -%}
                   <p
                     class="image-with-text__text image-with-text__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}"
@@ -85,6 +99,15 @@
                     {{ block.settings.text }}
                   </div>
                 {%- when 'button' -%}
+                  {%- style -%}
+                    {% if block.settings.small_btn %}
+                    .section-{{ section.id }}-padding .button{% if block.settings.button_style_secondary_1 %}.button--secondary{% else %}.button--primary{% endif %} {
+                      min-height: calc(3rem + var(--buttons-border-width) * 2);
+                      font-weight: 700;
+                      margin-top: 40px;
+                    }
+                    {% endif %}
+                  {%- endstyle -%}
                   {%- if block.settings.button_label != blank -%}
                     <a
                       {% if block.settings.button_link == blank %}
@@ -94,12 +117,14 @@
                       {% endif %}
                       class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
                       {{ block.shopify_attributes }}
+                      style="color: {{ block.settings.color_text }}; background-color: {{ block.settings.color_bg }};"
                     >
                       {{ block.settings.button_label | escape }}
                     </a>
                   {%- endif -%}
               {%- endcase -%}
             {%- endfor -%}
+            </div>
           </div>
         </div>
       </div>
@@ -446,6 +471,24 @@
       "name": "t:sections.image-with-text.blocks.button.name",
       "limit": 1,
       "settings": [
+        {
+          "type": "color",
+          "id": "color_text",
+          "label": "Color Texto",
+          "default": "#262624"
+        },
+        {
+          "type": "color",
+          "id": "color_bg",
+          "label": "Color Fondo",
+          "default": "#FDDA24"
+        },
+        {
+          "type": "checkbox",
+          "id": "small_btn",
+          "default": false,
+          "label": "Estilo Boton Pequeño"
+        },
         {
           "type": "text",
           "id": "button_label",
