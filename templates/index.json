@@ -23,18 +23,21 @@
             "style_subtitle": false
           }
         },
-        "text_CV69d6": {
-          "type": "text",
+        "heading_n8Ba7Y": {
+          "type": "heading",
           "settings": {
-            "text": "<p>join forces to hack the industry</p>",
-            "text_style": "subtitle",
-            "color_text": "#f4f3ef"
+            "heading": "JOIN FORCES TO HACK THE INDUSTRY",
+            "heading_size": "h1",
+            "font": "modesto",
+            "size_font": 30,
+            "color_text": "#f4f3ef",
+            "style_subtitle": false
           }
         }
       },
       "block_order": [
         "heading",
-        "text_CV69d6"
+        "heading_n8Ba7Y"
       ],
       "settings": {
         "image": "shopify://shop_images/Clip_path_group_2.png",
@@ -99,11 +102,81 @@
           "settings": {
             "heading": "Talk about your brand",
             "heading_size": "h1",
-            "font": "modesto",
+            "font": "permanent",
             "size_font": 36,
             "color_text": "#262624",
             "bg_highlight": true,
             "highlight_color": "#fdda24"
+          }
+        },
+        "caption_ctnrj4": {
+          "type": "caption",
+          "settings": {
+            "caption": "<strong>Producer</strong>",
+            "color_text": "#fdda24",
+            "color_cross_out": "#fdda24",
+            "cross_out": false,
+            "arrow": true
+          }
+        },
+        "caption_Dy6htj": {
+          "type": "caption",
+          "settings": {
+            "caption": "Co-op",
+            "color_text": "#f4f3ef",
+            "color_cross_out": "#fdda24",
+            "cross_out": true,
+            "arrow": true
+          }
+        },
+        "caption_BFy7zq": {
+          "type": "caption",
+          "settings": {
+            "caption": "Exporter",
+            "color_text": "#f4f3ef",
+            "color_cross_out": "#fdda24",
+            "cross_out": true,
+            "arrow": true
+          }
+        },
+        "caption_yxiq9k": {
+          "type": "caption",
+          "settings": {
+            "caption": "Importer",
+            "color_text": "#f4f3ef",
+            "color_cross_out": "#fdda24",
+            "cross_out": true,
+            "arrow": true
+          }
+        },
+        "caption_da4AW6": {
+          "type": "caption",
+          "settings": {
+            "caption": "Roaster",
+            "color_text": "#f4f3ef",
+            "color_cross_out": "#fdda24",
+            "cross_out": true,
+            "arrow": true
+          }
+        },
+        "caption_8R9b3C": {
+          "type": "caption",
+          "settings": {
+            "caption": "Coffee Shop",
+            "color_text": "#f4f3ef",
+            "color_cross_out": "#fdda24",
+            "cross_out": true,
+            "arrow": true
+          }
+        },
+        "caption_hBcMzz": {
+          "type": "caption",
+          "settings": {
+            "caption": "<strong>Consumer</strong>",
+            "color_text": "#fdda24",
+            "color_cross_out": "#fdda24",
+            "cross_out": false,
+            "arrow": false
           }
         },
         "text_jJYRL4": {
@@ -130,6 +203,13 @@
       },
       "block_order": [
         "heading_KT9jfN",
+        "caption_ctnrj4",
+        "caption_Dy6htj",
+        "caption_BFy7zq",
+        "caption_yxiq9k",
+        "caption_da4AW6",
+        "caption_8R9b3C",
+        "caption_hBcMzz",
         "text_jJYRL4",
         "button_HUr6qM"
       ],
@@ -268,6 +348,17 @@
             "color_text": "#262624"
           }
         },
+        "heading_HUChXy": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1",
+            "font": "modesto",
+            "size_font": 36,
+            "color_text": "#262624",
+            "style_subtitle": false
+          }
+        },
         "heading_GgNQQN": {
           "type": "heading",
           "settings": {
@@ -296,6 +387,7 @@
       },
       "block_order": [
         "text_hBAVpJ",
+        "heading_HUChXy",
         "heading_GgNQQN",
         "buttons_t4Qm6H"
       ],
