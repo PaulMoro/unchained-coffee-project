@@ -263,25 +263,25 @@
         "heading_qWwDap": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "WE ARE",
             "heading_size": "h1"
           }
         },
         "text_A4zAB7": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation</p><p>Ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan.</p>",
             "text_style": "body"
           }
         },
         "button_jiiNWM": {
           "type": "button",
           "settings": {
-            "color_text": "#262624",
-            "color_bg": "#fdda24",
-            "small_btn": false,
+            "color_text": "#f4f3ef",
+            "color_bg": "#262624",
+            "small_btn": true,
             "button_label": "Button label",
-            "button_link": "",
+            "button_link": "#",
             "button_style_secondary": false
           }
         }
@@ -293,8 +293,9 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "height": "adapt",
-        "desktop_image_width": "medium",
+        "image": "shopify://shop_images/Clip_path_group_3.png",
+        "height": "small",
+        "desktop_image_width": "small",
         "layout": "text_first",
         "image_behavior": "none",
         "content_layout": "no-overlap",
