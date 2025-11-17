@@ -431,7 +431,7 @@
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
-        "quick_add": "none",
+        "quick_add": "standard",
         "image_cta": "shopify://shop_images/Vector_1.png",
         "text_cta": "Shop Now",
         "columns_mobile": "2",
