@@ -123,7 +123,7 @@
           "type": "caption",
           "settings": {
             "caption": "Co-op",
-            "color_text": "#f4f3ef",
+            "color_text": "#f3f3f3",
             "color_cross_out": "#fdda24",
             "cross_out": true,
             "arrow": true
