@@ -182,7 +182,7 @@
         "text_jJYRL4": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "text": "<p>So that the <strong>REAL VALUE</strong> is delivered to the coffee growers & coffee lovers</p>",
             "color_text": "#f4f3ef",
             "color_text_bold": "#fdda24"
           }
@@ -192,8 +192,8 @@
           "settings": {
             "color_text": "#262624",
             "color_bg": "#f4f3ef",
-            "button_label": "Button label",
-            "button_link": "",
+            "button_label": "SEE MORE",
+            "button_link": "#",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -229,9 +229,9 @@
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "collection": "",
-        "products_to_show": 12,
-        "title": "Featured collection",
+        "collection": "best-seller",
+        "products_to_show": 6,
+        "title": "OUR BEST SELLERS",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
@@ -248,7 +248,8 @@
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
-        "quick_add": "none",
+        "quick_add": "standard",
+        "image_cta": "shopify://shop_images/Vector_1.png",
         "text_cta": "Shop Now",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
