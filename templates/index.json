@@ -174,7 +174,7 @@
           "settings": {
             "caption": "<strong>Consumer</strong>",
             "color_text": "#fdda24",
-            "color_cross_out": "#fdda24",
+            "color_cross_out": "#f3f3f3",
             "cross_out": false,
             "arrow": false
           }
