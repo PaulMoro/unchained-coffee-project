@@ -312,9 +312,9 @@
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "collection": "",
-        "products_to_show": 12,
-        "title": "Featured collection",
+        "collection": "best-seller",
+        "products_to_show": 6,
+        "title": "MICROLOTS",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
@@ -331,7 +331,8 @@
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
-        "quick_add": "none",
+        "quick_add": "standard",
+        "image_cta": "shopify://shop_images/Vector_1.png",
         "text_cta": "Shop Now",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
@@ -342,34 +343,34 @@
     "image_banner_JxHCxx": {
       "type": "image-banner",
       "blocks": {
-        "text_hBAVpJ": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Give customers details about the banner image(s) or content on the template.</p>",
-            "text_style": "subtitle",
-            "color_text": "#262624"
-          }
-        },
         "heading_HUChXy": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
+            "heading": "OUTSTANDING PRODUCER",
             "heading_size": "h1",
             "font": "modesto",
-            "size_font": 36,
-            "color_text": "#262624",
+            "size_font": 14,
+            "color_text": "#fdda24",
             "style_subtitle": false
           }
         },
         "heading_GgNQQN": {
           "type": "heading",
           "settings": {
-            "heading": "Browse our latest products",
+            "heading": "HECTOR CARDONA",
             "heading_size": "h0",
             "font": "modesto",
-            "size_font": 36,
-            "color_text": "#262624",
+            "size_font": 46,
+            "color_text": "#fdda24",
             "style_subtitle": false
+          }
+        },
+        "text_hBAVpJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation, lorem ipsum solor sit amet.</p>",
+            "text_style": "body",
+            "color_text": "#f4f3ef"
           }
         },
         "buttons_t4Qm6H": {
@@ -377,20 +378,20 @@
           "settings": {
             "color_text": "#262624",
             "color_bg": "#fdda24",
-            "small_btn": false,
-            "button_label_1": "Button label",
-            "button_link_1": "",
+            "small_btn": true,
+            "button_label_1": "GET TO KNOW HIM",
+            "button_link_1": "#",
             "button_style_secondary_1": false,
-            "button_label_2": "Button label",
+            "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "text_hBAVpJ",
         "heading_HUChXy",
         "heading_GgNQQN",
+        "text_hBAVpJ",
         "buttons_t4Qm6H"
       ],
       "settings": {
