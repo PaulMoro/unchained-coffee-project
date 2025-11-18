@@ -280,7 +280,7 @@
             "color_text": "#f4f3ef",
             "color_bg": "#262624",
             "small_btn": true,
-            "button_label": "Button label",
+            "button_label": "Read more",
             "button_link": "#",
             "button_style_secondary": false
           }
