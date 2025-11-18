@@ -357,7 +357,7 @@
         "heading_GgNQQN": {
           "type": "heading",
           "settings": {
-            "heading": "HECTOR CARDONA",
+            "heading": "MAIRA CALDERON",
             "heading_size": "h0",
             "font": "modesto",
             "size_font": 46,
@@ -368,7 +368,7 @@
         "text_hBAVpJ": {
           "type": "text",
           "settings": {
-            "text": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation, lorem ipsum solor sit amet.</p>",
+            "text": "<p>She turns adversity into intention. At 22, she carries the story of a family that nearly lost everything, yet she chose to rebuild through craft, not circumstance. When the pandemic pushed her family to the edge, Maira leaned into coffee with quiet determination—studying barismo, mastering selection, and learning to elevate quality from the ground up.</p>",
             "text_style": "body",
             "color_text": "#f4f3ef"
           }
@@ -379,7 +379,7 @@
             "color_text": "#262624",
             "color_bg": "#fdda24",
             "small_btn": true,
-            "button_label_1": "GET TO KNOW HIM",
+            "button_label_1": "GET TO KNOW HER",
             "button_link_1": "#",
             "button_style_secondary_1": false,
             "button_label_2": "",
@@ -395,7 +395,7 @@
         "buttons_t4Qm6H"
       ],
       "settings": {
-        "image": "shopify://shop_images/Clip_path_group_2.png",
+        "image": "shopify://shop_images/Maira_en_tostadora_b_n.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "image_behavior": "none",
