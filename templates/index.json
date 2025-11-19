@@ -293,9 +293,9 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Clip_path_group_3.png",
-        "height": "small",
-        "desktop_image_width": "small",
+        "image": "shopify://shop_images/fabio_charla_tostadora.jpg",
+        "height": "medium",
+        "desktop_image_width": "medium",
         "layout": "text_first",
         "image_behavior": "none",
         "content_layout": "no-overlap",
