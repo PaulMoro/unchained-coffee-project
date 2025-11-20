@@ -3601,6 +3601,7 @@ details-disclosure > details {
 }
 .text-modesto {
   font-family: var(--font-heading-family);
+  line-height: normal;
 }
 .text-barlow {
   font-family: var(--font-body-family);

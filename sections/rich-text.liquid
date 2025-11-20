@@ -86,8 +86,8 @@
                 {%- for block in section.blocks -%}
                   {%- case block.type -%}
                     {%- when 'caption' -%}
-                      {% if block.settings.cross_out %}
                       {%- style -%}
+                        {% if block.settings.cross_out %}
                         #section-{{ section.id }} .rich-text__step.cross-out--{{ forloop.index0 }}::before {
                           position: absolute;
                           width: calc(100% - 10px);
@@ -99,11 +99,15 @@
                           transform: rotateZ(10deg);
                           transform-origin: right;
                         }
+                        {% endif %}
+                        #section-{{ section.id }} .rich-text__step--{{ forloop.index0 }} {
+                          color: {{ block.settings.color_text }};
+                        }
                       {%- endstyle -%}
-                      {% endif %}
                       <span
                         class="
                           rich-text__step 
+                          rich-text__step--{{ forloop.index0 }}
                           rich-text__caption--{{ block.settings.text_style }} 
                           {% if block.settings.cross_out %}cross-out--{{ forloop.index0 }}{% endif %}
                           {% if block.settings.arrow %}arrow--{{ forloop.index0 }}{% endif %}
@@ -112,7 +116,7 @@
                         {{ block.shopify_attributes }}
                         {% if settings.animations_reveal_on_scroll %}
                           data-cascade
-                          style="--animation-order: {{ forloop.index }};color: {{ block.settings.color_text }};"
+                          style="--animation-order: {{ forloop.index }};"
                         {% endif %}
                       >
                         {{ block.settings.caption | replace: ' ', '<br>' }}
