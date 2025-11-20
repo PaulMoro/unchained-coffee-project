@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner": {
@@ -38,7 +47,7 @@
         "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",
         "show_text_box": false,
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-2",
         "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
         "show_text_below": false
@@ -77,7 +86,7 @@
         "heading_size": "h1",
         "image_ratio": "square",
         "columns_desktop": 3,
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "show_view_all": false,
         "columns_mobile": "1",
         "swipe_on_mobile": false,
@@ -232,7 +241,7 @@
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "show_info_product": false,
         "image_ratio": "adapt",
         "image_shape": "default",
@@ -293,8 +302,8 @@
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "",
+        "section_color_scheme": "scheme-2",
+        "color_scheme": "scheme-2",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -315,7 +324,7 @@
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "show_info_product": false,
         "image_ratio": "adapt",
         "image_shape": "default",
@@ -415,7 +424,7 @@
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "show_info_product": false,
         "image_ratio": "adapt",
         "image_shape": "default",
@@ -428,25 +437,44 @@
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 100,
-        "padding_bottom": 36
+        "padding_bottom": 100
       }
     },
     "featured_blog_yQd77q": {
       "type": "featured-blog",
       "name": "t:sections.featured-blog.presets.name",
       "settings": {
-        "blog": "",
+        "blog": "news",
         "post_limit": 3,
-        "heading": "Blog posts",
+        "heading": "UNCHAINED BLOGS",
         "heading_size": "h1",
-        "columns_desktop": 3,
-        "show_view_all": true,
+        "content_alignment": "center",
+        "font": "permanent",
+        "size_font": 36,
+        "color_text": "#262624",
+        "bg_highlight": true,
+        "highlight_color": "#fdda24",
+        "columns_desktop": 2,
+        "design_column": true,
+        "show_view_all": false,
         "show_image": true,
         "show_date": true,
         "show_author": false,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "color_scheme": "scheme-2",
+        "title_1": "#262624",
+        "text_1": "#262624",
+        "bg_1": "#ffffff",
+        "alternated": true,
+        "title_2": "#fdda24",
+        "text_2": "#f4f3ef",
+        "bg_2": "#262624",
+        "button_label": "WANT MORE?",
+        "button_link": "",
+        "text_btn": "#262624",
+        "bg_btn": "#fdda24",
+        "button_style_secondary": false,
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     }
   },
