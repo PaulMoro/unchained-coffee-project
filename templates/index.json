@@ -270,7 +270,7 @@
         "text_A4zAB7": {
           "type": "text",
           "settings": {
-            "text": "<p>The coffee industry is rigged - built so a few win while farmers lose.</p><p>We're colombians we know about we're talking.</p><p> <strong>Unchained exist to break that system.</strong></p><p>We've redesigned the coffee supply chain to deliver real value to the people who grow it and people who drink it.</p><p><strong>Unchained is a call to change the game.</strong></p><p>Because when you change the chain you change everything.</p>",
+            "text": "<p>The coffee industry is rigged - built so a few win while farmers lose.</p><p><strong>Unchained exist to break that system.</strong></p><p>We've redesigned the coffee supply chain to deliver real value to the people who grow it and people who drink it.</p><p><strong>Unchained is a call to change the game.</strong></p><p>Because when you change the chain you change everything.</p>",
             "text_style": "body"
           }
         },
@@ -293,8 +293,8 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/SF6.png",
-        "height": "small",
+        "image": "shopify://shop_images/Overflow_Cup.png",
+        "height": "medium",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "image_behavior": "none",
