@@ -293,8 +293,8 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/fabio_cafetal.jpg",
-        "height": "medium",
+        "image": "shopify://shop_images/SF6.png",
+        "height": "small",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "image_behavior": "none",
