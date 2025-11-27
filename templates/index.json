@@ -376,9 +376,9 @@
       "settings": {
         "collection": "best-seller",
         "products_to_show": 6,
-        "title": "OUR BEST SELLERS",
+        "title": "Limited Editions",
         "heading_size": "h1",
-        "description": "",
+        "description": "<p><strong>Once they’re gone, they’re truly gone.</strong> Secure yours before the next one arrives…and this one becomes history.</p>",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 3,
