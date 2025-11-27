@@ -461,7 +461,7 @@
         "products_to_show": 6,
         "title": "Planet First",
         "heading_size": "h1",
-        "description": "<p>Coffee grown to protect the planet—crafted with no compromise in flavor. Truly sustainable. Truly exceptional. <strong>Choose better.</strong></p>",
+        "description": "<p><strong>Choose better. </strong>Coffee grown to protect the planet—crafted with no compromise in flavor. Truly sustainable. Truly exceptional. </p>",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 4,
