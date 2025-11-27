@@ -559,9 +559,9 @@
       "settings": {
         "collection": "best-seller",
         "products_to_show": 6,
-        "title": "LIMITED EDITIONS",
+        "title": "Beyond Washed",
         "heading_size": "h1",
-        "description": "",
+        "description": "<p>Natural process coffees that<strong> feel new—yet comfortably familiar,</strong> with a clean, wine-like fruit sweetness.</p>",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 3,
