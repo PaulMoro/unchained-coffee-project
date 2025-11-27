@@ -100,8 +100,8 @@
           "type": "collection",
           "settings": {
             "select_space": "right",
-            "title_collection": "Geisha",
-            "collection": "geisha-collection",
+            "title_collection": "Rare Varietals",
+            "collection": "varietal-sidra-copy-2",
             "image_collection": "shopify://shop_images/LANDING_-_UNCHAINED_COFFEE_Folder_-_Google_Drive_1.png"
           }
         },
