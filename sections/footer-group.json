@@ -36,7 +36,10 @@
         "email_form_6RaWdc": {
           "type": "email_form",
           "settings": {
-            "btn_style": false
+            "aligment": "left",
+            "content_alignment": "center",
+            "btn_style": false,
+            "btn_text": "GO"
           }
         }
       },
@@ -49,6 +52,7 @@
       "settings": {
         "color_scheme": "scheme-3",
         "full_width": true,
+        "width_section": 70,
         "padding_top": 40,
         "padding_bottom": 52
       }
@@ -66,8 +70,8 @@
         "link_list_84rNRk": {
           "type": "link_list",
           "settings": {
-            "heading": "Services",
-            "menu": "footer"
+            "heading": "SHOP",
+            "menu": "footer-menu-shop"
           }
         },
         "link_list_iMdnRp": {
