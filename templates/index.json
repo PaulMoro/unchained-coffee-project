@@ -459,9 +459,9 @@
       "settings": {
         "collection": "best-seller",
         "products_to_show": 6,
-        "title": "MICROLOTS",
+        "title": "Planet First",
         "heading_size": "h1",
-        "description": "",
+        "description": "<p>Coffee grown to protect the planet—crafted with no compromise in flavor. Truly sustainable. Truly exceptional. <strong>Choose better.</strong></p>",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 3,
