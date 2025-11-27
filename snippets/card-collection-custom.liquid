@@ -1,0 +1,29 @@
+{% comment %}
+  Renders a custom collection card.
+  Accepts:
+  - block: {Object} Block object containing settings.
+{% endcomment %}
+
+{% liquid
+  assign collection = block.settings.collection
+  assign image = block.settings.image_collection | default: collection.featured_image
+  assign title = block.settings.title_collection | default: collection.title
+%}
+
+<a href="{{ collection.url }}" class="custom-collection-card">
+  {% if image != blank %}
+    <img
+      src="{{ image | image_url: width: 400 }}"
+      alt="{{ title | escape }}"
+      class="custom-collection-card__image"
+      loading="lazy"
+      width="400"
+      height="400"
+    >
+  {% else %}
+    {{ 'collection-1' | placeholder_svg_tag: 'custom-collection-card__image' }}
+  {% endif %}
+  <div class="custom-collection-card__content">
+    {{ title }}
+  </div>
+</a>

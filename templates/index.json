@@ -53,45 +53,118 @@
         "show_text_below": false
       }
     },
-    "collection_list_MyPFNx": {
-      "type": "collection-list",
+    "collection_home_3CmXRN": {
+      "type": "collection-home",
       "blocks": {
-        "featured_collection_b7Q3qb": {
-          "type": "featured_collection",
+        "collection_KpkXCw": {
+          "type": "collection",
           "settings": {
+            "select_space": "left",
+            "title_collection": "Lorem Ipsu",
+            "collection": "first-break"
+          }
+        },
+        "collection_wL6QYV": {
+          "type": "collection",
+          "settings": {
+            "select_space": "left",
+            "title_collection": "Lorem Ipsu",
             "collection": ""
           }
         },
-        "featured_collection_a3Yypy": {
-          "type": "featured_collection",
+        "collection_wF4GYa": {
+          "type": "collection",
           "settings": {
+            "select_space": "left",
+            "title_collection": "Lorem Ipsu",
             "collection": ""
           }
         },
-        "featured_collection_aUrwjV": {
-          "type": "featured_collection",
+        "collection_U4wWAE": {
+          "type": "collection",
           "settings": {
+            "select_space": "left",
+            "title_collection": "Lorem Ipsu",
             "collection": ""
+          }
+        },
+        "collection_h7gFMX": {
+          "type": "collection",
+          "settings": {
+            "select_space": "left",
+            "title_collection": "Lorem Ipsu",
+            "collection": ""
+          }
+        },
+        "collection_qxfqV9": {
+          "type": "collection",
+          "settings": {
+            "select_space": "right",
+            "title_collection": "Lorem Ipsu",
+            "collection": "flavor-profile-brown-sugar-copy",
+            "image_collection": "shopify://shop_images/maira_blur.jpg"
+          }
+        },
+        "collection_xzgGJV": {
+          "type": "collection",
+          "settings": {
+            "select_space": "right",
+            "title_collection": "Lorem Ipsu",
+            "collection": "flavor-profile-brown-sugar-copy",
+            "image_collection": "shopify://shop_images/maira_blur.jpg"
+          }
+        },
+        "collection_eeKEzY": {
+          "type": "collection",
+          "settings": {
+            "select_space": "right",
+            "title_collection": "Lorem Ipsu",
+            "collection": "flavor-profile-brown-sugar-copy",
+            "image_collection": "shopify://shop_images/maira_blur.jpg"
+          }
+        },
+        "collection_HTBAGH": {
+          "type": "collection",
+          "settings": {
+            "select_space": "right",
+            "title_collection": "Lorem Ipsu",
+            "collection": "flavor-profile-brown-sugar-copy",
+            "image_collection": "shopify://shop_images/maira_blur.jpg"
           }
         }
       },
       "block_order": [
-        "featured_collection_b7Q3qb",
-        "featured_collection_a3Yypy",
-        "featured_collection_aUrwjV"
+        "collection_KpkXCw",
+        "collection_wL6QYV",
+        "collection_wF4GYa",
+        "collection_U4wWAE",
+        "collection_h7gFMX",
+        "collection_qxfqV9",
+        "collection_xzgGJV",
+        "collection_eeKEzY",
+        "collection_HTBAGH"
       ],
-      "name": "t:sections.collection-list.presets.name",
+      "name": "Collection Home",
       "settings": {
-        "title": "Collections",
-        "heading_size": "h1",
-        "image_ratio": "square",
-        "columns_desktop": 3,
-        "color_scheme": "scheme-2",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "width_section": 30,
+        "bg_section_left": "#f5f4f0",
+        "title_left": "Producers",
+        "font_left": "modesto",
+        "size_font_left": 36,
+        "color_title_left": "#262624",
+        "color_text_left": "#262624",
+        "background_items": "#f5f4f0",
+        "border_items": "#262624",
+        "hover_color_items": "#fdda24",
+        "bg_section_right": "#e8e6dd",
+        "title_right": "FEATURED COLLECTIONS",
+        "font_right": "modesto",
+        "size_font_right": 36,
+        "color_title_right": "#262624",
+        "font_color_right": "#262624",
+        "bg_color_right": "#fdda24",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "rich_text_a8CCQB": {
@@ -480,7 +553,7 @@
   },
   "order": [
     "image_banner",
-    "collection_list_MyPFNx",
+    "collection_home_3CmXRN",
     "rich_text_a8CCQB",
     "featured_collection_CxjnxU",
     "image_with_text_R8QVJz",
