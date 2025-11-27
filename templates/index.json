@@ -128,6 +128,14 @@
             "collection": "varietal-castillo-1"
           }
         },
+        "collection_Giinmj": {
+          "type": "collection",
+          "settings": {
+            "select_space": "left",
+            "title_collection": "Light Roast",
+            "collection": "roast-level-light"
+          }
+        },
         "collection_qxfqV9": {
           "type": "collection",
           "settings": {
@@ -175,6 +183,7 @@
         "collection_XMcwnX",
         "collection_FybczF",
         "collection_xnXDmR",
+        "collection_Giinmj",
         "collection_qxfqV9",
         "collection_xzgGJV",
         "collection_eeKEzY",
