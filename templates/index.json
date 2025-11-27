@@ -564,7 +564,7 @@
         "description": "<p><strong>Choose better. </strong>Sustainable by design. Exceptional by taste.</p>",
         "show_description": false,
         "description_style": "body",
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,
