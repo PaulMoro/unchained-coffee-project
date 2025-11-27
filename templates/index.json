@@ -96,6 +96,30 @@
             "collection": "flavor-profile-nutty-copy"
           }
         },
+        "collection_3RfptT": {
+          "type": "collection",
+          "settings": {
+            "select_space": "left",
+            "title_collection": "Espresso",
+            "collection": "espresso-recommended-filter"
+          }
+        },
+        "collection_XMcwnX": {
+          "type": "collection",
+          "settings": {
+            "select_space": "left",
+            "title_collection": "French Press",
+            "collection": "caturra-varietal-filter"
+          }
+        },
+        "collection_FybczF": {
+          "type": "collection",
+          "settings": {
+            "select_space": "left",
+            "title_collection": "",
+            "collection": ""
+          }
+        },
         "collection_qxfqV9": {
           "type": "collection",
           "settings": {
@@ -139,6 +163,9 @@
         "collection_wF4GYa",
         "collection_U4wWAE",
         "collection_h7gFMX",
+        "collection_3RfptT",
+        "collection_XMcwnX",
+        "collection_FybczF",
         "collection_qxfqV9",
         "collection_xzgGJV",
         "collection_eeKEzY",
