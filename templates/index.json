@@ -245,7 +245,7 @@
         "heading_KT9jfN": {
           "type": "heading",
           "settings": {
-            "heading": "Simple. better. unchained.",
+            "heading": "We redesigned the chain",
             "heading_size": "h1",
             "font": "permanent",
             "size_font": 36,
@@ -381,9 +381,9 @@
         "description": "<p><strong>Once they’re gone, they’re truly gone.</strong> Secure yours before the next one arrives…and this one becomes history.</p>",
         "show_description": false,
         "description_style": "body",
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "enable_desktop_slider": false,
-        "full_width": true,
+        "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
         "color_scheme": "scheme-2",
