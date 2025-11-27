@@ -68,8 +68,8 @@
           "type": "collection",
           "settings": {
             "select_space": "left",
-            "title_collection": "Lorem Ipsu",
-            "collection": ""
+            "title_collection": "Floral",
+            "collection": "flavor-profile-vanilla-copy"
           }
         },
         "collection_wF4GYa": {
@@ -148,7 +148,7 @@
       "settings": {
         "width_section": 30,
         "bg_section_left": "#f5f4f0",
-        "title_left": "Producers",
+        "title_left": "Filters",
         "font_left": "modesto",
         "size_font_left": 36,
         "color_title_left": "#262624",
