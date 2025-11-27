@@ -136,6 +136,30 @@
             "collection": "roast-level-light"
           }
         },
+        "collection_f8XUft": {
+          "type": "collection",
+          "settings": {
+            "select_space": "left",
+            "title_collection": "Medium",
+            "collection": "roast-level-light-copy"
+          }
+        },
+        "collection_rqUPRt": {
+          "type": "collection",
+          "settings": {
+            "select_space": "left",
+            "title_collection": "Medium Dark",
+            "collection": "roast-level-medium-light-copy"
+          }
+        },
+        "collection_npNHmB": {
+          "type": "collection",
+          "settings": {
+            "select_space": "left",
+            "title_collection": "",
+            "collection": ""
+          }
+        },
         "collection_qxfqV9": {
           "type": "collection",
           "settings": {
@@ -184,6 +208,9 @@
         "collection_FybczF",
         "collection_xnXDmR",
         "collection_Giinmj",
+        "collection_f8XUft",
+        "collection_rqUPRt",
+        "collection_npNHmB",
         "collection_qxfqV9",
         "collection_xzgGJV",
         "collection_eeKEzY",
