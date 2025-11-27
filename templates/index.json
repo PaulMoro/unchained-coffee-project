@@ -459,9 +459,9 @@
       "settings": {
         "collection": "best-seller",
         "products_to_show": 6,
-        "title": "Planet First",
+        "title": "Eco Exceptional",
         "heading_size": "h1",
-        "description": "<p><strong>Choose better. </strong>Coffee grown to protect the planet—crafted with no compromise in flavor. Truly sustainable. Truly exceptional. </p>",
+        "description": "<p><strong>Choose better. </strong>Sustainable by design. Exceptional by taste.</p>",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 4,
