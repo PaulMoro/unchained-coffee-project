@@ -246,7 +246,7 @@
           "type": "heading",
           "settings": {
             "heading": "We redesigned the chain",
-            "heading_size": "h1",
+            "heading_size": "h0",
             "font": "permanent",
             "size_font": 36,
             "color_text": "#262624",
