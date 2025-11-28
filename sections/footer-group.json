@@ -37,7 +37,7 @@
           "type": "email_form",
           "settings": {
             "aligment": "left",
-            "content_alignment": "center",
+            "content_alignment": "left",
             "btn_style": false,
             "btn_text": "GO"
           }
