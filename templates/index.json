@@ -485,6 +485,38 @@
         "padding_bottom": 36
       }
     },
+    "featured_collection_QGjPbq": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "best-seller",
+        "products_to_show": 6,
+        "title": "Eco Exceptional",
+        "heading_size": "h1",
+        "description": "<p><strong>Choose better. </strong>Sustainable by design. Exceptional by taste.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 3,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-2",
+        "show_info_product": false,
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "image_cta": "shopify://shop_images/Vector_1.png",
+        "text_cta": "Shop Now",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 100,
+        "padding_bottom": 36
+      }
+    },
     "image_with_text_YFEmh3": {
       "type": "image-with-text",
       "blocks": {
@@ -536,83 +568,15 @@
         "padding_bottom": 36
       }
     },
-    "image_banner_JxHCxx": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_HUChXy": {
-          "type": "heading",
-          "settings": {
-            "heading": "OUTSTANDING PRODUCER",
-            "heading_size": "h1",
-            "font": "modesto",
-            "size_font": 14,
-            "color_text": "#fdda24",
-            "style_subtitle": false
-          }
-        },
-        "heading_GgNQQN": {
-          "type": "heading",
-          "settings": {
-            "heading": "MAIRA CALDERON",
-            "heading_size": "h0",
-            "font": "modesto",
-            "size_font": 46,
-            "color_text": "#fdda24",
-            "style_subtitle": false
-          }
-        },
-        "text_hBAVpJ": {
-          "type": "text",
-          "settings": {
-            "text": "<p>She turns adversity into intention. At 22, she carries the story of a family that nearly lost everything, yet she chose to rebuild through craft, not circumstance. When the pandemic pushed her family to the edge, Maira leaned into coffee with quiet determination—studying barismo, mastering selection, and learning to elevate quality from the ground up.</p>",
-            "text_style": "body",
-            "color_text": "#f4f3ef"
-          }
-        },
-        "buttons_t4Qm6H": {
-          "type": "buttons",
-          "settings": {
-            "color_text": "#262624",
-            "color_bg": "#fdda24",
-            "small_btn": true,
-            "button_label_1": "GET TO KNOW HER",
-            "button_link_1": "#",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_HUChXy",
-        "heading_GgNQQN",
-        "text_hBAVpJ",
-        "buttons_t4Qm6H"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/Maira_second_layer.png",
-        "image_overlay_opacity": 0,
-        "image_height": "large",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-left",
-        "desktop_content_alignment": "left",
-        "show_text_box": false,
-        "color_scheme": "scheme-3",
-        "stack_images_on_mobile": false,
-        "mobile_content_alignment": "left",
-        "show_text_below": false
-      }
-    },
-    "featured_collection_QGjPbq": {
+    "featured_collection_LkqxUq": {
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "collection": "best-seller",
         "products_to_show": 6,
-        "title": "Eco Exceptional",
+        "title": "Beyond Washed",
         "heading_size": "h1",
-        "description": "<p><strong>Choose better. </strong>Sustainable by design. Exceptional by taste.</p>",
+        "description": "<p>Natural process coffees that<strong> feel new—yet comfortably familiar,</strong> with a clean, wine-like fruit sweetness.</p>",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 3,
@@ -633,7 +597,39 @@
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 100,
-        "padding_bottom": 36
+        "padding_bottom": 100
+      }
+    },
+    "featured_collection_6q4Cwh": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "best-seller",
+        "products_to_show": 6,
+        "title": "Beyond Washed",
+        "heading_size": "h1",
+        "description": "<p>Natural process coffees that<strong> feel new—yet comfortably familiar,</strong> with a clean, wine-like fruit sweetness.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 3,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-2",
+        "show_info_product": false,
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "image_cta": "shopify://shop_images/Vector_1.png",
+        "text_cta": "Shop Now",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "image_banner_H6rQm4": {
@@ -704,36 +700,72 @@
         "show_text_below": false
       }
     },
-    "featured_collection_LkqxUq": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
+    "image_banner_JxHCxx": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_HUChXy": {
+          "type": "heading",
+          "settings": {
+            "heading": "OUTSTANDING PRODUCER",
+            "heading_size": "h1",
+            "font": "modesto",
+            "size_font": 14,
+            "color_text": "#fdda24",
+            "style_subtitle": false
+          }
+        },
+        "heading_GgNQQN": {
+          "type": "heading",
+          "settings": {
+            "heading": "MAIRA CALDERON",
+            "heading_size": "h0",
+            "font": "modesto",
+            "size_font": 46,
+            "color_text": "#fdda24",
+            "style_subtitle": false
+          }
+        },
+        "text_hBAVpJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>She turns adversity into intention. At 22, she carries the story of a family that nearly lost everything, yet she chose to rebuild through craft, not circumstance. When the pandemic pushed her family to the edge, Maira leaned into coffee with quiet determination—studying barismo, mastering selection, and learning to elevate quality from the ground up.</p>",
+            "text_style": "body",
+            "color_text": "#f4f3ef"
+          }
+        },
+        "buttons_t4Qm6H": {
+          "type": "buttons",
+          "settings": {
+            "color_text": "#262624",
+            "color_bg": "#fdda24",
+            "small_btn": true,
+            "button_label_1": "GET TO KNOW HER",
+            "button_link_1": "#",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_HUChXy",
+        "heading_GgNQQN",
+        "text_hBAVpJ",
+        "buttons_t4Qm6H"
+      ],
       "settings": {
-        "collection": "best-seller",
-        "products_to_show": 6,
-        "title": "Beyond Washed",
-        "heading_size": "h1",
-        "description": "<p>Natural process coffees that<strong> feel new—yet comfortably familiar,</strong> with a clean, wine-like fruit sweetness.</p>",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 3,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "color_scheme": "scheme-2",
-        "show_info_product": false,
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "standard",
-        "image_cta": "shopify://shop_images/Vector_1.png",
-        "text_cta": "Shop Now",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 100,
-        "padding_bottom": 100
+        "image": "shopify://shop_images/Maira_second_layer.png",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": false,
+        "color_scheme": "scheme-3",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "left",
+        "show_text_below": false
       }
     },
     "featured_blog_yQd77q": {
@@ -781,11 +813,12 @@
     "rich_text_a8CCQB",
     "featured_collection_mmCRXt",
     "image_with_text_R8QVJz",
-    "image_with_text_YFEmh3",
-    "image_banner_JxHCxx",
     "featured_collection_QGjPbq",
-    "image_banner_H6rQm4",
+    "image_with_text_YFEmh3",
     "featured_collection_LkqxUq",
+    "image_banner_H6rQm4",
+    "featured_collection_6q4Cwh",
+    "image_banner_JxHCxx",
     "featured_blog_yQd77q"
   ]
 }
