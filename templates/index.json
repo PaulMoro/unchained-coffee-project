@@ -485,6 +485,57 @@
         "padding_bottom": 36
       }
     },
+    "image_with_text_YFEmh3": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_rtq6gg": {
+          "type": "heading",
+          "settings": {
+            "heading": "WE ARE",
+            "heading_size": "h1"
+          }
+        },
+        "text_nAYpWk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The coffee industry is rigged - built so a few win while farmers lose.</p><p><strong>Unchained exist to break that system.</strong></p><p>We've redesigned the coffee supply chain to deliver real value to the people who grow it and people who drink it.</p><p><strong>Unchained is a call to change the game.</strong></p><p>Because when you change the chain you change everything.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_QjWnJc": {
+          "type": "button",
+          "settings": {
+            "color_text": "#f4f3ef",
+            "color_bg": "#262624",
+            "small_btn": true,
+            "button_label": "Read more",
+            "button_link": "#",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_rtq6gg",
+        "text_nAYpWk",
+        "button_QjWnJc"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Clip_path_group_2.png",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "ambient",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-2",
+        "color_scheme": "scheme-2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_banner_JxHCxx": {
       "type": "image-banner",
       "blocks": {
@@ -730,6 +781,7 @@
     "featured_collection_CxjnxU",
     "image_with_text_R8QVJz",
     "featured_collection_mmCRXt",
+    "image_with_text_YFEmh3",
     "image_banner_JxHCxx",
     "featured_collection_QGjPbq",
     "image_banner_H6rQm4",
