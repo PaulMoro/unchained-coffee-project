@@ -858,6 +858,51 @@
         "padding_top": 100,
         "padding_bottom": 100
       }
+    },
+    "1764591734c9abccfa": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_c0df128_aG97WC": {
+          "type": "ai_gen_block_c0df128",
+          "settings": {
+            "container_width": 1200,
+            "column_gap": 20,
+            "mobile_gap": 20,
+            "min_height": 500,
+            "mobile_min_height": 400,
+            "video_1": "shopify://files/videos/seleccion verde final.mp4",
+            "heading_1": "First video",
+            "text_1": "<p>Add descriptive text for your video</p>",
+            "button_text_1": "",
+            "button_link_1": "",
+            "video_2": "shopify://files/videos/Picking 2 - Final.mp4",
+            "heading_2": "Second video",
+            "text_2": "<p>Add descriptive text for your video</p>",
+            "button_text_2": "",
+            "button_link_2": "",
+            "video_radius": 0,
+            "overlay_opacity": 50,
+            "text_padding": 30,
+            "background_color": "#ffffff",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#121212",
+            "button_hover_background": "#f4f4f4",
+            "heading_size": 32,
+            "text_size": 16,
+            "heading_spacing": 15,
+            "text_spacing": 15,
+            "padding_top": 50,
+            "padding_bottom": 50,
+            "button_radius": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_c0df128_aG97WC"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -874,6 +919,7 @@
     "image_banner_H6rQm4",
     "featured_collection_6q4Cwh",
     "image_banner_JxHCxx",
-    "featured_blog_yQd77q"
+    "featured_blog_yQd77q",
+    "1764591734c9abccfa"
   ]
 }
