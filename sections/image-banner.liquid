@@ -12,6 +12,7 @@
       }
     }
 
+
     @media screen and (min-width: 750px) {
       #Banner-{{ section.id }}::before,
       #Banner-{{ section.id }} .banner__media::before {
@@ -27,6 +28,18 @@
   #Banner-{{ section.id }}::after {
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
   }
+  {% if section.settings.efecto_rasgado and section.settings.efecto_img != blank %}
+    #Banner-{{ section.id }} {
+      -webkit-mask-image: url({{ section.settings.efecto_img | image_url: width: 2000 }});
+      mask-image: url({{ section.settings.efecto_img | image_url: width: 2000 }});
+      -webkit-mask-size: cover;
+      mask-size: cover;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-position: top;
+      mask-position: top;
+    }
+  {% endif %}
 {%- endstyle -%}
 
 {%- liquid
@@ -142,7 +155,11 @@
               {{ block.settings.heading }}
             </h2>
           {%- when 'text' -%}
-            <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }} style="color: {{ block.settings.color_text }};">
+            <div
+              class="banner__text rte {{ block.settings.text_style }}"
+              {{ block.shopify_attributes }}
+              style="color: {{ block.settings.color_text }};"
+            >
               <p>{{ block.settings.text }}</p>
             </div>
           {%- when 'buttons' -%}
@@ -210,6 +227,7 @@
       "id": "image_2",
       "label": "t:sections.image-banner.settings.image_2.label"
     },
+
     {
       "type": "range",
       "id": "image_overlay_opacity",
@@ -357,7 +375,7 @@
       "id": "stack_images_on_mobile",
       "default": true,
       "label": "t:sections.image-banner.settings.stack_images_on_mobile.label"
-    },    
+    },
     {
       "type": "select",
       "id": "mobile_content_alignment",
@@ -383,6 +401,21 @@
       "id": "show_text_below",
       "default": true,
       "label": "t:sections.image-banner.settings.show_text_below.label"
+    },
+    {
+      "type": "header",
+      "content": "Rasgado de imagen"
+    },
+    {
+      "type": "image_picker",
+      "id": "efecto_img",
+      "label": "Imagen de Rasgado"
+    },
+    {
+      "type": "checkbox",
+      "id": "efecto_rasgado",
+      "default": true,
+      "label": "Efecto Rasgado"
     }
   ],
   "blocks": [
@@ -443,7 +476,7 @@
           ],
           "default": "modesto",
           "label": "Fuente"
-        }, 
+        },
         {
           "type": "number",
           "id": "size_font",
@@ -527,8 +560,8 @@
           "label": "Estilo Boton Pequeño"
         },
         {
-        "type": "header",
-        "content": "t:sections.image-banner.blocks.buttons.settings.header_1.content"
+          "type": "header",
+          "content": "t:sections.image-banner.blocks.buttons.settings.header_1.content"
         },
         {
           "type": "text",
@@ -549,8 +582,8 @@
           "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_1.label"
         },
         {
-        "type": "header",
-        "content": "t:sections.image-banner.blocks.buttons.settings.header_2.content"
+          "type": "header",
+          "content": "t:sections.image-banner.blocks.buttons.settings.header_2.content"
         },
         {
           "type": "text",

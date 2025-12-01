@@ -112,8 +112,6 @@
       font-size: {{ section.settings.size_font_right | times: 0.75 | round: 0 }}px;
     }
   }
-
-  /* Custom Card Styles */
   .custom-collection-card {
     display: flex;
     flex-direction: column;
@@ -122,23 +120,22 @@
   }
   .custom-collection-card__image {
     width: 100%;
-    aspect-ratio: 1 / 1; /* Square image as per screenshot roughly */
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     display: block;
   }
   .custom-collection-card__content {
-    background-color: #fdda24; /* Yellow from screenshot */
+    background-color: {{ section.settings.bg_color_right }};
     padding: 1rem;
     text-align: center;
-    color: #000;
+    color: {{ section.settings.font_color_right }};
     font-weight: bold;
     text-transform: uppercase;
     width: 100%;
   }
 
-  /* Splide Overrides if needed */
   .splide__slide {
-    padding: 0 10px; /* Gap between slides */
+    padding: 0 10px;
   }
 {%- endstyle -%}
 

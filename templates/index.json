@@ -11,12 +11,44 @@
   "sections": {
     "video_9Raep6": {
       "type": "video",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Producers & Coffee Lovers",
+            "heading_size": "h0",
+            "font": "permanent",
+            "size_font": 67,
+            "color_text": "#fdda24",
+            "style_subtitle": false
+          }
+        },
+        "heading_n8Ba7Y": {
+          "type": "heading",
+          "settings": {
+            "heading": "JOIN FORCES TO HACK THE INDUSTRY",
+            "heading_size": "h1",
+            "font": "modesto",
+            "size_font": 30,
+            "color_text": "#f4f3ef",
+            "style_subtitle": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "heading_n8Ba7Y"
+      ],
       "name": "t:sections.video.presets.name",
       "settings": {
         "heading": "",
         "heading_size": "h1",
+        "desktop_content_position": "bottom-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
         "enable_video_looping": true,
         "video": "shopify://files/videos/Main Video Unchained.mp4",
+        "autoplay": true,
         "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "description": "",
         "full_width": true,
