@@ -320,7 +320,7 @@
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "collection": "geisha-collection",
+        "collection": "limited-edition",
         "products_to_show": 6,
         "title": "Limited Editions",
         "heading_size": "h1",
