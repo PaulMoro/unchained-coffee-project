@@ -14,6 +14,7 @@
       "blocks": {
         "heading": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Producers & Coffee Lovers",
             "heading_size": "h0",
@@ -25,6 +26,7 @@
         },
         "heading_n8Ba7Y": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "JOIN FORCES TO HACK THE INDUSTRY",
             "heading_size": "h1",
@@ -99,7 +101,8 @@
         "color_scheme": "scheme-2",
         "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
-        "show_text_below": false
+        "show_text_below": false,
+        "efecto_rasgado": true
       }
     },
     "collection_home_3CmXRN": {
@@ -714,7 +717,8 @@
         "color_scheme": "scheme-3",
         "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
-        "show_text_below": false
+        "show_text_below": false,
+        "efecto_rasgado": true
       }
     },
     "featured_collection_6q4Cwh": {
@@ -814,7 +818,8 @@
         "color_scheme": "scheme-3",
         "stack_images_on_mobile": false,
         "mobile_content_alignment": "left",
-        "show_text_below": false
+        "show_text_below": false,
+        "efecto_rasgado": true
       }
     },
     "featured_blog_yQd77q": {
