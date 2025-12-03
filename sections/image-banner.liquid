@@ -28,17 +28,50 @@
   #Banner-{{ section.id }}::after {
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
   }
-  {% if section.settings.efecto_rasgado and section.settings.efecto_img != blank %}
-    #Banner-{{ section.id }} {
-      -webkit-mask-image: url({{ section.settings.efecto_img | image_url: width: 2000 }});
-      mask-image: url({{ section.settings.efecto_img | image_url: width: 2000 }});
-      -webkit-mask-size: cover;
-      mask-size: cover;
-      -webkit-mask-repeat: no-repeat;
-      mask-repeat: no-repeat;
-      -webkit-mask-position: top;
-      mask-position: top;
+  {% if section.settings.show_top_tear or section.settings.show_bottom_tear %}
+  #Banner-{{ section.id }} {
+    position: relative;
+    z-index: 1;
+  }
+  #Banner-{{ section.id }}::before,
+  #Banner-{{ section.id }}::after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    background-color: transparent;
+    pointer-events: none;
+    z-index: 2;
+    display: block;
+    top: auto;
+    bottom: auto;
+  }
+  {% endif %}
+  {% if section.settings.show_top_tear and section.settings.top_tear_image != blank %}
+    #Banner-{{ section.id }}::before {
+      content: '';
+      top: {{ section.settings.top_tear_offset }}px;
+      height: {{ section.settings.top_tear_height }}px;
+      background-image: url('{{ section.settings.top_tear_image | image_url: width: 2000 }}');
     }
+  {% else %}
+    #Banner-{{ section.id }}::before { content: none; }
+  {% endif %}
+
+  {% if section.settings.show_bottom_tear and section.settings.bottom_tear_image != blank %}
+    #Banner-{{ section.id }}::after {
+      content: '';
+      bottom: {{ section.settings.bottom_tear_offset }}px;
+      height: {{ section.settings.bottom_tear_height }}px;
+      background-image: url('{{ section.settings.bottom_tear_image | image_url: width: 2000 }}');
+      opacity: 1;
+      top: auto;
+      background-color: transparent;
+    }
+  {% else %}
+    #Banner-{{ section.id }}::after { content: none; }
   {% endif %}
 {%- endstyle -%}
 
@@ -404,18 +437,75 @@
     },
     {
       "type": "header",
-      "content": "Rasgado de imagen"
-    },
-    {
-      "type": "image_picker",
-      "id": "efecto_img",
-      "label": "Imagen de Rasgado"
+      "content": "Rasgado Superior (Top Tear)"
     },
     {
       "type": "checkbox",
-      "id": "efecto_rasgado",
-      "default": true,
-      "label": "Efecto Rasgado"
+      "id": "show_top_tear",
+      "label": "Activar rasgado superior",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "top_tear_image",
+      "label": "Imagen superior (PNG Transparente)"
+    },
+    {
+      "type": "range",
+      "id": "top_tear_height",
+      "min": 20,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Altura superior",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "top_tear_offset",
+      "min": -100,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Ajuste vertical superior",
+      "default": 2,
+      "info": "Valor negativo sube la imagen (solapamiento)."
+    },
+    {
+      "type": "header",
+      "content": "Rasgado Inferior (Bottom Tear)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_bottom_tear",
+      "label": "Activar rasgado inferior",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "bottom_tear_image",
+      "label": "Imagen inferior (PNG Transparente)"
+    },
+    {
+      "type": "range",
+      "id": "bottom_tear_height",
+      "min": 20,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Altura inferior",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "bottom_tear_offset",
+      "min": -100,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Ajuste vertical inferior",
+      "default": 2,
+      "info": "Valor negativo baja la imagen."
     }
   ],
   "blocks": [
