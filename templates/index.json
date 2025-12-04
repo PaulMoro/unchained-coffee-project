@@ -751,7 +751,7 @@
         "buttons_CCinyg"
       ],
       "settings": {
-        "image": "shopify://shop_images/PHOTO-2025-11-05-21-01-59_05d19958-3aa3-4b19-867d-aef858477b92.jpg",
+        "image": "shopify://shop_images/fabio_cafetal.jpg",
         "image_overlay_opacity": 100,
         "image_height": "medium",
         "image_behavior": "none",
@@ -764,11 +764,11 @@
         "show_text_below": false,
         "show_top_tear": true,
         "top_tear_image": "shopify://shop_images/UNCHAINED_razgado-b.png",
-        "top_tear_height": 100,
+        "top_tear_height": 50,
         "top_tear_offset": 0,
         "show_bottom_tear": true,
         "bottom_tear_image": "shopify://shop_images/UNCHAINED_razgado-a.png",
-        "bottom_tear_height": 100,
+        "bottom_tear_height": 50,
         "bottom_tear_offset": -2
       }
     },
