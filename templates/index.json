@@ -277,15 +277,15 @@
         "padding_bottom": 60
       }
     },
-    "featured_collection_CxjnxU": {
+    "featured_collection_LkqxUq": {
       "type": "featured-collection",
-      "name": "Limited Editions",
+      "name": "Recommended This Week",
       "settings": {
-        "collection": "limited-edition",
+        "collection": "best-seller",
         "products_to_show": 6,
-        "title": "Limited Editions",
+        "title": "Recommended This Week",
         "heading_size": "h1",
-        "description": "<p><strong>Once they’re gone, they’re truly gone.</strong> Secure yours before the next one arrives…and this one becomes history.</p>",
+        "description": "<p>Our weekly <strong>must-try selection </strong>coffees born from courage, craft, and the refusal to stay in the old chain.</p>",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 3,
@@ -341,15 +341,15 @@
         "padding_bottom": 32
       }
     },
-    "featured_collection_LkqxUq": {
+    "featured_collection_CxjnxU": {
       "type": "featured-collection",
-      "name": "Recommended This Week",
+      "name": "Limited Editions",
       "settings": {
-        "collection": "best-seller",
+        "collection": "limited-edition",
         "products_to_show": 6,
-        "title": "Recommended This Week",
+        "title": "Limited Editions",
         "heading_size": "h1",
-        "description": "<p>Our weekly <strong>must-try selection </strong>coffees born from courage, craft, and the refusal to stay in the old chain.</p>",
+        "description": "<p><strong>Once they’re gone, they’re truly gone.</strong> Secure yours before the next one arrives…and this one becomes history.</p>",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 3,
@@ -616,7 +616,6 @@
     },
     "featured_collection_6q4Cwh": {
       "type": "featured-collection",
-      "disabled": true,
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "collection": "best-seller",
@@ -643,7 +642,7 @@
         "text_cta": "Shop Now",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 100,
+        "padding_top": 32,
         "padding_bottom": 100
       }
     },
@@ -1099,9 +1098,9 @@
     "video_Rajhf9",
     "image_banner",
     "collection_home_3CmXRN",
-    "featured_collection_CxjnxU",
-    "featured_collection_mmCRXt",
     "featured_collection_LkqxUq",
+    "featured_collection_mmCRXt",
+    "featured_collection_CxjnxU",
     "rich_text_a8CCQB",
     "featured_collection_QGjPbq",
     "image_banner_H6rQm4",
