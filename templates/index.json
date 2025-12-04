@@ -762,12 +762,12 @@
         "show_text_below": false,
         "show_top_tear": true,
         "top_tear_image": "shopify://shop_images/UNCHAINED_razgado-b.png",
-        "top_tear_height": 75,
+        "top_tear_height": 50,
         "top_tear_offset": 0,
         "show_bottom_tear": true,
         "bottom_tear_image": "shopify://shop_images/UNCHAINED_razgado-a.png",
         "bottom_tear_height": 50,
-        "bottom_tear_offset": 0
+        "bottom_tear_offset": 2
       }
     },
     "featured_collection_6q4Cwh": {
