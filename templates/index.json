@@ -15,7 +15,7 @@
     },
     "video_Rajhf9": {
       "type": "video",
-      "name": "t:sections.video.presets.name",
+      "name": "Video Principal",
       "settings": {
         "heading": "",
         "heading_size": "h0",
@@ -31,7 +31,7 @@
         "color_scheme": "",
         "show_top_tear": false,
         "top_tear_image": "shopify://shop_images/UNCHAINED_razgado_2.svg",
-        "top_tear_height": 50,
+        "top_tear_height": 175,
         "top_tear_offset": 0,
         "show_bottom_tear": false,
         "bottom_tear_image": "shopify://shop_images/UNCHAINED_razgado-a.png",
@@ -74,7 +74,7 @@
         "heading_n8Ba7Y"
       ],
       "disabled": true,
-      "name": "t:sections.video.presets.name",
+      "name": "Video Rasgado Secundario",
       "settings": {
         "heading": "",
         "heading_size": "h1",
