@@ -279,7 +279,7 @@
     },
     "featured_collection_CxjnxU": {
       "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
+      "name": "Limited Editions",
       "settings": {
         "collection": "limited-edition",
         "products_to_show": 6,
