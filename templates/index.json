@@ -694,9 +694,9 @@
         "buttons_CCinyg"
       ],
       "settings": {
-        "image": "shopify://shop_images/Maira_en_tostadora_b_n.png",
+        "image": "shopify://shop_images/Pink_bourbon_Maira.jpg",
         "image_overlay_opacity": 100,
-        "image_height": "large",
+        "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "middle-left",
         "desktop_content_alignment": "left",
@@ -707,11 +707,11 @@
         "show_text_below": false,
         "show_top_tear": true,
         "top_tear_image": "shopify://shop_images/UNCHAINED_razgado-b.png",
-        "top_tear_height": 85,
+        "top_tear_height": 50,
         "top_tear_offset": 0,
         "show_bottom_tear": true,
         "bottom_tear_image": "shopify://shop_images/UNCHAINED_razgado-a.png",
-        "bottom_tear_height": 65,
+        "bottom_tear_height": 50,
         "bottom_tear_offset": -2
       }
     },
@@ -891,7 +891,7 @@
         "buttons_t4Qm6H"
       ],
       "settings": {
-        "image": "shopify://shop_images/Maira_second_layer.png",
+        "image": "shopify://shop_images/PHOTO-2025-11-09-16-13-06.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "image_behavior": "none",
