@@ -686,6 +686,17 @@
             "style_subtitle": false
           }
         },
+        "heading_aX9B6J": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Superautomatic machines + Direct-trade coffee + 70% of revenue to growers</strong>",
+            "heading_size": "hxxl",
+            "font": "modesto",
+            "size_font": 28,
+            "color_text": "#fdda24",
+            "style_subtitle": false
+          }
+        },
         "text_hBAVpJ": {
           "type": "text",
           "settings": {
@@ -712,6 +723,7 @@
       "block_order": [
         "heading_HUChXy",
         "heading_GgNQQN",
+        "heading_aX9B6J",
         "text_hBAVpJ",
         "buttons_t4Qm6H"
       ],
