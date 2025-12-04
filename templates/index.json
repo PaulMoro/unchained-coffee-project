@@ -712,6 +712,7 @@
       "blocks": {
         "ai_gen_block_f2a706a_bQ8JNC": {
           "type": "ai_gen_block_f2a706a",
+          "name": "Video con AI",
           "settings": {
             "video": "shopify://files/videos/Fogon Final.mp4",
             "video_height": 70,
