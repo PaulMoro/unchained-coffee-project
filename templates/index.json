@@ -501,17 +501,17 @@
         "color_custom": true,
         "background_color": "#262624",
         "full_width": true,
-        "padding_top": 80,
-        "padding_bottom": 80
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "featured_collection_QGjPbq": {
       "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
+      "name": "Designed for the planet",
       "settings": {
         "collection": "best-seller",
         "products_to_show": 6,
-        "title": "Eco Exceptional",
+        "title": "Designed for the planet",
         "heading_size": "h1",
         "description": "<p><strong>Choose better. </strong>Sustainable by design. Exceptional by taste.</p>",
         "show_description": false,
