@@ -810,12 +810,12 @@
         "ai_gen_block_f2a706a_bQ8JNC": {
           "type": "ai_gen_block_f2a706a",
           "settings": {
-            "video": "shopify://files/videos/Volteando cafe Final.mp4",
-            "video_height": 65,
+            "video": "shopify://files/videos/Fogon Final.mp4",
+            "video_height": 80,
             "video_height_mobile": 50,
             "show_overlay": true,
             "overlay_color": "#000000",
-            "overlay_opacity": 70,
+            "overlay_opacity": 15,
             "heading": "Full width video",
             "heading_color": "#fdda24",
             "heading_size": 52,
