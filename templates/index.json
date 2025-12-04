@@ -910,11 +910,11 @@
     },
     "featured_collection_PdMWKF": {
       "type": "featured-collection",
-      "name": "Recomendado de la semana",
+      "name": "Drip Recommended",
       "settings": {
         "collection": "next-generation-producers",
         "products_to_show": 3,
-        "title": "Beyond Washed",
+        "title": "Drip",
         "heading_size": "h1",
         "description": "<p>Natural process coffees that<strong> feel new—yet comfortably familiar,</strong> with a clean, wine-like fruit sweetness.</p>",
         "show_description": false,
