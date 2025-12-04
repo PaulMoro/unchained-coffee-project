@@ -656,6 +656,7 @@
         "buttons_CCinyg"
       ],
       "disabled": true,
+      "name": "Banner Pink Bourbon",
       "settings": {
         "image": "shopify://shop_images/Pink_bourbon_Maira.jpg",
         "image_overlay_opacity": 100,
