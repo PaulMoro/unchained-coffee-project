@@ -751,7 +751,7 @@
       "settings": {
         "image": "shopify://shop_images/Maira_second_layer.png",
         "image_overlay_opacity": 100,
-        "image_height": "medium",
+        "image_height": "large",
         "image_behavior": "none",
         "desktop_content_position": "middle-left",
         "desktop_content_alignment": "left",
