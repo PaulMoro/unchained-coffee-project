@@ -37,8 +37,8 @@
         "bottom_tear_image": "shopify://shop_images/UNCHAINED_razgado-a.png",
         "bottom_tear_height": 70,
         "bottom_tear_offset": 30,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "image_banner": {
@@ -707,6 +707,34 @@
         "padding_bottom": 0
       }
     },
+    "video_Vtxebh": {
+      "type": "video",
+      "name": "Video Principal",
+      "settings": {
+        "heading": "",
+        "heading_size": "h0",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "enable_video_looping": true,
+        "video": "shopify://files/videos/Fogon Final.mp4",
+        "autoplay": true,
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": true,
+        "color_scheme": "",
+        "show_top_tear": true,
+        "top_tear_image": "shopify://shop_images/UNCHAINED_razgado-b.png",
+        "top_tear_height": 50,
+        "top_tear_offset": 0,
+        "show_bottom_tear": true,
+        "bottom_tear_image": "shopify://shop_images/UNCHAINED_razgado-a.png",
+        "bottom_tear_height": 50,
+        "bottom_tear_offset": 0,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "1764593089f0c0ca97": {
       "type": "_blocks",
       "blocks": {
@@ -736,6 +764,7 @@
       "block_order": [
         "ai_gen_block_f2a706a_bQ8JNC"
       ],
+      "disabled": true,
       "settings": {}
     },
     "featured_collection_fCmpXd": {
@@ -1077,6 +1106,7 @@
     "image_banner_H6rQm4",
     "featured_collection_6q4Cwh",
     "video_9Raep6",
+    "video_Vtxebh",
     "1764593089f0c0ca97",
     "featured_collection_fCmpXd",
     "featured_collection_PdMWKF",
