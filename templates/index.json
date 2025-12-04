@@ -311,7 +311,7 @@
     },
     "featured_collection_mmCRXt": {
       "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
+      "name": "New Releases",
       "settings": {
         "collection": "best-seller",
         "products_to_show": 6,
@@ -337,6 +337,38 @@
         "text_cta": "Buy Now",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "featured_collection_LkqxUq": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "best-seller",
+        "products_to_show": 6,
+        "title": "Beyond Washed",
+        "heading_size": "h1",
+        "description": "<p>Natural process coffees that<strong> feel new—yet comfortably familiar,</strong> with a clean, wine-like fruit sweetness.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 3,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-2",
+        "show_info_product": false,
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "image_cta": "shopify://shop_images/Vector_1.png",
+        "text_cta": "Buy Now",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 32,
         "padding_bottom": 32
       }
@@ -471,38 +503,6 @@
         "full_width": true,
         "padding_top": 80,
         "padding_bottom": 80
-      }
-    },
-    "featured_collection_LkqxUq": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
-      "settings": {
-        "collection": "best-seller",
-        "products_to_show": 6,
-        "title": "Beyond Washed",
-        "heading_size": "h1",
-        "description": "<p>Natural process coffees that<strong> feel new—yet comfortably familiar,</strong> with a clean, wine-like fruit sweetness.</p>",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 3,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "color_scheme": "scheme-2",
-        "show_info_product": false,
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "standard",
-        "image_cta": "shopify://shop_images/Vector_1.png",
-        "text_cta": "Buy Now",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 32,
-        "padding_bottom": 32
       }
     },
     "featured_collection_QGjPbq": {
@@ -1101,8 +1101,8 @@
     "collection_home_3CmXRN",
     "featured_collection_CxjnxU",
     "featured_collection_mmCRXt",
-    "rich_text_a8CCQB",
     "featured_collection_LkqxUq",
+    "rich_text_a8CCQB",
     "featured_collection_QGjPbq",
     "image_banner_H6rQm4",
     "featured_collection_6q4Cwh",
