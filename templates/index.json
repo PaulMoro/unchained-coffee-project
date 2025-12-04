@@ -714,7 +714,7 @@
           "type": "ai_gen_block_f2a706a",
           "settings": {
             "video": "shopify://files/videos/Fogon Final.mp4",
-            "video_height": 50,
+            "video_height": 70,
             "video_height_mobile": 50,
             "show_overlay": true,
             "overlay_color": "#000000",
