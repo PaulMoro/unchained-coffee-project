@@ -666,6 +666,7 @@
       "blocks": {
         "heading_HUChXy": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "OUTSTANDING PRODUCER",
             "heading_size": "h1",
@@ -716,8 +717,8 @@
         "buttons_t4Qm6H"
       ],
       "settings": {
-        "image": "shopify://shop_images/LANDING_-_UNCHAINED_COFFEE_Folder_-_Google_Drive.png",
-        "image_overlay_opacity": 100,
+        "image": "shopify://shop_images/People_at_the_office.png",
+        "image_overlay_opacity": 0,
         "image_height": "large",
         "image_behavior": "none",
         "desktop_content_position": "middle-left",
@@ -729,8 +730,8 @@
         "show_text_below": false,
         "show_top_tear": true,
         "top_tear_image": "shopify://shop_images/UNCHAINED_razgado-b.png",
-        "top_tear_height": 75,
-        "top_tear_offset": 0,
+        "top_tear_height": 50,
+        "top_tear_offset": 2,
         "show_bottom_tear": true,
         "bottom_tear_image": "shopify://shop_images/UNCHAINED_razgado-a.png",
         "bottom_tear_height": 50,
