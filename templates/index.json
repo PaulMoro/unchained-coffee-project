@@ -30,11 +30,13 @@
         "full_width": true,
         "color_scheme": "",
         "show_top_tear": false,
+        "top_tear_image": "shopify://shop_images/UNCHAINED_razgado_2.svg",
         "top_tear_height": 50,
-        "top_tear_offset": 2,
+        "top_tear_offset": 0,
         "show_bottom_tear": false,
-        "bottom_tear_height": 50,
-        "bottom_tear_offset": 2,
+        "bottom_tear_image": "shopify://shop_images/UNCHAINED_razgado-a.png",
+        "bottom_tear_height": 70,
+        "bottom_tear_offset": 30,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -749,9 +751,9 @@
         "buttons_CCinyg"
       ],
       "settings": {
-        "image": "shopify://shop_images/Black_man_drinking_coffee.png",
-        "image_overlay_opacity": 50,
-        "image_height": "medium",
+        "image": "shopify://shop_images/olga_ajustada.jpg",
+        "image_overlay_opacity": 100,
+        "image_height": "large",
         "image_behavior": "none",
         "desktop_content_position": "middle-left",
         "desktop_content_alignment": "left",
@@ -767,7 +769,7 @@
         "show_bottom_tear": true,
         "bottom_tear_image": "shopify://shop_images/UNCHAINED_razgado-a.png",
         "bottom_tear_height": 50,
-        "bottom_tear_offset": 2
+        "bottom_tear_offset": -2
       }
     },
     "featured_collection_6q4Cwh": {
