@@ -373,6 +373,38 @@
         "padding_bottom": 32
       }
     },
+    "featured_collection_GAQTXY": {
+      "type": "featured-collection",
+      "name": "The Unchained Favorites",
+      "settings": {
+        "collection": "best-seller",
+        "products_to_show": 6,
+        "title": "The Unchained Favorites",
+        "heading_size": "h1",
+        "description": "<p>Fresh drops from <strong>new growers rewriting the rules</strong>. New coffees, new stories, same purpose.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 3,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-2",
+        "show_info_product": false,
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "image_cta": "shopify://shop_images/Vector_1.png",
+        "text_cta": "Buy Now",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
     "rich_text_a8CCQB": {
       "type": "rich-text",
       "blocks": {
@@ -706,8 +738,85 @@
         "padding_bottom": 0
       }
     },
+    "image_banner_JxHCxx": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_HUChXy": {
+          "type": "heading",
+          "settings": {
+            "heading": "OUTSTANDING PRODUCER",
+            "heading_size": "h1",
+            "font": "modesto",
+            "size_font": 14,
+            "color_text": "#fdda24",
+            "style_subtitle": false
+          }
+        },
+        "heading_GgNQQN": {
+          "type": "heading",
+          "settings": {
+            "heading": "MAIRA CALDERON",
+            "heading_size": "h0",
+            "font": "modesto",
+            "size_font": 46,
+            "color_text": "#fdda24",
+            "style_subtitle": false
+          }
+        },
+        "text_hBAVpJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>She turns adversity into intention. At 22, she carries the story of a family that nearly lost everything, yet she chose to rebuild through craft, not circumstance. When the pandemic pushed her family to the edge, Maira leaned into coffee with quiet determination—studying barismo, mastering selection, and learning to elevate quality from the ground up.</p>",
+            "text_style": "body",
+            "color_text": "#f4f3ef"
+          }
+        },
+        "buttons_t4Qm6H": {
+          "type": "buttons",
+          "settings": {
+            "color_text": "#262624",
+            "color_bg": "#fdda24",
+            "small_btn": true,
+            "button_label_1": "GET TO KNOW HER",
+            "button_link_1": "#",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_HUChXy",
+        "heading_GgNQQN",
+        "text_hBAVpJ",
+        "buttons_t4Qm6H"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/PHOTO-2025-11-09-16-13-06.jpg",
+        "image_overlay_opacity": 100,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": false,
+        "color_scheme": "scheme-3",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "left",
+        "show_text_below": false,
+        "show_top_tear": true,
+        "top_tear_image": "shopify://shop_images/UNCHAINED_razgado-b.png",
+        "top_tear_height": 75,
+        "top_tear_offset": 0,
+        "show_bottom_tear": true,
+        "bottom_tear_image": "shopify://shop_images/UNCHAINED_razgado-a.png",
+        "bottom_tear_height": 50,
+        "bottom_tear_offset": 0
+      }
+    },
     "video_Vtxebh": {
       "type": "video",
+      "disabled": true,
       "name": "Video Principal",
       "settings": {
         "heading": "",
@@ -829,82 +938,6 @@
         "swipe_on_mobile": false,
         "padding_top": 32,
         "padding_bottom": 32
-      }
-    },
-    "image_banner_JxHCxx": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_HUChXy": {
-          "type": "heading",
-          "settings": {
-            "heading": "OUTSTANDING PRODUCER",
-            "heading_size": "h1",
-            "font": "modesto",
-            "size_font": 14,
-            "color_text": "#fdda24",
-            "style_subtitle": false
-          }
-        },
-        "heading_GgNQQN": {
-          "type": "heading",
-          "settings": {
-            "heading": "MAIRA CALDERON",
-            "heading_size": "h0",
-            "font": "modesto",
-            "size_font": 46,
-            "color_text": "#fdda24",
-            "style_subtitle": false
-          }
-        },
-        "text_hBAVpJ": {
-          "type": "text",
-          "settings": {
-            "text": "<p>She turns adversity into intention. At 22, she carries the story of a family that nearly lost everything, yet she chose to rebuild through craft, not circumstance. When the pandemic pushed her family to the edge, Maira leaned into coffee with quiet determination—studying barismo, mastering selection, and learning to elevate quality from the ground up.</p>",
-            "text_style": "body",
-            "color_text": "#f4f3ef"
-          }
-        },
-        "buttons_t4Qm6H": {
-          "type": "buttons",
-          "settings": {
-            "color_text": "#262624",
-            "color_bg": "#fdda24",
-            "small_btn": true,
-            "button_label_1": "GET TO KNOW HER",
-            "button_link_1": "#",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_HUChXy",
-        "heading_GgNQQN",
-        "text_hBAVpJ",
-        "buttons_t4Qm6H"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/PHOTO-2025-11-09-16-13-06.jpg",
-        "image_overlay_opacity": 100,
-        "image_height": "medium",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-left",
-        "desktop_content_alignment": "left",
-        "show_text_box": false,
-        "color_scheme": "scheme-3",
-        "stack_images_on_mobile": false,
-        "mobile_content_alignment": "left",
-        "show_text_below": false,
-        "show_top_tear": true,
-        "top_tear_image": "shopify://shop_images/UNCHAINED_razgado-b.png",
-        "top_tear_height": 75,
-        "top_tear_offset": 0,
-        "show_bottom_tear": true,
-        "bottom_tear_image": "shopify://shop_images/UNCHAINED_razgado-a.png",
-        "bottom_tear_height": 50,
-        "bottom_tear_offset": 0
       }
     },
     "1764591734c9abccfa": {
@@ -1101,16 +1134,17 @@
     "featured_collection_LkqxUq",
     "featured_collection_mmCRXt",
     "featured_collection_CxjnxU",
+    "featured_collection_GAQTXY",
     "rich_text_a8CCQB",
     "featured_collection_QGjPbq",
     "featured_collection_6q4Cwh",
     "image_banner_H6rQm4",
     "video_9Raep6",
+    "image_banner_JxHCxx",
     "video_Vtxebh",
     "1764593089f0c0ca97",
     "featured_collection_fCmpXd",
     "featured_collection_PdMWKF",
-    "image_banner_JxHCxx",
     "1764591734c9abccfa",
     "image_with_text_R8QVJz",
     "featured_blog_yQd77q",
