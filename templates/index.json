@@ -749,9 +749,9 @@
         "buttons_CCinyg"
       ],
       "settings": {
-        "image": "shopify://shop_images/Maira_second_layer.png",
-        "image_overlay_opacity": 100,
-        "image_height": "large",
+        "image": "shopify://shop_images/Black_man_drinking_coffee.png",
+        "image_overlay_opacity": 50,
+        "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "middle-left",
         "desktop_content_alignment": "left",
@@ -762,11 +762,11 @@
         "show_text_below": false,
         "show_top_tear": true,
         "top_tear_image": "shopify://shop_images/UNCHAINED_razgado-b.png",
-        "top_tear_height": 30,
+        "top_tear_height": 75,
         "top_tear_offset": 0,
         "show_bottom_tear": true,
         "bottom_tear_image": "shopify://shop_images/UNCHAINED_razgado-a.png",
-        "bottom_tear_height": 30,
+        "bottom_tear_height": 50,
         "bottom_tear_offset": 0
       }
     },
