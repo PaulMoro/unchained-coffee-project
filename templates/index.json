@@ -343,7 +343,7 @@
     },
     "featured_collection_LkqxUq": {
       "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
+      "name": "Recommended This Week",
       "settings": {
         "collection": "best-seller",
         "products_to_show": 6,
