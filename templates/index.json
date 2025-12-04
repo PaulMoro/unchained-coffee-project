@@ -592,10 +592,11 @@
         "text_B6YYNT",
         "buttons_CCinyg"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/Pink_bourbon_Maira.jpg",
         "image_overlay_opacity": 100,
-        "image_height": "medium",
+        "image_height": "large",
         "image_behavior": "none",
         "desktop_content_position": "middle-left",
         "desktop_content_alignment": "left",
@@ -713,7 +714,7 @@
           "type": "ai_gen_block_f2a706a",
           "settings": {
             "video": "shopify://files/videos/Fogon Final.mp4",
-            "video_height": 80,
+            "video_height": 100,
             "video_height_mobile": 50,
             "show_overlay": true,
             "overlay_color": "#000000",
@@ -734,7 +735,6 @@
       "block_order": [
         "ai_gen_block_f2a706a_bQ8JNC"
       ],
-      "disabled": true,
       "settings": {}
     },
     "featured_collection_fCmpXd": {
