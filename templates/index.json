@@ -317,7 +317,7 @@
         "products_to_show": 6,
         "title": "New Releases",
         "heading_size": "h1",
-        "description": "<p>Fresh drops from new growers rewriting the rules. New coffees, new stories, same purpose.</p>",
+        "description": "<p>Fresh drops from <strong>new growers rewriting the rules</strong>. New coffees, new stories, same purpose.</p>",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 3,
