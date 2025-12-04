@@ -667,7 +667,7 @@
         "heading_HUChXy": {
           "type": "heading",
           "settings": {
-            "heading": "THE FIRST OFFICE COFFEE MODEL DESIGNED TO CHANGE THE CHAIN",
+            "heading": "THE FIRST MODEL DESIGNED TO CHANGE THE CHAIN",
             "heading_size": "h0",
             "font": "modesto",
             "size_font": 14,
@@ -690,8 +690,8 @@
           "type": "text",
           "settings": {
             "text": "<p><strong>Superautomatic machines + Direct-trade coffee + 70% of revenue to growers</strong></p>",
-            "text_style": "caption-with-letter-spacing",
-            "color_text": "#fdda24"
+            "text_style": "subtitle",
+            "color_text": "#ffffff"
           }
         },
         "buttons_t4Qm6H": {
