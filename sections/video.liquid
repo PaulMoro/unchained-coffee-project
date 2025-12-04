@@ -8,12 +8,12 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
   {% if section.settings.show_top_tear or section.settings.show_bottom_tear %}
-  .color-{{ section.settings.color_scheme }} {
+  .video-section-{{ section.id }} {
     position: relative;
     z-index: 1;
   }
-  .color-{{ section.settings.color_scheme }}::before,
-  .color-{{ section.settings.color_scheme }}::after {
+  .video-section-{{ section.id }}::before,
+  .video-section-{{ section.id }}::after {
     position: absolute;
     left: 0;
     width: 100%;
@@ -26,25 +26,25 @@
   }
   {% endif %}
   {% if section.settings.show_top_tear and section.settings.top_tear_image != blank %}
-    .color-{{ section.settings.color_scheme }}::before {
+    .video-section-{{ section.id }}::before {
       content: '';
       top: {{ section.settings.top_tear_offset }}px;
       height: {{ section.settings.top_tear_height }}px;
       background-image: url('{{ section.settings.top_tear_image | image_url: width: 2000 }}');
     }
   {% else %}
-    .color-{{ section.settings.color_scheme }}::before { content: none; }
+    .video-section-{{ section.id }}::before { content: none; }
   {% endif %}
 
   {% if section.settings.show_bottom_tear and section.settings.bottom_tear_image != blank %}
-    .color-{{ section.settings.color_scheme }}::after {
+    .video-section-{{ section.id }}::after {
       content: '';
       bottom: {{ section.settings.bottom_tear_offset }}px;
       height: {{ section.settings.bottom_tear_height }}px;
       background-image: url('{{ section.settings.bottom_tear_image | image_url: width: 2000 }}');
     }
   {% else %}
-    .color-{{ section.settings.color_scheme }}::after { content: none; }
+    .video-section-{{ section.id }}::after { content: none; }
   {% endif %}
 
   @media screen and (min-width: 750px) {
@@ -78,7 +78,10 @@
   {%- endif %}
 {%- endcapture -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient" style="position: relative;">
+<div
+  class="color-{{ section.settings.color_scheme }} gradient video-section-{{ section.id }}"
+  style="position: relative;"
+>
   <div
     class="video-section isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding"
   >
@@ -159,7 +162,9 @@
           fetchpriority="high"
           autoplay=""
           muted=""
-          controls=""
+          {% if section.settings.controls %}
+            controls=""
+          {% endif %}
           playsinline=""
           poster="{{ section.settings.video.preview_image | image_url: width: 1100 }}"
         >
@@ -400,6 +405,12 @@
       "type": "checkbox",
       "id": "autoplay",
       "label": "Autoplay para Video",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "controls",
+      "label": "Mostrar Controles",
       "default": true
     },
     {
