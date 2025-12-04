@@ -310,6 +310,38 @@
         "padding_bottom": 60
       }
     },
+    "featured_collection_mmCRXt": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "best-seller",
+        "products_to_show": 6,
+        "title": "Change Makers",
+        "heading_size": "h1",
+        "description": "<p>Coffees grown by<strong> leaders who turn action into impact </strong>and create real change in their communitie<strong>s.</strong></p>",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 3,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-2",
+        "show_info_product": false,
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "image_cta": "shopify://shop_images/Vector_1.png",
+        "text_cta": "Shop Now",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "rich_text_a8CCQB": {
       "type": "rich-text",
       "blocks": {
@@ -441,15 +473,15 @@
         "padding_bottom": 40
       }
     },
-    "featured_collection_mmCRXt": {
+    "featured_collection_LkqxUq": {
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "collection": "best-seller",
         "products_to_show": 6,
-        "title": "Change Makers",
+        "title": "Beyond Washed",
         "heading_size": "h1",
-        "description": "<p>Coffees grown by<strong> leaders who turn action into impact </strong>and create real change in their communitie<strong>s.</strong></p>",
+        "description": "<p>Natural process coffees that<strong> feel new—yet comfortably familiar,</strong> with a clean, wine-like fruit sweetness.</p>",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 3,
@@ -468,60 +500,9 @@
         "image_cta": "shopify://shop_images/Vector_1.png",
         "text_cta": "Shop Now",
         "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "image_with_text_R8QVJz": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_qWwDap": {
-          "type": "heading",
-          "settings": {
-            "heading": "WE ARE",
-            "heading_size": "h1"
-          }
-        },
-        "text_A4zAB7": {
-          "type": "text",
-          "settings": {
-            "text": "<p>The coffee industry is rigged - built so a few win while farmers lose.</p><p><strong>Unchained exist to break that system.</strong></p><p>We've redesigned the coffee supply chain to deliver real value to the people who grow it and people who drink it.</p><p><strong>Unchained is a call to change the game.</strong></p><p>Because when you change the chain you change everything.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_jiiNWM": {
-          "type": "button",
-          "settings": {
-            "color_text": "#f4f3ef",
-            "color_bg": "#262624",
-            "small_btn": true,
-            "button_label": "Read more",
-            "button_link": "#",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_qWwDap",
-        "text_A4zAB7",
-        "button_jiiNWM"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/Overflow_Cup.png",
-        "height": "medium",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-2",
-        "color_scheme": "scheme-2",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "swipe_on_mobile": false,
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "featured_collection_QGjPbq": {
@@ -554,89 +535,6 @@
         "swipe_on_mobile": false,
         "padding_top": 100,
         "padding_bottom": 36
-      }
-    },
-    "image_with_text_YFEmh3": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_rtq6gg": {
-          "type": "heading",
-          "settings": {
-            "heading": "WE ARE",
-            "heading_size": "h1"
-          }
-        },
-        "text_nAYpWk": {
-          "type": "text",
-          "settings": {
-            "text": "<p>The coffee industry is rigged - built so a few win while farmers lose.</p><p><strong>Unchained exist to break that system.</strong></p><p>We've redesigned the coffee supply chain to deliver real value to the people who grow it and people who drink it.</p><p><strong>Unchained is a call to change the game.</strong></p><p>Because when you change the chain you change everything.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_QjWnJc": {
-          "type": "button",
-          "settings": {
-            "color_text": "#f4f3ef",
-            "color_bg": "#262624",
-            "small_btn": true,
-            "button_label": "Read more",
-            "button_link": "#",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_rtq6gg",
-        "text_nAYpWk",
-        "button_QjWnJc"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/Clip_path_group_2.png",
-        "height": "medium",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "image_behavior": "ambient",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-2",
-        "color_scheme": "scheme-2",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "featured_collection_LkqxUq": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
-      "settings": {
-        "collection": "best-seller",
-        "products_to_show": 6,
-        "title": "Beyond Washed",
-        "heading_size": "h1",
-        "description": "<p>Natural process coffees that<strong> feel new—yet comfortably familiar,</strong> with a clean, wine-like fruit sweetness.</p>",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 3,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "color_scheme": "scheme-2",
-        "show_info_product": false,
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "standard",
-        "image_cta": "shopify://shop_images/Vector_1.png",
-        "text_cta": "Shop Now",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 100,
-        "padding_bottom": 100
       }
     },
     "image_banner_H6rQm4": {
@@ -717,6 +615,7 @@
     },
     "featured_collection_6q4Cwh": {
       "type": "featured-collection",
+      "disabled": true,
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "collection": "best-seller",
@@ -837,6 +736,70 @@
       "disabled": true,
       "settings": {}
     },
+    "featured_collection_fCmpXd": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "best-seller",
+        "products_to_show": 6,
+        "title": "Beyond Washed",
+        "heading_size": "h1",
+        "description": "<p>Natural process coffees that<strong> feel new—yet comfortably familiar,</strong> with a clean, wine-like fruit sweetness.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 3,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-2",
+        "show_info_product": false,
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "image_cta": "shopify://shop_images/Vector_1.png",
+        "text_cta": "Shop Now",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "featured_collection_PdMWKF": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "best-seller",
+        "products_to_show": 6,
+        "title": "Beyond Washed",
+        "heading_size": "h1",
+        "description": "<p>Natural process coffees that<strong> feel new—yet comfortably familiar,</strong> with a clean, wine-like fruit sweetness.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 3,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-2",
+        "show_info_product": false,
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "image_cta": "shopify://shop_images/Vector_1.png",
+        "text_cta": "Shop Now",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
     "image_banner_JxHCxx": {
       "type": "image-banner",
       "blocks": {
@@ -913,38 +876,6 @@
         "bottom_tear_offset": 0
       }
     },
-    "featured_collection_fCmpXd": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
-      "settings": {
-        "collection": "best-seller",
-        "products_to_show": 6,
-        "title": "Beyond Washed",
-        "heading_size": "h1",
-        "description": "<p>Natural process coffees that<strong> feel new—yet comfortably familiar,</strong> with a clean, wine-like fruit sweetness.</p>",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 3,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "color_scheme": "scheme-2",
-        "show_info_product": false,
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "standard",
-        "image_cta": "shopify://shop_images/Vector_1.png",
-        "text_cta": "Shop Now",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 100,
-        "padding_bottom": 100
-      }
-    },
     "1764591734c9abccfa": {
       "type": "_blocks",
       "blocks": {
@@ -990,6 +921,57 @@
       ],
       "settings": {}
     },
+    "image_with_text_R8QVJz": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_qWwDap": {
+          "type": "heading",
+          "settings": {
+            "heading": "WE ARE",
+            "heading_size": "h1"
+          }
+        },
+        "text_A4zAB7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The coffee industry is rigged - built so a few win while farmers lose.</p><p><strong>Unchained exist to break that system.</strong></p><p>We've redesigned the coffee supply chain to deliver real value to the people who grow it and people who drink it.</p><p><strong>Unchained is a call to change the game.</strong></p><p>Because when you change the chain you change everything.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_jiiNWM": {
+          "type": "button",
+          "settings": {
+            "color_text": "#f4f3ef",
+            "color_bg": "#262624",
+            "small_btn": true,
+            "button_label": "Read more",
+            "button_link": "#",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_qWwDap",
+        "text_A4zAB7",
+        "button_jiiNWM"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/fabio_cafetal.jpg",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-2",
+        "color_scheme": "scheme-2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_blog_yQd77q": {
       "type": "featured-blog",
       "name": "t:sections.featured-blog.presets.name",
@@ -1026,6 +1008,57 @@
         "padding_top": 100,
         "padding_bottom": 100
       }
+    },
+    "image_with_text_YFEmh3": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_rtq6gg": {
+          "type": "heading",
+          "settings": {
+            "heading": "WE ARE",
+            "heading_size": "h1"
+          }
+        },
+        "text_nAYpWk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The coffee industry is rigged - built so a few win while farmers lose.</p><p><strong>Unchained exist to break that system.</strong></p><p>We've redesigned the coffee supply chain to deliver real value to the people who grow it and people who drink it.</p><p><strong>Unchained is a call to change the game.</strong></p><p>Because when you change the chain you change everything.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_QjWnJc": {
+          "type": "button",
+          "settings": {
+            "color_text": "#f4f3ef",
+            "color_bg": "#262624",
+            "small_btn": true,
+            "button_label": "Read more",
+            "button_link": "#",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_rtq6gg",
+        "text_nAYpWk",
+        "button_QjWnJc"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Clip_path_group_2.png",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "ambient",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-2",
+        "color_scheme": "scheme-2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -1034,19 +1067,20 @@
     "image_banner",
     "collection_home_3CmXRN",
     "featured_collection_CxjnxU",
-    "rich_text_a8CCQB",
     "featured_collection_mmCRXt",
-    "image_with_text_R8QVJz",
-    "featured_collection_QGjPbq",
-    "image_with_text_YFEmh3",
+    "rich_text_a8CCQB",
     "featured_collection_LkqxUq",
+    "featured_collection_QGjPbq",
     "image_banner_H6rQm4",
     "featured_collection_6q4Cwh",
     "video_9Raep6",
     "1764593089f0c0ca97",
-    "image_banner_JxHCxx",
     "featured_collection_fCmpXd",
+    "featured_collection_PdMWKF",
+    "image_banner_JxHCxx",
     "1764591734c9abccfa",
-    "featured_blog_yQd77q"
+    "image_with_text_R8QVJz",
+    "featured_blog_yQd77q",
+    "image_with_text_YFEmh3"
   ]
 }
