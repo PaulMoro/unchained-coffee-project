@@ -338,8 +338,8 @@
         "text_cta": "Shop Now",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
-        "padding_top": 60,
-        "padding_bottom": 60
+        "padding_top": 32,
+        "padding_bottom": 32
       }
     },
     "rich_text_a8CCQB": {
@@ -1044,6 +1044,7 @@
         "text_nAYpWk",
         "button_QjWnJc"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/Clip_path_group_2.png",
