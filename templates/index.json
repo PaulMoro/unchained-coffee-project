@@ -810,7 +810,7 @@
         "ai_gen_block_f2a706a_bQ8JNC": {
           "type": "ai_gen_block_f2a706a",
           "settings": {
-            "video": "shopify://files/videos/Recolecion Olga.mp4",
+            "video": "shopify://files/videos/Volteando cafe Final.mp4",
             "video_height": 65,
             "video_height_mobile": 50,
             "show_overlay": true,
@@ -966,10 +966,10 @@
             "overlay_opacity": 50,
             "text_padding": 30,
             "background_color": "#ffffff",
-            "text_color": "#ffffff",
-            "button_background": "#ffffff",
+            "text_color": "#fdda24",
+            "button_background": "#fdda24",
             "button_text_color": "#121212",
-            "button_hover_background": "#f4f4f4",
+            "button_hover_background": "#fdda24",
             "heading_size": 32,
             "text_size": 16,
             "heading_spacing": 15,
