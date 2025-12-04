@@ -771,9 +771,9 @@
     },
     "featured_collection_PdMWKF": {
       "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
+      "name": "Recomendado de la semana",
       "settings": {
-        "collection": "best-seller",
+        "collection": "producer-cristian-alejandro-beltran-copy",
         "products_to_show": 6,
         "title": "Beyond Washed",
         "heading_size": "h1",
@@ -795,7 +795,7 @@
         "quick_add": "standard",
         "image_cta": "shopify://shop_images/Vector_1.png",
         "text_cta": "Shop Now",
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 100,
         "padding_bottom": 100
