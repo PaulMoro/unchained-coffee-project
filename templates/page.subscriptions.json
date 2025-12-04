@@ -11,13 +11,82 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
+        "padding_top": 60,
+        "padding_bottom": 60
       }
+    },
+    "17648851987fce27e2": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_f31f460_jkrAFR": {
+          "type": "ai_gen_block_f31f460",
+          "settings": {
+            "main_heading": "Choose Your Coffee Subscription",
+            "main_subheading": "Select the perfect plan for your coffee needs",
+            "level_1_enabled": true,
+            "level_1_badge": "",
+            "level_1_name": "Starter",
+            "level_1_price": "$19.99",
+            "level_1_frequency": "per month",
+            "level_1_description": "Perfect for casual coffee drinkers who want quality beans delivered monthly.",
+            "level_1_feature_1": "1 bag of premium coffee per month",
+            "level_1_feature_2": "Free shipping",
+            "level_1_feature_3": "Cancel anytime",
+            "level_1_feature_4": "Access to exclusive blends",
+            "level_1_button_text": "Subscribe Now",
+            "level_1_button_link": "",
+            "level_2_enabled": true,
+            "level_2_badge": "Popular",
+            "level_2_name": "Enthusiast",
+            "level_2_price": "$34.99",
+            "level_2_frequency": "per month",
+            "level_2_description": "For true coffee lovers who appreciate variety and premium quality.",
+            "level_2_feature_1": "2 bags of premium coffee per month",
+            "level_2_feature_2": "Free priority shipping",
+            "level_2_feature_3": "Early access to new releases",
+            "level_2_feature_4": "10% off additional purchases",
+            "level_2_button_text": "Subscribe Now",
+            "level_2_button_link": "",
+            "level_3_enabled": true,
+            "level_3_badge": "Best Value",
+            "level_3_name": "Connoisseur",
+            "level_3_price": "$54.99",
+            "level_3_frequency": "per month",
+            "level_3_description": "The ultimate experience for coffee connoisseurs seeking the finest selections.",
+            "level_3_feature_1": "3 bags of premium coffee per month",
+            "level_3_feature_2": "Free express shipping",
+            "level_3_feature_3": "Exclusive rare & limited editions",
+            "level_3_feature_4": "15% off all purchases",
+            "level_3_button_text": "Subscribe Now",
+            "level_3_button_link": "",
+            "heading_color": "#121212",
+            "text_color": "#121212",
+            "price_color": "#121212",
+            "card_background": "#ffffff",
+            "badge_background": "#121212",
+            "badge_text_color": "#ffffff",
+            "feature_icon_color": "#121212",
+            "button_background": "#121212",
+            "button_text_color": "#ffffff",
+            "button_hover_background": "#000000",
+            "heading_size": 36,
+            "subheading_size": 18,
+            "card_border_radius": 12,
+            "button_border_radius": 8
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_f31f460_jkrAFR"
+      ],
+      "settings": {}
     }
   },
   "order": [
-    "main"
+    "main",
+    "17648851987fce27e2"
   ]
 }
