@@ -96,6 +96,7 @@
       "blocks": {
         "collection_KpkXCw": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "select_space": "left",
             "title_collection": "Fruity",
@@ -104,6 +105,7 @@
         },
         "collection_wL6QYV": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "select_space": "left",
             "title_collection": "Floral",
@@ -112,6 +114,7 @@
         },
         "collection_wF4GYa": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "select_space": "left",
             "title_collection": "Sweet",
@@ -120,6 +123,7 @@
         },
         "collection_U4wWAE": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "select_space": "left",
             "title_collection": "Nutty/Cocoa",
@@ -128,6 +132,7 @@
         },
         "collection_h7gFMX": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "select_space": "left",
             "title_collection": "Spice",
@@ -136,6 +141,7 @@
         },
         "collection_3RfptT": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "select_space": "left",
             "title_collection": "Espresso",
@@ -144,6 +150,7 @@
         },
         "collection_XMcwnX": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "select_space": "left",
             "title_collection": "French Press / Drip",
@@ -152,6 +159,7 @@
         },
         "collection_FybczF": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "select_space": "left",
             "title_collection": "Pour Over",
@@ -160,6 +168,7 @@
         },
         "collection_xnXDmR": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "select_space": "left",
             "title_collection": "Decaf",
@@ -168,6 +177,7 @@
         },
         "collection_Giinmj": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "select_space": "left",
             "title_collection": "Light Roast",
@@ -176,6 +186,7 @@
         },
         "collection_f8XUft": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "select_space": "left",
             "title_collection": "Medium",
@@ -184,6 +195,7 @@
         },
         "collection_rqUPRt": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "select_space": "left",
             "title_collection": "Medium Dark",
@@ -192,6 +204,7 @@
         },
         "collection_npNHmB": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "select_space": "left",
             "title_collection": "",
@@ -256,9 +269,9 @@
       ],
       "name": "Collection Home",
       "settings": {
-        "width_section": 30,
+        "width_section": 10,
         "bg_section_left": "#f5f4f0",
-        "title_left": "Coffee Profile",
+        "title_left": "",
         "font_left": "modesto",
         "size_font_left": 36,
         "color_title_left": "#262624",
