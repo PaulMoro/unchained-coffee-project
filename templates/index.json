@@ -29,6 +29,12 @@
         "description": "",
         "full_width": true,
         "color_scheme": "",
+        "show_top_tear": false,
+        "top_tear_height": 50,
+        "top_tear_offset": 2,
+        "show_bottom_tear": false,
+        "bottom_tear_height": 50,
+        "bottom_tear_offset": 2,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -80,6 +86,12 @@
         "description": "",
         "full_width": true,
         "color_scheme": "",
+        "show_top_tear": false,
+        "top_tear_height": 50,
+        "top_tear_offset": 2,
+        "show_bottom_tear": false,
+        "bottom_tear_height": 50,
+        "bottom_tear_offset": 2,
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -127,7 +139,12 @@
         "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
         "show_text_below": false,
-        "efecto_rasgado": true
+        "show_top_tear": false,
+        "top_tear_height": 50,
+        "top_tear_offset": 2,
+        "show_bottom_tear": false,
+        "bottom_tear_height": 50,
+        "bottom_tear_offset": 2
       }
     },
     "collection_home_3CmXRN": {
@@ -733,7 +750,7 @@
       ],
       "settings": {
         "image": "shopify://shop_images/Maira_second_layer.png",
-        "image_overlay_opacity": 0,
+        "image_overlay_opacity": 100,
         "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "middle-left",
@@ -743,7 +760,14 @@
         "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
         "show_text_below": false,
-        "efecto_rasgado": true
+        "show_top_tear": true,
+        "top_tear_image": "shopify://shop_images/UNCHAINED_razgado-b.png",
+        "top_tear_height": 85,
+        "top_tear_offset": 2,
+        "show_bottom_tear": true,
+        "bottom_tear_image": "shopify://shop_images/UNCHAINED_razgado-a.png",
+        "bottom_tear_height": 50,
+        "bottom_tear_offset": 2
       }
     },
     "featured_collection_6q4Cwh": {
@@ -785,11 +809,11 @@
           "type": "ai_gen_block_f2a706a",
           "settings": {
             "video": "shopify://files/videos/Recolecion Olga.mp4",
-            "video_height": 60,
+            "video_height": 65,
             "video_height_mobile": 50,
             "show_overlay": true,
             "overlay_color": "#000000",
-            "overlay_opacity": 30,
+            "overlay_opacity": 70,
             "heading": "Full width video",
             "heading_color": "#fdda24",
             "heading_size": 52,
@@ -875,7 +899,12 @@
         "stack_images_on_mobile": false,
         "mobile_content_alignment": "left",
         "show_text_below": false,
-        "efecto_rasgado": true
+        "show_top_tear": false,
+        "top_tear_height": 50,
+        "top_tear_offset": 2,
+        "show_bottom_tear": false,
+        "bottom_tear_height": 50,
+        "bottom_tear_offset": 2
       }
     },
     "featured_collection_fCmpXd": {
