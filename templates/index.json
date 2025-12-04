@@ -691,8 +691,8 @@
           "type": "text",
           "settings": {
             "text": "<p><strong>Superautomatic machines + Direct-trade coffee + 70% of revenue to growers</strong><br/><br/><em>The first office coffee model designed to change the chain.</em></p>",
-            "text_style": "body",
-            "color_text": "#f4f3ef"
+            "text_style": "caption-with-letter-spacing",
+            "color_text": "#fdda24"
           }
         },
         "buttons_t4Qm6H": {
@@ -717,7 +717,7 @@
         "buttons_t4Qm6H"
       ],
       "settings": {
-        "image": "shopify://shop_images/People_at_the_office.png",
+        "image": "shopify://shop_images/People_at_the_office_4dd33dda-21a4-4fae-9282-e9179f669a35.png",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "image_behavior": "none",
