@@ -668,11 +668,11 @@
           "type": "heading",
           "disabled": true,
           "settings": {
-            "heading": "OUTSTANDING PRODUCER",
-            "heading_size": "h1",
+            "heading": "THE FIRST OFFICE COFFEE MODEL DESIGNED TO CHANGE THE CHAIN",
+            "heading_size": "h0",
             "font": "modesto",
             "size_font": 14,
-            "color_text": "#fdda24",
+            "color_text": "#ffffff",
             "style_subtitle": false
           }
         },
