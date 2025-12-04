@@ -773,8 +773,8 @@
       "type": "featured-collection",
       "name": "Recomendado de la semana",
       "settings": {
-        "collection": "producer-cristian-alejandro-beltran-copy",
-        "products_to_show": 2,
+        "collection": "next-generation-producers",
+        "products_to_show": 3,
         "title": "Beyond Washed",
         "heading_size": "h1",
         "description": "<p>Natural process coffees that<strong> feel new—yet comfortably familiar,</strong> with a clean, wine-like fruit sweetness.</p>",
