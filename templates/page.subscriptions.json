@@ -37,7 +37,7 @@
             "level_1_feature_3": "Cancel anytime",
             "level_1_feature_4": "Free shipping",
             "level_1_button_text": "Subscribe Now",
-            "level_1_button_link": "",
+            "level_1_button_link": "shopify://products/starter",
             "level_2_enabled": true,
             "level_2_badge": "Popular",
             "level_2_name": "Shifter",
