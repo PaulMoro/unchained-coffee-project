@@ -1009,11 +1009,11 @@
       ],
       "name": "Banner Pink Bourbon",
       "settings": {
-        "image": "shopify://shop_images/Pink_bourbon_Maira.jpg",
+        "image": "shopify://shop_images/Foto_Maira_Calderon_-_Pava.jpg",
         "image_overlay_opacity": 100,
         "image_height": "large",
         "image_behavior": "none",
-        "desktop_content_position": "middle-left",
+        "desktop_content_position": "bottom-left",
         "desktop_content_alignment": "left",
         "show_text_box": false,
         "color_scheme": "scheme-3",
