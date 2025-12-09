@@ -359,7 +359,6 @@
         "collection_eeKEzY",
         "collection_HTBAGH"
       ],
-      "disabled": true,
       "name": "Collection Home",
       "settings": {
         "width_section": 30,
@@ -1280,8 +1279,8 @@
   "order": [
     "video_Rajhf9",
     "image_banner",
-    "featured_collection_mmCRXt",
     "collection_fullwidth_XqbJbE",
+    "featured_collection_mmCRXt",
     "collection_home_3CmXRN",
     "featured_collection_LkqxUq",
     "featured_collection_CxjnxU",
