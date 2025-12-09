@@ -642,6 +642,83 @@
         "padding_bottom": 32
       }
     },
+    "image_banner_H6rQm4": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_Kxq8WY": {
+          "type": "heading",
+          "settings": {
+            "heading": "OUTSTANDING PRODUCER",
+            "heading_size": "h1",
+            "font": "modesto",
+            "size_font": 14,
+            "color_text": "#fdda24",
+            "style_subtitle": false
+          }
+        },
+        "heading_39qGrL": {
+          "type": "heading",
+          "settings": {
+            "heading": "MAIRA CALDERON",
+            "heading_size": "h0",
+            "font": "modesto",
+            "size_font": 46,
+            "color_text": "#fdda24",
+            "style_subtitle": false
+          }
+        },
+        "text_B6YYNT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>She turns adversity into intention. At 22, she carries the story of a family that nearly lost everything, yet she chose to rebuild through craft, not circumstance. When the pandemic pushed her family to the edge, Maira leaned into coffee with quiet determination—studying barismo, mastering selection, and learning to elevate quality from the ground up.</p>",
+            "text_style": "body",
+            "color_text": "#f4f3ef"
+          }
+        },
+        "buttons_CCinyg": {
+          "type": "buttons",
+          "settings": {
+            "color_text": "#262624",
+            "color_bg": "#fdda24",
+            "small_btn": true,
+            "button_label_1": "GET TO KNOW HER",
+            "button_link_1": "#",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Kxq8WY",
+        "heading_39qGrL",
+        "text_B6YYNT",
+        "buttons_CCinyg"
+      ],
+      "name": "Banner Pink Bourbon",
+      "settings": {
+        "image": "shopify://shop_images/Foto_Maira_Calderon_-_Pava.jpg",
+        "image_overlay_opacity": 100,
+        "image_height": "large",
+        "image_behavior": "none",
+        "desktop_content_position": "bottom-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": false,
+        "color_scheme": "scheme-3",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "show_text_below": false,
+        "show_top_tear": true,
+        "top_tear_image": "shopify://shop_images/UNCHAINED_razgado-b.png",
+        "top_tear_height": 50,
+        "top_tear_offset": 0,
+        "show_bottom_tear": true,
+        "bottom_tear_image": "shopify://shop_images/UNCHAINED_razgado-a.png",
+        "bottom_tear_height": 50,
+        "bottom_tear_offset": -2
+      }
+    },
     "featured_collection_6q4Cwh": {
       "type": "featured-collection",
       "name": "Change Makers",
@@ -922,83 +999,6 @@
         "swipe_on_mobile": true,
         "padding_top": 32,
         "padding_bottom": 32
-      }
-    },
-    "image_banner_H6rQm4": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_Kxq8WY": {
-          "type": "heading",
-          "settings": {
-            "heading": "OUTSTANDING PRODUCER",
-            "heading_size": "h1",
-            "font": "modesto",
-            "size_font": 14,
-            "color_text": "#fdda24",
-            "style_subtitle": false
-          }
-        },
-        "heading_39qGrL": {
-          "type": "heading",
-          "settings": {
-            "heading": "MAIRA CALDERON",
-            "heading_size": "h0",
-            "font": "modesto",
-            "size_font": 46,
-            "color_text": "#fdda24",
-            "style_subtitle": false
-          }
-        },
-        "text_B6YYNT": {
-          "type": "text",
-          "settings": {
-            "text": "<p>She turns adversity into intention. At 22, she carries the story of a family that nearly lost everything, yet she chose to rebuild through craft, not circumstance. When the pandemic pushed her family to the edge, Maira leaned into coffee with quiet determination—studying barismo, mastering selection, and learning to elevate quality from the ground up.</p>",
-            "text_style": "body",
-            "color_text": "#f4f3ef"
-          }
-        },
-        "buttons_CCinyg": {
-          "type": "buttons",
-          "settings": {
-            "color_text": "#262624",
-            "color_bg": "#fdda24",
-            "small_btn": true,
-            "button_label_1": "GET TO KNOW HER",
-            "button_link_1": "#",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_Kxq8WY",
-        "heading_39qGrL",
-        "text_B6YYNT",
-        "buttons_CCinyg"
-      ],
-      "name": "Banner Pink Bourbon",
-      "settings": {
-        "image": "shopify://shop_images/Foto_Maira_Calderon_-_Pava.jpg",
-        "image_overlay_opacity": 100,
-        "image_height": "large",
-        "image_behavior": "none",
-        "desktop_content_position": "bottom-left",
-        "desktop_content_alignment": "left",
-        "show_text_box": false,
-        "color_scheme": "scheme-3",
-        "stack_images_on_mobile": false,
-        "mobile_content_alignment": "center",
-        "show_text_below": false,
-        "show_top_tear": true,
-        "top_tear_image": "shopify://shop_images/UNCHAINED_razgado-b.png",
-        "top_tear_height": 50,
-        "top_tear_offset": 0,
-        "show_bottom_tear": true,
-        "bottom_tear_image": "shopify://shop_images/UNCHAINED_razgado-a.png",
-        "bottom_tear_height": 50,
-        "bottom_tear_offset": -2
       }
     },
     "1764591734c9abccfa": {
@@ -1288,6 +1288,7 @@
     "rich_text_a8CCQB",
     "featured_collection_QGjPbq",
     "featured_collection_6q4Cwh",
+    "image_banner_H6rQm4",
     "video_9Raep6",
     "video_Vtxebh",
     "1764593089f0c0ca97",
@@ -1295,7 +1296,6 @@
     "featured_collection_PdMWKF",
     "featured_collection_C36xWx",
     "featured_collection_Bgdphr",
-    "image_banner_H6rQm4",
     "1764591734c9abccfa",
     "image_banner_JxHCxx",
     "image_with_text_R8QVJz",
