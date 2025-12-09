@@ -341,7 +341,7 @@
         "image_cta": "shopify://shop_images/Vector_1.png",
         "text_cta": "Buy Now",
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 32,
         "padding_bottom": 32
       }
@@ -373,7 +373,7 @@
         "image_cta": "shopify://shop_images/Vector_1.png",
         "text_cta": "Buy Now",
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 32,
         "padding_bottom": 32
       }
@@ -569,7 +569,7 @@
         "image_cta": "shopify://shop_images/Vector_1.png",
         "text_cta": "Buy Now",
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 32,
         "padding_bottom": 32
       }
@@ -601,7 +601,7 @@
         "image_cta": "shopify://shop_images/Vector_1.png",
         "text_cta": "Shop Now",
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 32,
         "padding_bottom": 32
       }
@@ -844,7 +844,7 @@
         "image_cta": "shopify://shop_images/Vector_1.png",
         "text_cta": "Buy Now",
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 32,
         "padding_bottom": 32
       }
@@ -876,7 +876,7 @@
         "image_cta": "shopify://shop_images/Vector_1.png",
         "text_cta": "Buy Now",
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 32,
         "padding_bottom": 32
       }
@@ -908,7 +908,7 @@
         "image_cta": "shopify://shop_images/Vector_1.png",
         "text_cta": "Buy Now",
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 32,
         "padding_bottom": 32
       }
@@ -940,7 +940,7 @@
         "image_cta": "shopify://shop_images/Vector_1.png",
         "text_cta": "Buy Now",
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 32,
         "padding_bottom": 32
       }
@@ -1206,6 +1206,70 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "collection_fullwidth_XqbJbE": {
+      "type": "collection-fullwidth",
+      "blocks": {
+        "collection_button_4Cbgqi": {
+          "type": "collection_button",
+          "settings": {
+            "collection": "best-seller",
+            "custom_title": "ALL"
+          }
+        },
+        "collection_button_Va7YnJ": {
+          "type": "collection_button",
+          "settings": {
+            "collection": "first-break",
+            "custom_title": "FIRST BREAK"
+          }
+        },
+        "collection_button_cHwP9J": {
+          "type": "collection_button",
+          "settings": {
+            "collection": "varietal-java-copy",
+            "custom_title": "COCOA"
+          }
+        },
+        "collection_button_VenCmK": {
+          "type": "collection_button",
+          "settings": {
+            "collection": "flavor-profile-fermented-copy",
+            "custom_title": "FRUITY"
+          }
+        },
+        "collection_button_jMKLRT": {
+          "type": "collection_button",
+          "settings": {
+            "collection": "flavor-profile-vanilla-copy",
+            "custom_title": "FLORAL"
+          }
+        }
+      },
+      "block_order": [
+        "collection_button_4Cbgqi",
+        "collection_button_Va7YnJ",
+        "collection_button_cHwP9J",
+        "collection_button_VenCmK",
+        "collection_button_jMKLRT"
+      ],
+      "name": "Marquee Colecciones",
+      "settings": {
+        "bg_section": "#e8e6dd",
+        "title": "Explora nuestras categorías",
+        "title_alignment": "center",
+        "font_title": "modesto",
+        "size_font_title": 36,
+        "color_title": "#262624",
+        "font_items": "barlow",
+        "background_items": "#f5f4f0",
+        "color_text": "#262624",
+        "border_items": "#262624",
+        "hover_color_items": "#fdda24",
+        "hover_text_color": "#262624",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     }
   },
   "order": [
@@ -1231,6 +1295,7 @@
     "1764591734c9abccfa",
     "image_with_text_R8QVJz",
     "featured_blog_yQd77q",
-    "image_with_text_YFEmh3"
+    "image_with_text_YFEmh3",
+    "collection_fullwidth_XqbJbE"
   ]
 }

@@ -1,0 +1,319 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+{%- style -%}
+  /* Espaciado General de la Sección */
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    background-color: {{ section.settings.bg_section }};
+    overflow: hidden; /* Evita scroll horizontal no deseado */
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  /* Título de la Sección (Opcional) */
+  .collection-marquee__title {
+    text-align: {{ section.settings.title_alignment }};
+    color: {{ section.settings.color_title }};
+    margin-bottom: 3rem;
+    padding-inline: 2rem; /* Margen de seguridad en móviles */
+  }
+
+  .collection-marquee__title h2 {
+    margin: 0;
+    font-size: {{ section.settings.size_font_title }}px;
+    /* Aquí se aplicará la fuente seleccionada en el schema */
+  }
+
+  /* Contenedor del Slider */
+  .collection-marquee__wrapper {
+    width: 100%;
+    display: block;
+  }
+
+  /* Estilos del Slide Individual (El contenedor del botón) */
+  .section-{{ section.id }}-padding .splide__slide {
+    width: auto; /* CRUCIAL: Permite ancho variable según el texto */
+    padding: 0;  /* El gap lo controlaremos con JS o margin */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Estilos del Botón (Heredados del lado izquierdo original) */
+  .collection-marquee__item {
+    display: inline-block;
+    text-decoration: none;
+    border: 2px solid;
+    border-radius: 999px; /* Pill shape perfecta */
+    padding: 1rem 3rem; /* Padding interno del botón */
+
+    /* Colores dinámicos desde settings */
+    border-color: {{ section.settings.border_items }};
+    background-color: {{ section.settings.background_items }};
+    color: {{ section.settings.color_text }};
+
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Evita que el texto se rompa en dos líneas */
+  }
+
+  /* Tipografía interna del botón */
+  .collection-marquee__item h3 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.2;
+    /* Fuente dinámica */
+    font-family: inherit; /* Hereda o se define abajo */
+  }
+
+  /* Estado Hover */
+  .collection-marquee__item:hover {
+    background-color: {{ section.settings.hover_color_items }};
+    border-color: {{ section.settings.hover_color_items }};
+    color: {{ section.settings.hover_text_color | default: section.settings.color_text }}; /* Opcional: cambio de color de texto */
+  }
+{%- endstyle -%}
+
+<div class="collection-marquee section-{{ section.id }}-padding">
+  {%- if section.settings.title != blank -%}
+    <div class="collection-marquee__title page-width">
+      <h2 class="text-{{ section.settings.font_title }}">
+        {{ section.settings.title }}
+      </h2>
+    </div>
+  {%- endif -%}
+
+  <div class="collection-marquee__wrapper">
+    <section class="splide" id="splide-{{ section.id }}" aria-label="Collection Marquee">
+      <div class="splide__track">
+        <ul class="splide__list">
+          {%- for block in section.blocks -%}
+            {%- if block.settings.collection != blank or block.settings.custom_title != blank -%}
+              <li class="splide__slide">
+                <a href="{{ block.settings.collection.url | default: '#' }}" class="collection-marquee__item">
+                  <h3 class="text-{{ section.settings.font_items }}">
+                    {{ block.settings.custom_title | default: block.settings.collection.title }}
+                  </h3>
+                </a>
+              </li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"
+></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const splideElement = document.getElementById('splide-{{ section.id }}');
+
+    if (splideElement) {
+      new Splide(splideElement, {
+        type: 'loop',
+        drag: 'free',
+        focus: 'center',
+        perPage: 3,
+        autoWidth: true,
+        gap: '20px',
+        arrows: false,
+        pagination: false,
+        autoScroll: {
+          speed: 1.5,
+          pauseOnHover: true,
+          pauseOnFocus: false,
+          rewind: false,
+        },
+        breakpoints: {
+          750: {
+            gap: '15px',
+          },
+        },
+      }).mount(window.splide.Extensions);
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Marquee Colecciones",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Configuración General"
+    },
+    {
+      "type": "color",
+      "id": "bg_section",
+      "label": "Color Fondo Sección",
+      "default": "#e8e6dd"
+    },
+    {
+      "type": "header",
+      "content": "Título de la Sección"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Texto del Título",
+      "default": "Explora nuestras categorías"
+    },
+    {
+      "type": "select",
+      "id": "title_alignment",
+      "label": "Alineación del Título",
+      "options": [
+        { "value": "left", "label": "Izquierda" },
+        { "value": "center", "label": "Centro" },
+        { "value": "right", "label": "Derecha" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "font_title",
+      "label": "Fuente del Título",
+      "options": [
+        { "value": "permanent", "label": "Permanent Marker" },
+        { "value": "modesto", "label": "Modesto Text" },
+        { "value": "barlow", "label": "Barlow" }
+      ],
+      "default": "modesto"
+    },
+    {
+      "type": "range",
+      "id": "size_font_title",
+      "min": 16,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Tamaño Fuente Título",
+      "default": 36
+    },
+    {
+      "type": "color",
+      "id": "color_title",
+      "label": "Color del Título",
+      "default": "#262624"
+    },
+    {
+      "type": "header",
+      "content": "Estilo de los Botones"
+    },
+    {
+      "type": "select",
+      "id": "font_items",
+      "label": "Fuente de los Botones",
+      "options": [
+        { "value": "permanent", "label": "Permanent Marker" },
+        { "value": "modesto", "label": "Modesto Text" },
+        { "value": "barlow", "label": "Barlow" }
+      ],
+      "default": "barlow"
+    },
+    {
+      "type": "color",
+      "id": "background_items",
+      "label": "Fondo Botón",
+      "default": "#f5f4f0"
+    },
+    {
+      "type": "color",
+      "id": "color_text",
+      "label": "Color Texto",
+      "default": "#262624"
+    },
+    {
+      "type": "color",
+      "id": "border_items",
+      "label": "Color Borde",
+      "default": "#262624"
+    },
+    {
+      "type": "header",
+      "content": "Estilo Hover (Al pasar cursor)"
+    },
+    {
+      "type": "color",
+      "id": "hover_color_items",
+      "label": "Color Fondo y Borde Hover",
+      "default": "#fdda24"
+    },
+    {
+      "type": "color",
+      "id": "hover_text_color",
+      "label": "Color Texto Hover",
+      "default": "#262624"
+    },
+    {
+      "type": "header",
+      "content": "Espaciado (Padding)"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Superior",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Inferior",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection_button",
+      "name": "Botón de Colección",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Seleccionar Colección"
+        },
+        {
+          "type": "text",
+          "id": "custom_title",
+          "label": "Título Personalizado",
+          "info": "Deja en blanco para usar el nombre de la colección"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Marquee Colecciones",
+      "blocks": [
+        { "type": "collection_button" },
+        { "type": "collection_button" },
+        { "type": "collection_button" },
+        { "type": "collection_button" },
+        { "type": "collection_button" }
+      ]
+    }
+  ]
+}
+{% endschema %}
