@@ -9,10 +9,6 @@
  */
 {
   "sections": {
-    "1764592976d0b30007": {
-      "type": "_blocks",
-      "settings": {}
-    },
     "video_Rajhf9": {
       "type": "video",
       "name": "Video Principal",
@@ -102,7 +98,7 @@
         "description": "<p>Fresh drops from <strong>new growers rewriting the rules</strong>. New coffees, new stories, same purpose.</p>",
         "show_description": false,
         "description_style": "body",
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,
@@ -128,7 +124,6 @@
       "blocks": {
         "collection_KpkXCw": {
           "type": "collection",
-          "disabled": true,
           "settings": {
             "select_space": "left",
             "title_collection": "Fruity",
@@ -137,7 +132,6 @@
         },
         "collection_wL6QYV": {
           "type": "collection",
-          "disabled": true,
           "settings": {
             "select_space": "left",
             "title_collection": "Floral",
@@ -146,7 +140,6 @@
         },
         "collection_wF4GYa": {
           "type": "collection",
-          "disabled": true,
           "settings": {
             "select_space": "left",
             "title_collection": "Sweet",
@@ -155,7 +148,6 @@
         },
         "collection_U4wWAE": {
           "type": "collection",
-          "disabled": true,
           "settings": {
             "select_space": "left",
             "title_collection": "Nutty/Cocoa",
@@ -1217,7 +1209,6 @@
     }
   },
   "order": [
-    "1764592976d0b30007",
     "video_Rajhf9",
     "image_banner",
     "featured_collection_mmCRXt",
