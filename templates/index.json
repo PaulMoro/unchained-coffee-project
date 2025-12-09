@@ -188,6 +188,7 @@
       "blocks": {
         "collection_KpkXCw": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "select_space": "left",
             "title_collection": "Fruity",
@@ -196,6 +197,7 @@
         },
         "collection_wL6QYV": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "select_space": "left",
             "title_collection": "Floral",
@@ -204,6 +206,7 @@
         },
         "collection_wF4GYa": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "select_space": "left",
             "title_collection": "Sweet",
@@ -212,6 +215,7 @@
         },
         "collection_U4wWAE": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "select_space": "left",
             "title_collection": "Nutty/Cocoa",
