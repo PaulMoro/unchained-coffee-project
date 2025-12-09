@@ -293,7 +293,7 @@
       ],
       "name": "Collection Home",
       "settings": {
-        "width_section": 10,
+        "width_section": 30,
         "bg_section_left": "#f5f4f0",
         "title_left": "PRODUCER",
         "font_left": "modesto",
