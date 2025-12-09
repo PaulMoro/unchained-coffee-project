@@ -87,38 +87,6 @@
         "bottom_tear_offset": 2
       }
     },
-    "featured_collection_mmCRXt": {
-      "type": "featured-collection",
-      "name": "New Releases",
-      "settings": {
-        "collection": "best-seller",
-        "products_to_show": 6,
-        "title": "New Releases",
-        "heading_size": "h1",
-        "description": "<p>Fresh drops from <strong>new growers rewriting the rules</strong>. New coffees, new stories, same purpose.</p>",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 3,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "color_scheme": "scheme-2",
-        "show_info_product": false,
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "standard",
-        "image_cta": "shopify://shop_images/Vector_1.png",
-        "text_cta": "Buy Now",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 32,
-        "padding_bottom": 32
-      }
-    },
     "collection_fullwidth_XqbJbE": {
       "type": "collection-fullwidth",
       "blocks": {
@@ -171,7 +139,7 @@
         "title": "OUR COLLECTIONS",
         "title_alignment": "center",
         "font_title": "modesto",
-        "size_font_title": 36,
+        "size_font_title": 30,
         "color_title": "#262624",
         "font_items": "barlow",
         "background_items": "#f5f4f0",
@@ -181,6 +149,38 @@
         "hover_text_color": "#262624",
         "padding_top": 40,
         "padding_bottom": 40
+      }
+    },
+    "featured_collection_mmCRXt": {
+      "type": "featured-collection",
+      "name": "New Releases",
+      "settings": {
+        "collection": "best-seller",
+        "products_to_show": 6,
+        "title": "New Releases",
+        "heading_size": "h1",
+        "description": "<p>Fresh drops from <strong>new growers rewriting the rules</strong>. New coffees, new stories, same purpose.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 3,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-2",
+        "show_info_product": false,
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "image_cta": "shopify://shop_images/Vector_1.png",
+        "text_cta": "Buy Now",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 32,
+        "padding_bottom": 32
       }
     },
     "collection_home_3CmXRN": {
