@@ -129,7 +129,14 @@
           "type": "collection_button",
           "settings": {
             "collection": "espresso-recommended-filter",
-            "custom_title": "For Espresso"
+            "custom_title": "Espresso"
+          }
+        },
+        "collection_button_bXtFJG": {
+          "type": "collection_button",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
           }
         },
         "collection_button_6xhwjB": {
@@ -168,6 +175,7 @@
         "collection_button_MXbJjW",
         "collection_button_anUJhj",
         "collection_button_Gxyp4m",
+        "collection_button_bXtFJG",
         "collection_button_6xhwjB",
         "collection_button_9d4GaC",
         "collection_button_HCTyb9",
