@@ -97,6 +97,13 @@
             "custom_title": "ALL"
           }
         },
+        "collection_button_hHCRxy": {
+          "type": "collection_button",
+          "settings": {
+            "collection": "varietal-castillo-1",
+            "custom_title": "Decaf"
+          }
+        },
         "collection_button_ptBH3m": {
           "type": "collection_button",
           "settings": {
@@ -149,6 +156,7 @@
       },
       "block_order": [
         "collection_button_4Cbgqi",
+        "collection_button_hHCRxy",
         "collection_button_ptBH3m",
         "collection_button_Rii7ya",
         "collection_button_MXbJjW",
