@@ -118,6 +118,13 @@
             "custom_title": "Nutty/Cocoa"
           }
         },
+        "collection_button_anUJhj": {
+          "type": "collection_button",
+          "settings": {
+            "collection": "flavor-profile-nutty-copy",
+            "custom_title": "Spice"
+          }
+        },
         "collection_button_Gxyp4m": {
           "type": "collection_button",
           "settings": {
@@ -145,6 +152,7 @@
         "collection_button_ptBH3m",
         "collection_button_Rii7ya",
         "collection_button_MXbJjW",
+        "collection_button_anUJhj",
         "collection_button_Gxyp4m",
         "collection_button_ee7AQT",
         "collection_button_cHwP9J"
