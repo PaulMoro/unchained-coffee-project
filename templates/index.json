@@ -144,7 +144,7 @@
         "font_items": "barlow",
         "background_items": "#f5f4f0",
         "color_text": "#262624",
-        "border_items": "#ffffff",
+        "border_items": "#f5f4f0",
         "hover_color_items": "#fdda24",
         "hover_text_color": "#262624",
         "padding_top": 40,
