@@ -132,25 +132,18 @@
             "custom_title": "Espresso"
           }
         },
-        "collection_button_bXtFJG": {
-          "type": "collection_button",
-          "settings": {
-            "collection": "",
-            "custom_title": ""
-          }
-        },
         "collection_button_6xhwjB": {
           "type": "collection_button",
           "settings": {
             "collection": "caturra-varietal-filter",
-            "custom_title": "For Drip"
+            "custom_title": "Drip"
           }
         },
         "collection_button_9d4GaC": {
           "type": "collection_button",
           "settings": {
             "collection": "caturra-varietal-filter",
-            "custom_title": "For French Press"
+            "custom_title": "French Press"
           }
         },
         "collection_button_HCTyb9": {
@@ -166,6 +159,13 @@
             "collection": "varietal-castillo-1",
             "custom_title": "Decaf"
           }
+        },
+        "collection_button_bXtFJG": {
+          "type": "collection_button",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
+          }
         }
       },
       "block_order": [
@@ -175,11 +175,11 @@
         "collection_button_MXbJjW",
         "collection_button_anUJhj",
         "collection_button_Gxyp4m",
-        "collection_button_bXtFJG",
         "collection_button_6xhwjB",
         "collection_button_9d4GaC",
         "collection_button_HCTyb9",
-        "collection_button_hHCRxy"
+        "collection_button_hHCRxy",
+        "collection_button_bXtFJG"
       ],
       "name": "Marquee Colecciones",
       "settings": {
