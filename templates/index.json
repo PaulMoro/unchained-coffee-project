@@ -427,7 +427,7 @@
       "settings": {
         "width_section": 50,
         "bg_section_left": "#f5f4f0",
-        "title_left": "PRODUCER",
+        "title_left": "quitar",
         "font_left": "modesto",
         "size_font_left": 36,
         "color_title_left": "#262624",
@@ -436,7 +436,7 @@
         "border_items": "#262624",
         "hover_color_items": "#fdda24",
         "bg_section_right": "#e8e6dd",
-        "title_right": "SPECIALS COLLECTIONS",
+        "title_right": "SPECIALS COLLECTIONS - fijas por favor",
         "font_right": "modesto",
         "size_font_right": 36,
         "color_title_right": "#262624",
