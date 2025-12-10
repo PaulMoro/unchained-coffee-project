@@ -142,15 +142,8 @@
         "collection_button_9d4GaC": {
           "type": "collection_button",
           "settings": {
-            "collection": "",
-            "custom_title": ""
-          }
-        },
-        "collection_button_cHwP9J": {
-          "type": "collection_button",
-          "settings": {
-            "collection": "varietal-java-copy",
-            "custom_title": "COCOA"
+            "collection": "caturra-varietal-filter",
+            "custom_title": "For French Press"
           }
         },
         "collection_button_hHCRxy": {
@@ -170,7 +163,6 @@
         "collection_button_Gxyp4m",
         "collection_button_6xhwjB",
         "collection_button_9d4GaC",
-        "collection_button_cHwP9J",
         "collection_button_hHCRxy"
       ],
       "name": "Marquee Colecciones",
