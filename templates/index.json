@@ -90,13 +90,6 @@
     "collection_fullwidth_XqbJbE": {
       "type": "collection-fullwidth",
       "blocks": {
-        "collection_button_MXbJjW": {
-          "type": "collection_button",
-          "settings": {
-            "collection": "flavor-profile-cocoa-copy-1",
-            "custom_title": "Nutty/Cocoa"
-          }
-        },
         "collection_button_4Cbgqi": {
           "type": "collection_button",
           "settings": {
@@ -116,6 +109,13 @@
           "settings": {
             "collection": "flavor-profile-vanilla-copy",
             "custom_title": "Floral"
+          }
+        },
+        "collection_button_MXbJjW": {
+          "type": "collection_button",
+          "settings": {
+            "collection": "flavor-profile-cocoa-copy-1",
+            "custom_title": "Nutty/Cocoa"
           }
         },
         "collection_button_Gxyp4m": {
@@ -141,10 +141,10 @@
         }
       },
       "block_order": [
-        "collection_button_MXbJjW",
         "collection_button_4Cbgqi",
         "collection_button_ptBH3m",
         "collection_button_Rii7ya",
+        "collection_button_MXbJjW",
         "collection_button_Gxyp4m",
         "collection_button_ee7AQT",
         "collection_button_cHwP9J"
