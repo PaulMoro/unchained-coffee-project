@@ -90,13 +90,6 @@
     "collection_fullwidth_XqbJbE": {
       "type": "collection-fullwidth",
       "blocks": {
-        "collection_button_Rii7ya": {
-          "type": "collection_button",
-          "settings": {
-            "collection": "flavor-profile-vanilla-copy",
-            "custom_title": "Floral"
-          }
-        },
         "collection_button_4Cbgqi": {
           "type": "collection_button",
           "settings": {
@@ -109,6 +102,13 @@
           "settings": {
             "collection": "flavor-profile-fermented-copy",
             "custom_title": "Fruity"
+          }
+        },
+        "collection_button_Rii7ya": {
+          "type": "collection_button",
+          "settings": {
+            "collection": "flavor-profile-vanilla-copy",
+            "custom_title": "Floral"
           }
         },
         "collection_button_Gxyp4m": {
@@ -125,45 +125,21 @@
             "custom_title": "For Pour Over"
           }
         },
-        "collection_button_Va7YnJ": {
-          "type": "collection_button",
-          "settings": {
-            "collection": "first-break",
-            "custom_title": "FIRST BREAK"
-          }
-        },
         "collection_button_cHwP9J": {
           "type": "collection_button",
           "settings": {
             "collection": "varietal-java-copy",
             "custom_title": "COCOA"
           }
-        },
-        "collection_button_VenCmK": {
-          "type": "collection_button",
-          "settings": {
-            "collection": "flavor-profile-fermented-copy",
-            "custom_title": "FRUITY"
-          }
-        },
-        "collection_button_jMKLRT": {
-          "type": "collection_button",
-          "settings": {
-            "collection": "flavor-profile-vanilla-copy",
-            "custom_title": "FLORAL"
-          }
         }
       },
       "block_order": [
-        "collection_button_Rii7ya",
         "collection_button_4Cbgqi",
         "collection_button_ptBH3m",
+        "collection_button_Rii7ya",
         "collection_button_Gxyp4m",
         "collection_button_ee7AQT",
-        "collection_button_Va7YnJ",
-        "collection_button_cHwP9J",
-        "collection_button_VenCmK",
-        "collection_button_jMKLRT"
+        "collection_button_cHwP9J"
       ],
       "name": "Marquee Colecciones",
       "settings": {
