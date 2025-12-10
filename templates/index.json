@@ -90,18 +90,18 @@
     "collection_fullwidth_XqbJbE": {
       "type": "collection-fullwidth",
       "blocks": {
-        "collection_button_ee7AQT": {
-          "type": "collection_button",
-          "settings": {
-            "collection": "espresso-recommended-filter-copy",
-            "custom_title": "For Pour Over"
-          }
-        },
         "collection_button_Gxyp4m": {
           "type": "collection_button",
           "settings": {
             "collection": "espresso-recommended-filter",
             "custom_title": "For Espresso"
+          }
+        },
+        "collection_button_ee7AQT": {
+          "type": "collection_button",
+          "settings": {
+            "collection": "espresso-recommended-filter-copy",
+            "custom_title": "For Pour Over"
           }
         },
         "collection_button_4Cbgqi": {
@@ -141,8 +141,8 @@
         }
       },
       "block_order": [
-        "collection_button_ee7AQT",
         "collection_button_Gxyp4m",
+        "collection_button_ee7AQT",
         "collection_button_4Cbgqi",
         "collection_button_Va7YnJ",
         "collection_button_cHwP9J",
