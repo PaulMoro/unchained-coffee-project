@@ -90,6 +90,13 @@
     "collection_fullwidth_XqbJbE": {
       "type": "collection-fullwidth",
       "blocks": {
+        "collection_button_Rii7ya": {
+          "type": "collection_button",
+          "settings": {
+            "collection": "flavor-profile-vanilla-copy",
+            "custom_title": "Floral"
+          }
+        },
         "collection_button_4Cbgqi": {
           "type": "collection_button",
           "settings": {
@@ -148,6 +155,7 @@
         }
       },
       "block_order": [
+        "collection_button_Rii7ya",
         "collection_button_4Cbgqi",
         "collection_button_ptBH3m",
         "collection_button_Gxyp4m",
