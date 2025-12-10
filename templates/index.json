@@ -146,6 +146,13 @@
             "custom_title": "For French Press"
           }
         },
+        "collection_button_HCTyb9": {
+          "type": "collection_button",
+          "settings": {
+            "collection": "espresso-recommended-filter-copy",
+            "custom_title": "Pour Over"
+          }
+        },
         "collection_button_hHCRxy": {
           "type": "collection_button",
           "settings": {
@@ -163,6 +170,7 @@
         "collection_button_Gxyp4m",
         "collection_button_6xhwjB",
         "collection_button_9d4GaC",
+        "collection_button_HCTyb9",
         "collection_button_hHCRxy"
       ],
       "name": "Marquee Colecciones",
