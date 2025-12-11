@@ -473,7 +473,7 @@
       ],
       "name": "Collection Home",
       "settings": {
-        "width_section": 50,
+        "width_section": 0,
         "bg_section_left": "#f5f4f0",
         "title_left": "quitar",
         "font_left": "modesto",
@@ -484,7 +484,7 @@
         "border_items": "#262624",
         "hover_color_items": "#fdda24",
         "bg_section_right": "#e8e6dd",
-        "title_right": "SPECIALS COLLECTIONS - fijas por favor",
+        "title_right": "SPECIALS COLLECTIONS",
         "font_right": "modesto",
         "size_font_right": 36,
         "color_title_right": "#262624",
