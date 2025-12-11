@@ -231,15 +231,15 @@
         "padding_bottom": 32
       }
     },
-    "featured_collection_LkqxUq": {
+    "featured_collection_GAQTXY": {
       "type": "featured-collection",
-      "name": "Recommended This Week",
+      "name": "The Unchained Favorites",
       "settings": {
         "collection": "best-seller",
         "products_to_show": 6,
-        "title": "Recommended This Week",
+        "title": "The Unchained Favorites",
         "heading_size": "h1",
-        "description": "<p>Our weekly <strong>must-try selection </strong>coffees born from courage, craft, and the refusal to stay in the old chain.</p>",
+        "description": "<p>The coffees <strong>everyone returns to </strong>— powered by a fairer chain.</p>",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 3,
@@ -263,15 +263,15 @@
         "padding_bottom": 32
       }
     },
-    "featured_collection_GAQTXY": {
+    "featured_collection_LkqxUq": {
       "type": "featured-collection",
-      "name": "The Unchained Favorites",
+      "name": "Recommended This Week",
       "settings": {
         "collection": "best-seller",
         "products_to_show": 6,
-        "title": "The Unchained Favorites",
+        "title": "Recommended This Week",
         "heading_size": "h1",
-        "description": "<p>The coffees <strong>everyone returns to </strong>— powered by a fairer chain.</p>",
+        "description": "<p>Our weekly <strong>must-try selection </strong>coffees born from courage, craft, and the refusal to stay in the old chain.</p>",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 3,
@@ -490,8 +490,8 @@
         "color_title_right": "#262624",
         "font_color_right": "#262624",
         "bg_color_right": "#fdda24",
-        "padding_top": 60,
-        "padding_bottom": 60
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "featured_collection_CxjnxU": {
@@ -1330,8 +1330,8 @@
     "image_banner",
     "collection_fullwidth_XqbJbE",
     "featured_collection_mmCRXt",
-    "featured_collection_LkqxUq",
     "featured_collection_GAQTXY",
+    "featured_collection_LkqxUq",
     "collection_home_3CmXRN",
     "featured_collection_CxjnxU",
     "rich_text_a8CCQB",
