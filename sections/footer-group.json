@@ -51,7 +51,8 @@
       "name": "t:sections.newsletter.presets.name",
       "settings": {
         "color_scheme": "scheme-3",
-        "full_width": true,
+        "bg_section": "#262624",
+        "full_width": false,
         "width_section": 100,
         "padding_top": 40,
         "padding_bottom": 52
@@ -84,21 +85,9 @@
         "image_F3FxAY": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Group_1_2.png",
             "image_width": 295,
             "alignment": "center"
-          }
-        },
-        "text_NdUqkX": {
-          "type": "text",
-          "settings": {
-            "heading": "Heading",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
-          }
-        },
-        "brand_information_kzXxAQ": {
-          "type": "brand_information",
-          "settings": {
-            "show_social": true
           }
         }
       },
@@ -106,9 +95,7 @@
         "link_list_KgK8W8",
         "link_list_84rNRk",
         "link_list_iMdnRp",
-        "image_F3FxAY",
-        "text_NdUqkX",
-        "brand_information_kzXxAQ"
+        "image_F3FxAY"
       ],
       "settings": {
         "color_scheme": "scheme-3",
@@ -117,7 +104,7 @@
         "enable_follow_on_shop": true,
         "show_social": true,
         "enable_country_selector": false,
-        "enable_language_selector": true,
+        "enable_language_selector": false,
         "payment_enable": false,
         "show_policy": false,
         "margin_top": 0,
