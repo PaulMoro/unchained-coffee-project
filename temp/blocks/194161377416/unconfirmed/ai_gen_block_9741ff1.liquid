@@ -1,6 +1,798 @@
+{% doc %}
+  @prompt
+    crea una seccion de acuerdo a lo siguiente: UNCHAINED OFFICE COFFEE PROGRAM — FINAL VERSION
+    Short Subtitle
+    
+    Coffee that fuels your team.
+    And frees the people who grow it.
+    
+    Short Description (Top Section)
+    
+    Transform your workplace coffee into a benefit with real impact.
+    The Unchained Office Coffee Program brings freshly roasted specialty coffee to your team—powered by a professional Eversys superautomatic machine, included in your plan—while sending 70% of all coffee revenue directly to small Colombian growers.
+    
+    It’s a unique opportunity for your office to enjoy café-level quality and transparency normally only found in specialty coffee shops.
+    Now available at work.
+    Now changing the chain.
+    
+    Why Bring Unchained to Your Office?
+    
+    Eversys machine included – A world-class superautomatic espresso system delivering barista-quality drinks at the push of a button.
+    
+    70% of revenue goes directly to farmers – A radically fair model that shifts value back to the people who grow your coffee.
+    
+    Specialty coffee, every day – Fresh-roasted microlots delivered automatically based on your consumption.
+    
+    Unique access to premium coffee at work – True specialty coffee without leaving the building.
+    
+    Operational simplicity – Clean setups, simple workflows, high performance.
+    
+    Team culture that actually works – Coffee becomes a shared ritual, not just caffeine.
+    
+    How It Works
+    1 — We install your Eversys machine
+    
+    Your plan includes a premium Eversys superautomatic machine, configured for your space and calibrated for Unchained coffees.
+    
+    2 — Choose your plan size
+    
+    Designed around your headcount and preferred consumption style.
+    
+    3 — Fresh roasted coffee on a fixed schedule
+    
+    We roast and deliver automatically so your office never runs out.
+    
+    4 — Transparent impact
+    
+    Track how your program sends 70% of revenue back to small producers, improving livelihoods and building long-term resilience in Colombian coffee communities.
+    
+    Plan Options
+    Startup Fuel (Up to ~20 people)
+    
+    1 Eversys superautomatic machine 
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-office-program-{{ ai_gen_id }} {
+    padding: 60px 20px;
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .ai-office-program-container-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .ai-office-program-hero-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .ai-office-program-subtitle-{{ ai_gen_id }} {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: {{ block.settings.text_color }};
+    margin-bottom: 20px;
+    opacity: 0.8;
+  }
+
+  .ai-office-program-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    color: {{ block.settings.text_color }};
+    margin: 0 0 30px;
+    line-height: 1.2;
+  }
+
+  .ai-office-program-description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.description_size }}px;
+    color: {{ block.settings.text_color }};
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .ai-office-program-benefits-{{ ai_gen_id }} {
+    margin-bottom: 80px;
+  }
+
+  .ai-office-program-section-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.section_title_size }}px;
+    color: {{ block.settings.text_color }};
+    text-align: center;
+    margin: 0 0 50px;
+  }
+
+  .ai-office-program-benefits-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .ai-office-program-benefit-{{ ai_gen_id }} {
+    padding: 30px;
+    background-color: {{ block.settings.card_background }};
+    border-radius: {{ block.settings.card_radius }}px;
+  }
+
+  .ai-office-program-benefit-title-{{ ai_gen_id }} {
+    font-size: 18px;
+    font-weight: 600;
+    color: {{ block.settings.text_color }};
+    margin: 0 0 10px;
+  }
+
+  .ai-office-program-benefit-text-{{ ai_gen_id }} {
+    font-size: 14px;
+    color: {{ block.settings.text_color }};
+    opacity: 0.9;
+    line-height: 1.5;
+  }
+
+  .ai-office-program-how-it-works-{{ ai_gen_id }} {
+    margin-bottom: 80px;
+  }
+
+  .ai-office-program-steps-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+  }
+
+  .ai-office-program-step-{{ ai_gen_id }} {
+    text-align: center;
+  }
+
+  .ai-office-program-step-number-{{ ai_gen_id }} {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: {{ block.settings.accent_color }};
+    color: {{ block.settings.accent_text_color }};
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 50px;
+    margin-bottom: 20px;
+  }
+
+  .ai-office-program-step-title-{{ ai_gen_id }} {
+    font-size: 18px;
+    font-weight: 600;
+    color: {{ block.settings.text_color }};
+    margin: 0 0 10px;
+  }
+
+  .ai-office-program-step-text-{{ ai_gen_id }} {
+    font-size: 14px;
+    color: {{ block.settings.text_color }};
+    opacity: 0.9;
+    line-height: 1.5;
+  }
+
+  .ai-office-program-plans-{{ ai_gen_id }} {
+    margin-bottom: 60px;
+  }
+
+  .ai-office-program-plans-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+
+  .ai-office-program-plan-{{ ai_gen_id }} {
+    padding: 40px 30px;
+    background-color: {{ block.settings.card_background }};
+    border-radius: {{ block.settings.card_radius }}px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+
+  .ai-office-program-plan-{{ ai_gen_id }}:hover {
+    border-color: {{ block.settings.accent_color }};
+  }
+
+  .ai-office-program-plan-name-{{ ai_gen_id }} {
+    font-size: 24px;
+    font-weight: 700;
+    color: {{ block.settings.text_color }};
+    margin: 0 0 10px;
+  }
+
+  .ai-office-program-plan-capacity-{{ ai_gen_id }} {
+    font-size: 14px;
+    color: {{ block.settings.text_color }};
+    opacity: 0.8;
+    margin-bottom: 20px;
+  }
+
+  .ai-office-program-plan-features-{{ ai_gen_id }} {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+    text-align: left;
+  }
+
+  .ai-office-program-plan-feature-{{ ai_gen_id }} {
+    font-size: 14px;
+    color: {{ block.settings.text_color }};
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .ai-office-program-plan-feature-{{ ai_gen_id }}:last-child {
+    border-bottom: none;
+  }
+
+  .ai-office-program-cta-{{ ai_gen_id }} {
+    text-align: center;
+  }
+
+  .ai-office-program-button-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: 16px 40px;
+    background-color: {{ block.settings.button_color }};
+    color: {{ block.settings.button_text_color }};
+    text-decoration: none;
+    border-radius: {{ block.settings.button_radius }}px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  .ai-office-program-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_color }};
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-office-program-{{ ai_gen_id }} {
+      padding: 40px 20px;
+    }
+
+    .ai-office-program-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size | times: 0.7 }}px;
+    }
+
+    .ai-office-program-hero-{{ ai_gen_id }},
+    .ai-office-program-benefits-{{ ai_gen_id }},
+    .ai-office-program-how-it-works-{{ ai_gen_id }},
+    .ai-office-program-plans-{{ ai_gen_id }} {
+      margin-bottom: 50px;
+    }
+
+    .ai-office-program-benefits-grid-{{ ai_gen_id }},
+    .ai-office-program-steps-{{ ai_gen_id }},
+    .ai-office-program-plans-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-office-program-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-office-program-container-{{ ai_gen_id }}">
+    <div class="ai-office-program-hero-{{ ai_gen_id }}">
+      {% if block.settings.subtitle != blank %}
+        <div class="ai-office-program-subtitle-{{ ai_gen_id }}">
+          {{ block.settings.subtitle }}
+        </div>
+      {% endif %}
+
+      {% if block.settings.title != blank %}
+        <h1 class="ai-office-program-title-{{ ai_gen_id }}">
+          {{ block.settings.title }}
+        </h1>
+      {% endif %}
+
+      {% if block.settings.description != blank %}
+        <div class="ai-office-program-description-{{ ai_gen_id }}">
+          {{ block.settings.description }}
+        </div>
+      {% endif %}
+    </div>
+
+    {% if block.settings.show_benefits %}
+      <div class="ai-office-program-benefits-{{ ai_gen_id }}">
+        {% if block.settings.benefits_title != blank %}
+          <h2 class="ai-office-program-section-title-{{ ai_gen_id }}">
+            {{ block.settings.benefits_title }}
+          </h2>
+        {% endif %}
+
+        <div class="ai-office-program-benefits-grid-{{ ai_gen_id }}">
+          {% for i in (1..6) %}
+            {% liquid
+              assign benefit_title_key = 'benefit_' | append: i | append: '_title'
+              assign benefit_text_key = 'benefit_' | append: i | append: '_text'
+              assign benefit_title = block.settings[benefit_title_key]
+              assign benefit_text = block.settings[benefit_text_key]
+            %}
+
+            {% if benefit_title != blank %}
+              <div class="ai-office-program-benefit-{{ ai_gen_id }}">
+                <h3 class="ai-office-program-benefit-title-{{ ai_gen_id }}">
+                  {{ benefit_title }}
+                </h3>
+                {% if benefit_text != blank %}
+                  <p class="ai-office-program-benefit-text-{{ ai_gen_id }}">
+                    {{ benefit_text }}
+                  </p>
+                {% endif %}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if block.settings.show_how_it_works %}
+      <div class="ai-office-program-how-it-works-{{ ai_gen_id }}">
+        {% if block.settings.how_it_works_title != blank %}
+          <h2 class="ai-office-program-section-title-{{ ai_gen_id }}">
+            {{ block.settings.how_it_works_title }}
+          </h2>
+        {% endif %}
+
+        <div class="ai-office-program-steps-{{ ai_gen_id }}">
+          {% for i in (1..4) %}
+            {% liquid
+              assign step_title_key = 'step_' | append: i | append: '_title'
+              assign step_text_key = 'step_' | append: i | append: '_text'
+              assign step_title = block.settings[step_title_key]
+              assign step_text = block.settings[step_text_key]
+            %}
+
+            {% if step_title != blank %}
+              <div class="ai-office-program-step-{{ ai_gen_id }}">
+                <div class="ai-office-program-step-number-{{ ai_gen_id }}">{{ i }}</div>
+                <h3 class="ai-office-program-step-title-{{ ai_gen_id }}">
+                  {{ step_title }}
+                </h3>
+                {% if step_text != blank %}
+                  <p class="ai-office-program-step-text-{{ ai_gen_id }}">
+                    {{ step_text }}
+                  </p>
+                {% endif %}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if block.settings.show_plans %}
+      <div class="ai-office-program-plans-{{ ai_gen_id }}">
+        {% if block.settings.plans_title != blank %}
+          <h2 class="ai-office-program-section-title-{{ ai_gen_id }}">
+            {{ block.settings.plans_title }}
+          </h2>
+        {% endif %}
+
+        <div class="ai-office-program-plans-grid-{{ ai_gen_id }}">
+          {% for i in (1..3) %}
+            {% liquid
+              assign plan_name_key = 'plan_' | append: i | append: '_name'
+              assign plan_capacity_key = 'plan_' | append: i | append: '_capacity'
+              assign plan_features_key = 'plan_' | append: i | append: '_features'
+              assign plan_name = block.settings[plan_name_key]
+              assign plan_capacity = block.settings[plan_capacity_key]
+              assign plan_features = block.settings[plan_features_key]
+            %}
+
+            {% if plan_name != blank %}
+              <div class="ai-office-program-plan-{{ ai_gen_id }}">
+                <h3 class="ai-office-program-plan-name-{{ ai_gen_id }}">
+                  {{ plan_name }}
+                </h3>
+                {% if plan_capacity != blank %}
+                  <p class="ai-office-program-plan-capacity-{{ ai_gen_id }}">
+                    {{ plan_capacity }}
+                  </p>
+                {% endif %}
+                {% if plan_features != blank %}
+                  <ul class="ai-office-program-plan-features-{{ ai_gen_id }}">
+                    {% assign features_array = plan_features | split: '|' %}
+                    {% for feature in features_array %}
+                      <li class="ai-office-program-plan-feature-{{ ai_gen_id }}">
+                        {{ feature | strip }}
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if block.settings.cta_text != blank %}
+      <div class="ai-office-program-cta-{{ ai_gen_id }}">
+        <a
+          href="{{ block.settings.cta_link }}"
+          class="ai-office-program-button-{{ ai_gen_id }}"
+        >
+          {{ block.settings.cta_text }}
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Office coffee program",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Hero section"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Unchained Office Coffee Program"
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Title",
+      "default": "Coffee that fuels your team. And frees the people who grow it."
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Transform your workplace coffee into a benefit with real impact. The Unchained Office Coffee Program brings freshly roasted specialty coffee to your team—powered by a professional Eversys superautomatic machine, included in your plan—while sending 70% of all coffee revenue directly to small Colombian growers.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Benefits section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_benefits",
+      "label": "Show benefits section",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "benefits_title",
+      "label": "Benefits title",
+      "default": "Why Bring Unchained to Your Office?"
+    },
+    {
+      "type": "text",
+      "id": "benefit_1_title",
+      "label": "Benefit 1 title",
+      "default": "Eversys machine included"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_1_text",
+      "label": "Benefit 1 text",
+      "default": "A world-class superautomatic espresso system delivering barista-quality drinks at the push of a button."
+    },
+    {
+      "type": "text",
+      "id": "benefit_2_title",
+      "label": "Benefit 2 title",
+      "default": "70% of revenue goes directly to farmers"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_2_text",
+      "label": "Benefit 2 text",
+      "default": "A radically fair model that shifts value back to the people who grow your coffee."
+    },
+    {
+      "type": "text",
+      "id": "benefit_3_title",
+      "label": "Benefit 3 title",
+      "default": "Specialty coffee, every day"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_3_text",
+      "label": "Benefit 3 text",
+      "default": "Fresh-roasted microlots delivered automatically based on your consumption."
+    },
+    {
+      "type": "text",
+      "id": "benefit_4_title",
+      "label": "Benefit 4 title",
+      "default": "Unique access to premium coffee at work"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_4_text",
+      "label": "Benefit 4 text",
+      "default": "True specialty coffee without leaving the building."
+    },
+    {
+      "type": "text",
+      "id": "benefit_5_title",
+      "label": "Benefit 5 title",
+      "default": "Operational simplicity"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_5_text",
+      "label": "Benefit 5 text",
+      "default": "Clean setups, simple workflows, high performance."
+    },
+    {
+      "type": "text",
+      "id": "benefit_6_title",
+      "label": "Benefit 6 title",
+      "default": "Team culture that actually works"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_6_text",
+      "label": "Benefit 6 text",
+      "default": "Coffee becomes a shared ritual, not just caffeine."
+    },
+    {
+      "type": "header",
+      "content": "How it works section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_how_it_works",
+      "label": "Show how it works section",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "how_it_works_title",
+      "label": "How it works title",
+      "default": "How It Works"
+    },
+    {
+      "type": "text",
+      "id": "step_1_title",
+      "label": "Step 1 title",
+      "default": "We install your Eversys machine"
+    },
+    {
+      "type": "textarea",
+      "id": "step_1_text",
+      "label": "Step 1 text",
+      "default": "Your plan includes a premium Eversys superautomatic machine, configured for your space and calibrated for Unchained coffees."
+    },
+    {
+      "type": "text",
+      "id": "step_2_title",
+      "label": "Step 2 title",
+      "default": "Choose your plan size"
+    },
+    {
+      "type": "textarea",
+      "id": "step_2_text",
+      "label": "Step 2 text",
+      "default": "Designed around your headcount and preferred consumption style."
+    },
+    {
+      "type": "text",
+      "id": "step_3_title",
+      "label": "Step 3 title",
+      "default": "Fresh roasted coffee on a fixed schedule"
+    },
+    {
+      "type": "textarea",
+      "id": "step_3_text",
+      "label": "Step 3 text",
+      "default": "We roast and deliver automatically so your office never runs out."
+    },
+    {
+      "type": "text",
+      "id": "step_4_title",
+      "label": "Step 4 title",
+      "default": "Transparent impact"
+    },
+    {
+      "type": "textarea",
+      "id": "step_4_text",
+      "label": "Step 4 text",
+      "default": "Track how your program sends 70% of revenue back to small producers, improving livelihoods and building long-term resilience in Colombian coffee communities."
+    },
+    {
+      "type": "header",
+      "content": "Plans section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_plans",
+      "label": "Show plans section",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "plans_title",
+      "label": "Plans title",
+      "default": "Plan Options"
+    },
+    {
+      "type": "text",
+      "id": "plan_1_name",
+      "label": "Plan 1 name",
+      "default": "Startup Fuel"
+    },
+    {
+      "type": "text",
+      "id": "plan_1_capacity",
+      "label": "Plan 1 capacity",
+      "default": "Up to ~20 people"
+    },
+    {
+      "type": "textarea",
+      "id": "plan_1_features",
+      "label": "Plan 1 features",
+      "info": "Separate features with | symbol",
+      "default": "1 Eversys superautomatic machine|Fresh roasted coffee delivery|70% revenue to farmers|Full setup and training"
+    },
+    {
+      "type": "text",
+      "id": "plan_2_name",
+      "label": "Plan 2 name",
+      "default": "Growth Blend"
+    },
+    {
+      "type": "text",
+      "id": "plan_2_capacity",
+      "label": "Plan 2 capacity",
+      "default": "Up to ~50 people"
+    },
+    {
+      "type": "textarea",
+      "id": "plan_2_features",
+      "label": "Plan 2 features",
+      "info": "Separate features with | symbol",
+      "default": "1 Eversys superautomatic machine|Increased coffee delivery|70% revenue to farmers|Priority support"
+    },
+    {
+      "type": "text",
+      "id": "plan_3_name",
+      "label": "Plan 3 name",
+      "default": "Enterprise Roast"
+    },
+    {
+      "type": "text",
+      "id": "plan_3_capacity",
+      "label": "Plan 3 capacity",
+      "default": "50+ people"
+    },
+    {
+      "type": "textarea",
+      "id": "plan_3_features",
+      "label": "Plan 3 features",
+      "info": "Separate features with | symbol",
+      "default": "Multiple Eversys machines|Custom delivery schedule|70% revenue to farmers|Dedicated account manager"
+    },
+    {
+      "type": "header",
+      "content": "Call to action"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "Button text",
+      "default": "Get Started"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Card background",
+      "default": "#f3f3f3"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "accent_text_color",
+      "label": "Accent text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button color",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_color",
+      "label": "Button hover color",
+      "default": "#262624"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 24,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "label": "Title size",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Description size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "section_title_size",
+      "min": 24,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Section title size",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Card border radius",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "button_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Button border radius",
+      "default": 4
+    }
+  ],
+  "presets": [
+    {
+      "name": "Office coffee program"
+    }
+  ]
+}
 {% endschema %}
