@@ -56,10 +56,52 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "rich_text_nVteRN": {
+      "type": "rich-text",
+      "blocks": {
+        "text_QNXiFG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Transform your workplace coffee into a benefit with real impact.<br/><br/>The Unchained Office Coffee Program brings freshly roasted specialty coffee to your team—powered by a <strong>professional Eversys superautomatic machine</strong>, included in your plan—while sending <strong>70% of all coffee revenue directly to small Colombian growers</strong>.</p><p>It’s a <strong>unique opportunity</strong> for your office to enjoy café-level quality and transparency normally only found in specialty shops.<br/><br/>Now available at work.<br/><br/>Now changing the chain.</p>",
+            "color_text": "#000000",
+            "color_text_bold": "#000000"
+          }
+        },
+        "button_grUi4y": {
+          "type": "button",
+          "settings": {
+            "color_text": "#262624",
+            "color_bg": "#F4F3EF",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "text_QNXiFG",
+        "button_grUi4y"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "color_custom": true,
+        "background_color": "#f5f4f0",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "main",
-    "rich_text_QD84QG"
+    "rich_text_QD84QG",
+    "rich_text_nVteRN"
   ]
 }
