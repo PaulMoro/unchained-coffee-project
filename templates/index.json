@@ -183,7 +183,7 @@
       ],
       "name": "Marquee Colecciones",
       "settings": {
-        "bg_section": "#fdda24",
+        "bg_section": "#ffffff",
         "title": "quick pick",
         "title_alignment": "center",
         "font_title": "permanent",
