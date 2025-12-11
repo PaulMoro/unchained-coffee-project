@@ -4,286 +4,246 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 
 {%- style -%}
-    /* --- CONFIGURACIÓN GENERAL --- */
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-      position: relative;
-      background-color: transparent;
-      overflow: hidden;
-    }
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    position: relative;
+    overflow: hidden;
+    {% if section.settings.width_section == 0 %}
+      background-color: {{ section.settings.bg_section_right }};
+    {% endif %}
+  }
+  .section-{{ section.id }}-padding.content-container:after,
+  .section-{{ section.id }}-padding.content-container:before {
+    display: none !important;
+  }
+  .section-{{ section.id }}-padding.collection-home__wrapper {
+    display: block;
+  }
+  .section-{{ section.id }}-padding.collection-home__wrapper .first-child,
+  .section-{{ section.id }}-padding.collection-home__wrapper .second-child {
+    position: relative;
+    z-index: 1;
+  }
 
-    /* PUNTO 3: Eliminamos cualquier borde/sombra heredada del tema global */
-    .section-{{ section.id }}-padding.content-container:after,
-    .section-{{ section.id }}-padding.content-container:before {
-      display: none !important;
-    }
+  .section-{{ section.id }}-padding.collection-home__wrapper .first-child:before,
+  .section-{{ section.id }}-padding.collection-home__wrapper .second-child:before {
+    display: block;
+    content: '';
+    position: absolute;
+    z-index: -1;
+  }
+  .section-{{ section.id }}-padding.collection-home__wrapper .first-child:before {
+    background-color: {{ section.settings.bg_section_left }};
+  }
+  .section-{{ section.id }}-padding.collection-home__wrapper .second-child:before {
+    background-color: {{ section.settings.bg_section_right }};
+  }
 
-    /* Default Mobile (Ahora aplica hasta 1023px) */
-    .section-{{ section.id }}-padding.collection-home__wrapper {
-      display: block;
-    }
-
-    /* Posicionamiento relativo para anclar los fondos */
-    .section-{{ section.id }}-padding.collection-home__wrapper .first-child,
-    .section-{{ section.id }}-padding.collection-home__wrapper .second-child {
-      position: relative;
-      z-index: 1;
-    }
-
-    /* --- DEFINICIÓN BASE DE FONDOS --- */
+  @media screen and (max-width: 1023px) {
     .section-{{ section.id }}-padding.collection-home__wrapper .first-child:before,
     .section-{{ section.id }}-padding.collection-home__wrapper .second-child:before {
-      display: block;
-      content: '';
-      position: absolute;
-      z-index: -1;
+      width: 100vw;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
-    /* Colores */
     .section-{{ section.id }}-padding.collection-home__wrapper .first-child:before {
-      background-color: {{ section.settings.bg_section_left }};
+      top: -200px;
+      height: calc(100% + 200px);
+    }
+    .section-{{ section.id }}-padding .first-child {
+       padding-bottom: 2rem;
     }
     .section-{{ section.id }}-padding.collection-home__wrapper .second-child:before {
-      background-color: {{ section.settings.bg_section_right }};
+      {% if section.settings.width_section == 0 %}
+      top: -{{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      {% else %}
+      top: 0;
+      {% endif %}
+      height: calc(100% + 200px);
     }
 
-    /* --- MOBILE / TABLET (Hasta 1023px - PUNTO 1) --- */
-    @media screen and (max-width: 1023px) {
-
-      /* Configuración Full Width para romper el contenedor */
-      .section-{{ section.id }}-padding.collection-home__wrapper .first-child:before,
-      .section-{{ section.id }}-padding.collection-home__wrapper .second-child:before {
-        width: 100vw;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
-      /* --- PUNTO 4: REPARACIÓN DE LINEA BLANCA --- */
-      /* Estrategia: "Overkill". Subimos mucho más de lo necesario (-200px)
-         para garantizar que tape cualquier padding del padre */
-      .section-{{ section.id }}-padding.collection-home__wrapper .first-child:before {
-        top: -200px;
-        height: calc(100% + 200px); /* Compensamos la subida */
-      }
-
-      /* Ajuste de espacio interno para que el contenido no pegue arriba */
-      .section-{{ section.id }}-padding .first-child {
-         padding-bottom: 2rem;
-      }
-
-      /* Parte Inferior (Second Child) */
-      .section-{{ section.id }}-padding.collection-home__wrapper .second-child:before {
-        top: 0;
-        /* Bajamos también exageradamente para cubrir el padding bottom */
-        height: calc(100% + 200px);
-      }
-
-      .section-{{ section.id }}-padding .second-child {
-         padding-top: 2rem;
-      }
-
-      /* Textos centrados */
-      .section-{{ section.id }}-padding .first-child h2,
-      .section-{{ section.id }}-padding .second-child h2 {
-        text-align: center;
-        font-size: 28px;
-      }
+    .section-{{ section.id }}-padding .second-child {
+       padding-top: 2rem;
     }
-
-    /* --- DESKTOP (Desde 1024px - PUNTO 1) --- */
-    @media screen and (min-width: 1024px) {
-      .section-{{ section.id }}-padding {
-        padding-top: {{ section.settings.padding_top }}px;
-        padding-bottom: {{ section.settings.padding_bottom }}px;
-      }
-      .section-{{ section.id }}-padding.collection-home__wrapper {
-        display: flex;
-      }
-      .section-{{ section.id }}-padding.collection-home__wrapper .first-child {
-        width: {{ section.settings.width_section }}%;
-      }
-
-      /* PUNTO 2: Tu código corregido */
-      .section-{{ section.id }}-padding.collection-home__wrapper .second-child {
-        {% assign width_right = 100 | minus: section.settings.width_section %}
-        width: {{ width_right }}%;
-        padding-left: 5rem; /* Padding solicitado */
-      }
-
-      /* Cálculo original de Desktop (Funciona bien aqui) */
-      .section-{{ section.id }}-padding.collection-home__wrapper .first-child:before,
-      .section-{{ section.id }}-padding.collection-home__wrapper .second-child:before {
-        top: calc(0% - {{ section.settings.padding_top }}px);
-        height: calc(100% + {{ section.settings.padding_top }}px + {{ section.settings.padding_bottom }}px);
-      }
-      .section-{{ section.id }}-padding.collection-home__wrapper .first-child:before {
-        width: calc(((100vw - (100% * {{ 100.0 | divided_by: section.settings.width_section }})) / 2) + 100%);
-        right: 0;
-      }
-      .section-{{ section.id }}-padding.collection-home__wrapper .second-child:before {
-          width: 200vw;
-          left: 0;
-      }
-    }
-
-    /* --- ESTILOS COMPONENTES --- */
-
-    .section-{{ section.id }}-padding .container--first-child {
-      padding-inline: 2rem;
-    }
-    @media screen and (min-width: 1024px) {
-      .section-{{ section.id }}-padding .container--first-child {
-          padding-inline: 8rem;
-      }
-    }
-
-    .section-{{ section.id }}-padding .first-child h2 {
-      margin-bottom: 4rem;
-      color: {{ section.settings.color_title_left }};
-      text-align: {{ section.settings.content_alignment }};
-      font-size: {{ section.settings.size_font_left }}px;
-    }
-
-    /* Botones */
-    .section-{{ section.id }}-padding .first-child .items {
-      border: 2px solid;
-      border-radius: 12rem;
-      border-color: {{ section.settings.border_items }};
-      background-color: {{ section.settings.background_items }};
-      color: {{ section.settings.color_text_left }};
-      margin-bottom: 2rem;
-      padding: 0 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 55px;
-    }
-    .section-{{ section.id }}-padding .first-child a { text-decoration: none; }
-
-    .section-{{ section.id }}-padding .first-child .items h3 {
-      margin-block: 0.5rem;
-      font-size: 1.8rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      text-align: center;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      line-height: 1.1;
-    }
-
-    .section-{{ section.id }}-padding .first-child .items:hover {
-      background-color: {{ section.settings.hover_color_items }};
-      border-color: {{ section.settings.hover_color_items }};
-    }
-
-    /* Derecha */
+    .section-{{ section.id }}-padding .first-child h2,
     .section-{{ section.id }}-padding .second-child h2 {
-      margin-bottom: 4rem;
-      color: {{ section.settings.color_title_right }};
-      text-align: {{ section.settings.content_alignment }};
-      font-size: {{ section.settings.size_font_right }}px;
-    }
-    @media screen and (max-width: 1023px) {
-        .section-{{ section.id }}-padding .second-child h2 { text-align: center; }
-    }
-
-    .section-{{ section.id }}-padding .second-child .items {
-      background-color: {{ section.settings.bg_color_right }};
-      color: {{ section.settings.font_color_right }};
-    }
-    .section-{{ section.id }}-padding .second-child .items:hover {
-      background-color: {{ section.settings.hover_color_items }};
-    }
-
-    /* Tarjetas */
-  /* --- TARJETAS DERECHA (Fixed: Botón visible + Ratio 3:4) --- */
-
-    .custom-collection-card {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      text-decoration: none;
-
-      /* 1. Definimos la proporción de la tarjeta completa */
-      aspect-ratio: 3 / 4;
-
-      /* 2. Ocultamos lo que se salga (por seguridad) y preparamos el contenedor */
-      overflow: hidden;
-      position: relative;
-      background-color: {{ section.settings.bg_color_right }}; /* Fondo de seguridad */
-    }
-
-    .custom-collection-card__image {
-      width: 100%;
-
-      /* 3. TRUCO PARA QUE NO EMPUJE AL BOTÓN: */
-      height: auto;       /* No forzar altura fija */
-      flex-grow: 1;       /* Ocupar todo el espacio disponible... */
-      min-height: 0;      /* ...pero permitir encogerse si el botón necesita espacio */
-
-      object-fit: cover;  /* Recortar la imagen para llenar su hueco sin deformarse */
-      display: block;
-    }
-
-    .custom-collection-card__content {
-      background-color: {{ section.settings.bg_color_right }};
-      color: {{ section.settings.font_color_right }};
-
-      /* Estilos de texto */
-      padding: 1.5rem 1rem;
       text-align: center;
-      font-weight: bold;
-      text-transform: uppercase;
-      width: 100%;
-
-      /* 4. ASEGURAR VISIBILIDAD DEL BOTÓN: */
-      flex-shrink: 0;     /* Prohibido encogerse o desaparecer */
-      position: relative;
-      z-index: 2;         /* Asegurar que esté por encima visualmente */
-
-      /* Centrado del texto interno */
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      font-size: 28px;
     }
+  }
+  @media screen and (min-width: 1024px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    .section-{{ section.id }}-padding.collection-home__wrapper {
+      display: flex;
+    }
+    .section-{{ section.id }}-padding.collection-home__wrapper .first-child {
+      width: {{ section.settings.width_section }}%;
+    }
+    .section-{{ section.id }}-padding.collection-home__wrapper .second-child {
+      {% if section.settings.width_section == 0 %}
+        {% assign width_right = 100 %}
+      {% else %}
+        {% assign width_right = 100 | minus: section.settings.width_section %}
+      {% endif %}
+      width: {{ width_right }}%;
+      padding-left: 5rem;
+      position: inherit;
+    }
+    .section-{{ section.id }}-padding.collection-home__wrapper .first-child:before,
+    .section-{{ section.id }}-padding.collection-home__wrapper .second-child:before {
+      top: calc(0% - {{ section.settings.padding_top }}px);
+      height: calc(100% + {{ section.settings.padding_top }}px + {{ section.settings.padding_bottom }}px);
+    }
+    .section-{{ section.id }}-padding.collection-home__wrapper .first-child:before {
+      width: calc(((100vw - (100% * {{ 100.0 | divided_by: section.settings.width_section }})) / 2) + 100%);
+      right: 0;
+    }
+    .section-{{ section.id }}-padding.collection-home__wrapper .second-child:before {
+      left: 0;
+      width: 100%;
+    }
+  }
+  .section-{{ section.id }}-padding .container--first-child {
+    padding-inline: 2rem;
+  }
+  @media screen and (min-width: 1024px) {
+    .section-{{ section.id }}-padding .container--first-child {
+        padding-inline: 8rem;
+    }
+  }
+
+  .section-{{ section.id }}-padding .first-child h2 {
+    margin-bottom: 4rem;
+    color: {{ section.settings.color_title_left }};
+    text-align: {{ section.settings.content_alignment }};
+    font-size: {{ section.settings.size_font_left }}px;
+  }
+
+  /* Botones */
+  .section-{{ section.id }}-padding .first-child .items {
+    border: 2px solid;
+    border-radius: 12rem;
+    border-color: {{ section.settings.border_items }};
+    background-color: {{ section.settings.background_items }};
+    color: {{ section.settings.color_text_left }};
+    margin-bottom: 2rem;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 55px;
+  }
+  .section-{{ section.id }}-padding .first-child a { text-decoration: none; }
+
+  .section-{{ section.id }}-padding .first-child .items h3 {
+    margin-block: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.1;
+  }
+
+  .section-{{ section.id }}-padding .first-child .items:hover {
+    background-color: {{ section.settings.hover_color_items }};
+    border-color: {{ section.settings.hover_color_items }};
+  }
+  .section-{{ section.id }}-padding .second-child h2 {
+    margin-bottom: 4rem;
+    color: {{ section.settings.color_title_right }};
+    text-align: {{ section.settings.content_alignment }};
+    font-size: {{ section.settings.size_font_right }}px;
+  }
+  @media screen and (max-width: 1023px) {
+      .section-{{ section.id }}-padding .second-child h2 { text-align: center; }
+  }
+
+  .section-{{ section.id }}-padding .second-child .items {
+    background-color: {{ section.settings.bg_color_right }};
+    color: {{ section.settings.font_color_right }};
+  }
+  .section-{{ section.id }}-padding .second-child .items:hover {
+    background-color: {{ section.settings.hover_color_items }};
+  }
+  .custom-collection-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-decoration: none;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    position: relative;
+    background-color: {{ section.settings.bg_color_right }};
+  }
+  .custom-collection-card__image {
+    width: 100%;
+    height: auto;
+    flex-grow: 1;
+    min-height: 0;
+    object-fit: cover;
+    display: block;
+  }
+  .custom-collection-card__content {
+    background-color: {{ section.settings.bg_color_right }};
+    color: {{ section.settings.font_color_right }};
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 {%- endstyle -%}
 
 <div class="collection-home center collection-home--narrow page-width}">
   <div class="collection-home__wrapper color-{{ section.settings.color_scheme }} gradient content-container isolate section-{{ section.id }}-padding">
-    <div class="first-child">
-      <h2
-        class="inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} text-{{ block.settings.font | downcase }}"
-        {{ block.shopify_attributes }}
-        {% if settings.animations_reveal_on_scroll %}
-          data-cascade
-          style="--animation-order: {{ forloop.index }};"
-        {% endif %}
-      >
-        {{ section.settings.title_left }}
-      </h2>
-      <div class="container--first-child">
-        {%- for block in section.blocks -%}
-          {%- case block.type -%}
-            {%- when 'collection' -%}
-              {% if block.settings.select_space == 'left' and block.settings.collection != blank %}
-                <div class="item-first">
-                  <a href="{{ block.settings.collection.url }}">
-                    <div class="items">
-                      <h3 class="text-barlow">
-                        {{ block.settings.title_collection | default: block.settings.collection.title }}
-                      </h3>
-                    </div>
-                  </a>
-                </div>
-              {% endif %}
-          {%- endcase -%}
-        {%- endfor -%}
+    {% unless section.settings.width_section == 0 %}
+      <div class="first-child">
+        <h2
+          class="inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} text-{{ block.settings.font | downcase }}"
+          {{ block.shopify_attributes }}
+          {% if settings.animations_reveal_on_scroll %}
+            data-cascade
+            style="--animation-order: {{ forloop.index }};"
+          {% endif %}
+        >
+          {{ section.settings.title_left }}
+        </h2>
+        <div class="container--first-child">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'collection' -%}
+                {% if block.settings.select_space == 'left' and block.settings.collection != blank %}
+                  <div class="item-first">
+                    <a href="{{ block.settings.collection.url }}">
+                      <div class="items">
+                        <h3 class="text-barlow">
+                          {{ block.settings.title_collection | default: block.settings.collection.title }}
+                        </h3>
+                      </div>
+                    </a>
+                  </div>
+                {% endif %}
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
       </div>
-    </div>
-    <div class="second-child">
+    {% endunless %}
+    <div class="second-child {% if section.settings.width_section == 0 %}page-width-desktop{% endif %}">
       <h2
         class="inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} text-{{ block.settings.font | downcase }}"
         {{ block.shopify_attributes }}
@@ -343,33 +303,23 @@
 
     if (splideElement) {
       new Splide(splideElement, {
-        /* --- Configuración Base (Desktop) --- */
-        type: 'loop', // Indispensable para el scroll infinito
-        perPage: 3, // Mostrar 3 tarjetas en pantallas grandes
-        gap: '30px', // Espacio entre tarjetas en desktop
-        arrows: false, // Flechas de navegación en desktop
-        pagination: false, // Sin puntitos abajo
+        type: 'loop',
+        perPage: 3,
+        gap: '30px',
+        arrows: false,
+        pagination: false,
         drag: true,
-
-        /* Por defecto en Desktop el AutoScroll está apagado (o puedes poner speed: 0) */
-        autoScroll: {
-          speed: 1, // Velocidad del movimiento (ajusta si lo quieres más rápido)
-          pauseOnHover: false, // Sigue moviéndose aunque pases el dedo (opcional)
-          pauseOnFocus: false,
-          rewind: false,
-        },
-
-        /* --- Configuración Responsive (Mobile/Tablet < 1024px) --- */
+        autoScroll: false,
         breakpoints: {
           1024: {
-            perPage: 1.4, // Muestra 1 tarjeta entera y el 40% de la siguiente
-            gap: '15px', // Espacio un poco menor en mobile
-            arrows: false, // Ocultar flechas en mobile (se mueve solo)
-            drag: 'free', // Permite arrastrar libremente sin "imanes"
-            focus: false, // Alineación a la izquierda (por defecto)
+            perPage: 1.4,
+            gap: '15px',
+            arrows: false,
+            drag: 'free',
+            focus: false,
           },
         },
-      }).mount(window.splide.Extensions); // IMPORTANTE: Montar con la extensión
+      }).mount(window.splide.Extensions);
     }
   });
 </script>
@@ -387,7 +337,7 @@
     {
       "type": "range",
       "id": "width_section",
-      "min": 10,
+      "min": 0,
       "max": 100,
       "step": 10,
       "unit": "%",

@@ -48,6 +48,13 @@
                     font-size: {{ block.settings.size_font | times: 0.8 }}px;
                   }
                 }
+                @media screen and (max-width: 420px) {
+                  #section-{{ section.id }} .rich-text__heading--{{ forloop.index0 }}::after {
+                    width: calc(150% + 46px);
+                    left: 0;
+                    transform: rotateZ(1deg) translate(-5%, 60%);
+                  }
+                }
               {%- endstyle -%}
               <h2
                 class="rich-text__heading rich-text__heading--{{ forloop.index0 }} rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} text-{{ block.settings.font | downcase }}"
@@ -61,72 +68,73 @@
               </h2>
           {%- endcase -%}
         {%- endfor -%}
-              {%- style -%}
-                #section-{{ section.id }} .rich-text__steps {
-                  display: flex;
-                  width: 100%;
-                  justify-content: center;
-                  flex-wrap: wrap;
-                }
-                #section-{{ section.id }} .rich-text__step {
-                  position: relative;
-                  margin-right: 10px;
-                  margin-bottom: 20px;
-                  display: flex;
-                  align-items: center;
-                  line-height: 1;
-                }
-                #section-{{ section.id }} .rich-text__step-arrow {
-                  margin-left: 10px;
-                }
-              {%- endstyle -%}
-              <div
-                class="rich-text__steps"
-              >
-                {%- for block in section.blocks -%}
-                  {%- case block.type -%}
-                    {%- when 'caption' -%}
-                      {%- style -%}
-                        {% if block.settings.cross_out %}
-                        #section-{{ section.id }} .rich-text__step.cross-out--{{ forloop.index0 }}::before {
-                          position: absolute;
-                          width: calc(100% - 10px);
-                          height: 2px;
-                          top: 75%;
-                          left: -8px;
-                          content: "";
-                          background-color: {{ block.settings.color_cross_out }};
-                          transform: rotateZ(10deg);
-                          transform-origin: right;
-                        }
-                        {% endif %}
-                        #section-{{ section.id }} .rich-text__step--{{ forloop.index0 }} {
-                          color: {{ block.settings.color_text }};
-                        }
-                      {%- endstyle -%}
-                      <span
-                        class="
-                          rich-text__step 
-                          rich-text__step--{{ forloop.index0 }}
-                          rich-text__caption--{{ block.settings.text_style }} 
-                          {% if block.settings.cross_out %}cross-out--{{ forloop.index0 }}{% endif %}
-                          {% if block.settings.arrow %}arrow--{{ forloop.index0 }}{% endif %}
-                          rich-text__caption--{{ block.settings.text_size }}
-                          {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                        {{ block.shopify_attributes }}
-                        {% if settings.animations_reveal_on_scroll %}
-                          data-cascade
-                          style="--animation-order: {{ forloop.index }};"
-                        {% endif %}
-                      >
-                        {{ block.settings.caption | replace: ' ', '<br>' }}
-                        {% if block.settings.arrow %}
-                          <span class="rich-text__step-arrow" aria-hidden="true">→</span>
-                        {% endif %}
-                      </span>
-                  {%- endcase -%}
-                {%- endfor -%}
-              </div>
+        {%- style -%}
+          #section-{{ section.id }} .rich-text__steps {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            flex-wrap: wrap;
+          }
+          #section-{{ section.id }} .rich-text__step {
+            position: relative;
+            margin-right: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            line-height: 1;
+          }
+          #section-{{ section.id }} .rich-text__step-arrow {
+            margin-left: 10px;
+          }
+        {%- endstyle -%}
+        <div
+          class="rich-text__steps"
+        >
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'caption' -%}
+                {%- style -%}
+                  {% if block.settings.cross_out %}
+                  #section-{{ section.id }} .rich-text__step.cross-out--{{ forloop.index0 }}::before {
+                    position: absolute;
+                    width: calc(100% - 10px);
+                    height: 2px;
+                    top: 75%;
+                    left: -8px;
+                    content: "";
+                    background-color: {{ block.settings.color_cross_out }};
+                    transform: rotateZ(10deg);
+                    transform-origin: right;
+                  }
+                  {% endif %}
+                  #section-{{ section.id }} .rich-text__step--{{ forloop.index0 }} {
+                    color: {{ block.settings.color_text }};
+                  }
+                {%- endstyle -%}
+                <span
+                  class="
+                    rich-text__step
+                    rich-text__step--{{ forloop.index0 }}
+                    rich-text__caption--{{ block.settings.text_style }}
+                    {% if block.settings.cross_out %}cross-out--{{ forloop.index0 }}{% endif %}
+                    {% if block.settings.arrow %}arrow--{{ forloop.index0 }}{% endif %}
+                    rich-text__caption--{{ block.settings.text_size }}
+                    {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}
+                  "
+                  {{ block.shopify_attributes }}
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  {{ block.settings.caption | replace: ' ', '<br>' }}
+                  {% if block.settings.arrow %}
+                    <span class="rich-text__step-arrow" aria-hidden="true">→</span>
+                  {% endif %}
+                </span>
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when 'text' -%}
@@ -460,9 +468,9 @@
           "default": "#F4F3EF"
         },
         {
-         "type": "header",
-         "content": "t:sections.rich-text.blocks.buttons.settings.header_button1.content"
-        },        
+          "type": "header",
+          "content": "t:sections.rich-text.blocks.buttons.settings.header_button1.content"
+        },
         {
           "type": "text",
           "id": "button_label",
@@ -482,9 +490,9 @@
           "label": "t:sections.rich-text.blocks.buttons.settings.button_style_secondary_1.label"
         },
         {
-         "type": "header",
-         "content": "t:sections.rich-text.blocks.buttons.settings.header_button2.content"
-        },          
+          "type": "header",
+          "content": "t:sections.rich-text.blocks.buttons.settings.header_button2.content"
+        },
         {
           "type": "text",
           "id": "button_label_2",

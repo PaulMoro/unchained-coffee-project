@@ -2,6 +2,9 @@
 {{ 'newsletter-section.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
+  .newsletter-section {
+    background-color: {{ section.settings.bg_section }};
+  }
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -27,12 +30,12 @@
 {%- endstyle -%}
 
 <div class="newsletter center {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
-  <div class="newsletter__wrapper color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding">
+  <div class=" gradient color-{{ section.settings.color_scheme }} content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding">
     <div class="first-child">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
-            {%  style %} 
+            {% style %}
               .section-{{ section.id }}-padding h2 {
                 margin-bottom: 1rem;
                 color: {{ block.settings.color_text }};
@@ -45,19 +48,19 @@
               }
             {% endstyle %}
             {% if block.settings.aligment == 'left' %}
-            <h2
-              class="inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} text-{{ block.settings.font | downcase }}"
-              {{ block.shopify_attributes }}
-              {% if settings.animations_reveal_on_scroll %}
-                data-cascade
-                style="--animation-order: {{ forloop.index }};"
-              {% endif %}
-            >
-              {{ block.settings.heading }}
-            </h2>
+              <h2
+                class="inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} text-{{ block.settings.font | downcase }}"
+                {{ block.shopify_attributes }}
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
+                {{ block.settings.heading }}
+              </h2>
             {% endif %}
-          {%  when 'text' %}
-            {%  style %} 
+          {% when 'text' %}
+            {% style %}
               .section-{{ section.id }}-padding .inline-text {
                 margin: 0 0 4rem;
                 color: {{ block.settings.color_text }};
@@ -83,7 +86,7 @@
               </div>
             {% endif %}
           {%- when 'paragraph' -%}
-            {%  style %} 
+            {% style %}
               .section-{{ section.id }}-padding .newsletter__subheading {
                 margin: 0 0 4rem;
                 color: {{ block.settings.color_text }};
@@ -108,7 +111,7 @@
               </div>
             {% endif %}
           {%- when 'email_form' -%}
-            {%  style %} 
+            {% style %}
               .section-{{ section.id }}-padding .newsletter-form__button {
                 {% if block.settings.btn_style %}
                   padding: 0.75rem 1rem;
@@ -180,7 +183,7 @@
                         id="Subscribe"
                         aria-label="{{ 'newsletter.button_label' | t }}"
                       >
-                      <span class="svg-wrapper">
+                        <span class="svg-wrapper">
                           {% if block.settings.btn_style %}
                             {{- 'icon-arrow.svg' | inline_asset_content -}}
                           {% else %}
@@ -223,18 +226,18 @@
         {%- case block.type -%}
           {%- when 'heading' -%}
             {% if block.settings.aligment == 'right' %}
-            <h2
-              class="inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} text-{{ block.settings.font | downcase }}"
-              {{ block.shopify_attributes }}
-              {% if settings.animations_reveal_on_scroll %}
-                data-cascade
-                style="--animation-order: {{ forloop.index }};"
-              {% endif %}
-            >
-              {{ block.settings.heading }}
-            </h2>
+              <h2
+                class="inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} text-{{ block.settings.font | downcase }}"
+                {{ block.shopify_attributes }}
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
+                {{ block.settings.heading }}
+              </h2>
             {% endif %}
-          {%  when 'text' %}
+          {% when 'text' %}
             {% if block.settings.aligment == 'right' %}
               <div
                 class="inline-text{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} text-{{ block.settings.font | downcase }}"
@@ -336,7 +339,7 @@
             {% endif %}
         {%- endcase -%}
       {%- endfor -%}
-     </div> 
+    </div>
   </div>
 </div>
 
@@ -344,7 +347,7 @@
 {
   "name": "t:sections.newsletter.name",
   "tag": "section",
-  "class": "section",
+  "class": "section newsletter-section",
   "disabled_on": {
     "groups": ["header"]
   },
@@ -358,6 +361,12 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "bg_section",
+      "label": "Color de seccion",
+      "default": "#262624"
     },
     {
       "type": "checkbox",

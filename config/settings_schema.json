@@ -1311,6 +1311,12 @@
       },
       {
         "type": "text",
+        "id": "social_twitter_link",
+        "label": "t:settings_schema.social-media.settings.social_twitter_link.label",
+        "placeholder": "t:settings_schema.social-media.settings.social_twitter_link.info"
+      },
+      {
+        "type": "text",
         "id": "social_instagram_link",
         "label": "t:settings_schema.social-media.settings.social_instagram_link.label",
         "placeholder": "t:settings_schema.social-media.settings.social_instagram_link.info"
@@ -1323,15 +1329,21 @@
       },
       {
         "type": "text",
-        "id": "social_tiktok_link",
-        "label": "t:settings_schema.social-media.settings.social_tiktok_link.label",
-        "placeholder": "t:settings_schema.social-media.settings.social_tiktok_link.info"
+        "id": "social_wa_link",
+        "label": "t:settings_schema.social-media.settings.social_wa_link.label",
+        "placeholder": "t:settings_schema.social-media.settings.social_wa_link.info"
       },
       {
         "type": "text",
-        "id": "social_twitter_link",
-        "label": "t:settings_schema.social-media.settings.social_twitter_link.label",
-        "placeholder": "t:settings_schema.social-media.settings.social_twitter_link.info"
+        "id": "social_mail_link",
+        "label": "t:settings_schema.social-media.settings.social_mail_link.label",
+        "placeholder": "t:settings_schema.social-media.settings.social_mail_link.info"
+      },
+      {
+        "type": "text",
+        "id": "social_tiktok_link",
+        "label": "t:settings_schema.social-media.settings.social_tiktok_link.label",
+        "placeholder": "t:settings_schema.social-media.settings.social_tiktok_link.info"
       },
       {
         "type": "text",
