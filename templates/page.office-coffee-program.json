@@ -36,28 +36,14 @@
           "type": "text",
           "settings": {
             "text": "<p>Coffee that fuels your team. And frees the people who grow it.</p>",
-            "color_text": "#F4F3EF",
+            "color_text": "#000000",
             "color_text_bold": "#fdda24"
-          }
-        },
-        "button_3jWpwW": {
-          "type": "button",
-          "settings": {
-            "color_text": "#262624",
-            "color_bg": "#F4F3EF",
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
         "heading_KBHwfd",
-        "text_i8FX4L",
-        "button_3jWpwW"
+        "text_i8FX4L"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
