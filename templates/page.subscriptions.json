@@ -50,7 +50,7 @@
             "level_2_feature_3": "Early access to new releases",
             "level_2_feature_4": "10% off additional purchases",
             "level_2_button_text": "Subscribe Now",
-            "level_2_button_link": "",
+            "level_2_button_link": "shopify://products/starter-copy",
             "level_3_enabled": true,
             "level_3_image": "shopify://shop_images/Clip_path_group_2.png",
             "level_3_badge": "Best Value",
