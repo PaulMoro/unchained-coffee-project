@@ -1146,7 +1146,7 @@
             "color_bg": "#fdda24",
             "small_btn": true,
             "button_label_1": "CHANGE THE CHAIN AT WORK",
-            "button_link_1": "#",
+            "button_link_1": "shopify://pages/office-coffee-program",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
