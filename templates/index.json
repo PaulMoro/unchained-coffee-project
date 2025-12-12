@@ -231,15 +231,15 @@
         "padding_bottom": 32
       }
     },
-    "featured_collection_CxjnxU": {
+    "featured_collection_GAQTXY": {
       "type": "featured-collection",
-      "name": "Limited Editions",
+      "name": "The Unchained Favorites",
       "settings": {
-        "collection": "limited-edition",
+        "collection": "best-seller",
         "products_to_show": 6,
-        "title": "Limited Editions",
+        "title": "The Unchained Favorites",
         "heading_size": "h1",
-        "description": "<p><strong>Once they’re gone, they’re truly gone.</strong> Secure yours before the next one arrives…and this one becomes history.</p>",
+        "description": "<p>The coffees <strong>everyone returns to </strong>— powered by a fairer chain.</p>",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 3,
@@ -462,15 +462,15 @@
         "padding_bottom": 20
       }
     },
-    "featured_collection_GAQTXY": {
+    "featured_collection_CxjnxU": {
       "type": "featured-collection",
-      "name": "The Unchained Favorites",
+      "name": "Limited Editions",
       "settings": {
-        "collection": "best-seller",
+        "collection": "limited-edition",
         "products_to_show": 6,
-        "title": "The Unchained Favorites",
+        "title": "Limited Editions",
         "heading_size": "h1",
-        "description": "<p>The coffees <strong>everyone returns to </strong>— powered by a fairer chain.</p>",
+        "description": "<p><strong>Once they’re gone, they’re truly gone.</strong> Secure yours before the next one arrives…and this one becomes history.</p>",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 3,
@@ -1066,9 +1066,9 @@
             "button_text_1": "Buy Now",
             "button_link_1": "#",
             "video_2": "shopify://files/videos/Picking Slow Motion.mp4",
-            "heading_2": "For Beginner’s",
-            "text_2": "<p>Smooth, balanced coffees made for your first step into specialty. Easy to enjoy. Simply delicious.</p>",
-            "button_text_2": "Buy Now",
+            "heading_2": "Events for Free",
+            "text_2": "<p>Here you can schedule your event with us without payment.  </p>",
+            "button_text_2": "Schedule Now",
             "button_link_2": "#",
             "video_radius": 0,
             "overlay_opacity": 50,
