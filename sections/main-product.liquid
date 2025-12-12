@@ -5,9 +5,6 @@
   data-product-id="{{ product.id }}"
   data-update-url="true"
   data-url="{{ product.url }}"
-  {% if section.settings.image_zoom == 'hover' %}
-    data-zoom-on-hover
-  {% endif %}
 >
   {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
   {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
@@ -46,39 +43,17 @@
     <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
 
-  {% if section.settings.image_zoom == 'hover' %}
-    <script id="EnableZoomOnHover-main" src="{{ 'magnify.js' | asset_url }}" defer="defer"></script>
-  {% endif %}
   {%- if request.design_mode -%}
     <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
 
-  {%- assign first_3d_model = product.media | where: 'media_type', 'model' | first -%}
-  {%- if first_3d_model -%}
-    {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
-    <link
-      id="ModelViewerStyle"
-      rel="stylesheet"
-      href="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css"
-      media="print"
-      onload="this.media='all'"
-    >
-    <link
-      id="ModelViewerOverride"
-      rel="stylesheet"
-      href="{{ 'component-model-viewer-ui.css' | asset_url }}"
-      media="print"
-      onload="this.media='all'"
-    >
-  {%- endif -%}
-
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
   <div class="page-width">
-    <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+    <div class="product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper">
         {% render 'product-media-gallery', variant_images: variant_images %}
       </div>
-      <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      <div class="product__info-wrapper grid__item product__info-wrapper--extra-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <section
           id="ProductInfo-{{ section.id }}"
           class="product__info-container{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}"
@@ -2106,26 +2081,6 @@
       "content": "t:sections.main-product.settings.header.content"
     },
     {
-      "type": "select",
-      "id": "media_size",
-      "options": [
-        {
-          "value": "small",
-          "label": "t:sections.main-product.settings.media_size.options__1.label"
-        },
-        {
-          "value": "medium",
-          "label": "t:sections.main-product.settings.media_size.options__2.label"
-        },
-        {
-          "value": "large",
-          "label": "t:sections.main-product.settings.media_size.options__3.label"
-        }
-      ],
-      "default": "large",
-      "label": "t:sections.main-product.settings.media_size.label"
-    },
-    {
       "type": "checkbox",
       "id": "constrain_to_viewport",
       "default": true,
@@ -2190,42 +2145,6 @@
       ],
       "default": "hide",
       "label": "t:sections.main-product.settings.mobile_thumbnails.label"
-    },
-    {
-      "type": "select",
-      "id": "media_position",
-      "options": [
-        {
-          "value": "left",
-          "label": "t:sections.main-product.settings.media_position.options__1.label"
-        },
-        {
-          "value": "right",
-          "label": "t:sections.main-product.settings.media_position.options__2.label"
-        }
-      ],
-      "default": "left",
-      "label": "t:sections.main-product.settings.media_position.label"
-    },
-    {
-      "type": "select",
-      "id": "image_zoom",
-      "options": [
-        {
-          "value": "lightbox",
-          "label": "t:sections.main-product.settings.image_zoom.options__1.label"
-        },
-        {
-          "value": "hover",
-          "label": "t:sections.main-product.settings.image_zoom.options__2.label"
-        },
-        {
-          "value": "none",
-          "label": "t:sections.main-product.settings.image_zoom.options__3.label"
-        }
-      ],
-      "default": "lightbox",
-      "label": "t:sections.main-product.settings.image_zoom.label"
     },
     {
       "type": "checkbox",
