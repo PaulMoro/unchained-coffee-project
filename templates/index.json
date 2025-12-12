@@ -199,15 +199,15 @@
         "padding_bottom": 40
       }
     },
-    "featured_collection_CxjnxU": {
+    "featured_collection_mmCRXt": {
       "type": "featured-collection",
-      "name": "Limited Editions",
+      "name": "New Releases",
       "settings": {
-        "collection": "limited-edition",
+        "collection": "best-seller",
         "products_to_show": 6,
-        "title": "Limited Editions",
+        "title": "New Releases",
         "heading_size": "h1",
-        "description": "<p><strong>Once they’re gone, they’re truly gone.</strong> Secure yours before the next one arrives…and this one becomes history.</p>",
+        "description": "<p>Fresh drops from <strong>new growers rewriting the rules</strong>. New coffees, new stories, same purpose.</p>",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 3,
@@ -231,15 +231,15 @@
         "padding_bottom": 32
       }
     },
-    "featured_collection_mmCRXt": {
+    "featured_collection_CxjnxU": {
       "type": "featured-collection",
-      "name": "New Releases",
+      "name": "Limited Editions",
       "settings": {
-        "collection": "best-seller",
+        "collection": "limited-edition",
         "products_to_show": 6,
-        "title": "New Releases",
+        "title": "Limited Editions",
         "heading_size": "h1",
-        "description": "<p>Fresh drops from <strong>new growers rewriting the rules</strong>. New coffees, new stories, same purpose.</p>",
+        "description": "<p><strong>Once they’re gone, they’re truly gone.</strong> Secure yours before the next one arrives…and this one becomes history.</p>",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 3,
@@ -1329,10 +1329,10 @@
     "video_Rajhf9",
     "image_banner",
     "collection_fullwidth_XqbJbE",
-    "featured_collection_CxjnxU",
     "featured_collection_mmCRXt",
-    "collection_home_3CmXRN",
     "featured_collection_GAQTXY",
+    "collection_home_3CmXRN",
+    "featured_collection_CxjnxU",
     "featured_collection_LkqxUq",
     "rich_text_a8CCQB",
     "featured_collection_QGjPbq",
