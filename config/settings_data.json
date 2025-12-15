@@ -164,6 +164,11 @@
           "button_vertical_position": "lowest",
           "greeting_message": ""
         }
+      },
+      "16639719321517056074": {
+        "type": "shopify://apps/appointment-booking-app-propel/blocks/app-embed/8fc80258-efd0-4b1f-bf89-d034bbb2e473",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
