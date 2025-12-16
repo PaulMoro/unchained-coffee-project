@@ -10,16 +10,8 @@
 {
   "sections": {
     "main": {
-      "type": "main-product",
+      "type": "custom-product",
       "blocks": {
-        "title": {
-          "type": "title",
-          "settings": {}
-        },
-        "price": {
-          "type": "price",
-          "settings": {}
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -29,6 +21,10 @@
         },
         "quantity_selector": {
           "type": "quantity_selector",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
           "settings": {}
         },
         "buy_buttons": {
@@ -52,25 +48,25 @@
         }
       },
       "block_order": [
-        "title",
-        "price",
         "variant_picker",
         "quantity_selector",
+        "price",
         "buy_buttons",
         "subscriptions_app_block_xyAAXq"
       ],
       "settings": {
-        "enable_sticky_info": true,
+        "enable_sticky_info": false,
         "color_scheme": "scheme-1",
-        "media_size": "small",
         "constrain_to_viewport": false,
-        "media_fit": "contain",
-        "gallery_layout": "stacked",
-        "mobile_thumbnails": "hide",
-        "media_position": "left",
+        "media_fit": "cover",
         "image_zoom": "none",
         "hide_variants": false,
         "enable_video_looping": false,
+        "title_separator": "|",
+        "characteristics_title": "FLORAL & BALANCED PROFILE",
+        "char_bg_color": "#f3f3f3",
+        "char_text_color": "#000000",
+        "info_alignment": "flex-start",
         "padding_top": 36,
         "padding_bottom": 12
       }
