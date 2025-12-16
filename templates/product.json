@@ -55,7 +55,7 @@
         "subscriptions_app_block_xyAAXq"
       ],
       "settings": {
-        "enable_sticky_info": false,
+        "general_bg_color": "#f1f1f9",
         "color_scheme": "scheme-1",
         "constrain_to_viewport": false,
         "media_fit": "cover",
@@ -64,7 +64,7 @@
         "enable_video_looping": false,
         "title_separator": "|",
         "characteristics_title": "FLORAL & BALANCED PROFILE",
-        "char_bg_color": "#f3f3f3",
+        "char_bg_color": "#ffffff",
         "char_text_color": "#000000",
         "info_alignment": "flex-start",
         "padding_top": 36,
