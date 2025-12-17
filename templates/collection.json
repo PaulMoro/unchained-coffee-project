@@ -11,51 +11,10 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
-      "disabled": true,
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,
         "color_scheme": "scheme-1"
-      }
-    },
-    "rich_text_dtHNAM": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_PixetM": {
-          "type": "heading",
-          "settings": {
-            "heading": "New Releases Collection",
-            "heading_size": "h1",
-            "font": "modesto",
-            "size_font": 36,
-            "color_text": "#000000",
-            "bg_highlight": true,
-            "highlight_color": "#fdda24"
-          }
-        },
-        "text_QjiFMT": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Freshly released coffees, introduced at their peak.<br/><br/>Each lot represents a new origin, a new harvest, or a new producer entering the Unchained ecosystem.</p><p>These coffees mark the beginning of something—before it becomes familiar, before it sells out.<br/><br/>First access. Same principles.</p>",
-            "color_text": "#000000",
-            "color_text_bold": "#fdda24"
-          }
-        }
-      },
-      "block_order": [
-        "heading_PixetM",
-        "text_QjiFMT"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
-        "color_scheme": "",
-        "color_custom": true,
-        "background_color": "#ffffff",
-        "full_width": true,
-        "padding_top": 52,
-        "padding_bottom": 52
       }
     },
     "product-grid": {
@@ -81,7 +40,6 @@
   },
   "order": [
     "banner",
-    "rich_text_dtHNAM",
     "product-grid"
   ]
 }
