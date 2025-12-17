@@ -203,7 +203,7 @@
       "type": "featured-collection",
       "name": "New Releases",
       "settings": {
-        "collection": "best-seller",
+        "collection": "new-releases-collection",
         "products_to_show": 6,
         "title": "New Releases",
         "heading_size": "h1",
