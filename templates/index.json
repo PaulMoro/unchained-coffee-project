@@ -695,7 +695,7 @@
       "name": "Change Makers",
       "settings": {
         "collection": "community-builders",
-        "products_to_show": 6,
+        "products_to_show": 4,
         "title": "Community Builders",
         "heading_size": "h1",
         "description": "<p>Coffees grown by farmers <strong>leading real progress </strong>lifting their communities, shaping their regions, and proving that meaningful change starts at origin.</p>",
