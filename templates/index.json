@@ -100,7 +100,7 @@
         "collection_button_ptBH3m": {
           "type": "collection_button",
           "settings": {
-            "collection": "flavor-profile-fermented-copy",
+            "collection": "fruity-collection",
             "custom_title": "Fruity"
           }
         },
@@ -272,7 +272,7 @@
           "settings": {
             "select_space": "left",
             "title_collection": "Fruity",
-            "collection": "flavor-profile-fermented-copy"
+            "collection": "fruity-collection"
           }
         },
         "collection_wL6QYV": {
