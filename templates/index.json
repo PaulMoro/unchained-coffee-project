@@ -467,7 +467,7 @@
       "name": "Limited Editions",
       "settings": {
         "collection": "limited-edition",
-        "products_to_show": 6,
+        "products_to_show": 4,
         "title": "Limited Editions",
         "heading_size": "h1",
         "description": "<p><strong>Once they’re gone, they’re truly gone.</strong> Secure yours before the next one arrives…and this one becomes history.</p>",
