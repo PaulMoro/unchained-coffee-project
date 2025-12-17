@@ -451,7 +451,7 @@
         "background_items": "#f5f4f0",
         "border_items": "#262624",
         "hover_color_items": "#fdda24",
-        "bg_section_right": "#e8e6dd",
+        "bg_section_right": "#000000",
         "title_right": "The Smart Choice.",
         "font_right": "modesto",
         "size_font_right": 36,
