@@ -107,7 +107,7 @@
         "collection_button_Rii7ya": {
           "type": "collection_button",
           "settings": {
-            "collection": "flavor-profile-vanilla-copy",
+            "collection": "floral-1",
             "custom_title": "Floral"
           }
         },
@@ -281,7 +281,7 @@
           "settings": {
             "select_space": "left",
             "title_collection": "Floral",
-            "collection": "flavor-profile-vanilla-copy"
+            "collection": "floral-1"
           }
         },
         "collection_wF4GYa": {
