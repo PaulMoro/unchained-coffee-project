@@ -406,7 +406,7 @@
           "settings": {
             "select_space": "right",
             "title_collection": "Youth",
-            "collection": "next-generation-producers",
+            "collection": "youth-collection",
             "image_collection": "shopify://shop_images/Foto_Cristian_Alejandro_Beltran.jpg"
           }
         },
@@ -957,7 +957,7 @@
       "type": "featured-collection",
       "name": "Drip Recommended",
       "settings": {
-        "collection": "next-generation-producers",
+        "collection": "youth-collection",
         "products_to_show": 3,
         "title": "Drip",
         "heading_size": "h1",
