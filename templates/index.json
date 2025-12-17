@@ -926,7 +926,7 @@
       "name": "Espresso Recommended",
       "settings": {
         "collection": "best-seller",
-        "products_to_show": 6,
+        "products_to_show": 8,
         "title": "Espresso",
         "heading_size": "h1",
         "description": "<p>Built for milk drinks. Exceptional on its own.</p>",
