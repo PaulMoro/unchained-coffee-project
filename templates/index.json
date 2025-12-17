@@ -498,7 +498,7 @@
       "type": "featured-collection",
       "name": "Recommended This Week",
       "settings": {
-        "collection": "best-seller",
+        "collection": "weekly-picks",
         "products_to_show": 6,
         "title": "Recommended This Week",
         "heading_size": "h1",
