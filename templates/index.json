@@ -235,7 +235,7 @@
       "type": "featured-collection",
       "name": "The Unchained Favorites",
       "settings": {
-        "collection": "best-seller",
+        "collection": "the-unchained-favorites",
         "products_to_show": 6,
         "title": "The Unchained Favorites",
         "heading_size": "h1",
