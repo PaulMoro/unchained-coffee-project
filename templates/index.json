@@ -662,9 +662,9 @@
       "type": "featured-collection",
       "name": "Designed for the planet",
       "settings": {
-        "collection": "best-seller",
+        "collection": "planet-first-collection",
         "products_to_show": 6,
-        "title": "Designed for the planet",
+        "title": "Planet First",
         "heading_size": "h1",
         "description": "<p>Carefully grown by <strong>environmental innovators</strong> who create remarkable coffee through regenerative practices.</p>",
         "show_description": false,
