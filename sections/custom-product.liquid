@@ -40,15 +40,12 @@
         padding-bottom: {{ section.settings.padding_bottom }}px;
       }
     }
-
-    /* ESTILOS CUSTOM */
-    @media screen and (min-width: 990px) {
-      .product-custom-layout {
-        display: grid;
-        grid-template-columns: 350px 1fr 350px;
-        align-items: start;
-      }
-
+    .product-custom-layout {
+      display: grid;
+      grid-template-columns: 350px 1fr 350px;
+      align-items: start;
+    }
+    @media screen and (min-width: 1025px) {
       .product__info-wrapper.custom-alignment {
         display: flex;
         flex-direction: column;
@@ -74,7 +71,7 @@
     .char-grid {
       display: grid;
       grid-template-columns: 1fr;
-      max-width: 260px;
+      max-width: 350px;
       margin-inline: auto;
       gap: 15px;
     }
@@ -90,25 +87,110 @@
       display: flex;
       margin-bottom: 0px;
       gap: 10px;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: space-between;
+      align-items: start;
+    }
+    .char-datum--roast {
+      flex-direction: row;
       align-items: center;
+    }
+    .char-title {
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      color: {{ section.settings.char_text_color | default: '#000000' }};
+    }
+    .char-text-val {
+      font-size: 1.2rem;
+      color: {{ section.settings.char_text_color | default: '#000000' }};
+    }
+    .scale-container {
+      display: flex;
+      gap: 4px;
+      width: 100%;
+      justify-content: space-around;
+    }
+    .scale-box {
+      width: 15px;
+      height: 15px;
+      border: 1px solid {{ section.settings.char_text_color | default: '#000000' }};
+      display: inline-block;
+    }
+    .scale-box.filled {
+      background-color: {{ section.settings.char_text_color | default: '#000000' }};
+    }
+    @media screen and (max-width: 1200px) and (min-width: 1025px) {
+      .product-custom-layout {
+        grid-template-columns: 300px 1fr 300px;
+      }
+      .scale-container {
+        gap: 2px;
+      }
+      .scale-box {
+        width: 14px;
+        height: 14px;
+      }
     }
 
     @media screen and (max-width: 1024px) and (min-width: 981px) {
+      .product-custom-layout {
+        grid-template-columns: 300px 1fr 300px;
+      }
       .char-datum {
         flex-direction: column;
         align-items: flex-start;
       }
     }
     @media screen and (max-width: 980px) and (min-width: 421px) {
+      .product-custom-layout {
+        grid-template-columns: 1fr;
+        justify-items: center;
+      }
+      .char-column{
+        order: 1;
+      }
       .char-datum {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
       }
+      .scale-box {
+        width: 12px;
+        height: 12px;
+      }
+      .scale-container {
+        width: fit-content;
+      }
+      .product__info-wrapper {
+        order: 2;
+      }
+      .product__media-wrapper {
+        width: 100%;
+      }
+      .grid--peek.slider .grid__item:first-of-type {
+        width: 100%;
+        max-width: none;
+      }
     }
     @media screen and (max-width: 420px) {
+      .product-custom-layout {
+        grid-template-columns: 1fr;
+        justify-items: center;
+      }
+      .char-column{
+        order: 1;
+      }
+      .product__info-wrapper {
+        order: 2;
+      }
+      .product__media-wrapper {
+        width: 100%;
+      }
+      .grid--peek.slider .grid__item:first-of-type {
+        width: 100%;
+        max-width: none;
+      }
       .char-datum {
         flex-direction: column;
         align-items: flex-start;
@@ -122,34 +204,10 @@
       .char-text-val {
         font-size: 1.2rem;
       }
-    }
-
-    .char-title {
-      font-weight: bold;
-      text-transform: uppercase;
-      font-size: 1.2rem;
-      color: {{ section.settings.char_text_color | default: '#000000' }};
-    }
-
-    .char-text-val {
-      font-size: 1.2rem;
-      color: {{ section.settings.char_text_color | default: '#000000' }};
-    }
-
-    .scale-container {
-      display: flex;
-      gap: 4px;
-    }
-
-    .scale-box {
-      width: 15px;
-      height: 15px;
-      border: 1px solid {{ section.settings.char_text_color | default: '#000000' }};
-      display: inline-block;
-    }
-
-    .scale-box.filled {
-      background-color: {{ section.settings.char_text_color | default: '#000000' }};
+      .scale-box {
+        width: 12px;
+        height: 12px;
+      }
     }
 
     /* Estilos Columna Derecha */
@@ -178,6 +236,9 @@
     .quantity:after {
       border-radius: 30px;
       border: 1.3px solid #262625;
+    }
+    .quantity:before {
+      border-radius: 30px;
     }
     .quantity__input {
       border-right: 1.5px solid #262625;
@@ -208,6 +269,13 @@
       font-family: var(--font-body-family);
       font-weight: normal;
     }
+    .product-form__submit {
+      width: fit-content;
+      min-width: 192px;
+      text-transform: uppercase;
+      font-weight: bold;
+      background-color: #262625;
+    }
 
     /* Estilos del Título Principal */
     .product-main-header {
@@ -226,6 +294,52 @@
       text-transform: uppercase;
       color: #262625;
       letter-spacing: 0.1em;
+    }
+    {% if section.settings.show_top_tear or section.settings.show_bottom_tear %}
+      #MainProduct-{{ section.id }} {
+        position: relative;
+        z-index: 1;
+      }
+      #MainProduct-{{ section.id }}::before,
+      #MainProduct-{{ section.id }}::after {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        background-color: transparent;
+        pointer-events: none;
+        z-index: 2;
+        display: block;
+        top: auto;
+        bottom: auto;
+      }
+    {% endif %}
+    {% if section.settings.show_bottom_tear and section.settings.bottom_tear_image != blank %}
+      #MainProduct-{{ section.id }}::after {
+        content: '';
+        bottom: {{ section.settings.bottom_tear_offset }}px;
+        height: {{ section.settings.bottom_tear_height }}px;
+        background-image: url('{{ section.settings.bottom_tear_image | image_url: width: 2000 }}');
+        opacity: 1;
+        top: auto;
+        background-color: transparent;
+      }
+    {% else %}
+      #MainProduct-{{ section.id }}::after { content: none; }
+    {% endif %}
+    .quick-add-modal__content-info #MainProduct-{{ section.id }}::after { content: none; }
+    .quick-add-modal__content-info .char-column {
+      display: none;
+    }
+    .quick-add-modal__content-info .product-custom-layout {
+      grid-template-columns: 1fr 1fr;
+    }
+    quick-add-modal .product:not(.product--no-media) .product__media-wrapper,
+    quick-add-modal .product:not(.product--no-media) .product__info-wrapper {
+      width: 100%;
+      max-width: none;
     }
   {%- endstyle -%}
 
@@ -263,7 +377,7 @@
 
         <div class="char-grid">
           <div class="char-item">
-            <div class="char-datum">
+            <div class="char-datum char-datum--roast">
               <span class="char-title text-barlow">Roast</span>
               <span class="char-text-val">{{ product.metafields.custom.roast }}</span>
             </div>
@@ -274,7 +388,7 @@
               <span class="char-title text-barlow">Aroma</span>
               <div class="scale-container">
                 {% assign aroma_val = product.metafields.custom.aroma | plus: 0 %}
-                {% for i in (1..5) %}
+                {% for i in (1..15) %}
                   <span class="scale-box {% if i <= aroma_val %}filled{% endif %}"></span>
                 {% endfor %}
               </div>
@@ -283,7 +397,7 @@
               <span class="char-title text-barlow">Fragrance</span>
               <div class="scale-container">
                 {% assign fragrance_val = product.metafields.custom.fragance | plus: 0 %}
-                {% for i in (1..5) %}
+                {% for i in (1..15) %}
                   <span class="scale-box {% if i <= fragrance_val %}filled{% endif %}"></span>
                 {% endfor %}
               </div>
@@ -298,7 +412,7 @@
               <span class="char-title text-barlow">Flavor</span>
               <div class="scale-container">
                 {% assign flavor_val = product.metafields.custom.flavor | plus: 0 %}
-                {% for i in (1..5) %}
+                {% for i in (1..15) %}
                   <span class="scale-box {% if i <= flavor_val %}filled{% endif %}"></span>
                 {% endfor %}
               </div>
@@ -307,7 +421,7 @@
               <span class="char-title text-barlow">Aftertaste</span>
               <div class="scale-container">
                 {% assign aftertaste_val = product.metafields.custom.aftertaste | plus: 0 %}
-                {% for i in (1..5) %}
+                {% for i in (1..15) %}
                   <span class="scale-box {% if i <= aftertaste_val %}filled{% endif %}"></span>
                 {% endfor %}
               </div>
@@ -322,7 +436,7 @@
               <span class="char-title text-barlow">Acidity</span>
               <div class="scale-container">
                 {% assign acidity_val = product.metafields.custom.acidity | plus: 0 %}
-                {% for i in (1..5) %}
+                {% for i in (1..15) %}
                   <span class="scale-box {% if i <= acidity_val %}filled{% endif %}"></span>
                 {% endfor %}
               </div>
@@ -334,7 +448,7 @@
               <span class="char-title text-barlow">Sweetness</span>
               <div class="scale-container">
                 {% assign sweetness_val = product.metafields.custom.sweetness | plus: 0 %}
-                {% for i in (1..5) %}
+                {% for i in (1..15) %}
                   <span class="scale-box {% if i <= sweetness_val %}filled{% endif %}"></span>
                 {% endfor %}
               </div>
@@ -346,7 +460,7 @@
               <span class="char-title text-barlow">Mouthfeel</span>
               <div class="scale-container">
                 {% assign mouthfeel_val = product.metafields.custom.mouthfeel | plus: 0 %}
-                {% for i in (1..5) %}
+                {% for i in (1..15) %}
                   <span class="scale-box {% if i <= mouthfeel_val %}filled{% endif %}"></span>
                 {% endfor %}
               </div>
@@ -2331,7 +2445,7 @@
     {
       "type": "color",
       "id": "general_bg_color",
-      "label": "t:sections.main-product.settings.general_bg_color.label",
+      "label": "Color de Fondo General",
       "default": "#f1f1f9"
     },
     {
@@ -2459,6 +2573,42 @@
       ],
       "default": "flex-start",
       "info": "Define si los bloques de compra se pegan arriba, abajo o se distribuyen."
+    },
+    {
+      "type": "header",
+      "content": "Rasgado Inferior (Bottom Tear)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_bottom_tear",
+      "label": "Activar rasgado inferior",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "bottom_tear_image",
+      "label": "Imagen inferior (PNG Transparente)"
+    },
+    {
+      "type": "range",
+      "id": "bottom_tear_height",
+      "min": 20,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Altura inferior",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "bottom_tear_offset",
+      "min": -100,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Ajuste vertical inferior",
+      "default": 2,
+      "info": "Valor negativo baja la imagen."
     },
     {
       "type": "header",
