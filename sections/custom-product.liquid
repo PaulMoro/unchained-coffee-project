@@ -329,6 +329,9 @@
     {% else %}
       #MainProduct-{{ section.id }}::after { content: none; }
     {% endif %}
+    .quick-add-modal__content-info #MainProduct-{{ section.id }} {
+      background-color: transparent;
+    }
     .quick-add-modal__content-info #MainProduct-{{ section.id }}::after { content: none; }
     .quick-add-modal__content-info .char-column {
       display: none;
@@ -340,6 +343,15 @@
     quick-add-modal .product:not(.product--no-media) .product__info-wrapper {
       width: 100%;
       max-width: none;
+    }
+    @media screen and (max-width: 750px) {
+      .quick-add-modal__content-info .product-custom-layout {
+        grid-template-columns: 1fr;
+      }
+      .quick-add-modal__content-info .product__media-wrapper slider-component:not(.thumbnail-slider--no-slide) {
+        width: 100%;
+        max-width: none;
+      }
     }
   {%- endstyle -%}
 
