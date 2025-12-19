@@ -1,0 +1,479 @@
+{{ 'section-rich-text.css' | asset_url | stylesheet_tag }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    background-color: {{ section.settings.bg_color }};
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  /* Variables CSS Scopeadas */
+  #section-{{ section.id }} {
+    --tab-bg-color: {{ section.settings.tab_bg_color | default: '#ffffff' }};
+    --tab-text-color: {{ section.settings.tab_text_color | default: '#000000' }};
+    --content-bg-color: {{ section.settings.content_bg_color | default: '#f4f4f4' }};
+  }
+
+  /* =========================================
+   CUSTOM METAFIELD TABS CSS
+   ========================================= */
+
+  .tab-radio-input {
+    display: none;
+  }
+
+  .custom-tabs-container {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* 1. NAVEGACIÓN (Botones/Labels)
+    ----------------------------------------- */
+  .custom-tabs-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    padding-left: 0;
+    margin-bottom: -1px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .custom-tab-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 22px 30px;
+    width: 100%;
+    max-width: 242px;
+    background-color: var(--tab-bg-color);
+    cursor: pointer;
+    border-radius: 10px 10px 0 0;
+    transition: all 0.3s ease;
+    position: relative;
+    margin-bottom: 0;
+  }
+
+  .custom-tab-label .tab-text {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--tab-text-color);
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .tab-divider {
+    width: 1px;
+    height: 26px;
+    background-color: rgba(0, 0, 0, 0.1);
+    align-self: center;
+  }
+
+  .custom-tabs-container:has(.tab-radio-input:nth-of-type(1):checked) .custom-tabs-nav label:nth-of-type(1),
+  .custom-tabs-container:has(.tab-radio-input:nth-of-type(2):checked) .custom-tabs-nav label:nth-of-type(2),
+  .custom-tabs-container:has(.tab-radio-input:nth-of-type(3):checked) .custom-tabs-nav label:nth-of-type(3),
+  .custom-tabs-container:has(.tab-radio-input:nth-of-type(4):checked) .custom-tabs-nav label:nth-of-type(4) {
+    background-color: var(--content-bg-color);
+    z-index: 12;
+    cursor: default;
+  }
+
+  .custom-tabs-container:has(.tab-radio-input:checked) .custom-tabs-nav label:not(:first-of-type)::before {
+    display: none;
+  }
+  .custom-tab-label::before,
+  .custom-tab-label::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 5;
+  }
+
+  .custom-tabs-container:has(.tab-radio-input:nth-of-type(1):checked) label:nth-of-type(1)::before,
+  .custom-tabs-container:has(.tab-radio-input:nth-of-type(2):checked) label:nth-of-type(2)::before,
+  .custom-tabs-container:has(.tab-radio-input:nth-of-type(3):checked) label:nth-of-type(3)::before,
+  .custom-tabs-container:has(.tab-radio-input:nth-of-type(4):checked) label:nth-of-type(4)::before {
+    left: -20px;
+    box-shadow: 10px 10px 0 var(--content-bg-color);
+    opacity: 1;
+  }
+
+  .custom-tabs-container:has(.tab-radio-input:nth-of-type(1):checked) label:nth-of-type(1)::after,
+  .custom-tabs-container:has(.tab-radio-input:nth-of-type(2):checked) label:nth-of-type(2)::after,
+  .custom-tabs-container:has(.tab-radio-input:nth-of-type(3):checked) label:nth-of-type(3)::after,
+  .custom-tabs-container:has(.tab-radio-input:nth-of-type(4):checked) label:nth-of-type(4)::after {
+    right: -20px;
+    box-shadow: -10px 10px 0 var(--content-bg-color);
+    opacity: 1;
+  }
+
+  /* 4. CONTENIDO (Paneles)
+    ----------------------------------------- */
+  .custom-tabs-content-wrapper {
+    background-color: var(--content-bg-color);
+    padding: 50px;
+    border-radius: 0 10px 10px 10px;
+    position: relative;
+    z-index: 11;
+    min-height: 400px;
+  }
+
+  .custom-tab-panel {
+    display: none;
+    animation: fadeEffect 0.5s;
+  }
+
+  .tab-radio-input:nth-of-type(1):checked ~ .custom-tabs-content-wrapper .panel-1,
+  .tab-radio-input:nth-of-type(2):checked ~ .custom-tabs-content-wrapper .panel-2,
+  .tab-radio-input:nth-of-type(3):checked ~ .custom-tabs-content-wrapper .panel-3,
+  .tab-radio-input:nth-of-type(4):checked ~ .custom-tabs-content-wrapper .panel-4 {
+    display: block;
+  }
+
+  .tab-panel-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .tab-image, .tab-video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .col-text .rte {
+    margin-bottom: 20px;
+    color: var(--color-foreground);
+  }
+
+  .col-text h1, .col-text h2, .col-text h3 {
+    margin-top: 0;
+  }
+
+  .tab-file-wrapper {
+    margin-top: 20px;
+  }
+  @keyframes fadeEffect {
+    from {opacity: 0; transform: translateY(5px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+
+  .custom-tab-label:last-of-type {
+    margin-right: 0;
+  }
+{%- endstyle -%}
+
+<div class="isolate section-{{ section.id }}-padding" id="section-{{ section.id }}">
+  <div class="page-width custom-tabs-container">
+    {%- for block in section.blocks -%}
+      <input
+        type="radio"
+        id="tab-control-{{ section.id }}-{{ forloop.index }}"
+        name="tab-group-{{ section.id }}"
+        class="tab-radio-input"
+        {% if forloop.first %}
+          checked
+        {% endif %}
+      >
+    {%- endfor -%}
+
+    <div class="custom-tabs-nav">
+      {%- for block in section.blocks -%}
+        <label
+          for="tab-control-{{ section.id }}-{{ forloop.index }}"
+          class="custom-tab-label"
+          {{ block.shopify_attributes }}
+        >
+          <span class="tab-text">{{ block.settings.title }}</span>
+        </label>
+
+        {%- unless forloop.last -%}
+          <div class="tab-divider"></div>
+        {%- endunless -%}
+      {%- endfor -%}
+    </div>
+
+    <div class="custom-tabs-content-wrapper">
+      {%- for block in section.blocks -%}
+        {%- assign metaobject_key = block.settings.metafield_key -%}
+        {%- assign metaobject_ref = product.metafields.custom[metaobject_key].value -%}
+
+        <div class="custom-tab-panel panel-{{ forloop.index }}">
+          <div class="tab-panel-inner">
+            {%- capture content_media_image -%}
+              <div class="col-media col-image">
+                {%- assign imgs = metaobject_ref.imagenes.value -%}
+                
+                {%- if imgs.size > 1 -%}
+                  <div class="splide splide-{{ section.id }}-{{ forloop.index }}" aria-label="Product Images">
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        {%- for image in imgs -%}
+                          <li class="splide__slide">
+                            {{ image | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'tab-image' }}
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                    </div>
+                  </div>
+                {%- elsif imgs != blank -%}
+                  {%- assign single_img = imgs | first | default: imgs -%}
+                  {{ single_img | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'tab-image' }}
+                
+                {%- else -%}
+                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+              </div>
+            {%- endcapture -%}
+
+            {%- capture content_media_video -%}
+              <div class="col-media col-video">
+                {%- if metaobject_ref.video != blank -%}
+                  {{ metaobject_ref.video.value | video_tag: image_size: '1000x', loop: true, controls: true, muted: false, class: 'tab-video' }}
+                {%- else -%}
+                   {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+              </div>
+            {%- endcapture -%}
+
+            {%- capture content_text -%}
+              <div class="col-text">
+                {%- if metaobject_ref.texto_enriquecido != blank -%}
+                  <div class="rte">
+                    {{ metaobject_ref.texto_enriquecido | metafield_tag }}
+                  </div>
+                {%- else -%}
+                  <p>Descripción no disponible.</p>
+                {%- endif -%}
+
+                {%- if metaobject_ref.archivo != blank -%}
+                  <div class="tab-file-wrapper">
+                    <a href="{{ metaobject_ref.archivo.url }}" class="button button--secondary" target="_blank">
+                      Descargar Archivo
+                    </a>
+                  </div>
+                {%- endif -%}
+              </div>
+            {%- endcapture -%}
+
+            {%- case block.settings.layout_distribution -%}
+              {%- when 'image_text' -%}
+                {{ content_media_image }}
+                {{ content_text }}
+              {%- when 'video_text' -%}
+                {{ content_media_video }}
+                {{ content_text }}
+            {%- endcase -%}
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const sectionContainer = document.getElementById('section-{{ section.id }}');
+
+    const sliders = sectionContainer.querySelectorAll('.splide');
+    let splideInstances = {};
+
+    sliders.forEach((sliderEl) => {
+      const splide = new Splide(sliderEl, {
+        type: 'loop',
+        perPage: 1,
+        arrows: true,
+        pagination: true,
+        gap: '1rem',
+      });
+      splide.mount();
+      const parentPanel = sliderEl.closest('.custom-tab-panel');
+      if (parentPanel) {
+        splideInstances[parentPanel.id] = splide;
+      }
+    });
+
+    if (sectionContainer) {
+      const radios = sectionContainer.querySelectorAll('.tab-radio-input');
+      const panels = sectionContainer.querySelectorAll('.custom-tab-panel');
+
+      radios.forEach((radio, index) => {
+        radio.addEventListener('change', function () {
+          if (this.checked) {
+            const allVideos = sectionContainer.querySelectorAll('video');
+            allVideos.forEach((video) => {
+              video.pause();
+            });
+            const activePanel = panels[index];
+            if (activePanel) {
+              const activeVideo = activePanel.querySelector('video');
+              if (activeVideo) {
+                activeVideo.currentTime = 0;
+                const playPromise = activeVideo.play();
+
+                if (playPromise !== undefined) {
+                  playPromise.catch((error) => {
+                    console.log('Autoplay prevenido por el navegador:', error);
+                  });
+                }
+              }
+            }
+          }
+        });
+      });
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Custom Metafield Tabs",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Color Settings"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Section Background Color",
+      "default": "#f5f4f1"
+    },
+    {
+      "type": "color",
+      "id": "tab_bg_color",
+      "label": "Tabs Inactive Background",
+      "default": "#e8e5dd"
+    },
+    {
+      "type": "color",
+      "id": "tab_text_color",
+      "label": "Tabs Font Color",
+      "default": "#262625"
+    },
+    {
+      "type": "color",
+      "id": "content_bg_color",
+      "label": "Info Container & Active Tab",
+      "default": "#ffffff",
+      "info": "This color will apply to the info box and the active tab to create the connected effect."
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab Block",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Tab Title",
+          "default": "THE PRODUCER"
+        },
+        {
+          "type": "select",
+          "id": "metafield_key",
+          "label": "Metafield Source Data",
+          "options": [
+            {
+              "value": "tab_1",
+              "label": "custom.tab_1"
+            },
+            {
+              "value": "tab_2",
+              "label": "custom.tab_2"
+            },
+            {
+              "value": "tab_3",
+              "label": "custom.tab_3"
+            },
+            {
+              "value": "tab_4",
+              "label": "custom.tab_4"
+            }
+          ],
+          "default": "tab_1",
+          "info": "Select which metafield (Metaobject) populates this tab."
+        },
+        {
+          "type": "radio",
+          "id": "layout_distribution",
+          "label": "Content Layout",
+          "options": [
+            {
+              "value": "image_text",
+              "label": "Image (Left) - Text (Right)"
+            },
+            {
+              "value": "video_text",
+              "label": "Video (Left) - Text (Right)"
+            }
+          ],
+          "default": "image_text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Metafield Tabs",
+      "blocks": [
+        {
+          "type": "tab"
+        },
+        {
+          "type": "tab"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

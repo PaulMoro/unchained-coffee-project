@@ -75,6 +75,58 @@
         "padding_bottom": 60
       }
     },
+    "tabs_product_EnEQg3": {
+      "type": "tabs-product",
+      "blocks": {
+        "tab_VmPQ8N": {
+          "type": "tab",
+          "settings": {
+            "title": "THE PRODUCER",
+            "metafield_key": "tab_1",
+            "layout_distribution": "image_text"
+          }
+        },
+        "tab_4QxPbe": {
+          "type": "tab",
+          "settings": {
+            "title": "THE HISTORY",
+            "metafield_key": "tab_2",
+            "layout_distribution": "image_text"
+          }
+        },
+        "tab_bzFzdA": {
+          "type": "tab",
+          "settings": {
+            "title": "THE PROCESS",
+            "metafield_key": "tab_3",
+            "layout_distribution": "video_text"
+          }
+        },
+        "tab_PDVAnn": {
+          "type": "tab",
+          "settings": {
+            "title": "TRANSPARENCY",
+            "metafield_key": "tab_4",
+            "layout_distribution": "image_text"
+          }
+        }
+      },
+      "block_order": [
+        "tab_VmPQ8N",
+        "tab_4QxPbe",
+        "tab_bzFzdA",
+        "tab_PDVAnn"
+      ],
+      "name": "Custom Metafield Tabs",
+      "settings": {
+        "bg_color": "#f5f4f1",
+        "tab_bg_color": "#e8e5dd",
+        "tab_text_color": "#262625",
+        "content_bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -84,9 +136,9 @@
         "columns_desktop": 4,
         "columns_mobile": "2",
         "color_scheme": "scheme-2",
-        "image_ratio": "square",
+        "image_ratio": "adapt",
         "image_shape": "default",
-        "show_secondary_image": true,
+        "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
         "padding_top": 36,
@@ -96,6 +148,7 @@
   },
   "order": [
     "main",
+    "tabs_product_EnEQg3",
     "related-products"
   ]
 }
