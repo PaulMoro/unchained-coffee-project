@@ -81,7 +81,7 @@
         "tab_VmPQ8N": {
           "type": "tab",
           "settings": {
-            "title": "THE PRODUCER",
+            "title": "MEET THE PRODUCER",
             "metafield_key": "tab_1",
             "layout_distribution": "image_text"
           }
@@ -89,7 +89,7 @@
         "tab_4QxPbe": {
           "type": "tab",
           "settings": {
-            "title": "THE HISTORY",
+            "title": "FARM",
             "metafield_key": "tab_2",
             "layout_distribution": "image_text"
           }
@@ -97,7 +97,7 @@
         "tab_bzFzdA": {
           "type": "tab",
           "settings": {
-            "title": "THE PROCESS",
+            "title": "PROCESS",
             "metafield_key": "tab_3",
             "layout_distribution": "video_text"
           }
@@ -105,7 +105,7 @@
         "tab_PDVAnn": {
           "type": "tab",
           "settings": {
-            "title": "TRANSPARENCY",
+            "title": "CONTACT",
             "metafield_key": "tab_4",
             "layout_distribution": "image_text"
           }
