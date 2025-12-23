@@ -51,6 +51,7 @@
         flex-direction: column;
         height: 100%;
         justify-content: {{ section.settings.info_alignment | default: 'flex-start' }};
+        padding: 0 0 0 2rem;
       }
     }
 
@@ -383,9 +384,12 @@
 
     <div class="product product-custom-layout">
       <div class="char-column">
-        {% if section.settings.characteristics_title != blank %}
-          <h3 class="char-column__title h4">{{ section.settings.characteristics_title }}</h3>
+        {% if product.metafields.custom.titulo_de_caracteristicas != blank %}
+          {% assign characteristics_title = product.metafields.custom.titulo_de_caracteristicas %}
+        {% else %}
+          {% assign characteristics_title = section.settings.characteristics_title %}
         {% endif %}
+        <h3 class="char-column__title h4">{{ characteristics_title }}</h3>
 
         <div class="char-grid">
           <div class="char-item">

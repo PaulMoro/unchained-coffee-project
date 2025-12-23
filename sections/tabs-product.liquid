@@ -38,8 +38,8 @@
     flex-direction: column;
   }
 
-  /* 1. NAVEGACIÓN (Botones/Labels)
-    ----------------------------------------- */
+  /* 1. NAVEGACIÓN
+    -------------- */
   .custom-tabs-nav {
     display: flex;
     flex-wrap: wrap;
@@ -90,9 +90,6 @@
     cursor: default;
   }
 
-  .custom-tabs-container:has(.tab-radio-input:checked) .custom-tabs-nav label:not(:first-of-type)::before {
-    display: none;
-  }
   .custom-tab-label::before,
   .custom-tab-label::after {
     content: "";
@@ -106,7 +103,9 @@
     z-index: 5;
   }
 
-  .custom-tabs-container:has(.tab-radio-input:nth-of-type(1):checked) label:nth-of-type(1)::before,
+  .custom-tabs-container:has(.tab-radio-input:nth-of-type(1):checked) label:nth-of-type(1)::before {
+    display: none;
+  }
   .custom-tabs-container:has(.tab-radio-input:nth-of-type(2):checked) label:nth-of-type(2)::before,
   .custom-tabs-container:has(.tab-radio-input:nth-of-type(3):checked) label:nth-of-type(3)::before,
   .custom-tabs-container:has(.tab-radio-input:nth-of-type(4):checked) label:nth-of-type(4)::before {
@@ -124,8 +123,8 @@
     opacity: 1;
   }
 
-  /* 4. CONTENIDO (Paneles)
-    ----------------------------------------- */
+  /* 4. CONTENIDO
+  -------------- */
   .custom-tabs-content-wrapper {
     background-color: var(--content-bg-color);
     padding: 50px;
@@ -169,6 +168,23 @@
 
   .col-text h1, .col-text h2, .col-text h3 {
     margin-top: 0;
+  }
+
+  .panel-1 .col-text h2 {
+    position: relative;
+    text-align: center;
+    font-size: 38px;
+  }
+
+  .panel-1 .col-text h2::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: calc(100% - 20px);
+    background-color: #FCD920;
+    top: 2px;
+    position: absolute;
+    z-index: -1;
   }
 
   .tab-file-wrapper {
