@@ -174,6 +174,7 @@
     position: relative;
     text-align: center;
     font-size: 38px;
+    isolation: isolate;
   }
 
   .panel-1 .col-text h2::before {
@@ -198,6 +199,120 @@
   .custom-tab-label:last-of-type {
     margin-right: 0;
   }
+
+  .mobile-tab-label { display: none; }
+
+  /* =========================================
+    MOBILE STYLES (ACORDEÓN)
+  ========================================= */
+  @media (max-width: 1199px) and (min-width: 750px) {
+    .custom-tabs-nav {
+      flex-wrap: nowrap;
+    }
+
+    .custom-tab-label {
+      flex: 1;
+      max-width: none;
+      width: auto;
+      padding: 22px 10px;
+    }
+
+    .custom-tab-label .tab-text {
+      font-size: 16px;
+    }
+  }
+  @media screen and (max-width: 749px) {
+
+    .desktop-only { display: none; }
+
+    .custom-tabs-content-wrapper {
+      padding: 0;
+      background-color: transparent;
+      border-radius: 0;
+      min-height: auto;
+    }
+
+    .mobile-tab-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+      padding: 20px;
+      margin-left: 0;
+      margin-right: auto;
+      background-color: var(--tab-bg-color);
+      cursor: pointer;
+      border-radius: 0;
+      position: relative;
+      transition: background-color 0.3s ease;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    .mobile-tab-label:first-of-type {
+      border-radius: 10px 10px 0 0;
+    }
+
+    .mobile-tab-label:last-of-type {
+      border-radius: 0 0 10px 10px;
+    }
+
+    .mobile-tab-label:first-of-type { margin-top: 0; }
+
+    .mobile-tab-label .tab-text {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--tab-text-color);
+    }
+
+    .tab-radio-input:nth-of-type(1):checked ~ .custom-tabs-content-wrapper .mobile-label-1,
+    .tab-radio-input:nth-of-type(2):checked ~ .custom-tabs-content-wrapper .mobile-label-2,
+    .tab-radio-input:nth-of-type(3):checked ~ .custom-tabs-content-wrapper .mobile-label-3,
+    .tab-radio-input:nth-of-type(4):checked ~ .custom-tabs-content-wrapper .mobile-label-4 {
+      background-color: var(--content-bg-color);
+      margin-bottom: 0;
+    }
+
+    .custom-tab-panel {
+      background-color: var(--content-bg-color);
+      border-radius: 10px;
+      border-top-left-radius: 0;
+      padding: 30px 20px;
+      margin-bottom: 0;
+    }
+
+    .tab-panel-inner {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    .panel-1 .col-text h2 { font-size: 28px; }
+
+
+    /* --- INDICADORES VISUALES --- */
+
+    .mobile-tab-label::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      pointer-events: none;
+      opacity: 0;
+      z-index: 5;
+    }
+    .tab-radio-input:nth-of-type(1):checked ~ .custom-tabs-content-wrapper .mobile-label-1::after,
+    .tab-radio-input:nth-of-type(2):checked ~ .custom-tabs-content-wrapper .mobile-label-2::after,
+    .tab-radio-input:nth-of-type(3):checked ~ .custom-tabs-content-wrapper .mobile-label-3::after,
+    .tab-radio-input:nth-of-type(4):checked ~ .custom-tabs-content-wrapper .mobile-label-4::after {
+      right: -20px;
+      box-shadow: -10px 10px 0 var(--content-bg-color);
+      opacity: 1;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .mobile-tab-label {
+      width: 70%;
+    }
+  }
 {%- endstyle -%}
 
 <div class="isolate section-{{ section.id }}-padding" id="section-{{ section.id }}">
@@ -214,7 +329,7 @@
       >
     {%- endfor -%}
 
-    <div class="custom-tabs-nav">
+    <div class="custom-tabs-nav desktop-only">
       {%- for block in section.blocks -%}
         <label
           for="tab-control-{{ section.id }}-{{ forloop.index }}"
@@ -234,6 +349,13 @@
       {%- for block in section.blocks -%}
         {%- assign metaobject_key = block.settings.metafield_key -%}
         {%- assign metaobject_ref = product.metafields.custom[metaobject_key].value -%}
+
+        <label
+          for="tab-control-{{ section.id }}-{{ forloop.index }}"
+          class="mobile-tab-label mobile-label-{{ forloop.index }}"
+        >
+          <span class="tab-text">{{ block.settings.title }}</span>
+        </label>
 
         <div class="custom-tab-panel panel-{{ forloop.index }}">
           <div class="tab-panel-inner">
@@ -359,6 +481,30 @@
         });
       });
     }
+
+    const mobileTabs = sectionContainer.querySelectorAll('.mobile-tab-label');
+    mobileTabs.forEach((tab) => {
+      tab.addEventListener('click', function () {
+        const allVideos = sectionContainer.querySelectorAll('video');
+        allVideos.forEach((video) => {
+          video.pause();
+        });
+        const activePanel = this.closest('.custom-tab-panel');
+        if (activePanel) {
+          const activeVideo = activePanel.querySelector('video');
+          if (activeVideo) {
+            activeVideo.currentTime = 0;
+            const playPromise = activeVideo.play();
+
+            if (playPromise !== undefined) {
+              playPromise.catch((error) => {
+                console.log('Autoplay prevenido por el navegador:', error);
+              });
+            }
+          }
+        }
+      });
+    });
   });
 </script>
 
