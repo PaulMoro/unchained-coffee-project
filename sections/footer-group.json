@@ -98,6 +98,9 @@
         "image_F3FxAY"
       ],
       "settings": {
+        "text_rrss": "BECAUSE WHEN YOU CHANGE THE CHAIN, YOU CHANGE EVERYTHING.",
+        "color_title_links": "#fdda24",
+        "new_style": true,
         "color_scheme": "scheme-3",
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
