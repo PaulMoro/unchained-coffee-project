@@ -81,7 +81,7 @@
         "tab_VmPQ8N": {
           "type": "tab",
           "settings": {
-            "title": "MEET THE PRODUCER",
+            "title": "PRODUCER",
             "metafield_key": "tab_1",
             "layout_distribution": "image_text"
           }
@@ -97,7 +97,7 @@
         "tab_bzFzdA": {
           "type": "tab",
           "settings": {
-            "title": "PROCESS",
+            "title": "IMPACT",
             "metafield_key": "tab_3",
             "layout_distribution": "video_text"
           }
