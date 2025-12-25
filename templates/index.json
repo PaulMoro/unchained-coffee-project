@@ -187,7 +187,7 @@
         "title": "quick pick",
         "title_alignment": "center",
         "font_title": "permanent",
-        "size_font_title": 50,
+        "size_font_title": 40,
         "color_title": "#262624",
         "font_items": "barlow",
         "background_items": "#fdda24",
