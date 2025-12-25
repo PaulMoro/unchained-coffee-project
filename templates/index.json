@@ -11,6 +11,7 @@
   "sections": {
     "video_Rajhf9": {
       "type": "video",
+      "disabled": true,
       "name": "Video Principal",
       "settings": {
         "heading": "",
@@ -66,7 +67,6 @@
         "heading",
         "heading_n8Ba7Y"
       ],
-      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/Clip_path_group_2.png",
         "image_overlay_opacity": 0,
@@ -85,6 +85,138 @@
         "show_bottom_tear": false,
         "bottom_tear_height": 50,
         "bottom_tear_offset": 2
+      }
+    },
+    "rich_text_a8CCQB": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_KT9jfN": {
+          "type": "heading",
+          "settings": {
+            "heading": "We redesigned the chain",
+            "heading_size": "h0",
+            "font": "permanent",
+            "size_font": 36,
+            "color_text": "#262624",
+            "bg_highlight": true,
+            "highlight_color": "#fdda24"
+          }
+        },
+        "caption_ctnrj4": {
+          "type": "caption",
+          "settings": {
+            "caption": "<strong>Producer</strong>",
+            "color_text": "#fdda24",
+            "color_cross_out": "#fdda24",
+            "cross_out": false,
+            "arrow": true
+          }
+        },
+        "caption_Dy6htj": {
+          "type": "caption",
+          "settings": {
+            "caption": "Co-op",
+            "color_text": "#f3f3f3",
+            "color_cross_out": "#fdda24",
+            "cross_out": true,
+            "arrow": true
+          }
+        },
+        "caption_BFy7zq": {
+          "type": "caption",
+          "settings": {
+            "caption": "Exporter",
+            "color_text": "#f4f3ef",
+            "color_cross_out": "#fdda24",
+            "cross_out": true,
+            "arrow": true
+          }
+        },
+        "caption_yxiq9k": {
+          "type": "caption",
+          "settings": {
+            "caption": "Importer",
+            "color_text": "#f3f3f3",
+            "color_cross_out": "#fdda24",
+            "cross_out": true,
+            "arrow": true
+          }
+        },
+        "caption_da4AW6": {
+          "type": "caption",
+          "settings": {
+            "caption": "Roaster",
+            "color_text": "#f4f3ef",
+            "color_cross_out": "#fdda24",
+            "cross_out": true,
+            "arrow": true
+          }
+        },
+        "caption_8R9b3C": {
+          "type": "caption",
+          "settings": {
+            "caption": "Coffee Shop",
+            "color_text": "#f4f3ef",
+            "color_cross_out": "#fdda24",
+            "cross_out": true,
+            "arrow": true
+          }
+        },
+        "caption_hBcMzz": {
+          "type": "caption",
+          "settings": {
+            "caption": "<strong>Consumer</strong>",
+            "color_text": "#fdda24",
+            "color_cross_out": "#f3f3f3",
+            "cross_out": false,
+            "arrow": false
+          }
+        },
+        "text_jJYRL4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>So that the <strong>REAL VALUE</strong> is delivered to the coffee growers & coffee lovers</p>",
+            "color_text": "#f4f3ef",
+            "color_text_bold": "#fdda24"
+          }
+        },
+        "button_HUr6qM": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "color_text": "#262624",
+            "color_bg": "#f4f3ef",
+            "button_label": "SEE MORE",
+            "button_link": "#",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_KT9jfN",
+        "caption_ctnrj4",
+        "caption_Dy6htj",
+        "caption_BFy7zq",
+        "caption_yxiq9k",
+        "caption_da4AW6",
+        "caption_8R9b3C",
+        "caption_hBcMzz",
+        "text_jJYRL4",
+        "button_HUr6qM"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "color_custom": true,
+        "background_color": "#262624",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "collection_fullwidth_XqbJbE": {
@@ -524,138 +656,6 @@
         "swipe_on_mobile": true,
         "padding_top": 32,
         "padding_bottom": 32
-      }
-    },
-    "rich_text_a8CCQB": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_KT9jfN": {
-          "type": "heading",
-          "settings": {
-            "heading": "We redesigned the chain",
-            "heading_size": "h0",
-            "font": "permanent",
-            "size_font": 36,
-            "color_text": "#262624",
-            "bg_highlight": true,
-            "highlight_color": "#fdda24"
-          }
-        },
-        "caption_ctnrj4": {
-          "type": "caption",
-          "settings": {
-            "caption": "<strong>Producer</strong>",
-            "color_text": "#fdda24",
-            "color_cross_out": "#fdda24",
-            "cross_out": false,
-            "arrow": true
-          }
-        },
-        "caption_Dy6htj": {
-          "type": "caption",
-          "settings": {
-            "caption": "Co-op",
-            "color_text": "#f3f3f3",
-            "color_cross_out": "#fdda24",
-            "cross_out": true,
-            "arrow": true
-          }
-        },
-        "caption_BFy7zq": {
-          "type": "caption",
-          "settings": {
-            "caption": "Exporter",
-            "color_text": "#f4f3ef",
-            "color_cross_out": "#fdda24",
-            "cross_out": true,
-            "arrow": true
-          }
-        },
-        "caption_yxiq9k": {
-          "type": "caption",
-          "settings": {
-            "caption": "Importer",
-            "color_text": "#f3f3f3",
-            "color_cross_out": "#fdda24",
-            "cross_out": true,
-            "arrow": true
-          }
-        },
-        "caption_da4AW6": {
-          "type": "caption",
-          "settings": {
-            "caption": "Roaster",
-            "color_text": "#f4f3ef",
-            "color_cross_out": "#fdda24",
-            "cross_out": true,
-            "arrow": true
-          }
-        },
-        "caption_8R9b3C": {
-          "type": "caption",
-          "settings": {
-            "caption": "Coffee Shop",
-            "color_text": "#f4f3ef",
-            "color_cross_out": "#fdda24",
-            "cross_out": true,
-            "arrow": true
-          }
-        },
-        "caption_hBcMzz": {
-          "type": "caption",
-          "settings": {
-            "caption": "<strong>Consumer</strong>",
-            "color_text": "#fdda24",
-            "color_cross_out": "#f3f3f3",
-            "cross_out": false,
-            "arrow": false
-          }
-        },
-        "text_jJYRL4": {
-          "type": "text",
-          "settings": {
-            "text": "<p>So that the <strong>REAL VALUE</strong> is delivered to the coffee growers & coffee lovers</p>",
-            "color_text": "#f4f3ef",
-            "color_text_bold": "#fdda24"
-          }
-        },
-        "button_HUr6qM": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "color_text": "#262624",
-            "color_bg": "#f4f3ef",
-            "button_label": "SEE MORE",
-            "button_link": "#",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_KT9jfN",
-        "caption_ctnrj4",
-        "caption_Dy6htj",
-        "caption_BFy7zq",
-        "caption_yxiq9k",
-        "caption_da4AW6",
-        "caption_8R9b3C",
-        "caption_hBcMzz",
-        "text_jJYRL4",
-        "button_HUr6qM"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "color_custom": true,
-        "background_color": "#262624",
-        "full_width": true,
-        "padding_top": 100,
-        "padding_bottom": 100
       }
     },
     "featured_collection_QGjPbq": {
@@ -1323,68 +1323,18 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "image_with_text_n3eExg": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_8FVfgW": {
-          "type": "heading",
-          "settings": {
-            "heading": "Builders",
-            "heading_size": "h1"
-          }
-        },
-        "text_EbiwdK": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Farmers <strong>leading real progress </strong>proving that meaningful change starts at origin.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_qqAj3F": {
-          "type": "button",
-          "settings": {
-            "color_text": "#262624",
-            "color_bg": "#FDDA24",
-            "small_btn": false,
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_8FVfgW",
-        "text_EbiwdK",
-        "button_qqAj3F"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "height": "medium",
-        "desktop_image_width": "large",
-        "layout": "image_first",
-        "image_behavior": "ambient",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "mobile_content_alignment": "center",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
     }
   },
   "order": [
     "video_Rajhf9",
     "image_banner",
+    "rich_text_a8CCQB",
     "collection_fullwidth_XqbJbE",
     "featured_collection_mmCRXt",
     "featured_collection_GAQTXY",
     "collection_home_3CmXRN",
     "featured_collection_CxjnxU",
     "featured_collection_LkqxUq",
-    "rich_text_a8CCQB",
     "featured_collection_QGjPbq",
     "featured_collection_6q4Cwh",
     "image_banner_H6rQm4",
@@ -1399,7 +1349,6 @@
     "image_banner_JxHCxx",
     "image_with_text_R8QVJz",
     "featured_blog_yQd77q",
-    "image_with_text_YFEmh3",
-    "image_with_text_n3eExg"
+    "image_with_text_YFEmh3"
   ]
 }
