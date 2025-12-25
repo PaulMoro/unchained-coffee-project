@@ -87,6 +87,182 @@
         "bottom_tear_offset": 2
       }
     },
+    "collection_fullwidth_XqbJbE": {
+      "type": "collection-fullwidth",
+      "blocks": {
+        "collection_button_4Cbgqi": {
+          "type": "collection_button",
+          "settings": {
+            "collection": "best-seller",
+            "custom_title": "ALL"
+          }
+        },
+        "collection_button_ptBH3m": {
+          "type": "collection_button",
+          "settings": {
+            "collection": "fruity-collection",
+            "custom_title": "Fruity"
+          }
+        },
+        "collection_button_Rii7ya": {
+          "type": "collection_button",
+          "settings": {
+            "collection": "floral-1",
+            "custom_title": "Floral"
+          }
+        },
+        "collection_button_MXbJjW": {
+          "type": "collection_button",
+          "settings": {
+            "collection": "flavor-profile-cocoa-copy-1",
+            "custom_title": "Nutty/Cocoa"
+          }
+        },
+        "collection_button_anUJhj": {
+          "type": "collection_button",
+          "settings": {
+            "collection": "flavor-profile-nutty-copy",
+            "custom_title": "Spice"
+          }
+        },
+        "collection_button_Gxyp4m": {
+          "type": "collection_button",
+          "settings": {
+            "collection": "espresso-recommended-filter",
+            "custom_title": "Espresso"
+          }
+        },
+        "collection_button_6xhwjB": {
+          "type": "collection_button",
+          "settings": {
+            "collection": "caturra-varietal-filter",
+            "custom_title": "Drip"
+          }
+        },
+        "collection_button_9d4GaC": {
+          "type": "collection_button",
+          "settings": {
+            "collection": "caturra-varietal-filter",
+            "custom_title": "French Press"
+          }
+        },
+        "collection_button_HCTyb9": {
+          "type": "collection_button",
+          "settings": {
+            "collection": "espresso-recommended-filter-copy",
+            "custom_title": "Pour Over"
+          }
+        },
+        "collection_button_hHCRxy": {
+          "type": "collection_button",
+          "settings": {
+            "collection": "varietal-castillo-1",
+            "custom_title": "Decaf"
+          }
+        },
+        "collection_button_bXtFJG": {
+          "type": "collection_button",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_button_4Cbgqi",
+        "collection_button_ptBH3m",
+        "collection_button_Rii7ya",
+        "collection_button_MXbJjW",
+        "collection_button_anUJhj",
+        "collection_button_Gxyp4m",
+        "collection_button_6xhwjB",
+        "collection_button_9d4GaC",
+        "collection_button_HCTyb9",
+        "collection_button_hHCRxy",
+        "collection_button_bXtFJG"
+      ],
+      "name": "Marquee Colecciones",
+      "settings": {
+        "bg_section": "#ffffff",
+        "title": "quick pick",
+        "title_alignment": "center",
+        "font_title": "permanent",
+        "size_font_title": 40,
+        "color_title": "#262624",
+        "font_items": "barlow",
+        "background_items": "#fdda24",
+        "color_text": "#262624",
+        "border_items": "#f5f4f0",
+        "hover_color_items": "#fdda24",
+        "hover_text_color": "#262624",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "featured_collection_mmCRXt": {
+      "type": "featured-collection",
+      "name": "New Releases",
+      "settings": {
+        "collection": "new-releases-collection",
+        "products_to_show": 4,
+        "title": "New Releases",
+        "heading_size": "h1",
+        "description": "<p>Fresh drops from <strong>new growers rewriting the rules</strong>. New coffees, new stories, same purpose.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-2",
+        "show_info_product": false,
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": true,
+        "quick_add": "standard",
+        "image_cta": "shopify://shop_images/Vector_1.png",
+        "text_cta": "Buy Now",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "featured_collection_GAQTXY": {
+      "type": "featured-collection",
+      "name": "The Unchained Favorites",
+      "settings": {
+        "collection": "the-unchained-favorites",
+        "products_to_show": 4,
+        "title": "The Unchained Favorites",
+        "heading_size": "h1",
+        "description": "<p>The coffees <strong>everyone returns to </strong>— powered by a fairer chain.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-2",
+        "show_info_product": false,
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "image_cta": "shopify://shop_images/Vector_1.png",
+        "text_cta": "Buy Now",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
     "rich_text_a8CCQB": {
       "type": "rich-text",
       "blocks": {
@@ -217,182 +393,6 @@
         "full_width": true,
         "padding_top": 100,
         "padding_bottom": 100
-      }
-    },
-    "collection_fullwidth_XqbJbE": {
-      "type": "collection-fullwidth",
-      "blocks": {
-        "collection_button_4Cbgqi": {
-          "type": "collection_button",
-          "settings": {
-            "collection": "best-seller",
-            "custom_title": "ALL"
-          }
-        },
-        "collection_button_ptBH3m": {
-          "type": "collection_button",
-          "settings": {
-            "collection": "fruity-collection",
-            "custom_title": "Fruity"
-          }
-        },
-        "collection_button_Rii7ya": {
-          "type": "collection_button",
-          "settings": {
-            "collection": "floral-1",
-            "custom_title": "Floral"
-          }
-        },
-        "collection_button_MXbJjW": {
-          "type": "collection_button",
-          "settings": {
-            "collection": "flavor-profile-cocoa-copy-1",
-            "custom_title": "Nutty/Cocoa"
-          }
-        },
-        "collection_button_anUJhj": {
-          "type": "collection_button",
-          "settings": {
-            "collection": "flavor-profile-nutty-copy",
-            "custom_title": "Spice"
-          }
-        },
-        "collection_button_Gxyp4m": {
-          "type": "collection_button",
-          "settings": {
-            "collection": "espresso-recommended-filter",
-            "custom_title": "Espresso"
-          }
-        },
-        "collection_button_6xhwjB": {
-          "type": "collection_button",
-          "settings": {
-            "collection": "caturra-varietal-filter",
-            "custom_title": "Drip"
-          }
-        },
-        "collection_button_9d4GaC": {
-          "type": "collection_button",
-          "settings": {
-            "collection": "caturra-varietal-filter",
-            "custom_title": "French Press"
-          }
-        },
-        "collection_button_HCTyb9": {
-          "type": "collection_button",
-          "settings": {
-            "collection": "espresso-recommended-filter-copy",
-            "custom_title": "Pour Over"
-          }
-        },
-        "collection_button_hHCRxy": {
-          "type": "collection_button",
-          "settings": {
-            "collection": "varietal-castillo-1",
-            "custom_title": "Decaf"
-          }
-        },
-        "collection_button_bXtFJG": {
-          "type": "collection_button",
-          "settings": {
-            "collection": "",
-            "custom_title": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_button_4Cbgqi",
-        "collection_button_ptBH3m",
-        "collection_button_Rii7ya",
-        "collection_button_MXbJjW",
-        "collection_button_anUJhj",
-        "collection_button_Gxyp4m",
-        "collection_button_6xhwjB",
-        "collection_button_9d4GaC",
-        "collection_button_HCTyb9",
-        "collection_button_hHCRxy",
-        "collection_button_bXtFJG"
-      ],
-      "name": "Marquee Colecciones",
-      "settings": {
-        "bg_section": "#ffffff",
-        "title": "quick pick",
-        "title_alignment": "center",
-        "font_title": "permanent",
-        "size_font_title": 40,
-        "color_title": "#262624",
-        "font_items": "barlow",
-        "background_items": "#fdda24",
-        "color_text": "#262624",
-        "border_items": "#f5f4f0",
-        "hover_color_items": "#fdda24",
-        "hover_text_color": "#262624",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
-    "featured_collection_mmCRXt": {
-      "type": "featured-collection",
-      "name": "New Releases",
-      "settings": {
-        "collection": "new-releases-collection",
-        "products_to_show": 4,
-        "title": "New Releases",
-        "heading_size": "h1",
-        "description": "<p>Fresh drops from <strong>new growers rewriting the rules</strong>. New coffees, new stories, same purpose.</p>",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 5,
-        "enable_desktop_slider": false,
-        "full_width": true,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "color_scheme": "scheme-2",
-        "show_info_product": false,
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": true,
-        "show_rating": true,
-        "quick_add": "standard",
-        "image_cta": "shopify://shop_images/Vector_1.png",
-        "text_cta": "Buy Now",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 32,
-        "padding_bottom": 32
-      }
-    },
-    "featured_collection_GAQTXY": {
-      "type": "featured-collection",
-      "name": "The Unchained Favorites",
-      "settings": {
-        "collection": "the-unchained-favorites",
-        "products_to_show": 4,
-        "title": "The Unchained Favorites",
-        "heading_size": "h1",
-        "description": "<p>The coffees <strong>everyone returns to </strong>— powered by a fairer chain.</p>",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "color_scheme": "scheme-2",
-        "show_info_product": false,
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "standard",
-        "image_cta": "shopify://shop_images/Vector_1.png",
-        "text_cta": "Buy Now",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 32,
-        "padding_bottom": 32
       }
     },
     "collection_home_3CmXRN": {
@@ -1330,10 +1330,10 @@
   "order": [
     "video_Rajhf9",
     "image_banner",
-    "rich_text_a8CCQB",
     "collection_fullwidth_XqbJbE",
     "featured_collection_mmCRXt",
     "featured_collection_GAQTXY",
+    "rich_text_a8CCQB",
     "collection_home_3CmXRN",
     "featured_collection_CxjnxU",
     "featured_collection_LkqxUq",
