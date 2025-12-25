@@ -1337,7 +1337,7 @@
         "text_EbiwdK": {
           "type": "text",
           "settings": {
-            "text": "<p>Coffees grown by farmers <strong>leading real progress </strong>lifting their communities, shaping their regions, and proving that meaningful change starts at origin.</p>",
+            "text": "<p>Farmers <strong>leading real progress </strong>proving that meaningful change starts at origin.</p>",
             "text_style": "body"
           }
         },
@@ -1360,7 +1360,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "height": "adapt",
+        "height": "medium",
         "desktop_image_width": "large",
         "layout": "image_first",
         "image_behavior": "ambient",
