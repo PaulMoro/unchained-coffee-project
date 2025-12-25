@@ -1323,6 +1323,56 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "image_with_text_n3eExg": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_8FVfgW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Builders",
+            "heading_size": "h1"
+          }
+        },
+        "text_EbiwdK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Coffees grown by farmers <strong>leading real progress </strong>lifting their communities, shaping their regions, and proving that meaningful change starts at origin.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_qqAj3F": {
+          "type": "button",
+          "settings": {
+            "color_text": "#262624",
+            "color_bg": "#FDDA24",
+            "small_btn": false,
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_8FVfgW",
+        "text_EbiwdK",
+        "button_qqAj3F"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "large",
+        "layout": "image_first",
+        "image_behavior": "ambient",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
     }
   },
   "order": [
@@ -1349,6 +1399,7 @@
     "image_banner_JxHCxx",
     "image_with_text_R8QVJz",
     "featured_blog_yQd77q",
-    "image_with_text_YFEmh3"
+    "image_with_text_YFEmh3",
+    "image_with_text_n3eExg"
   ]
 }
