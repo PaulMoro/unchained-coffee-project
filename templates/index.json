@@ -358,7 +358,6 @@
         },
         "button_HUr6qM": {
           "type": "button",
-          "disabled": true,
           "settings": {
             "color_text": "#262624",
             "color_bg": "#f4f3ef",
@@ -392,7 +391,7 @@
         "background_color": "#262624",
         "full_width": true,
         "padding_top": 100,
-        "padding_bottom": 100
+        "padding_bottom": 52
       }
     },
     "collection_home_3CmXRN": {
