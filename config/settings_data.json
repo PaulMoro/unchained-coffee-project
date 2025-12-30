@@ -315,6 +315,8 @@
       "inputs_shadow_horizontal_offset": 0,
       "inputs_shadow_vertical_offset": 4,
       "inputs_shadow_blur": 5,
+      "text_cta_quick": "Buy Now",
+      "image_cta_quick": "shopify://shop_images/Vector_1.png",
       "card_style": "standard",
       "card_image_padding": 0,
       "card_text_alignment": "left",

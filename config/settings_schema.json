@@ -488,6 +488,17 @@
     "name": "t:settings_schema.cards.name",
     "settings": [
       {
+        "type": "image_picker",
+        "id": "image_cta_quick",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "text_cta_quick",
+        "label": "Text CTA",
+        "default": "Shop Now"
+      },
+      {
         "type": "select",
         "id": "card_style",
         "options": [

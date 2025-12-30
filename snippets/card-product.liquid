@@ -306,7 +306,11 @@
             -%}
             {%- if card_product.variants_count > 1 or qty_rules -%}
               <modal-opener data-modal="#QuickAdd-{{ card_product.id }}">
-                <button
+                {% if link_to_product == true %}
+                  <a href="{{ card_product.url }}"
+                {% else %}
+                  <button
+                {% endif %}
                   id="{{ product_form_id }}-submit"
                   type="submit"
                   name="add"
@@ -322,7 +326,11 @@
                     </span>
                   {%- endif -%}
                   {%- render 'loading-spinner' -%}
-                </button>
+                {% if link_to_product == true %}
+                  </a>
+                {% else %}
+                  </button>
+                {% endif %}
               </modal-opener>
               <quick-add-modal id="QuickAdd-{{ card_product.id }}" class="quick-add-modal">
                 <div
