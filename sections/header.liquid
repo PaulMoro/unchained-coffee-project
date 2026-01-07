@@ -143,6 +143,7 @@
       .section-header .header-wrapper::after {
         {% if section.settings.bottom_img_desktop != blank && template.name != 'index' %}
           background-image: url('{{ section.settings.bottom_img_desktop | image_url: width: 2000 }}');
+          height: {{ section.settings.bottom_tear_height }}px;
         {% endif %}
         z-index: -1;
         top: 0px;
