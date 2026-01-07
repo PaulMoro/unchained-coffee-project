@@ -405,7 +405,7 @@
 
                 {%- if metaobject_ref.archivo != blank -%}
                   <div class="tab-file-wrapper">
-                    <a href="{{ metaobject_ref.archivo.url }}" class="button button--secondary" target="_blank">
+                    <a href="{{ metaobject_ref.archivo.value.url }}" class="button button--secondary" target="_blank">
                       Descargar Archivo
                     </a>
                   </div>
@@ -413,14 +413,13 @@
               </div>
             {%- endcapture -%}
 
-            {%- case block.settings.layout_distribution -%}
-              {%- when 'image_text' -%}
-                {{ content_media_image }}
-                {{ content_text }}
-              {%- when 'video_text' -%}
-                {{ content_media_video }}
-                {{ content_text }}
-            {%- endcase -%}
+            {%- if metaobject_ref.video != blank -%}
+              {{ content_media_video }}
+              {{ content_text }}
+            {%- else -%}
+              {{ content_media_image }}
+              {{ content_text }}
+            {%- endif -%}
           </div>
         </div>
       {%- endfor -%}
@@ -602,22 +601,6 @@
           ],
           "default": "tab_1",
           "info": "Select which metafield (Metaobject) populates this tab."
-        },
-        {
-          "type": "radio",
-          "id": "layout_distribution",
-          "label": "Content Layout",
-          "options": [
-            {
-              "value": "image_text",
-              "label": "Image (Left) - Text (Right)"
-            },
-            {
-              "value": "video_text",
-              "label": "Video (Left) - Text (Right)"
-            }
-          ],
-          "default": "image_text"
         }
       ]
     }
