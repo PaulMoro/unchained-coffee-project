@@ -10,7 +10,7 @@
 {
   "current": {
     "logo": "shopify://shop_images/UNCHAINED_COFFEE_LOGO.svg",
-    "logo_width": 100,
+    "logo_width": 120,
     "favicon": "shopify://shop_images/UNCHAINED_COFFEE_LOGO.svg",
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
@@ -221,6 +221,17 @@
           "button_label": "#334fb4",
           "secondary_button_label": "#ffffff",
           "shadow": "#121212"
+        }
+      },
+      "scheme-dbd6fa04-8b3b-45ca-bcbd-07757b99aa6f": {
+        "settings": {
+          "background": "#262625",
+          "background_gradient": "",
+          "text": "#f5f4f1",
+          "button": "#f5f4f1",
+          "button_label": "#262625",
+          "secondary_button_label": "#262625",
+          "shadow": "#262625"
         }
       }
     }
