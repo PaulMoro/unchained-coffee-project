@@ -98,6 +98,81 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  {% if section.settings.show_bottom_tear and section.settings.bottom_tear_image != blank %}
+    .header-wrapper::after {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100% 100%;
+      background-color: transparent;
+      pointer-events: none;
+      z-index: 2;
+      display: block;
+      content: '';
+      height: {{ section.settings.bottom_tear_height }}px;
+      background-image: url('{{ section.settings.bottom_tear_image | image_url: width: 2000 }}');
+      opacity: 1;
+      top: auto;
+      bottom: calc(1px - {{ section.settings.bottom_tear_height }}px);
+      background-color: transparent;
+      box-shadow: none;
+      will-change: opacity;
+      transition: opacity 0.3s ease-in-out;
+    }
+  {% endif %}
+  {% if section.settings.style_unchained %}
+    @media screen and (min-width: 990px) {
+      header.header {
+        grid-template-columns: auto 1fr auto;
+      }
+      .header__heading {
+        position: absolute;
+        top: {{ section.settings.padding_top }}px;
+        z-index: 3;
+      }
+      .header__inline-menu {
+        justify-self: end;
+        padding-left: {{ settings.logo_width }};
+      }
+      .header__menu-item {
+        font-weight: 700;
+        text-decoration: underline;
+      }
+      .section-header .header-wrapper::after {
+        {% if section.settings.bottom_img_desktop != blank %}
+          background-image: url('{{ section.settings.bottom_img_desktop | image_url: width: 2000 }}');
+        {% endif %}
+      }
+      {%  if template.name == 'index' %}
+      .section-header:not(.scrolled-past-header) {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+      .section-header .header-wrapper::after {
+        z-index: -1;
+        top: 0px;
+        bottom: auto;
+        height: calc(80px + {{ section.settings.padding_top }}px + {{ section.settings.margin_bottom }}px + {{ section.settings.bottom_tear_height }}px);
+      }
+      .section-header:not(.scrolled-past-header) .header-wrapper::after {
+        opacity: 0;
+      }
+      .section-header.scrolled-past-header .header-wrapper::after {
+        opacity: 1;
+      }
+      .section-header .header-wrapper.gradient {
+        background-color: transparent !important;
+      }
+      {% endif %}
+      .section-header.scrolled-past-header .header__heading-logo-wrapper {
+        width: 100%;
+      }
+    }
+  {% endif %}
 {%- endstyle -%}
 
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
@@ -473,6 +548,12 @@
   "max_blocks": 3,
   "settings": [
     {
+      "type": "checkbox",
+      "id": "style_unchained",
+      "default": false,
+      "label": "New Styles for Header"
+    },
+    {
       "type": "select",
       "id": "logo_position",
       "options": [
@@ -647,6 +728,36 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Rasgado Inferior (Bottom Tear)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_bottom_tear",
+      "label": "Activar rasgado inferior",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "bottom_tear_image",
+      "label": "Imagen inferior (Mobile)"
+    },
+    {
+      "type": "image_picker",
+      "id": "bottom_img_desktop",
+      "label": "Imagen inferior (Desktop)"
+    },
+    {
+      "type": "range",
+      "id": "bottom_tear_height",
+      "min": 20,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Altura inferior",
+      "default": 50
     }
   ],
   "blocks": [
