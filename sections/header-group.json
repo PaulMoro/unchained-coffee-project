@@ -39,20 +39,25 @@
     "header": {
       "type": "header",
       "settings": {
+        "style_unchained": true,
         "logo_position": "middle-left",
         "mobile_logo_position": "center",
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "reduce-logo-size",
-        "show_line_separator": true,
-        "color_scheme": "scheme-2",
-        "menu_color_scheme": "scheme-1",
+        "show_line_separator": false,
+        "color_scheme": "scheme-dbd6fa04-8b3b-45ca-bcbd-07757b99aa6f",
+        "menu_color_scheme": "scheme-2",
         "enable_country_selector": false,
         "enable_language_selector": false,
         "enable_customer_avatar": false,
         "margin_bottom": 0,
-        "padding_top": 12,
-        "padding_bottom": 12
+        "padding_top": 32,
+        "padding_bottom": 12,
+        "show_bottom_tear": true,
+        "bottom_tear_image": "shopify://shop_images/path716_83e65dcd-6581-42fd-a7a8-4446241c7c74.png",
+        "bottom_img_desktop": "shopify://shop_images/path32.png",
+        "bottom_tear_height": 20
       }
     }
   },
