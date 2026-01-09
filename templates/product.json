@@ -71,7 +71,7 @@
         "bottom_tear_image": "shopify://shop_images/UNCHAINED_razgado-a.png",
         "bottom_tear_height": 70,
         "bottom_tear_offset": 2,
-        "padding_top": 36,
+        "padding_top": 60,
         "padding_bottom": 60
       }
     },
@@ -82,32 +82,28 @@
           "type": "tab",
           "settings": {
             "title": "PRODUCER",
-            "metafield_key": "tab_1",
-            "layout_distribution": "image_text"
+            "metafield_key": "tab_1"
           }
         },
         "tab_4QxPbe": {
           "type": "tab",
           "settings": {
             "title": "FARM",
-            "metafield_key": "tab_2",
-            "layout_distribution": "image_text"
+            "metafield_key": "tab_2"
           }
         },
         "tab_bzFzdA": {
           "type": "tab",
           "settings": {
             "title": "IMPACT",
-            "metafield_key": "tab_3",
-            "layout_distribution": "image_text"
+            "metafield_key": "tab_3"
           }
         },
         "tab_PDVAnn": {
           "type": "tab",
           "settings": {
             "title": "CONTACT",
-            "metafield_key": "tab_4",
-            "layout_distribution": "image_text"
+            "metafield_key": "tab_4"
           }
         }
       },
