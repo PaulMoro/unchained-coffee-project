@@ -98,6 +98,13 @@
             "custom_title": "ALL"
           }
         },
+        "collection_button_Gxyp4m": {
+          "type": "collection_button",
+          "settings": {
+            "collection": "espresso-recommended-filter",
+            "custom_title": "Espresso"
+          }
+        },
         "collection_button_ptBH3m": {
           "type": "collection_button",
           "settings": {
@@ -124,13 +131,6 @@
           "settings": {
             "collection": "flavor-profile-nutty-copy",
             "custom_title": "Spice"
-          }
-        },
-        "collection_button_Gxyp4m": {
-          "type": "collection_button",
-          "settings": {
-            "collection": "espresso-recommended-filter",
-            "custom_title": "Espresso"
           }
         },
         "collection_button_6xhwjB": {
@@ -172,11 +172,11 @@
       },
       "block_order": [
         "collection_button_4Cbgqi",
+        "collection_button_Gxyp4m",
         "collection_button_ptBH3m",
         "collection_button_Rii7ya",
         "collection_button_MXbJjW",
         "collection_button_anUJhj",
-        "collection_button_Gxyp4m",
         "collection_button_6xhwjB",
         "collection_button_9d4GaC",
         "collection_button_HCTyb9",
