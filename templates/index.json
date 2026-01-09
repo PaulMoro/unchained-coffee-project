@@ -141,6 +141,7 @@
         },
         "collection_button_9d4GaC": {
           "type": "collection_button",
+          "disabled": true,
           "settings": {
             "collection": "caturra-varietal-filter",
             "custom_title": "French Press"
