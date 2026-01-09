@@ -92,6 +92,7 @@
       "blocks": {
         "collection_button_4Cbgqi": {
           "type": "collection_button",
+          "disabled": true,
           "settings": {
             "collection": "best-seller",
             "custom_title": "ALL"
