@@ -113,6 +113,7 @@
         "tab_bzFzdA",
         "tab_PDVAnn"
       ],
+      "disabled": true,
       "name": "Custom Metafield Tabs",
       "settings": {
         "bg_color": "#f5f4f1",
