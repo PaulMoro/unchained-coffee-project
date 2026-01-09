@@ -61,6 +61,11 @@
       padding-left: 0px;
       height: fit-content;
     }
+    {% if template.suffix == 'without-column-left' %}
+      .char-column {
+        visibility: hidden;
+      }
+    {% endif %}
     .char-column__title {
       margin-top: 0px;
       margin-bottom: 24px;

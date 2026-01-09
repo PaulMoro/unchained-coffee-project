@@ -1,0 +1,150 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "custom-product",
+      "blocks": {
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "subscriptions_app_block_xyAAXq": {
+          "type": "shopify://apps/subscriptions/blocks/app-block/a3bfe9ec-96f8-4508-a003-df608a36d2ad",
+          "settings": {
+            "color_text_body": "#6d7175",
+            "dividers_color": "#8f8d8d",
+            "bacgkround_color": "#ffffff",
+            "border_thickness": 1,
+            "border_radius": 0,
+            "subscription_policy_url": "",
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "variant_picker",
+        "quantity_selector",
+        "price",
+        "buy_buttons",
+        "subscriptions_app_block_xyAAXq"
+      ],
+      "settings": {
+        "general_bg_color": "#f1f1f9",
+        "color_scheme": "scheme-1",
+        "constrain_to_viewport": false,
+        "media_fit": "cover",
+        "image_zoom": "none",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "title_separator": "|",
+        "characteristics_title": "FLORAL & BALANCED",
+        "char_bg_color": "#ffffff",
+        "char_text_color": "#000000",
+        "info_alignment": "flex-start",
+        "show_bottom_tear": true,
+        "bottom_tear_image": "shopify://shop_images/UNCHAINED_razgado-a.png",
+        "bottom_tear_height": 70,
+        "bottom_tear_offset": 2,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "tabs_product_EnEQg3": {
+      "type": "tabs-product",
+      "blocks": {
+        "tab_VmPQ8N": {
+          "type": "tab",
+          "settings": {
+            "title": "PRODUCER",
+            "metafield_key": "tab_1"
+          }
+        },
+        "tab_4QxPbe": {
+          "type": "tab",
+          "settings": {
+            "title": "FARM",
+            "metafield_key": "tab_2"
+          }
+        },
+        "tab_bzFzdA": {
+          "type": "tab",
+          "settings": {
+            "title": "IMPACT",
+            "metafield_key": "tab_3"
+          }
+        },
+        "tab_PDVAnn": {
+          "type": "tab",
+          "settings": {
+            "title": "CONTACT",
+            "metafield_key": "tab_4"
+          }
+        }
+      },
+      "block_order": [
+        "tab_VmPQ8N",
+        "tab_4QxPbe",
+        "tab_bzFzdA",
+        "tab_PDVAnn"
+      ],
+      "name": "Custom Metafield Tabs",
+      "settings": {
+        "bg_color": "#f5f4f1",
+        "tab_bg_color": "#e8e5dd",
+        "tab_text_color": "#262625",
+        "content_bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h1",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-2",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "main",
+    "tabs_product_EnEQg3",
+    "related-products"
+  ]
+}
