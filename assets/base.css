@@ -3616,3 +3616,16 @@ details-disclosure>details {
 .text-barlow {
   font-family: var(--font-body-family);
 }
+
+.shopify-section {
+  position: relative;
+}
+
+.random-arrow-icon {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  width: 19px;
+  height: 19px;
+  display: block;
+}

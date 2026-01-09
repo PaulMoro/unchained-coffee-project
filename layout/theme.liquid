@@ -370,5 +370,115 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const CONFIG = {
+          svgIcon: `
+        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+          <path d="M7.82812 0H10.9531L18.9531 9.04692L10.9531 18.0938H7.82812V17.9532L14.6719 10.2969H0V7.79692H14.6719L7.82812 0.140625V0Z" fill="currentColor"/>
+        </svg>`,
+          marginSize: 12,
+          colors: {
+            default: '#262625',
+            light: '#f4f3ef',
+          },
+        };
+
+        /**
+         * Valida si la sección debe ser excluida.
+         */
+        const shouldSkipSection = (section) => {
+          const id = section.id.toLowerCase();
+          const classes = section.className.toLowerCase();
+
+          // 1. Header
+          if (id.includes('header') || classes.includes('header')) return true;
+
+          // 2. Rich Text
+          if (
+            id.includes('rich_text') ||
+            id.includes('rich-text') ||
+            classes.includes('rich-text') ||
+            section.querySelector('.rich-text')
+          )
+            return true;
+
+          // 3. Video / Iframe
+          if (
+            id.includes('video') ||
+            classes.includes('video') ||
+            section.querySelector('video') ||
+            section.querySelector('iframe')
+          )
+            return true;
+
+          return false;
+        };
+
+        /**
+         * Define el color según el tipo de sección.
+         */
+        const getArrowColor = (id, classes) => {
+          const isDark =
+            id.includes('footer') ||
+            classes.includes('footer') ||
+            id.includes('newsletter') ||
+            classes.includes('newsletter');
+
+          return isDark ? CONFIG.colors.light : CONFIG.colors.default;
+        };
+
+        /**
+         * Lógica Principal
+         */
+        const sections = document.querySelectorAll('.shopify-section');
+
+        sections.forEach((section) => {
+          if (shouldSkipSection(section)) return;
+
+          const sectionId = section.id.toLowerCase();
+          const sectionClasses = section.className.toLowerCase();
+          const arrowColor = getArrowColor(sectionId, sectionClasses);
+          const arrowCount = Math.floor(Math.random() * 2) + 2;
+
+          for (let i = 0; i < arrowCount; i++) {
+            const div = document.createElement('div');
+            div.classList.add('random-arrow-icon');
+            div.innerHTML = CONFIG.svgIcon;
+            div.style.color = arrowColor;
+            div.style.position = 'absolute';
+
+            const side = Math.floor(Math.random() * 4);
+            let randomX, randomY;
+            const { marginSize } = CONFIG;
+
+            switch (side) {
+              case 0:
+                randomX = Math.floor(Math.random() * 96) + 2;
+                randomY = Math.floor(Math.random() * marginSize) + 2;
+                break;
+              case 1:
+                randomX = Math.floor(Math.random() * 96) + 2;
+                randomY = Math.floor(Math.random() * marginSize) + (98 - marginSize);
+                break;
+              case 2:
+                randomX = Math.floor(Math.random() * marginSize) + 2;
+                randomY = Math.floor(Math.random() * 96) + 2;
+                break;
+              case 3:
+                randomX = Math.floor(Math.random() * marginSize) + (98 - marginSize);
+                randomY = Math.floor(Math.random() * 96) + 2;
+                break;
+            }
+
+            div.style.left = `${randomX}%`;
+            div.style.top = `${randomY}%`;
+
+            section.appendChild(div);
+          }
+        });
+      });
+    </script>
   </body>
 </html>
