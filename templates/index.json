@@ -206,7 +206,7 @@
       "name": "New Releases",
       "settings": {
         "collection": "new-releases-collection",
-        "products_to_show": 6,
+        "products_to_show": 3,
         "title": "New Releases",
         "heading_size": "h1",
         "description": "<p>Fresh drops from <strong>new growers rewriting the rules</strong>. New coffees, new stories, same purpose.</p>",
