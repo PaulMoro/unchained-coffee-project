@@ -17,12 +17,83 @@
 {%- endstyle -%}
 
 {%- paginate blog.articles by 6 -%}
-  <div class="main-blog page-width section-{{ section.id }}-padding">
+  <div class="main-blog page-width section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
     <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
       {{ blog.title | escape }}
     </h1>
 
     <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
+      {% style %}
+        {% if section.settings.design_column %}
+          .blog-articles {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          .blog-articles .blog-articles__article {
+            width: calc(100% - 20px);
+            max-width: none;
+            padding: 26px;
+          }
+          .blog-articles .article-card {
+            flex-direction: row;
+          }
+          .card--standard>.card__content .card__information {
+            padding-left: 5rem;
+            align-self: center;
+          }
+        {% endif %}
+        .blog-articles .blog-articles__article {
+          background-color: {{ section.settings.bg_1 }};
+        }
+        .blog-articles .blog-articles__article h3 {
+          color: {{ section.settings.title_1 }};
+          {% if section.settings.design_column %}
+            font-size: 46px;
+          {% endif %}
+        }
+        .blog-articles .blog-articles__article .article-card__info,
+        .blog-articles .blog-articles__article:nth-child({{odd}}) .article-card__excerpt {
+          color: {{ section.settings.text_1 }};
+        }
+        {% if section.settings.alternated %}
+          {% assign odd = '2n' %}
+        {% else %}
+          {% assign odd = 'n' %}
+        {% endif %}
+        {% if section.settings.alternated %}
+          .blog-articles .blog-articles__article:nth-child({{odd}}) {
+            background-color: {{ section.settings.bg_2 }};
+          }
+          .blog-articles .blog-articles__article:nth-child({{odd}}) h3 {
+            color: {{ section.settings.title_2 }};
+          }
+          .blog-articles .blog-articles__article:nth-child({{odd}}) .article-card__info,
+          .blog-articles .blog-articles__article:nth-child({{odd}}) .article-card__excerpt  {
+            color: {{ section.settings.text_2 }};
+          }
+        {% endif %}
+        {% if section.settings.design_column %}
+        @media screen and (max-width: 989px) {
+          .blog-articles {
+            flex-direction: unset;
+            padding: 10px;
+          }
+          .blog-articles .blog-articles__article {
+            width: calc(100% - 20px);
+          }
+          .blog-articles .article-card {
+            flex-direction: unset;
+          }
+          .blog-articles .blog-articles__article h3 {
+            font-size: 26px;
+          }
+          .card--standard>.card__content .card__information {
+            padding-left: 2rem;
+          }
+        }
+        {% endif %}
+      {% endstyle %}
       {%- for article in blog.articles -%}
         <div
           class="blog-articles__article article{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -56,6 +127,13 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "info": "t:sections.all.colors.has_cards_info",
+      "default": "scheme-2"
+    },
     {
       "type": "select",
       "id": "layout",
@@ -137,6 +215,55 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "checkbox",
+      "id": "design_column",
+      "label": "Design Column",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "title_1",
+      "label": "Color Title",
+      "default": "#262624"
+    },
+    {
+      "type": "color",
+      "id": "text_1",
+      "label": "Color Texto",
+      "default": "#262624"
+    },
+    {
+      "type": "color",
+      "id": "bg_1",
+      "label": "Color de Fondo",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "checkbox",
+      "id": "alternated",
+      "label": "Intercalados",
+      "info": "Si esta encendido, los colores se intercalaran entre tarjeta y tarjeta. Si no llega a estar prendido, todas las tarjetas tendran el mismo colores.",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "title_2",
+      "label": "ColorTitulo",
+      "default": "#fdda24"
+    },
+    {
+      "type": "color",
+      "id": "text_2",
+      "label": "Color Texto",
+      "default": "#F4F3EF"
+    },
+    {
+      "type": "color",
+      "id": "bg_2",
+      "label": "Color de Fondo",
+      "default": "#262624"
     }
   ]
 }
