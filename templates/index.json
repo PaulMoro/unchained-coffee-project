@@ -1164,6 +1164,7 @@
         "text_hBAVpJ",
         "buttons_t4Qm6H"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/People_at_the_office_4dd33dda-21a4-4fae-9282-e9179f669a35.png",
         "image_overlay_opacity": 0,
