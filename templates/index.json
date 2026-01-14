@@ -265,6 +265,38 @@
         "padding_bottom": 32
       }
     },
+    "featured_collection_LkqxUq": {
+      "type": "featured-collection",
+      "name": "Recommended This Week",
+      "settings": {
+        "collection": "weekly-picks",
+        "products_to_show": 3,
+        "title": "Recommended This Week",
+        "heading_size": "h1",
+        "description": "<p>Our weekly <strong>must-try selection </strong>coffees born from courage, craft, and the refusal to stay in the old chain.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 3,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-2",
+        "show_info_product": false,
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "image_cta": "shopify://shop_images/Vector_1.png",
+        "text_cta": "Buy Now",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
     "rich_text_a8CCQB": {
       "type": "rich-text",
       "blocks": {
@@ -428,18 +460,18 @@
         "padding_bottom": 32
       }
     },
-    "featured_collection_LkqxUq": {
+    "featured_collection_tViQhY": {
       "type": "featured-collection",
-      "name": "Recommended This Week",
+      "name": "Award Winners",
       "settings": {
-        "collection": "weekly-picks",
+        "collection": "award-winners",
         "products_to_show": 3,
-        "title": "Recommended This Week",
+        "title": "Award Winners",
         "heading_size": "h1",
-        "description": "<p>Our weekly <strong>must-try selection </strong>coffees born from courage, craft, and the refusal to stay in the old chain.</p>",
+        "description": "<p>Awards don’t change the coffee.<strong> They confirm it.</strong></p>",
         "show_description": false,
         "description_style": "body",
-        "columns_desktop": 3,
+        "columns_desktop": 2,
         "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,
@@ -1335,9 +1367,10 @@
     "collection_fullwidth_XqbJbE",
     "featured_collection_mmCRXt",
     "featured_collection_GAQTXY",
+    "featured_collection_LkqxUq",
     "rich_text_a8CCQB",
     "featured_collection_CxjnxU",
-    "featured_collection_LkqxUq",
+    "featured_collection_tViQhY",
     "collection_home_3CmXRN",
     "featured_collection_QGjPbq",
     "featured_collection_6q4Cwh",
