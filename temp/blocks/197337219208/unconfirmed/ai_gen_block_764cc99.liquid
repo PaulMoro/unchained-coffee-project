@@ -1,6 +1,1128 @@
+{% doc %}
+  @prompt
+    Create a **coffee subscription landing page** inspired by the structure and UX of Onyx Coffee Lab’s subscription page, but fully adapted to the **Unchained brand**.
+    >
+    > ### Brand & Tone
+    >
+    > * Brand name: **Unchained Coffee**
+    > * Tone: **Bold, minimal, premium, Apple-style**
+    > * Attitude: Transparent, rebellious, no fluff
+    > * Core idea: *Unchained is a call to change the coffee chain*
+    >
+    > ### Page Goal
+    >
+    > Help customers easily subscribe to specialty coffee while clearly understanding:
+    >
+    > * What they get
+    > * How it works
+    > * Why it matters
+    >
+    > ---
+    >
+    > ### Page Structure (Required)
+    >
+    > #### 1. Hero Section
+    >
+    > * Headline: short, powerful, minimal
+    >   Example:
+    >   **“Never Run Out of Coffee. Change the Chain.”**
+    > * Subheadline explaining value in one sentence:
+    >   *Freshly roasted specialty coffee. Delivered on your schedule. Up to 70% goes directly to the producer.*
+    >
+    > ---
+    >
+    > #### 2. Choose Your Coffee
+    >
+    > * Selector for **Single Origin / Espresso / Drip / Limited Editions**
+    > * Emphasize transparency and traceability
+    >
+    > ---
+    >
+    > #### 3. Choose Your Bag Size
+    >
+    > * Options: 10 oz / 12 oz / 2 lb / 5 lb
+    > * Simple, clean UI language
+    >
+    > ---
+    >
+    > #### 4. Choose Your Delivery Schedule
+    >
+    > * Weekly
+    > * Every 2 weeks
+    > * Monthly
+    > * Copy should highlight flexibility:
+    >   *Skip, pause, or cancel anytime.*
+    >
+    > ---
+    >
+    > #### 5. Why Subscribe with Unchained
+    >
+    > Use short, scannable bullet points:
+    >
+    > * Fresh coffee, roasted weekly
+    > * Direct trade. Radical transparency
+    > * Up to **70% of revenue goes directly to small coffee growers**
+    > * No contracts. No middlemen. No compromises
+    >
+    > ---
+    >
+    > ####
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-subscription-landing-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: {{ block.settings.background_color }};
+    color: {{ block.settings.text_color }};
+  }
+
+  .ai-subscription-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.max_width }}px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-subscription-hero-{{ ai_gen_id }} {
+    padding: {{ block.settings.hero_padding_top }}px 0 {{ block.settings.hero_padding_bottom }}px;
+    text-align: center;
+  }
+
+  .ai-subscription-hero-headline-{{ ai_gen_id }} {
+    font-size: {{ block.settings.headline_size }}px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 20px;
+    letter-spacing: -0.02em;
+  }
+
+  .ai-subscription-hero-subheadline-{{ ai_gen_id }} {
+    font-size: {{ block.settings.subheadline_size }}px;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 700px;
+    opacity: 0.85;
+  }
+
+  .ai-subscription-section-{{ ai_gen_id }} {
+    padding: {{ block.settings.section_spacing }}px 0;
+    border-top: 1px solid {{ block.settings.border_color }};
+  }
+
+  .ai-subscription-section-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.section_title_size }}px;
+    font-weight: 600;
+    margin: 0 0 {{ block.settings.section_title_margin }}px;
+    letter-spacing: -0.01em;
+  }
+
+  .ai-subscription-options-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .ai-subscription-option-{{ ai_gen_id }} {
+    position: relative;
+    padding: 24px;
+    border: 2px solid {{ block.settings.option_border_color }};
+    background-color: {{ block.settings.option_bg_color }};
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .ai-subscription-option-{{ ai_gen_id }}:hover {
+    border-color: {{ block.settings.option_hover_border_color }};
+    transform: translateY(-2px);
+  }
+
+  .ai-subscription-option-{{ ai_gen_id }}.selected {
+    border-color: {{ block.settings.option_selected_border_color }};
+    background-color: {{ block.settings.option_selected_bg_color }};
+  }
+
+  .ai-subscription-option-title-{{ ai_gen_id }} {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 8px;
+  }
+
+  .ai-subscription-option-description-{{ ai_gen_id }} {
+    font-size: 14px;
+    opacity: 0.7;
+    margin: 0;
+  }
+
+  .ai-subscription-option-checkmark-{{ ai_gen_id }} {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: {{ block.settings.checkmark_color }};
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-subscription-option-{{ ai_gen_id }}.selected .ai-subscription-option-checkmark-{{ ai_gen_id }} {
+    display: flex;
+  }
+
+  .ai-subscription-option-checkmark-{{ ai_gen_id }} svg {
+    width: 14px;
+    height: 14px;
+    stroke: {{ block.settings.checkmark_icon_color }};
+  }
+
+  .ai-subscription-benefits-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+    margin-top: 32px;
+  }
+
+  .ai-subscription-benefit-{{ ai_gen_id }} {
+    text-align: left;
+  }
+
+  .ai-subscription-benefit-icon-{{ ai_gen_id }} {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+    stroke: {{ block.settings.icon_color }};
+  }
+
+  .ai-subscription-benefit-title-{{ ai_gen_id }} {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 8px;
+  }
+
+  .ai-subscription-benefit-text-{{ ai_gen_id }} {
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.8;
+    margin: 0;
+  }
+
+  .ai-subscription-cta-{{ ai_gen_id }} {
+    text-align: center;
+    padding: {{ block.settings.cta_padding }}px 0;
+  }
+
+  .ai-subscription-button-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: 18px 48px;
+    background-color: {{ block.settings.button_bg_color }};
+    color: {{ block.settings.button_text_color }};
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .ai-subscription-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_bg_color }};
+    transform: translateY(-2px);
+  }
+
+  .ai-subscription-flexibility-note-{{ ai_gen_id }} {
+    margin-top: 16px;
+    font-size: 14px;
+    opacity: 0.7;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-subscription-hero-headline-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.headline_size }}px * 0.6);
+    }
+
+    .ai-subscription-hero-subheadline-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.subheadline_size }}px * 0.9);
+    }
+
+    .ai-subscription-section-title-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.section_title_size }}px * 0.8);
+    }
+
+    .ai-subscription-options-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+    }
+
+    .ai-subscription-benefits-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+{% endstyle %}
+
+<unchained-subscription-{{ ai_gen_id }} class="ai-subscription-landing-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-subscription-container-{{ ai_gen_id }}">
+    
+    {% if block.settings.show_hero %}
+      <div class="ai-subscription-hero-{{ ai_gen_id }}">
+        {% if block.settings.headline != blank %}
+          <h1 class="ai-subscription-hero-headline-{{ ai_gen_id }}">{{ block.settings.headline }}</h1>
+        {% endif %}
+        {% if block.settings.subheadline != blank %}
+          <div class="ai-subscription-hero-subheadline-{{ ai_gen_id }}">{{ block.settings.subheadline }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if block.settings.show_coffee_selector %}
+      <div class="ai-subscription-section-{{ ai_gen_id }}">
+        <h2 class="ai-subscription-section-title-{{ ai_gen_id }}">{{ block.settings.coffee_section_title }}</h2>
+        <div class="ai-subscription-options-grid-{{ ai_gen_id }}" data-option-group="coffee">
+          {% if block.settings.coffee_option_1_enabled %}
+            <div class="ai-subscription-option-{{ ai_gen_id }}" data-option="coffee-1">
+              <div class="ai-subscription-option-checkmark-{{ ai_gen_id }}">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="ai-subscription-option-title-{{ ai_gen_id }}">{{ block.settings.coffee_option_1_title }}</h3>
+              <p class="ai-subscription-option-description-{{ ai_gen_id }}">{{ block.settings.coffee_option_1_description }}</p>
+            </div>
+          {% endif %}
+          {% if block.settings.coffee_option_2_enabled %}
+            <div class="ai-subscription-option-{{ ai_gen_id }}" data-option="coffee-2">
+              <div class="ai-subscription-option-checkmark-{{ ai_gen_id }}">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="ai-subscription-option-title-{{ ai_gen_id }}">{{ block.settings.coffee_option_2_title }}</h3>
+              <p class="ai-subscription-option-description-{{ ai_gen_id }}">{{ block.settings.coffee_option_2_description }}</p>
+            </div>
+          {% endif %}
+          {% if block.settings.coffee_option_3_enabled %}
+            <div class="ai-subscription-option-{{ ai_gen_id }}" data-option="coffee-3">
+              <div class="ai-subscription-option-checkmark-{{ ai_gen_id }}">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="ai-subscription-option-title-{{ ai_gen_id }}">{{ block.settings.coffee_option_3_title }}</h3>
+              <p class="ai-subscription-option-description-{{ ai_gen_id }}">{{ block.settings.coffee_option_3_description }}</p>
+            </div>
+          {% endif %}
+          {% if block.settings.coffee_option_4_enabled %}
+            <div class="ai-subscription-option-{{ ai_gen_id }}" data-option="coffee-4">
+              <div class="ai-subscription-option-checkmark-{{ ai_gen_id }}">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="ai-subscription-option-title-{{ ai_gen_id }}">{{ block.settings.coffee_option_4_title }}</h3>
+              <p class="ai-subscription-option-description-{{ ai_gen_id }}">{{ block.settings.coffee_option_4_description }}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if block.settings.show_bag_size_selector %}
+      <div class="ai-subscription-section-{{ ai_gen_id }}">
+        <h2 class="ai-subscription-section-title-{{ ai_gen_id }}">{{ block.settings.bag_size_section_title }}</h2>
+        <div class="ai-subscription-options-grid-{{ ai_gen_id }}" data-option-group="bag-size">
+          {% if block.settings.bag_size_1_enabled %}
+            <div class="ai-subscription-option-{{ ai_gen_id }}" data-option="bag-1">
+              <div class="ai-subscription-option-checkmark-{{ ai_gen_id }}">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="ai-subscription-option-title-{{ ai_gen_id }}">{{ block.settings.bag_size_1_title }}</h3>
+              {% if block.settings.bag_size_1_description != blank %}
+                <p class="ai-subscription-option-description-{{ ai_gen_id }}">{{ block.settings.bag_size_1_description }}</p>
+              {% endif %}
+            </div>
+          {% endif %}
+          {% if block.settings.bag_size_2_enabled %}
+            <div class="ai-subscription-option-{{ ai_gen_id }}" data-option="bag-2">
+              <div class="ai-subscription-option-checkmark-{{ ai_gen_id }}">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="ai-subscription-option-title-{{ ai_gen_id }}">{{ block.settings.bag_size_2_title }}</h3>
+              {% if block.settings.bag_size_2_description != blank %}
+                <p class="ai-subscription-option-description-{{ ai_gen_id }}">{{ block.settings.bag_size_2_description }}</p>
+              {% endif %}
+            </div>
+          {% endif %}
+          {% if block.settings.bag_size_3_enabled %}
+            <div class="ai-subscription-option-{{ ai_gen_id }}" data-option="bag-3">
+              <div class="ai-subscription-option-checkmark-{{ ai_gen_id }}">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="ai-subscription-option-title-{{ ai_gen_id }}">{{ block.settings.bag_size_3_title }}</h3>
+              {% if block.settings.bag_size_3_description != blank %}
+                <p class="ai-subscription-option-description-{{ ai_gen_id }}">{{ block.settings.bag_size_3_description }}</p>
+              {% endif %}
+            </div>
+          {% endif %}
+          {% if block.settings.bag_size_4_enabled %}
+            <div class="ai-subscription-option-{{ ai_gen_id }}" data-option="bag-4">
+              <div class="ai-subscription-option-checkmark-{{ ai_gen_id }}">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="ai-subscription-option-title-{{ ai_gen_id }}">{{ block.settings.bag_size_4_title }}</h3>
+              {% if block.settings.bag_size_4_description != blank %}
+                <p class="ai-subscription-option-description-{{ ai_gen_id }}">{{ block.settings.bag_size_4_description }}</p>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if block.settings.show_delivery_schedule %}
+      <div class="ai-subscription-section-{{ ai_gen_id }}">
+        <h2 class="ai-subscription-section-title-{{ ai_gen_id }}">{{ block.settings.delivery_section_title }}</h2>
+        <div class="ai-subscription-options-grid-{{ ai_gen_id }}" data-option-group="delivery">
+          {% if block.settings.delivery_option_1_enabled %}
+            <div class="ai-subscription-option-{{ ai_gen_id }}" data-option="delivery-1">
+              <div class="ai-subscription-option-checkmark-{{ ai_gen_id }}">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="ai-subscription-option-title-{{ ai_gen_id }}">{{ block.settings.delivery_option_1_title }}</h3>
+              {% if block.settings.delivery_option_1_description != blank %}
+                <p class="ai-subscription-option-description-{{ ai_gen_id }}">{{ block.settings.delivery_option_1_description }}</p>
+              {% endif %}
+            </div>
+          {% endif %}
+          {% if block.settings.delivery_option_2_enabled %}
+            <div class="ai-subscription-option-{{ ai_gen_id }}" data-option="delivery-2">
+              <div class="ai-subscription-option-checkmark-{{ ai_gen_id }}">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="ai-subscription-option-title-{{ ai_gen_id }}">{{ block.settings.delivery_option_2_title }}</h3>
+              {% if block.settings.delivery_option_2_description != blank %}
+                <p class="ai-subscription-option-description-{{ ai_gen_id }}">{{ block.settings.delivery_option_2_description }}</p>
+              {% endif %}
+            </div>
+          {% endif %}
+          {% if block.settings.delivery_option_3_enabled %}
+            <div class="ai-subscription-option-{{ ai_gen_id }}" data-option="delivery-3">
+              <div class="ai-subscription-option-checkmark-{{ ai_gen_id }}">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="ai-subscription-option-title-{{ ai_gen_id }}">{{ block.settings.delivery_option_3_title }}</h3>
+              {% if block.settings.delivery_option_3_description != blank %}
+                <p class="ai-subscription-option-description-{{ ai_gen_id }}">{{ block.settings.delivery_option_3_description }}</p>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+        {% if block.settings.flexibility_note != blank %}
+          <p class="ai-subscription-flexibility-note-{{ ai_gen_id }}">{{ block.settings.flexibility_note }}</p>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if block.settings.show_benefits %}
+      <div class="ai-subscription-section-{{ ai_gen_id }}">
+        <h2 class="ai-subscription-section-title-{{ ai_gen_id }}">{{ block.settings.benefits_section_title }}</h2>
+        <div class="ai-subscription-benefits-{{ ai_gen_id }}">
+          {% if block.settings.benefit_1_enabled %}
+            <div class="ai-subscription-benefit-{{ ai_gen_id }}">
+              <svg class="ai-subscription-benefit-icon-{{ ai_gen_id }}" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+              <h3 class="ai-subscription-benefit-title-{{ ai_gen_id }}">{{ block.settings.benefit_1_title }}</h3>
+              <p class="ai-subscription-benefit-text-{{ ai_gen_id }}">{{ block.settings.benefit_1_text }}</p>
+            </div>
+          {% endif %}
+          {% if block.settings.benefit_2_enabled %}
+            <div class="ai-subscription-benefit-{{ ai_gen_id }}">
+              <svg class="ai-subscription-benefit-icon-{{ ai_gen_id }}" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <h3 class="ai-subscription-benefit-title-{{ ai_gen_id }}">{{ block.settings.benefit_2_title }}</h3>
+              <p class="ai-subscription-benefit-text-{{ ai_gen_id }}">{{ block.settings.benefit_2_text }}</p>
+            </div>
+          {% endif %}
+          {% if block.settings.benefit_3_enabled %}
+            <div class="ai-subscription-benefit-{{ ai_gen_id }}">
+              <svg class="ai-subscription-benefit-icon-{{ ai_gen_id }}" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+              <h3 class="ai-subscription-benefit-title-{{ ai_gen_id }}">{{ block.settings.benefit_3_title }}</h3>
+              <p class="ai-subscription-benefit-text-{{ ai_gen_id }}">{{ block.settings.benefit_3_text }}</p>
+            </div>
+          {% endif %}
+          {% if block.settings.benefit_4_enabled %}
+            <div class="ai-subscription-benefit-{{ ai_gen_id }}">
+              <svg class="ai-subscription-benefit-icon-{{ ai_gen_id }}" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+              <h3 class="ai-subscription-benefit-title-{{ ai_gen_id }}">{{ block.settings.benefit_4_title }}</h3>
+              <p class="ai-subscription-benefit-text-{{ ai_gen_id }}">{{ block.settings.benefit_4_text }}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if block.settings.show_cta %}
+      <div class="ai-subscription-cta-{{ ai_gen_id }}">
+        {% if block.settings.cta_button_link != blank %}
+          <a href="{{ block.settings.cta_button_link }}" class="ai-subscription-button-{{ ai_gen_id }}">
+            {{ block.settings.cta_button_text }}
+          </a>
+        {% else %}
+          <button class="ai-subscription-button-{{ ai_gen_id }}">
+            {{ block.settings.cta_button_text }}
+          </button>
+        {% endif %}
+      </div>
+    {% endif %}
+
+  </div>
+</unchained-subscription-{{ ai_gen_id }}>
+
+<script>
+(function() {
+  class UnchainedSubscription{{ ai_gen_id }} extends HTMLElement {
+    constructor() {
+      super();
+      this.selections = {
+        coffee: null,
+        bagSize: null,
+        delivery: null
+      };
+    }
+
+    connectedCallback() {
+      this.setupOptionSelectors();
+    }
+
+    setupOptionSelectors() {
+      const optionGroups = this.querySelectorAll('[data-option-group]');
+      
+      optionGroups.forEach(group => {
+        const groupType = group.getAttribute('data-option-group');
+        const options = group.querySelectorAll('.ai-subscription-option-{{ ai_gen_id }}');
+        
+        options.forEach(option => {
+          option.addEventListener('click', () => {
+            options.forEach(opt => opt.classList.remove('selected'));
+            option.classList.add('selected');
+            
+            const optionValue = option.getAttribute('data-option');
+            this.selections[groupType] = optionValue;
+            
+            this.dispatchEvent(new CustomEvent('subscription-option-changed', {
+              detail: {
+                group: groupType,
+                value: optionValue,
+                selections: this.selections
+              },
+              bubbles: true
+            }));
+          });
+        });
+      });
+    }
+  }
+
+  customElements.define('unchained-subscription-{{ ai_gen_id }}', UnchainedSubscription{{ ai_gen_id }});
+})();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Subscription landing",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 800,
+      "max": 1600,
+      "step": 100,
+      "unit": "px",
+      "label": "Maximum width",
+      "default": 1200
+    },
+    {
+      "type": "range",
+      "id": "section_spacing",
+      "min": 40,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "label": "Section spacing",
+      "default": 80
+    },
+    {
+      "type": "header",
+      "content": "Hero section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_hero",
+      "label": "Show hero section",
+      "default": true
+    },
+    {
+      "type": "inline_richtext",
+      "id": "headline",
+      "label": "Headline",
+      "default": "Never Run Out of Coffee. Change the Chain."
+    },
+    {
+      "type": "range",
+      "id": "headline_size",
+      "min": 32,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Headline size",
+      "default": 56
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subheadline",
+      "label": "Subheadline",
+      "default": "Freshly roasted specialty coffee. Delivered on your schedule. Up to 70% goes directly to the producer."
+    },
+    {
+      "type": "range",
+      "id": "subheadline_size",
+      "min": 14,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Subheadline size",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "hero_padding_top",
+      "min": 40,
+      "max": 160,
+      "step": 10,
+      "unit": "px",
+      "label": "Hero top padding",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "hero_padding_bottom",
+      "min": 40,
+      "max": 160,
+      "step": 10,
+      "unit": "px",
+      "label": "Hero bottom padding",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Coffee type selector"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_coffee_selector",
+      "label": "Show coffee selector",
+      "default": true
+    },
+    {
+      "type": "inline_richtext",
+      "id": "coffee_section_title",
+      "label": "Section title",
+      "default": "Choose Your Coffee"
+    },
+    {
+      "type": "checkbox",
+      "id": "coffee_option_1_enabled",
+      "label": "Enable option 1",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "coffee_option_1_title",
+      "label": "Option 1 title",
+      "default": "Single Origin"
+    },
+    {
+      "type": "text",
+      "id": "coffee_option_1_description",
+      "label": "Option 1 description",
+      "default": "Traceable to the farm"
+    },
+    {
+      "type": "checkbox",
+      "id": "coffee_option_2_enabled",
+      "label": "Enable option 2",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "coffee_option_2_title",
+      "label": "Option 2 title",
+      "default": "Espresso"
+    },
+    {
+      "type": "text",
+      "id": "coffee_option_2_description",
+      "label": "Option 2 description",
+      "default": "Bold and balanced"
+    },
+    {
+      "type": "checkbox",
+      "id": "coffee_option_3_enabled",
+      "label": "Enable option 3",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "coffee_option_3_title",
+      "label": "Option 3 title",
+      "default": "Drip"
+    },
+    {
+      "type": "text",
+      "id": "coffee_option_3_description",
+      "label": "Option 3 description",
+      "default": "Smooth and clean"
+    },
+    {
+      "type": "checkbox",
+      "id": "coffee_option_4_enabled",
+      "label": "Enable option 4",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "coffee_option_4_title",
+      "label": "Option 4 title",
+      "default": "Limited Editions"
+    },
+    {
+      "type": "text",
+      "id": "coffee_option_4_description",
+      "label": "Option 4 description",
+      "default": "Rare micro-lots"
+    },
+    {
+      "type": "header",
+      "content": "Bag size selector"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_bag_size_selector",
+      "label": "Show bag size selector",
+      "default": true
+    },
+    {
+      "type": "inline_richtext",
+      "id": "bag_size_section_title",
+      "label": "Section title",
+      "default": "Choose Your Bag Size"
+    },
+    {
+      "type": "checkbox",
+      "id": "bag_size_1_enabled",
+      "label": "Enable size 1",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "bag_size_1_title",
+      "label": "Size 1 title",
+      "default": "10 oz"
+    },
+    {
+      "type": "text",
+      "id": "bag_size_1_description",
+      "label": "Size 1 description"
+    },
+    {
+      "type": "checkbox",
+      "id": "bag_size_2_enabled",
+      "label": "Enable size 2",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "bag_size_2_title",
+      "label": "Size 2 title",
+      "default": "12 oz"
+    },
+    {
+      "type": "text",
+      "id": "bag_size_2_description",
+      "label": "Size 2 description"
+    },
+    {
+      "type": "checkbox",
+      "id": "bag_size_3_enabled",
+      "label": "Enable size 3",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "bag_size_3_title",
+      "label": "Size 3 title",
+      "default": "2 lb"
+    },
+    {
+      "type": "text",
+      "id": "bag_size_3_description",
+      "label": "Size 3 description"
+    },
+    {
+      "type": "checkbox",
+      "id": "bag_size_4_enabled",
+      "label": "Enable size 4",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "bag_size_4_title",
+      "label": "Size 4 title",
+      "default": "5 lb"
+    },
+    {
+      "type": "text",
+      "id": "bag_size_4_description",
+      "label": "Size 4 description"
+    },
+    {
+      "type": "header",
+      "content": "Delivery schedule"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_delivery_schedule",
+      "label": "Show delivery schedule",
+      "default": true
+    },
+    {
+      "type": "inline_richtext",
+      "id": "delivery_section_title",
+      "label": "Section title",
+      "default": "Choose Your Delivery Schedule"
+    },
+    {
+      "type": "checkbox",
+      "id": "delivery_option_1_enabled",
+      "label": "Enable option 1",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "delivery_option_1_title",
+      "label": "Option 1 title",
+      "default": "Weekly"
+    },
+    {
+      "type": "text",
+      "id": "delivery_option_1_description",
+      "label": "Option 1 description"
+    },
+    {
+      "type": "checkbox",
+      "id": "delivery_option_2_enabled",
+      "label": "Enable option 2",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "delivery_option_2_title",
+      "label": "Option 2 title",
+      "default": "Every 2 Weeks"
+    },
+    {
+      "type": "text",
+      "id": "delivery_option_2_description",
+      "label": "Option 2 description"
+    },
+    {
+      "type": "checkbox",
+      "id": "delivery_option_3_enabled",
+      "label": "Enable option 3",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "delivery_option_3_title",
+      "label": "Option 3 title",
+      "default": "Monthly"
+    },
+    {
+      "type": "text",
+      "id": "delivery_option_3_description",
+      "label": "Option 3 description"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "flexibility_note",
+      "label": "Flexibility note",
+      "default": "Skip, pause, or cancel anytime."
+    },
+    {
+      "type": "header",
+      "content": "Benefits section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_benefits",
+      "label": "Show benefits section",
+      "default": true
+    },
+    {
+      "type": "inline_richtext",
+      "id": "benefits_section_title",
+      "label": "Section title",
+      "default": "Why Subscribe with Unchained"
+    },
+    {
+      "type": "checkbox",
+      "id": "benefit_1_enabled",
+      "label": "Enable benefit 1",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "benefit_1_title",
+      "label": "Benefit 1 title",
+      "default": "Fresh coffee, roasted weekly"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_1_text",
+      "label": "Benefit 1 text",
+      "default": "Your coffee is roasted to order and shipped within 48 hours for maximum freshness."
+    },
+    {
+      "type": "checkbox",
+      "id": "benefit_2_enabled",
+      "label": "Enable benefit 2",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "benefit_2_title",
+      "label": "Benefit 2 title",
+      "default": "Direct trade. Radical transparency"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_2_text",
+      "label": "Benefit 2 text",
+      "default": "Know exactly where your coffee comes from and who grew it. Full traceability on every bag."
+    },
+    {
+      "type": "checkbox",
+      "id": "benefit_3_enabled",
+      "label": "Enable benefit 3",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "benefit_3_title",
+      "label": "Benefit 3 title",
+      "default": "Up to 70% goes to growers"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_3_text",
+      "label": "Benefit 3 text",
+      "default": "We pay small coffee growers directly, cutting out middlemen and ensuring fair compensation."
+    },
+    {
+      "type": "checkbox",
+      "id": "benefit_4_enabled",
+      "label": "Enable benefit 4",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "benefit_4_title",
+      "label": "Benefit 4 title",
+      "default": "No contracts. No compromises"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_4_text",
+      "label": "Benefit 4 text",
+      "default": "Cancel, pause, or modify your subscription anytime. No questions asked."
+    },
+    {
+      "type": "header",
+      "content": "Call to action"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_cta",
+      "label": "Show CTA button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "cta_button_text",
+      "label": "Button text",
+      "default": "Start Your Subscription"
+    },
+    {
+      "type": "url",
+      "id": "cta_button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "range",
+      "id": "cta_padding",
+      "min": 40,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "label": "CTA section padding",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "section_title_size",
+      "min": 20,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Section title size",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "section_title_margin",
+      "min": 16,
+      "max": 48,
+      "step": 4,
+      "unit": "px",
+      "label": "Section title margin",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border",
+      "default": "#e5e5e5"
+    },
+    {
+      "type": "color",
+      "id": "option_bg_color",
+      "label": "Option background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "option_border_color",
+      "label": "Option border",
+      "default": "#e5e5e5"
+    },
+    {
+      "type": "color",
+      "id": "option_hover_border_color",
+      "label": "Option hover border",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "option_selected_bg_color",
+      "label": "Selected option background",
+      "default": "#f9f9f9"
+    },
+    {
+      "type": "color",
+      "id": "option_selected_border_color",
+      "label": "Selected option border",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "checkmark_color",
+      "label": "Checkmark background",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "checkmark_icon_color",
+      "label": "Checkmark icon",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Benefit icon",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Button background",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_bg_color",
+      "label": "Button hover background",
+      "default": "#000000"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Subscription landing"
+    }
+  ]
+}
 {% endschema %}
