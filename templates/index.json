@@ -661,7 +661,7 @@
     },
     "featured_collection_QGjPbq": {
       "type": "featured-collection",
-      "name": "Designed for the planet",
+      "name": "Planet First",
       "settings": {
         "collection": "planet-first-collection",
         "products_to_show": 6,
@@ -693,7 +693,7 @@
     },
     "featured_collection_6q4Cwh": {
       "type": "featured-collection",
-      "name": "Change Makers",
+      "name": "Community Builders",
       "settings": {
         "collection": "community-builders",
         "products_to_show": 3,
