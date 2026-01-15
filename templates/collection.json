@@ -36,7 +36,7 @@
         "filter_type": "horizontal",
         "enable_sorting": true,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 100
       }
     }
   },
