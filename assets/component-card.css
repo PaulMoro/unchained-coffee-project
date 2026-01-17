@@ -380,10 +380,6 @@
   }
 }
 
-.card-wrapper .media.media--hover-effect img {
-  border: 1px red solid
-}
-
 .card-wrapper:hover .media.media--hover-effect img:first-child:not(:only-child) {
   opacity: 0;
 }
