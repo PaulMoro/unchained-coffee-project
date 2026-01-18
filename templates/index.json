@@ -186,6 +186,7 @@
       "name": "Marquee Colecciones",
       "settings": {
         "bg_section": "#ffffff",
+        "speed": 1,
         "title": "quick pick",
         "title_alignment": "center",
         "font_title": "permanent",
@@ -638,15 +639,6 @@
             "collection": "youth-collection",
             "image_collection": "shopify://shop_images/Foto_Cristian_Alejandro_Beltran.jpg"
           }
-        },
-        "collection_HTBAGH": {
-          "type": "collection",
-          "settings": {
-            "select_space": "right",
-            "title_collection": "Lorem Ipsu",
-            "collection": "flavor-profile-brown-sugar-copy",
-            "image_collection": "shopify://shop_images/maira_blur.jpg"
-          }
         }
       },
       "block_order": [
@@ -665,8 +657,7 @@
         "collection_npNHmB",
         "collection_qxfqV9",
         "collection_xzgGJV",
-        "collection_eeKEzY",
-        "collection_HTBAGH"
+        "collection_eeKEzY"
       ],
       "name": "Collection Home",
       "settings": {
