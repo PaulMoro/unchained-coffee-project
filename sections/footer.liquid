@@ -34,6 +34,7 @@
       position: absolute;
       bottom: -4px;
       margin: 0;
+      z-index: 10;
     }
     .footer-block__heading--new {
       color: {{ section.settings.color_title_links }};
@@ -48,8 +49,8 @@
     }
     @media screen and (max-width: 750px) {
       .footer-block__image-wrapper--new {
-        position: relative;
         bottom: auto;
+        overflow: visible;
       }
     }
   {%- endif -%}

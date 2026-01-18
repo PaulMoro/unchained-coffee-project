@@ -179,7 +179,6 @@
     flex-direction: column;
     width: 100%;
     text-decoration: none;
-    aspect-ratio: 3 / 4;
     overflow: hidden;
     position: relative;
     background-color: {{ section.settings.bg_color_right }};
@@ -263,7 +262,7 @@
           {% endif %}
         {% endfor %}
 
-        {% if right_blocks_count > 3 %}
+        {% if right_blocks_count > 2 %}
           <section class="splide" aria-label="Collection Slider" id="splide-{{ section.id }}">
             <div class="splide__track">
               <ul class="splide__list">
