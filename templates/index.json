@@ -982,7 +982,7 @@
       "type": "featured-collection",
       "name": "Drip Recommended",
       "settings": {
-        "collection": "community-builders",
+        "collection": "method-drip-collection",
         "products_to_show": 3,
         "title": "Drip",
         "heading_size": "h1",
