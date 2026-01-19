@@ -950,7 +950,7 @@
       "type": "featured-collection",
       "name": "Espresso Recommended",
       "settings": {
-        "collection": "community-builders",
+        "collection": "espresso-recommended-filter",
         "products_to_show": 3,
         "title": "Espresso",
         "heading_size": "h1",
