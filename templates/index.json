@@ -1014,7 +1014,7 @@
       "type": "featured-collection",
       "name": "Pour Over Recommended",
       "settings": {
-        "collection": "community-builders",
+        "collection": "espresso-recommended-filter-copy",
         "products_to_show": 3,
         "title": "Pour Over",
         "heading_size": "h1",
