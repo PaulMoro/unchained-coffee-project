@@ -1264,6 +1264,7 @@
     },
     "featured_blog_yQd77q": {
       "type": "featured-blog",
+      "disabled": true,
       "name": "t:sections.featured-blog.presets.name",
       "settings": {
         "blog": "news",
