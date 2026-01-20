@@ -694,7 +694,7 @@
         "description": "<p>Carefully grown by <strong>environmental innovators</strong> who create remarkable coffee through regenerative practices.</p>",
         "show_description": false,
         "description_style": "body",
-        "columns_desktop": 3,
+        "columns_desktop": 1,
         "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,
@@ -709,7 +709,7 @@
         "quick_add": "standard",
         "image_cta": "shopify://shop_images/Vector_1.png",
         "text_cta": "Buy Now",
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 32,
         "padding_bottom": 32
