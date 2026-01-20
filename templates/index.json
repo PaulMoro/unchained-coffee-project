@@ -277,7 +277,7 @@
         "description": "<p>Our weekly <strong>must-try selection </strong>coffees born from courage, craft, and the refusal to stay in the old chain.</p>",
         "show_description": false,
         "description_style": "body",
-        "columns_desktop": 1,
+        "columns_desktop": 3,
         "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,
