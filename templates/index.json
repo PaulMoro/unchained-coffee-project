@@ -726,7 +726,7 @@
         "description": "<p>Coffees grown by farmers <strong>leading real progress </strong>lifting their communities, shaping their regions, and proving that meaningful change starts at origin.</p>",
         "show_description": false,
         "description_style": "body",
-        "columns_desktop": 1,
+        "columns_desktop": 3,
         "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,
