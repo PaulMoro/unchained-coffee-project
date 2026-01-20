@@ -228,7 +228,7 @@
         "quick_add": "standard",
         "image_cta": "shopify://shop_images/Vector_1.png",
         "text_cta": "Buy Now",
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 32,
         "padding_bottom": 32
