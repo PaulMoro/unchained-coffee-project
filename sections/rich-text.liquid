@@ -25,6 +25,21 @@
           {%- case block.type -%}
             {%- when 'heading' -%}
               {%- style -%}
+                #section-{{ section.id }} .rich-text__blocks {
+                  overflow: hidden;
+                }
+                @media screen and (max-width: 749px) {
+                  #section-{{ section.id }} .rich-text__heading--{{ forloop.index0 }} {
+                    font-size: {{ block.settings.size_font | times: 0.8 }}px;
+                  }
+                }
+                @media screen and (max-width: 420px) {
+                  #section-{{ section.id }} .rich-text__heading--{{ forloop.index0 }}::after {
+                    width: calc(150% + 46px);
+                    left: 0;
+                    transform: rotateZ(1deg) translate(-5%, 60%);
+                  }
+                }
                 #section-{{ section.id }} .rich-text__heading--{{ forloop.index0 }} {
                   font-size: {{ block.settings.size_font }}px;
                   color: {{ block.settings.color_text }};

@@ -3629,3 +3629,9 @@ details-disclosure>details {
   height: 19px;
   display: block;
 }
+
+@media screen and (max-width: 768px) {
+  .random-arrow-icon {
+    display: none;
+  }
+}

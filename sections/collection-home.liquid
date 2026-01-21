@@ -298,10 +298,10 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    var splideElement = document.getElementById('splide-{{ section.id }}');
+    const sliderCollection = document.getElementById('splide-{{ section.id }}');
 
-    if (splideElement) {
-      new Splide(splideElement, {
+    if (sliderCollection) {
+      const splide = new Splide(sliderCollection, {
         type: 'loop',
         perPage: 3,
         gap: '30px',
@@ -309,16 +309,22 @@
         pagination: false,
         drag: true,
         autoScroll: false,
+        updateOnMove: true,
+        clones: 6,
+        snap: true,
         breakpoints: {
           1024: {
-            perPage: 1.4,
+            perPage: 1,
             gap: '15px',
-            arrows: false,
             drag: 'free',
-            focus: false,
+            focus: 'center',
           },
         },
-      }).mount(window.splide.Extensions);
+      });
+      splide.mount();
+      setTimeout(function () {
+        splide.refresh();
+      }, 100);
     }
   });
 </script>

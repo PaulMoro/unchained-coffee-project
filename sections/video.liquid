@@ -7,6 +7,11 @@
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
+  @media screen and (max-width: 750px) {
+    .video-section-{{ section.id }} {
+      padding-top: {{ section.settings.custom_top }}px;
+    }
+  }
   {% if section.settings.show_top_tear or section.settings.show_bottom_tear %}
   .video-section-{{ section.id }} {
     position: relative;
@@ -551,6 +556,16 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "range",
+      "id": "custom_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Ajuste vertical superior",
+      "default": 18
     }
   ],
   "blocks": [

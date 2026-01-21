@@ -42,7 +42,12 @@
     }
     .product-custom-layout {
       display: grid;
-      grid-template-columns: 350px 1fr 350px;
+      {% if template.suffix == 'without-column-left' %}
+        grid-template-columns: minmax(auto, 600px) 350px;
+        justify-content: center;
+      {% else %}
+        grid-template-columns: 350px 1fr 350px;
+      {% endif %}
       align-items: start;
     }
     @media screen and (min-width: 1025px) {
@@ -64,6 +69,7 @@
     {% if template.suffix == 'without-column-left' %}
       .char-column {
         visibility: hidden;
+        display: none;
       }
     {% endif %}
     .char-column__title {
@@ -128,7 +134,12 @@
     }
     @media screen and (max-width: 1200px) and (min-width: 1025px) {
       .product-custom-layout {
-        grid-template-columns: 300px 1fr 300px;
+        {% if template.suffix == 'without-column-left' %}
+          grid-template-columns: minmax(auto, 300px) 300px;
+          justify-content: center;
+        {% else %}
+          grid-template-columns: 300px 1fr 300px;
+        {% endif %}
       }
       .scale-container {
         gap: 2px;
@@ -141,7 +152,12 @@
 
     @media screen and (max-width: 1024px) and (min-width: 981px) {
       .product-custom-layout {
+        {% if template.suffix == 'without-column-left' %}
+        grid-template-columns: minmax(auto, 600px) 350px;
+        justify-content: center;
+      {% else %}
         grid-template-columns: 300px 1fr 300px;
+      {% endif %}
       }
       .char-datum {
         flex-direction: column;
@@ -263,7 +279,7 @@
       color: #262625;
     }
     #price-{{ section.id }} {
-      margin-top: 10rem;
+      margin-top: 2rem;
     }
     #price-{{ section.id }} .price {
       font-size: 3.6rem;
@@ -300,6 +316,12 @@
       text-transform: uppercase;
       color: #262625;
       letter-spacing: 0.1em;
+    }
+    .quick-add-modal__content-info .product-main-header h1 {
+      font-size: 3rem;
+    }
+    .quick-add-modal__content-info .product-main-header .producer-by {
+      font-size: 1.8rem;
     }
     {% if section.settings.show_top_tear or section.settings.show_bottom_tear %}
       #MainProduct-{{ section.id }} {
