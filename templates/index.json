@@ -476,7 +476,7 @@
       "name": "Award Winners",
       "settings": {
         "collection": "award-winners",
-        "products_to_show": 3,
+        "products_to_show": 2,
         "title": "Award Winners",
         "heading_size": "h2",
         "description": "<p>Awards don’t change the coffee.<strong> They confirm it.</strong></p>",
