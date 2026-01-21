@@ -980,7 +980,7 @@
         "show_view_all": true,
         "view_all_style": "solid",
         "color_scheme": "scheme-2",
-        "show_info_product": true,
+        "show_info_product": false,
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": false,
