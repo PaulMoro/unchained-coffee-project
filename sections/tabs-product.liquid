@@ -329,14 +329,17 @@
 
     <div class="custom-tabs-nav desktop-only">
       {%- for block in section.blocks -%}
-        <label
-          for="tab-control-{{ section.id }}-{{ forloop.index }}"
-          class="custom-tab-label"
-          {{ block.shopify_attributes }}
-        >
-          <span class="tab-text">{{ block.settings.title }}</span>
-        </label>
-
+        {%- assign metaobject_key = block.settings.metafield_key -%}
+        {%- assign metaobject_ref = product.metafields.custom[metaobject_key].value -%}
+        {% if metaobject_ref != blank %}
+          <label
+            for="tab-control-{{ section.id }}-{{ forloop.index }}"
+            class="custom-tab-label"
+            {{ block.shopify_attributes }}
+          >
+            <span class="tab-text">{{ block.settings.title }}</span>
+          </label>
+        {% endif %}
         {%- unless forloop.last -%}
           <div class="tab-divider"></div>
         {%- endunless -%}
@@ -348,12 +351,14 @@
         {%- assign metaobject_key = block.settings.metafield_key -%}
         {%- assign metaobject_ref = product.metafields.custom[metaobject_key].value -%}
 
-        <label
-          for="tab-control-{{ section.id }}-{{ forloop.index }}"
-          class="mobile-tab-label mobile-label-{{ forloop.index }}"
-        >
-          <span class="tab-text">{{ block.settings.title }}</span>
-        </label>
+        {% if metaobject_ref != blank %}
+          <label
+            for="tab-control-{{ section.id }}-{{ forloop.index }}"
+            class="mobile-tab-label mobile-label-{{ forloop.index }}"
+          >
+            <span class="tab-text">{{ block.settings.title }}</span>
+          </label>
+        {% endif %}
 
         <div class="custom-tab-panel panel-{{ forloop.index }}">
           <div class="tab-panel-inner">
