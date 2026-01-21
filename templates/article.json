@@ -36,9 +36,57 @@
         "content"
       ],
       "settings": {}
+    },
+    "collection_home_VWY8tR": {
+      "type": "collection-home",
+      "blocks": {
+        "collection_Q3hLXB": {
+          "type": "collection",
+          "settings": {
+            "select_space": "left",
+            "title_collection": "",
+            "collection": ""
+          }
+        },
+        "collection_mM3deY": {
+          "type": "collection",
+          "settings": {
+            "select_space": "left",
+            "title_collection": "",
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_Q3hLXB",
+        "collection_mM3deY"
+      ],
+      "name": "Collection Home",
+      "settings": {
+        "width_section": 70,
+        "bg_section_left": "#ffffff",
+        "title_left": "",
+        "font_left": "modesto",
+        "size_font_left": 36,
+        "color_title_left": "#262624",
+        "color_text_left": "#262624",
+        "background_items": "#ffffff",
+        "border_items": "#262624",
+        "hover_color_items": "#fdda24",
+        "bg_section_right": "#ffffff",
+        "title_right": "",
+        "font_right": "modesto",
+        "size_font_right": 36,
+        "color_title_right": "#262624",
+        "font_color_right": "#262624",
+        "bg_color_right": "#fdda24",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "collection_home_VWY8tR"
   ]
 }
