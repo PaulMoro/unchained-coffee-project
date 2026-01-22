@@ -27,7 +27,7 @@
         "full_width": true,
         "color_scheme": "",
         "show_top_tear": false,
-        "top_tear_height": 20,
+        "top_tear_height": 200,
         "top_tear_offset": -100,
         "show_bottom_tear": false,
         "bottom_tear_height": 70,
