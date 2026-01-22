@@ -57,7 +57,7 @@
       "settings": {
         "general_bg_color": "#f1f1f9",
         "color_scheme": "scheme-1",
-        "constrain_to_viewport": false,
+        "constrain_to_viewport": true,
         "media_fit": "cover",
         "image_zoom": "none",
         "hide_variants": false,
