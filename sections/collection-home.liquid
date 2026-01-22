@@ -275,6 +275,41 @@
                 {%- endfor -%}
               </ul>
             </div>
+
+            <div class="slider-buttons no-js-hidden">
+              <button
+                type="button"
+                class="slider-button slider-button--prev custom-splide-prev"
+                name="previous"
+                aria-label="Slide left"
+              >
+                <span class="svg-wrapper">
+                  <svg class="icon icon-caret" viewBox="0 0 10 6">
+                    <path fill="currentColor" fill-rule="evenodd" d="M9.354.646a.5.5 0 0 0-.708 0L5 4.293 1.354.646a.5.5 0 0 0-.708.708l4 4a.5.5 0 0 0 .708 0l4-4a.5.5 0 0 0 0-.708" clip-rule="evenodd"></path>
+                  </svg>
+                </span>
+              </button>
+
+              <div class="slider-counter caption">
+                <span class="slider-counter--current">1</span>
+                <span aria-hidden="true"> / </span>
+                <span class="visually-hidden">of</span>
+                <span class="slider-counter--total">{{ right_blocks_count }}</span>
+              </div>
+
+              <button
+                type="button"
+                class="slider-button slider-button--next custom-splide-next"
+                name="next"
+                aria-label="Slide right"
+              >
+                <span class="svg-wrapper">
+                  <svg class="icon icon-caret" viewBox="0 0 10 6">
+                    <path fill="currentColor" fill-rule="evenodd" d="M9.354.646a.5.5 0 0 0-.708 0L5 4.293 1.354.646a.5.5 0 0 0-.708.708l4 4a.5.5 0 0 0 .708 0l4-4a.5.5 0 0 0 0-.708" clip-rule="evenodd"></path>
+                  </svg>
+                </span>
+              </button>
+            </div>
           </section>
         {% else %}
           {%- for block in section.blocks -%}
@@ -298,10 +333,11 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const sliderCollection = document.getElementById('splide-{{ section.id }}');
+    const sliderEl = document.getElementById('splide-{{ section.id }}');
+    const container = sliderEl?.closest('.second-child'); // Buscamos en el contenedor padre
 
-    if (sliderCollection) {
-      const splide = new Splide(sliderCollection, {
+    if (sliderEl) {
+      const splide = new Splide(sliderEl, {
         type: 'loop',
         perPage: 3,
         gap: '30px',
@@ -321,13 +357,61 @@
           },
         },
       });
+
+      // Selectores actualizados a las clases de Shopify
+      const currentText = container.querySelector('.slider-counter--current');
+      const btnPrev = container.querySelector('.custom-splide-prev');
+      const btnNext = container.querySelector('.custom-splide-next');
+
+      // Función de actualización
+      const updateCounter = () => {
+        if (currentText) {
+          // splide.index maneja correctamente el loop y nos da el índice real
+          currentText.textContent = splide.index + 1;
+        }
+      };
+
+      // 'move' dispara el cambio durante el arrastre, 'active' al final
+      splide.on('mounted move active', updateCounter);
+
+      if (btnPrev) {
+        btnPrev.addEventListener('click', () => splide.go('<'));
+      }
+      if (btnNext) {
+        btnNext.addEventListener('click', () => splide.go('>'));
+      }
+
       splide.mount();
-      setTimeout(function () {
-        splide.refresh();
-      }, 100);
     }
   });
 </script>
+<style>
+  .splide-counter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 1.5rem;
+    font-family: var(--font-body-family); /* O la que uses */
+  }
+  .splide-counter-container button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 10px;
+    transition: opacity 0.3s;
+  }
+  .splide-counter-container button:hover {
+    opacity: 0.6;
+  }
+  .splide-counter-numbers {
+    font-size: 1.2rem;
+    font-weight: bold;
+    min-width: 45px;
+    text-align: center;
+  }
+</style>
 
 {% schema %}
 {

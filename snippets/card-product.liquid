@@ -166,15 +166,16 @@
               </a>
             </h3>
             <div class="card-information">
-              {%- if show_vendor -%}
-                <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
-                <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
-              {%- endif -%}
-
               {%- if show_metafield -%}
                 <span class="visually-hidden">{{ 'accessibility.metafield' | t }}</span>
-                <div class="caption-with-letter-spacing light">{{ card_product.metafields.custom.aroma_fragance }}</div>
+                <div class="caption-with-letter-spacing light aroma">{{ card_product.metafields.custom.aroma_fragance }}</div>
               {%- endif -%}
+
+              {%- if show_vendor -%}
+                <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
+                <div class="caption-with-letter-spacing light vendor">{{ card_product.vendor }}</div>
+              {%- endif -%}
+
 
               <span class="caption-large light">{{ block.settings.description | escape }}</span>
 
