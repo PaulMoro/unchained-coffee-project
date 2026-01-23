@@ -172,8 +172,28 @@
 
   @media screen and (max-width: 768px) {
     .ai-subscription-levels__grid-{{ ai_gen_id }} {
-      grid-template-columns: 1fr;
+      display: grid;
+      padding: 10px 5px 24px;
+      grid-auto-flow: column;
+      grid-template-columns: repeat(auto-fit, minmax(80vw, 1fr));
       gap: 24px;
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .ai-subscription-levels__grid-{{ ai_gen_id }}::-webkit-scrollbar {
+      display: none;
+    }
+
+    .ai-subscription-levels__grid-{{ ai_gen_id }} > div {
+      scroll-snap-align: center;
+      width: 80vw;
+      min-width: 80vw;
+      flex-shrink: 0;
     }
 
     .ai-subscription-level__price-{{ ai_gen_id }} {
@@ -386,7 +406,10 @@
       }
 
       connectedCallback() {
-        this.setupScrollBehavior();
+        // Solo ejecuta si el ancho de pantalla es mayor a 1024px
+        if (window.innerWidth > 1024) {
+          this.setupScrollBehavior();
+        }
       }
 
       setupScrollBehavior() {

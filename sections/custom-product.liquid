@@ -397,14 +397,11 @@
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
 
   <div class="page-width">
-    {%- assign separator = section.settings.title_separator | default: '|' -%}
-    {%- assign title_parts = product.title | split: separator -%}
-
     <div class="product-main-header">
       <h1 class="h1">
-        {{ title_parts[0] | strip }}
-        {%- if title_parts.size > 1 -%}
-          <span class="producer-by">BY {{ title_parts[1] | strip }}</span>
+        {{ product.title | strip }}
+        {%- if section.settings.show_vendor -%}
+          <span class="producer-by">BY {{ product.vendor | strip }}</span>
         {%- endif -%}
       </h1>
     </div>
@@ -2560,11 +2557,10 @@
       "content": "Configuración del Título Dividido"
     },
     {
-      "type": "text",
-      "id": "title_separator",
-      "label": "Separador de Título",
-      "default": "|",
-      "info": "Símbolo para separar el nombre del producto del productor (ej: Café | Finca)."
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": "Mostrar Productor",
+      "default": true
     },
     {
       "type": "header",

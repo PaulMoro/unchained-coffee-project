@@ -511,8 +511,22 @@
             }
           }
         }
+
+        setTimeout(() => {
+          scrollToTab(this);
+        }, 300);
       });
     });
+
+    function scrollToTab(element) {
+      const yOffset = -140;
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({
+        top: y,
+        behavior: 'smooth',
+      });
+    }
   });
 </script>
 

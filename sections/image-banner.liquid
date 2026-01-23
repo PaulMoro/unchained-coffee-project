@@ -73,6 +73,23 @@
   {% else %}
     #Banner-{{ section.id }}::after { content: none; }
   {% endif %}
+  {% if section.settings.new_design_mobile %}
+    @media screen and (max-width: 749px) {
+      #Banner-{{ section.id }} {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      #Banner-{{ section.id }} .banner__media {
+        position: relative;
+      }
+      #Banner-{{ section.id }} .banner__media img{
+        position: relative;
+      }
+      #Banner-{{ section.id }} .banner__content {
+        background-color: {{ section.settings.content_overlay_color }};
+      }
+    }
+  {% endif %}
 {%- endstyle -%}
 
 {%- liquid
@@ -506,6 +523,22 @@
       "label": "Ajuste vertical inferior",
       "default": 2,
       "info": "Valor negativo baja la imagen."
+    },
+    {
+      "type": "header",
+      "content": "Diseno mobile Custom"
+    },
+    {
+      "type": "checkbox",
+      "id": "new_design_mobile",
+      "label": "Activar nuevo diseño mobile",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "content_overlay_color",
+      "label": "Color de overlay",
+      "default": "#262624"
     }
   ],
   "blocks": [

@@ -118,10 +118,23 @@
   }
 
   .section-{{ section.id }}-padding .first-child h2 {
+    {% if section.settings.text_right == blank %}
     margin-bottom: 4rem;
+    {% else %}
+    margin-bottom: 0;
+    {% endif %}
     color: {{ section.settings.color_title_left }};
     text-align: {{ section.settings.content_alignment }};
     font-size: {{ section.settings.size_font_left }}px;
+  }
+
+  .section-{{ section.id }}-padding .first-child h3.subtitle,
+  .section-{{ section.id }}-padding .second-child h3.subtitle {
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    color: {{ section.settings.color_subtitle_right }};
+    text-align: {{ section.settings.content_alignment }};
+    font-size: {{ section.settings.size_subheading }}px;
   }
 
   /* Botones */
@@ -158,7 +171,11 @@
     border-color: {{ section.settings.hover_color_items }};
   }
   .section-{{ section.id }}-padding .second-child h2 {
+    {% if section.settings.text_right == blank %}
     margin-bottom: 4rem;
+    {% else %}
+    margin-bottom: 0;
+    {% endif %}
     color: {{ section.settings.color_title_right }};
     text-align: {{ section.settings.content_alignment }};
     font-size: {{ section.settings.size_font_right }}px;
@@ -222,6 +239,18 @@
         >
           {{ section.settings.title_left }}
         </h2>
+        {% if section.settings.text_right != blank %}
+          <h3
+            class="subtitle inline-richtext text-{{ block.settings.font_subheading | downcase }}"
+            {{ block.shopify_attributes }}
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
+          >
+            {{ section.settings.text_left }}
+          </h3>
+        {% endif %}
         <div class="container--first-child">
           {%- for block in section.blocks -%}
             {%- case block.type -%}
@@ -253,6 +282,18 @@
       >
         {{ section.settings.title_right }}
       </h2>
+      {% if section.settings.text_right != blank %}
+        <h3
+          class="subtitle inline-richtext text-{{ block.settings.font_subheading | downcase }}"
+          {{ block.shopify_attributes }}
+          {% if settings.animations_reveal_on_scroll %}
+            data-cascade
+            style="--animation-order: {{ forloop.index }};"
+          {% endif %}
+        >
+          {{ section.settings.text_right }}
+        </h3>
+      {% endif %}
       <div class="container--second-child">
         {% assign right_blocks = section.blocks | where: 'type', 'collection' %}
         {% assign right_blocks_count = 0 %}
@@ -421,6 +462,28 @@
   "settings": [
     {
       "type": "header",
+      "content": "Subtitulo"
+    },
+    {
+      "type": "text",
+      "id": "text_right",
+      "label": "Subtitulo",
+      "default": "Subtitulo"
+    },
+    {
+      "type": "number",
+      "id": "size_subheading",
+      "label": "Tamaño de Subheading (px)",
+      "default": 24
+    },
+    {
+      "type": "color",
+      "id": "color_subtitle_right",
+      "label": "Color Subtitulo",
+      "default": "#262624"
+    },
+    {
+      "type": "header",
       "content": "Distribucion"
     },
     {
@@ -449,26 +512,6 @@
       "id": "title_left",
       "label": "Heading",
       "default": "Producers"
-    },
-    {
-      "type": "select",
-      "id": "font_left",
-      "options": [
-        {
-          "value": "permanent",
-          "label": "Permanent Marker"
-        },
-        {
-          "value": "modesto",
-          "label": "Modesto Text"
-        },
-        {
-          "value": "barlow",
-          "label": "Barlow"
-        }
-      ],
-      "default": "modesto",
-      "label": "Fuente"
     },
     {
       "type": "number",
