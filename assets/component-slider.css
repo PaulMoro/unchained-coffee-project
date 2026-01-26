@@ -28,9 +28,6 @@ slider-component.slider-component-full-width {
   scroll-snap-align: start;
   flex-shrink: 0;
   padding-bottom: 0;
-  overscroll-behavior-y: none;
-  -webkit-overflow-scrolling: touch;
-  touch-action: pan-x;
 }
 
 @media screen and (max-width: 749px) {
@@ -375,4 +372,12 @@ slider-component.slider-component-full-width {
 
 .slider-button--prev:not([disabled]):hover .icon {
   transform: rotate(90deg) scale(1.1);
+}
+
+/*
+Edit for fix scroll on iOS 
+*/
+.slider-mobile-gutter {
+  overflow-y: hidden;
+  overflow-x: hidden;
 }

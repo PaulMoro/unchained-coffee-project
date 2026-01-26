@@ -51,6 +51,9 @@
     margin-top: -30px;
     background-color: transparent;
     font-weight: 600;
+    position: absolute;
+    width: 100%;
+    top: -10px;
   }
   .section-{{ section.id }}-padding .quick-add__submit:not([disabled]):hover {
     transition: transform 0.3s ease;
@@ -67,6 +70,25 @@
   }
   .section-{{ section.id }}-padding quick-add-modal {
     display: none;
+  }
+  /* Main Search */
+  .section-{{ section.id }}-padding .card__content {
+    position: relative;
+  }
+  .section-{{ section.id }}-padding .card__heading {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .section-{{ section.id }}-padding .card__heading a {
+    text-decoration: none !important;
+  }
+  .section-{{ section.id }}-padding .card-information {
+    padding-top: 1rem;
+    text-align: center;
+  }
+  .section-{{ section.id }}-padding .card-information .aroma,
+  .section-{{ section.id }}-padding .card-information .vendor {
+    font-size: 1.6rem;
   }
 </style>
 
@@ -309,7 +331,7 @@
                           lazy_load: lazy_load,
                           skip_styles: skip_card_product_styles,
                           quick_add: 'standard',
-                          show_info_product: false,
+                          show_info_product: true,
                           text_cta: settings.text_cta_quick,
                           link_to_product: true
                         %}

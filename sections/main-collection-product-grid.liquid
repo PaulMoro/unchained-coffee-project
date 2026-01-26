@@ -43,6 +43,9 @@
       margin-top: -30px;
       background-color: transparent;
       font-weight: 600;
+      position: absolute;
+      width: 100%;
+      top: -10px;
     }
     .section-{{ section.id }}-padding .quick-add__submit:not([disabled]):hover {
       transition: transform 0.3s ease;
@@ -52,10 +55,30 @@
       box-shadow: none;
     }
     .quick-add {
+      position: static;
       margin: 0;
     }
     .card__content {
       padding: 0;
+    }
+    /* Main Collection Product Grid */
+    .section-{{ section.id }}-padding .card__content {
+      position: relative;
+    }
+    .section-{{ section.id }}-padding .card__heading {
+      font-size: 1.8rem;
+      text-align: center;
+    }
+    .section-{{ section.id }}-padding .card__heading a {
+      text-decoration: none !important;
+    }
+    .section-{{ section.id }}-padding .card-information {
+      padding-top: 1rem;
+      text-align: center;
+    }
+    .section-{{ section.id }}-padding .card-information .aroma,
+    .section-{{ section.id }}-padding .card-information .vendor {
+      font-size: 1.6rem;
     }
   {% endunless %}
 {%- endstyle -%}
@@ -198,9 +221,10 @@
                     show_rating: section.settings.show_rating,
                     lazy_load: lazy_load,
                     skip_styles: skip_card_product_styles,
-                    quick_add: section.settings.quick_add,
                     section_id: section.id,
-                    text_cta: section.settings.text_cta
+                    text_cta: section.settings.text_cta,
+                    quick_add: 'standard',
+                    show_info_product: true
                   %}
                 </li>
                 {%- assign skip_card_product_styles = true -%}
