@@ -85,7 +85,9 @@
         "top_tear_offset": 2,
         "show_bottom_tear": false,
         "bottom_tear_height": 50,
-        "bottom_tear_offset": 2
+        "bottom_tear_offset": 2,
+        "new_design_mobile": true,
+        "content_overlay_color": "#262624"
       }
     },
     "collection_fullwidth_XqbJbE": {
@@ -482,7 +484,7 @@
         "description": "<p>Awards don’t change the coffee.<strong> They confirm it.</strong></p>",
         "show_description": false,
         "description_style": "body",
-        "columns_desktop": 2,
+        "columns_desktop": 3,
         "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,
@@ -673,10 +675,12 @@
       ],
       "name": "Collection Home",
       "settings": {
+        "text_right": "Subtitulo",
+        "size_subheading": 24,
+        "color_subtitle_right": "#262624",
         "width_section": 0,
         "bg_section_left": "#f5f4f0",
         "title_left": "quitar",
-        "font_left": "modesto",
         "size_font_left": 36,
         "color_title_left": "#262624",
         "color_text_left": "#262624",
@@ -836,7 +840,9 @@
         "show_bottom_tear": true,
         "bottom_tear_image": "shopify://shop_images/UNCHAINED_razgado-a.png",
         "bottom_tear_height": 50,
-        "bottom_tear_offset": -2
+        "bottom_tear_offset": -2,
+        "new_design_mobile": true,
+        "content_overlay_color": "#262624"
       }
     },
     "video_9Raep6": {
@@ -1232,7 +1238,9 @@
         "show_bottom_tear": true,
         "bottom_tear_image": "shopify://shop_images/UNCHAINED_razgado-a.png",
         "bottom_tear_height": 50,
-        "bottom_tear_offset": 0
+        "bottom_tear_offset": 0,
+        "new_design_mobile": true,
+        "content_overlay_color": "#262624"
       }
     },
     "image_with_text_R8QVJz": {
