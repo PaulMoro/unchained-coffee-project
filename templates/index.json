@@ -676,7 +676,7 @@
       "name": "Collection Home",
       "settings": {
         "text_right": "Faster. Stronger.",
-        "size_subheading": 20,
+        "size_subheading": 18,
         "color_subtitle_right": "#262624",
         "width_section": 0,
         "bg_section_left": "#f5f4f0",
@@ -690,7 +690,7 @@
         "bg_section_right": "#ffffff",
         "title_right": "They are Breaking The Chain",
         "font_right": "modesto",
-        "size_font_right": 26,
+        "size_font_right": 20,
         "color_title_right": "#262624",
         "font_color_right": "#262624",
         "bg_color_right": "#fdda24",
