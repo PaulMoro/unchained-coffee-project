@@ -846,7 +846,7 @@
         "top_tear_offset": 0,
         "show_bottom_tear": true,
         "bottom_tear_image": "shopify://shop_images/UNCHAINED_razgado-a.png",
-        "bottom_tear_height": 50,
+        "bottom_tear_height": 30,
         "bottom_tear_offset": -2,
         "new_design_mobile": true,
         "content_overlay_color": "#262624"
