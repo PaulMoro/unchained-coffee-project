@@ -83,12 +83,18 @@
     text-decoration: none !important;
   }
   .section-{{ section.id }}-padding .card-information {
-    padding-top: 1rem;
     text-align: center;
   }
   .section-{{ section.id }}-padding .card-information .aroma,
   .section-{{ section.id }}-padding .card-information .vendor {
     font-size: 1.6rem;
+  }
+  @media screen and (max-width: 750px) {
+    .section-{{ section.id }}-padding .card-information .card__heading,
+    .section-{{ section.id }}-padding .card-information .aroma,
+    .section-{{ section.id }}-padding .card-information .vendor {
+      font-size: 1.2rem;
+    }
   }
 </style>
 
