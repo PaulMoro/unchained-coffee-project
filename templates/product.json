@@ -130,7 +130,7 @@
         "heading_size": "h1",
         "products_to_show": 3,
         "columns_desktop": 3,
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "color_scheme": "scheme-2",
         "image_ratio": "adapt",
         "image_shape": "default",
