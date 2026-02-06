@@ -1151,7 +1151,7 @@
             "heading_spacing": 15,
             "text_spacing": 15,
             "padding_top": 50,
-            "padding_bottom": 50,
+            "padding_bottom": 100,
             "button_radius": 0
           },
           "blocks": {}
