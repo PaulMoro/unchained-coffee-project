@@ -12,7 +12,8 @@
     "banner": {
       "type": "main-collection-banner",
       "custom_css": [
-        ".collection-hero__title {}"
+        ".collection-hero__title {font-size: 3rem;}",
+        "@media screen and (max-width: 749px) {.collection-hero__title {font-size: 2.4rem;}}"
       ],
       "settings": {
         "show_collection_description": true,
