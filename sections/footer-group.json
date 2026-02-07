@@ -11,6 +11,16 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "custom_liquid_MCDy8P": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<script>\nwindow.addEventListener('scroll', function() {\n  const chatButton = document.getElementById('shopify-chat');\n  \n  if (chatButton) {\n    // Si el scroll es mayor a 100px (puedes ajustar este número)\n    if (window.scrollY > 100) {\n      chatButton.style.display = 'block';\n      chatButton.style.opacity = '1';\n      chatButton.style.transition = 'opacity 0.3s ease';\n    } else {\n      // Cuando volvemos al top\n      chatButton.style.opacity = '0';\n      // Usamos un pequeño timeout para que la transición de opacidad se vea\n      setTimeout(() => {\n        if (window.scrollY <= 100) chatButton.style.display = 'none';\n      }, 300);\n    }\n  }\n});\n</script>\n\n<style>\n#shopify-chat {\n  display: none;\n  opacity: 0;\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "newsletter_fHfHcP": {
       "type": "newsletter",
       "blocks": {
@@ -124,6 +134,7 @@
     }
   },
   "order": [
+    "custom_liquid_MCDy8P",
     "newsletter_fHfHcP",
     "footer"
   ]
