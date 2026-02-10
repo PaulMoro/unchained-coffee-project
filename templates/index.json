@@ -139,7 +139,7 @@
         "collection_button_6xhwjB": {
           "type": "collection_button",
           "settings": {
-            "collection": "caturra-varietal-filter",
+            "collection": "method-drip-collection",
             "custom_title": "Drip"
           }
         },
