@@ -1,4 +1,21 @@
-<div class="main-container">Entrando en el blog nuevo</div>
+<div class="main-container">
+    <div class="blog-title">{{ blog.title }}</div>
+    <div class="container-articles">
+        {% for article in blog.articles %}
+            <a 
+                href="{{ article.url }}" 
+                class="card-article"
+                >
+                <img src="{{ article.image | image_url: width: 800 }}" class="article-image" alt="{{ article.title }}">
+                <div class="article-title">{{ article.title }}</div>
+                <div class="article-author">{{ article.author }}</div>
+                <div class="article-time-remaining">{{ article.metafields.custom.time_remaining }}</div>
+                <div class="card-summary">{{ article.metafields.custom.card_summary }}</div>
+                <div class="what-it-s-about">{{ article.metafields.custom.what_it_s_about }}</div>
+            </a>
+        {% endfor %}
+    </div>
+</div>
 
 <style>
     .main-container{
@@ -15,42 +32,69 @@
         z-index: 2;
         position: relative;
     }
+    .blog-title{
+        font-size: 40px;
+        font-weight: 700;
+        color: black;
+    }
+    .container-articles{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        width: 100%;
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+    .card-article{
+        width: 100%;
+        height: 100%;
+        color: white;
+        padding: 10px;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        border-color: black;
+        border-width: 1|px;
+        border-style: solid;
+    }
+    .article-image{
+        width: 100%;
+        height: 100px;
+    }
+    .article-title{
+        font-size: 20px;
+        font-weight: 700;
+        color: black;
+    }
+    .article-author{
+        font-size: 16px;
+        font-weight: 400;
+        color: black;
+    }
+    .article-time-remaining{
+        font-size: 16px;
+        font-weight: 400;
+        color: black;
+    }
+    .card-summary{
+        font-size: 16px;
+        font-weight: 400;
+        color: black;
+    }
+    .what-it-s-about{
+        font-size: 16px;
+        font-weight: 400;
+        color: black;
+    }
 </style>
 
 {% schema %}
     {
     "name": "Fundraising",
     "settings": [
-        {
-        "type": "text",
-        "id": "title",
-        "label": "Título"
-        },
-        {
-        "type": "textarea",
-        "id": "description",
-        "label": "Descripción"
-        }
     ],
-    "blocks": [
-        {
-        "type": "item",
-        "name": "Item",
-        "settings": [
-            {
-            "type": "blog",
-            "id": "blog",
-            "label": "Seleccionar blog"
-            },
-            {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Imagen"
-            }
-        ]
-        }
-    ],
-    "max_blocks": 12,
     "presets": [
         {
         "name": "Fundraising"
