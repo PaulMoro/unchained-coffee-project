@@ -1,0 +1,109 @@
+<div class="main-container">
+    <div class="title-fundraising">
+        Explora recaudaciones de fondos por categoría
+    </div>
+    <div class="description-fundraising">
+        Personas de todo el mundo están recaudando dinero para aquello que les apasiona.
+    </div>
+    <div class="container-blogs">
+        {% for block in section.blocks %}
+            {% assign selected_blog = blogs[block.settings.blog] %}
+            {% if selected_blog %}
+                <a 
+                href="{{ selected_blog.url }}" 
+                class="card-blog"
+                {% if block.settings.image != blank %}
+                    style="background-image: url('{{ block.settings.image | image_url: width: 800 }}');"
+                {% endif %}
+                >
+                    {{ selected_blog.title }}
+                </a>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+    .main-container{
+        height: 100vh;
+        width: 100vw;
+        color: black;
+        margin-top: 58px;
+        gap: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background: white;
+        z-index: 2;
+        position: relative;
+    }
+    .title-fundraising{
+        font-size: 40px;
+        font-weight: 700;
+        color: black;
+    }
+    .description-fundraising{
+        font-size: 20px;
+        font-weight: 400;
+        color: black;
+    }
+    .container-blogs{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+    .card-blog{
+        width: 200px;
+        height: 200px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: var(--bg-image);
+        background-size: cover;
+        background-position: center;
+    }
+</style>
+
+{% schema %}
+{
+  "name": "Fundraising",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Título"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Descripción"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "blog",
+          "id": "blog",
+          "label": "Seleccionar blog"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Imagen"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "Fundraising"
+    }
+  ]
+}
+{% endschema %}
