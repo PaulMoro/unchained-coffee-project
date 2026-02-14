@@ -1,9 +1,9 @@
 <div class="main-container">
     <div class="title-fundraising">
-        Explora recaudaciones de fondos por categoría
+        {{ section.settings.title }}
     </div>
     <div class="description-fundraising">
-        Personas de todo el mundo están recaudando dinero para aquello que les apasiona.
+        {{ section.settings.description }}
     </div>
     <div class="container-blogs">
         {% for block in section.blocks %}

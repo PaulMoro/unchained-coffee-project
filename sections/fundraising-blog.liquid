@@ -1,0 +1,60 @@
+<div class="main-container">Entrando en el blog nuevo</div>
+
+<style>
+    .main-container{
+        height: 100vh;
+        width: 100vw;
+        color: black;
+        margin-top: 58px;
+        gap: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background: white;
+        z-index: 2;
+        position: relative;
+    }
+</style>
+
+{% schema %}
+    {
+    "name": "Fundraising",
+    "settings": [
+        {
+        "type": "text",
+        "id": "title",
+        "label": "Título"
+        },
+        {
+        "type": "textarea",
+        "id": "description",
+        "label": "Descripción"
+        }
+    ],
+    "blocks": [
+        {
+        "type": "item",
+        "name": "Item",
+        "settings": [
+            {
+            "type": "blog",
+            "id": "blog",
+            "label": "Seleccionar blog"
+            },
+            {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Imagen"
+            }
+        ]
+        }
+    ],
+    "max_blocks": 12,
+    "presets": [
+        {
+        "name": "Fundraising"
+        }
+    ]
+    }
+{% endschema %}
