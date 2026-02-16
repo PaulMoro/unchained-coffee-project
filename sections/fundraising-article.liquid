@@ -4,16 +4,29 @@
         <img src="{{ article.image | image_url: width: 800 }}" class="article-image" alt="{{ article.title }}">
         <div class="article-author">{{ article.author }}</div>
         <div class="article-content">{{ article.content }}</div>
+        <div class="container-products">
+            {% assign related_products = article.metafields.custom.related_products.value %}
+            {% if related_products != blank %}
+                {% for product in related_products %}
+                    <a href="{{ product.url }}" class="product-card">
+                        <img src="{{ product.featured_image | image_url: width: 800 }}" class="product-image" alt="{{ product.title }}">
+                        <div class="product-title">{{ product.title }}</div>
+                        <div class="product-price">{{ product.price | money }}</div>
+                    </a>
+                {% endfor %}
+            {% endif %}
+        </div>
     </div>
     <div class="container-purchase">Para comprar</div>
 </div>
 
 <style>
     .main-container{
-        height: 100vh;
+        height: auto;
         width: 100vw;
         color: black;
         margin-top: 58px;
+        margin-bottom: 100px;
         gap: 50px;
         display: flex;
         flex-direction: row;
@@ -57,6 +70,41 @@
         font-size: 16px;
         font-weight: 400;
         color: black;
+    }
+    .container-products{
+        width: 100%;
+        height: 350px;
+        background: white;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+    .product-card{
+        flex: 1;
+        height: 100%;
+        background: grey;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .product-image{
+        width: 100%;
+        height: 100%;
+    }
+    .product-title{
+        font-size: 16px;
+        font-weight: 400;
+        color: black;
+        text-align: center;
+    }
+    .product-price{
+        font-size: 14px;
+        font-weight: 400;
+        color: black;
+        text-align: center;
+        margin-bottom: 16px;  
     }
     
 </style>
