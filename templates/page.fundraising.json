@@ -1,7 +1,56 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
-      "type": "fundraising"
+      "type": "fundraising",
+      "blocks": {
+        "item_9J6YCB": {
+          "type": "item",
+          "settings": {
+            "blog": "news",
+            "image": "shopify://shop_images/istockphoto-2153926949-2048x2048.jpg"
+          }
+        },
+        "item_XP9j3T": {
+          "type": "item",
+          "settings": {
+            "blog": "fundraising",
+            "image": "shopify://shop_images/istockphoto-2153926949-2048x2048.jpg"
+          }
+        },
+        "item_KxHzKn": {
+          "type": "item",
+          "settings": {
+            "blog": "familia",
+            "image": "shopify://shop_images/istockphoto-2153926949-2048x2048.jpg"
+          }
+        },
+        "item_be84pF": {
+          "type": "item",
+          "settings": {
+            "blog": "animales",
+            "image": "shopify://shop_images/istockphoto-2153926949-2048x2048.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "item_9J6YCB",
+        "item_XP9j3T",
+        "item_KxHzKn",
+        "item_be84pF"
+      ],
+      "settings": {
+        "title": "",
+        "description": ""
+      }
     }
   },
   "order": [
