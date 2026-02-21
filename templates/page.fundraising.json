@@ -12,36 +12,46 @@
     "main": {
       "type": "fundraising",
       "blocks": {
+        "item_z4UjDK": {
+          "type": "item",
+          "settings": {
+            "title-item": ""
+          }
+        },
+        "item_gijhDi": {
+          "type": "item",
+          "settings": {
+            "title-item": ""
+          }
+        },
         "item_9J6YCB": {
           "type": "item",
           "settings": {
-            "blog": "news",
-            "image": "shopify://shop_images/istockphoto-2153926949-2048x2048.jpg"
+            "title-item": ""
           }
         },
         "item_XP9j3T": {
           "type": "item",
           "settings": {
-            "blog": "fundraising",
-            "image": "shopify://shop_images/istockphoto-2153926949-2048x2048.jpg"
+            "title-item": ""
           }
         },
         "item_KxHzKn": {
           "type": "item",
           "settings": {
-            "blog": "familia",
-            "image": "shopify://shop_images/istockphoto-2153926949-2048x2048.jpg"
+            "title-item": ""
           }
         },
         "item_be84pF": {
           "type": "item",
           "settings": {
-            "blog": "animales",
-            "image": "shopify://shop_images/istockphoto-2153926949-2048x2048.jpg"
+            "title-item": ""
           }
         }
       },
       "block_order": [
+        "item_z4UjDK",
+        "item_gijhDi",
         "item_9J6YCB",
         "item_XP9j3T",
         "item_KxHzKn",
@@ -49,7 +59,16 @@
       ],
       "settings": {
         "title": "",
-        "description": ""
+        "description-left": "",
+        "description-right": "",
+        "subtitle": "",
+        "description-page": "",
+        "title-one": "",
+        "description-one": "",
+        "title-two": "",
+        "description-two": "",
+        "title-three": "",
+        "description-three": ""
       }
     }
   },
