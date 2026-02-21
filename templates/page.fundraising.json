@@ -58,17 +58,18 @@
         "item_be84pF"
       ],
       "settings": {
-        "title": "",
-        "description-left": "",
-        "description-right": "",
-        "subtitle": "",
-        "description-page": "",
-        "title-one": "",
-        "description-one": "",
-        "title-two": "",
-        "description-two": "",
-        "title-three": "",
-        "description-three": ""
+        "title": "SUCCESFUL COFFEE FUNDSCRIPTION START HERE",
+        "description-left": "More than $3k is raised every week on CoffeeFunds.*",
+        "description-right": "Subscribe today to fuel your mornings while directly funding the growers;\nyour purchase provides the capital farming families need to thrive, turning\nevery cup you enjoy into a shared investment in their dignity and future.",
+        "subtitle": "REAL-TIME IMPACT REPORTING",
+        "description-page": "Coffee Fundscription is easy, powerful and trusted",
+        "image_left": "shopify://shop_images/Captura_de_pantalla_2026-02-21_101219.png",
+        "title-one": "1. Browse fundraisers by category",
+        "description-one": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.",
+        "title-two": "1. Browse fundraisers by category",
+        "description-two": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.",
+        "title-three": "1. Browse fundraisers by category",
+        "description-three": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx."
       }
     }
   },
