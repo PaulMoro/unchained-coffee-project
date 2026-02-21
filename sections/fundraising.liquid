@@ -1,27 +1,6 @@
-<div class="main-container">
-    <div class="title-fundraising">
-        {{ section.settings.title }}
-    </div>
-    <div class="description-fundraising">
-        {{ section.settings.description }}
-    </div>
-    <div class="container-blogs">
-        {% for block in section.blocks %}
-            {% assign selected_blog = blogs[block.settings.blog] %}
-            {% if selected_blog %}
-                <a 
-                href="{{ selected_blog.url }}" 
-                class="card-blog"
-                {% if block.settings.image != blank %}
-                    style="background-image: url('{{ block.settings.image | image_url: width: 800 }}');"
-                {% endif %}
-                >
-                    {{ selected_blog.title }}
-                </a>
-            {% endif %}
-        {% endfor %}
-    </div>
-</div>
+{% render 'fundraising-presentation', title: section.settings.title, blocks: section.blocks %}
+{% render 'fundraising-two-texts', description-left: section.settings.description-left, description-right: section.settings.description-right %}
+{% render 'fundraising-content', subtitle: section.settings.subtitle, description-page: section.settings.description-page, image_left: section.settings.image_left, title-one: section.settings.title-one, description-one: section.settings.description-one, title-two: section.settings.title-two, description-two: section.settings.description-two, title-three: section.settings.title-three, description-three: section.settings.description-three %}
 
 <style>
     .main-container{
@@ -73,12 +52,62 @@
     {
       "type": "text",
       "id": "title",
-      "label": "Título"
+      "label": "Título Pagina"
     },
     {
       "type": "textarea",
-      "id": "description",
-      "label": "Descripción"
+      "id": "description-left",
+      "label": "Texto izquierda"
+    },
+    {
+      "type": "textarea",
+      "id": "description-right",
+      "label": "Texto derecha"
+    },
+        {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Título en zona amarilla"
+    },
+    {
+      "type": "textarea",
+      "id": "description-page",
+      "label": "Descripción página"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_left",
+      "label": "Imagen zona izquierda"
+    },
+    {
+      "type": "text",
+      "id": "title-one",
+      "label": "Titulo 1 Subitem"
+    },
+    {
+      "type": "textarea",
+      "id": "description-one",
+      "label": "Descripcion 1 Subitem"
+    },
+       {
+      "type": "text",
+      "id": "title-two",
+      "label": "Titulo 2 Subitem"
+    },
+    {
+      "type": "textarea",
+      "id": "description-two",
+      "label": "Descripcion 2 Subitem"
+    },
+        {
+      "type": "text",
+      "id": "title-three",
+      "label": "Titulo 3 Subitem"
+    },
+    {
+      "type": "textarea",
+      "id": "description-three",
+      "label": "Descripcion 3 Subitem"
     }
   ],
   "blocks": [
@@ -87,19 +116,19 @@
       "name": "Item",
       "settings": [
         {
-          "type": "blog",
-          "id": "blog",
-          "label": "Seleccionar blog"
+          "type": "text",
+          "id": "title-item",
+          "label": "Titulo Item"
         },
         {
           "type": "image_picker",
-          "id": "image",
-          "label": "Imagen"
+          "id": "image-item",
+          "label": "Imagen Item"
         }
       ]
     }
   ],
-  "max_blocks": 12,
+  "max_blocks": 6,
   "presets": [
     {
       "name": "Fundraising"

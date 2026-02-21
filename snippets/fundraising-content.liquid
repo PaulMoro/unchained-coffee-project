@@ -1,0 +1,92 @@
+<div class="container-fundraising-content">
+    <div class="title-fundraising-content">{{ subtitle }}</div>
+    <div class="description-fundraising-content">{{ description-page }}</div>
+    <div class="columns-fundraising-content">
+        <div class="column-fundraising-content column-fundraising-content-left">
+            {% if image_left != blank %}
+                <img src="{{ image_left | image_url: width: 400 }}" alt="{{ image_left.alt }}">
+            {% else %}
+                <img src="https://cdn.shopify.com/s/files/1/0705/5926/9000/files/Captura_de_pantalla_2026-02-21_101219.png?v=1771687110" alt="">
+            {% endif %}
+        </div>
+        <div class="column-fundraising-content column-fundraising-content-right">
+            <div class="content-column">
+                <div class="title-column">{{ title-one }}</div>
+                <div class="description-column">{{ description-one }}</div>
+            </div>
+            <div class="content-column">
+                <div class="title-column">{{ title-two }}</div>
+                <div class="description-column">{{ description-two }}</div>
+            </div>
+            <div class="content-column">
+                <div class="title-column">{{ title-three }}</div>
+                <div class="description-column">{{ description-three }}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .container-fundraising-content{ 
+        height: 100%;
+        max-width: 1300px;
+        margin: 0px auto 80px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+        font-family: 'Modesto Text', sans-serif;
+    }
+    .title-fundraising-content{
+        font-size: 40px;
+        font-weight: 700;
+        color: black;
+        background-color: #fbd81f;
+        padding: 15px;
+    }
+    .description-fundraising-content{
+        font-size: 30px;
+        font-weight: 400;
+        color: black;
+    }
+    .columns-fundraising-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+    }
+    .column-fundraising-content{
+        width: 50%;
+    }
+    .column-fundraising-content-left{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .column-fundraising-content-right{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .content-column{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .content-column .title-column{
+        font-size: 18px;
+        font-weight: 700;
+        color: black;
+    }
+    .content-column .description-column{
+        font-size: 15px;
+        font-weight: 400;
+        color: rgb(99, 96, 96);
+    }
+</style>

@@ -1,0 +1,158 @@
+{% assign block_1 = blocks[0] %}
+{% assign block_2 = blocks[1] %}
+{% assign block_3 = blocks[2] %}
+{% assign block_4 = blocks[3] %}
+{% assign block_5 = blocks[4] %}
+{% assign block_6 = blocks[5] %}
+
+<div class="container-fundraising-presentation">
+    <div class="images-left">
+        <div class="image-left image-left-1">
+            {% if block_1 and block_1.settings.image-item != blank %}
+                <img src="{{ block_1.settings.image-item | image_url: width: 400 }}" alt="{{ block_1.settings.title-item }}">
+                <div class="text-image">{{ block_1.settings.title-item | default: 'Texto 1' }}</div>
+            {% else %}
+                <img src="https://cdn.shopify.com/s/files/1/0705/5926/9000/files/istockphoto-2153926949-2048x2048.jpg?v=1771082441" alt="">
+                <div class="text-image">Texto 1</div>
+            {% endif %}
+        </div>
+        <div class="image-left image-left-2">
+            {% if block_2 and block_2.settings.image-item != blank %}
+                <img src="{{ block_2.settings.image-item | image_url: width: 400 }}" alt="{{ block_2.settings.title-item }}">
+                <div class="text-image">{{ block_2.settings.title-item | default: 'Texto 2' }}</div>
+            {% else %}
+                <img src="https://cdn.shopify.com/s/files/1/0705/5926/9000/files/istockphoto-2153926949-2048x2048.jpg?v=1771082441" alt="">
+                <div class="text-image">Texto 2</div>
+            {% endif %}
+        </div>
+        <div class="image-left image-left-3">
+            {% if block_3 and block_3.settings.image-item != blank %}
+                <img src="{{ block_3.settings.image-item | image_url: width: 400 }}" alt="{{ block_3.settings.title-item }}">
+                <div class="text-image">{{ block_3.settings.title-item | default: 'Texto 3' }}</div>
+            {% else %}
+                <img src="https://cdn.shopify.com/s/files/1/0705/5926/9000/files/istockphoto-2153926949-2048x2048.jpg?v=1771082441" alt="">
+                <div class="text-image">Texto 3</div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="title-page">
+        <h1>{% if title != blank %}{{ title }}{% else %}SUCCESFUL COFFEE FUNDSCRIPTION START HERE{% endif %}</h1>
+    </div>
+    <div class="images-right">
+        <div class="image-right image-right-1">
+            {% if block_4 and block_4.settings.image-item != blank %}
+                <img src="{{ block_4.settings.image-item | image_url: width: 400 }}" alt="{{ block_4.settings.title-item }}">
+                <div class="text-image">{{ block_4.settings.title-item | default: 'Texto 4' }}</div>
+            {% else %}
+                <img src="https://cdn.shopify.com/s/files/1/0705/5926/9000/files/istockphoto-2153926949-2048x2048.jpg?v=1771082441" alt="">
+                <div class="text-image">Texto 4</div>
+            {% endif %}
+        </div>
+        <div class="image-right image-right-2">
+            {% if block_5 and block_5.settings.image-item != blank %}
+                <img src="{{ block_5.settings.image-item | image_url: width: 400 }}" alt="{{ block_5.settings.title-item }}">
+                <div class="text-image">{{ block_5.settings.title-item | default: 'Texto 5' }}</div>
+            {% else %}
+                <img src="https://cdn.shopify.com/s/files/1/0705/5926/9000/files/istockphoto-2153926949-2048x2048.jpg?v=1771082441" alt="">
+                <div class="text-image">Texto 5</div>
+            {% endif %}
+        </div>
+        <div class="image-right image-right-3">
+            {% if block_6 and block_6.settings.image-item != blank %}
+                <img src="{{ block_6.settings.image-item | image_url: width: 400 }}" alt="{{ block_6.settings.title-item }}">
+                <div class="text-image">{{ block_6.settings.title-item | default: 'Texto 6' }}</div>
+            {% else %}
+                <img src="https://cdn.shopify.com/s/files/1/0705/5926/9000/files/istockphoto-2153926949-2048x2048.jpg?v=1771082441" alt="">
+                <div class="text-image">Texto 6</div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<style>
+    .container-fundraising-presentation{
+        height: 605PX;
+        max-width: 1300px;
+        margin: 80px auto;
+        padding: 0 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 2;
+    }
+
+    .images-left{
+        height: 100%;
+        width: 475px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .image-left{
+        height: 200px;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+    .image-left-1{
+        margin-left: auto;
+    }
+    .image-left-3{
+        margin-left: auto;
+    }
+    .images-left img{
+        height: 160px;
+        width: 160px;
+        border-radius: 50%;
+    }
+    .text-image{
+        width: 70%;
+        font-size: 18px;
+        font-weight: 400;
+        color: black;
+        background-color: #fbd81f;
+        text-align: center;
+        font-family: 'Modesto Text', sans-serif;
+    }
+    .title-page{
+        height: 100%;
+        width: 525px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .title-page h1{
+        font-size: 40px;
+        font-weight: 400;
+        color: black;
+        text-align: center;
+    }
+    .images-right{
+        height: 100%;
+        width: 475px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .image-right{
+        height: 200px;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+    .image-right-2{
+        margin-left: auto;
+    }
+    .images-right img{
+        height: 160px;
+        width: 160px;
+        border-radius: 50%;
+    }
+</style>
