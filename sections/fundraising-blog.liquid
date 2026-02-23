@@ -8,20 +8,26 @@
             <a href="{{ block.settings.blog.url }}" class="title-blog">{{ block.settings.blog.title | upcase }}</a>
         {% endfor %}
     </div>
-    <div class="container-articles">
-        {% for article in blog.articles %}
-            <a 
-                href="{{ article.url }}" 
-                class="card-article"
-                >
-                <img src="{{ article.image | image_url: width: 800 }}" class="article-image" alt="{{ article.title }}">
-                <div class="article-title">{{ article.title }}</div>
-                <div class="article-author">{{ article.author }}</div>
-                <div class="article-time-remaining">{{ article.metafields.custom.time_remaining }}</div>
-                <div class="card-summary">{{ article.metafields.custom.card_summary }}</div>
-                <div class="what-it-s-about">{{ article.metafields.custom.what_it_s_about }}</div>
+    <div class="container-blog container-blog-1">
+        <div class="title-container-blog">{{ section.settings.blog1.title  }}</div>
+        {% for article in section.settings.blog1.articles %}
+            <a class="card-article" href="{{ article.url }}">
+                <div class="image-article">
+                    <img src="{{ article.image | img_url: 'master' }}" alt="{{ article.title }}">
+                </div>
+                <div class="content-article">
+                    <div class="title-article">{{ article.title }}</div>
+                    <div class="fundraising-article-content">
+                        <div class="progress">
+                            <div class="progress-bar">&nbsp;</div>
+                        </div>
+                        
+                        <div class="progress-text">$2,230 RAISED</div>
+                    </div>
+                </div>
             </a>
         {% endfor %}
+
     </div>
 </div>
 
@@ -101,56 +107,77 @@
         clip-path: polygon(0% 0%, 92% 15%, 92% 100%, 0% 85%);
         font-family: 'Modesto Text', sans-serif;
     }
-    .container-articles{
+    .container-blog{
+        width: 1300px;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-        width: 100%;
-        padding-left: 200px;
-        padding-right: 200px;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 60px;
+        row-gap: 40px;
+    }
+    .title-container-blog{
+        font-size: 28px;
+        font-weight: 400;
+        color: black;
+        font-family: 'Modesto Text', sans-serif;
+        color: rgb(179 176 176);
+        width: 870px;
+        text-align: left;
+        width: 870px;
+        line-height: 35px;
     }
     .card-article{
-        width: 100%;
-        height: 100%;
-        color: white;
-        padding: 10px;
         display: flex;
-        gap: 10px;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: center;
-        border-color: black;
-        border-width: 1|px;
-        border-style: solid;
+        align-items: flex-start;
+        gap: 20px;
     }
-    .article-image{
+    .image-article{
         width: 100%;
-        height: 100px;
+        height: 200px;
     }
-    .article-title{
-        font-size: 20px;
-        font-weight: 700;
-        color: black;
+    .image-article img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
-    .article-author{
-        font-size: 16px;
+    .content-article{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .title-article{
+        font-size: 28px;
         font-weight: 400;
         color: black;
+        font-family: 'Modesto Text', sans-serif;
+        color: rgb(179 176 176);
+        width: 870px;
+        text-align: left;
+        width: 870px;
+        line-height: 35px;
     }
-    .article-time-remaining{
-        font-size: 16px;
-        font-weight: 400;
-        color: black;
+    .fundraising-article-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 20px;
     }
-    .card-summary{
-        font-size: 16px;
-        font-weight: 400;
-        color: black;
+    .progress {
+        width: 300px;          /* o 100% */
+        height: 12px;
+        background: #e5e7eb;   /* gris del track */
+        border-radius: 999px;
+        overflow: hidden;      /* para que respete bordes redondeados */
     }
-    .what-it-s-about{
-        font-size: 16px;
-        font-weight: 400;
-        color: black;
+
+    .progress-bar {
+        width: 50%;            /* <- 50% de progreso */
+        height: 100%;
+        background: #22c55e;   /* color de la barra */
     }
 </style>
 
