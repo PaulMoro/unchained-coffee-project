@@ -8,15 +8,15 @@
             <a href="{{ block.settings.blog.url }}" class="title-blog">{{ block.settings.blog.title | upcase }}</a>
         {% endfor %}
     </div>
+    <div class="title-container-blog title-container-blog-1">{{ section.settings.blog1.title  }}</div>
     <div class="container-blog container-blog-1">
-        <div class="title-container-blog">{{ section.settings.blog1.title  }}</div>
-        {% for article in section.settings.blog1.articles %}
+        {% for article in section.settings.blog1.articles limit: 4 %}
             <a class="card-article" href="{{ article.url }}">
                 <div class="image-article">
                     <img src="{{ article.image | img_url: 'master' }}" alt="{{ article.title }}">
                 </div>
                 <div class="content-article">
-                    <div class="title-article">{{ article.title }}</div>
+                    <div class="title-article">{{ article.metafields.custom.blog_text }}</div>
                     <div class="fundraising-article-content">
                         <div class="progress">
                             <div class="progress-bar">&nbsp;</div>
@@ -27,7 +27,26 @@
                 </div>
             </a>
         {% endfor %}
-
+    </div>
+    <div class="title-container-blog title-container-blog-2">{{ section.settings.blog2.title  }}</div>
+    <div class="container-blog container-blog-2">
+        {% for article in section.settings.blog2.articles limit: 4 %}
+            <a class="card-article" href="{{ article.url }}">
+                <div class="image-article">
+                    <img src="{{ article.image | img_url: 'master' }}" alt="{{ article.title }}">
+                </div>
+                <div class="content-article">
+                    <div class="title-article">{{ article.metafields.custom.blog_text }}</div>
+                    <div class="fundraising-article-content">
+                        <div class="progress">
+                            <div class="progress-bar">&nbsp;</div>
+                        </div>
+                        
+                        <div class="progress-text">$2,230 RAISED</div>
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
     </div>
 </div>
 
@@ -108,76 +127,110 @@
         font-family: 'Modesto Text', sans-serif;
     }
     .container-blog{
-        width: 1300px;
+        max-width: 1300px;
+        width: 100%;
+        margin: 0 auto;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 60px;
-        row-gap: 40px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px 60px;
     }
-    .title-container-blog{
-        font-size: 28px;
-        font-weight: 400;
-        color: black;
-        font-family: 'Modesto Text', sans-serif;
-        color: rgb(179 176 176);
-        width: 870px;
-        text-align: left;
-        width: 870px;
-        line-height: 35px;
-    }
+
+    /* Card */
     .card-article{
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
         gap: 20px;
+        width: 100%;
+        min-width: 0;
+        background-color: rgb(243 241 238);
+        padding: 20px;
+        border-radius: 10px;
+        text-decoration: none;
     }
+
+    /* Imagen */
     .image-article{
         width: 100%;
         height: 200px;
     }
+
     .image-article img{
         width: 100%;
         height: 100%;
         object-fit: cover;
+        display: block;
     }
+
+    /* Contenido */
     .content-article{
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
         gap: 20px;
+        width: 100%;
     }
-    .title-article{
+
+    /* Títulos */
+    .title-container-blog{
         font-size: 28px;
         font-weight: 400;
-        color: black;
         font-family: 'Modesto Text', sans-serif;
-        color: rgb(179 176 176);
-        width: 870px;
-        text-align: left;
-        width: 870px;
+        color: black;
         line-height: 35px;
+        width: 1300px;
+        border-top: solid 2px #d1d2d6;
+        padding-top: 30px;
     }
+
+    .title-article{
+        font-size: 16px;
+        font-weight: 400;
+        font-family: 'Modesto Text', sans-serif;
+        color: black;
+        line-height: 30px;
+        width: 100%;
+    }
+
+    /* Progress */
     .fundraising-article-content{
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: 20px;
-    }
-    .progress {
-        width: 300px;          /* o 100% */
-        height: 12px;
-        background: #e5e7eb;   /* gris del track */
-        border-radius: 999px;
-        overflow: hidden;      /* para que respete bordes redondeados */
+        gap: 15px;
+        width: 100%;
     }
 
-    .progress-bar {
-        width: 50%;            /* <- 50% de progreso */
+    .progress{
+        width: 80%;
+        height: 12px;
+        background: #d1d2d6;
+        border-radius: 999px;
+        overflow: hidden;
+    }
+
+    .progress-bar{
+        width: 50%;
         height: 100%;
-        background: #22c55e;   /* color de la barra */
+        background: #69b183;
+    }  
+    .progress-text{
+        font-size: 16px;
+        font-weight: 400;
+        font-family: 'Modesto Text', sans-serif;
+        color: black;
+        line-height: 30px;
+        width: 100%;
+    } 
+    /* Tablet */
+    @media (max-width: 1024px){
+        .container-blog{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    /* Mobile */
+    @media (max-width: 600px){
+        .container-blog{
+            grid-template-columns: 1fr;
+        }
     }
 </style>
 
