@@ -11,6 +11,66 @@
   "sections": {
     "main": {
       "type": "fundraising-blog",
+      "blocks": {
+        "item_A3DAFi": {
+          "type": "item",
+          "settings": {
+            "blog": "fundraising"
+          }
+        },
+        "item_bK9q8g": {
+          "type": "item",
+          "settings": {
+            "blog": "fundraising"
+          }
+        },
+        "item_UhDKMn": {
+          "type": "item",
+          "settings": {
+            "blog": "fundraising"
+          }
+        },
+        "item_L3wXbY": {
+          "type": "item",
+          "settings": {
+            "blog": "fundraising"
+          }
+        },
+        "item_FpEFjw": {
+          "type": "item",
+          "settings": {
+            "blog": ""
+          }
+        },
+        "item_33KVrQ": {
+          "type": "item",
+          "settings": {
+            "blog": ""
+          }
+        },
+        "item_44ht7t": {
+          "type": "item",
+          "settings": {
+            "blog": ""
+          }
+        },
+        "item_N3LEch": {
+          "type": "item",
+          "settings": {
+            "blog": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_A3DAFi",
+        "item_bK9q8g",
+        "item_UhDKMn",
+        "item_L3wXbY",
+        "item_FpEFjw",
+        "item_33KVrQ",
+        "item_44ht7t",
+        "item_N3LEch"
+      ],
       "settings": {
         "title": "Browse your fundraisers by category",
         "description": "Small coffee farmers around Colombia are raising money for what they are passionate about.",
