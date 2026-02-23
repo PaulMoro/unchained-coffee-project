@@ -59,6 +59,30 @@
           "settings": {
             "blog": "fundraising"
           }
+        },
+        "item_jqCtAr": {
+          "type": "item",
+          "settings": {
+            "blog": "fundraising"
+          }
+        },
+        "item_ffVCpG": {
+          "type": "item",
+          "settings": {
+            "blog": "fundraising"
+          }
+        },
+        "item_CBHy8U": {
+          "type": "item",
+          "settings": {
+            "blog": "fundraising"
+          }
+        },
+        "item_WLgJNE": {
+          "type": "item",
+          "settings": {
+            "blog": "fundraising"
+          }
         }
       },
       "block_order": [
@@ -69,7 +93,11 @@
         "item_FpEFjw",
         "item_33KVrQ",
         "item_44ht7t",
-        "item_N3LEch"
+        "item_N3LEch",
+        "item_jqCtAr",
+        "item_ffVCpG",
+        "item_CBHy8U",
+        "item_WLgJNE"
       ],
       "settings": {
         "title": "Browse your fundraisers by category",
