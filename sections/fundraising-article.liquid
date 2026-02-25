@@ -8,25 +8,54 @@
             {% assign related_products = article.metafields.custom.related_products.value %}
             {% if related_products != blank %}
                 {% for product in related_products %}
-                    <a href="{{ product.url }}" class="product-card">
+                    <div class="product-card">
                         <img src="{{ product.featured_image | image_url: width: 800 }}" class="product-image" alt="{{ product.title }}">
-                        <div class="product-title">{{ product.title }}</div>
-                        <div class="product-price">{{ product.price | money }}</div>
-                    </a>
+                        <div class="product-add" data-product-id="{{ product.selected_or_first_available_variant.id }}" data-product-title="{{ product.title | escape }}" data-product-price="{{ product.price }}">
+                            <button class="qty-btn qty-minus">-</button>
+                            <span class="qty-value">0</span>
+                            <button class="qty-btn qty-plus">+</button>
+                        </div>
+                    </div>
                 {% endfor %}
             {% endif %}
         </div>
     </div>
-    <div class="container-purchase">Para comprar</div>
+    <div class="container-purchase">
+            <div class="number-raised">$2,230 RAISED</div>
+            <div class="number-objective">of $4.000</div>
+            <div class="progress">
+                <div class="progress-bar">&nbsp;</div>
+            </div>
+            <div class="container-products-selected"></div>
+            <div class="container-suscription">
+                <div class="container-text-suscription" data-type="one-time">One Time</div>
+                <div class="container-text-suscription" data-type="subscription">For delivery every month</div>
+            </div>
+            <div class="container-total">TOTAL $0.00</div>
+            <div class="container-fundraising">$ 0.00 (7.5%) are going to funding</div>
+            <div class="container-text-beyond">Go Beyond</div>
+            <div class="container-options-beyond">
+                {% assign tip_5 = all_products['tip-5-dolars'] %}
+                {% assign tip_10 = all_products['tip-10-dolars'] %}
+                {% assign tip_25 = all_products['tip-25-dolars'] %}
+                <div class="tip-option" data-id="{{ tip_5.selected_or_first_available_variant.id }}" data-price="{{ tip_5.price | default: 500 }}">$5</div>
+                <div class="tip-option" data-id="{{ tip_10.selected_or_first_available_variant.id }}" data-price="{{ tip_10.price | default: 1000 }}">$10</div>
+                <div class="tip-option" data-id="{{ tip_25.selected_or_first_available_variant.id }}" data-price="{{ tip_25.price | default: 2500 }}">$25</div>
+            </div>
+            <div class="container-text-total-amount">Your Total</div>
+            <div class="container-number-total-amount">$0.00</div>
+            <div class="container-button">Add to cart</div>
+            <div class="container-share-button">Share</div>
+    </div>
 </div>
 
 <style>
     .main-container{
         height: auto;
         width: 100vw;
+        max-width: 1440px;
         color: black;
-        margin-top: 58px;
-        margin-bottom: 100px;
+        margin: 110px auto;
         gap: 50px;
         display: flex;
         flex-direction: row;
@@ -35,7 +64,7 @@
         background: white;
         z-index: 2;
         position: relative;
-        padding: 0 200px;
+        padding: 0 50px;
     }
     .container-article{
         width: 70%;
@@ -48,7 +77,8 @@
     .container-purchase{
         width: 30%;
         height: 60vh;
-        background: grey;
+        border: solid 2px #d1d2d6;
+        border-radius: 10px;
         position: sticky;
         top: 200px;
     }
@@ -85,7 +115,6 @@
         background: grey;
         display: flex;
         flex-direction: column;
-        gap: 20px;
         cursor: pointer;
         text-decoration: none;
     }
@@ -93,21 +122,375 @@
         width: 100%;
         height: 100%;
     }
-    .product-title{
-        font-size: 16px;
-        font-weight: 400;
+    .product-add{
+        background: #fbd81f;
+        padding: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+    .qty-btn {
+        background: black;
+        color: white;
+        border: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        font-size: 18px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .qty-btn:hover {
+        background: #333;
+    }
+    .qty-value {
+        font-weight: bold;
+        font-size: 18px;
+        min-width: 20px;
+    }
+    .progress{
+        width: 80%;
+        height: 12px;
+        background: #d1d2d6;
+        border-radius: 999px;
+        overflow: hidden;
+    }
+
+    .progress-bar{
+        width: 50%;
+        height: 100%;
+        background: #69b183;
+    }  
+
+    .container-products-selected {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+        max-height: 200px;
+        overflow-y: auto;
+    }
+    .selected-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        padding: 5px 0;
+        border-bottom: 1px solid #eee;
+    }
+    .selected-item-info {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+    .remove-item {
+        background: none;
+        border: none;
+        text-decoration: underline;
+        cursor: pointer;
+        color: #d9534f;
+        font-size: 12px;
+    }
+    .container-total {
+        font-weight: bold;
+        font-size: 18px;
+        margin: 20px 0;
+    }
+    .container-button {
+        background: black;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .container-button:hover {
+        background: #333;
+    }
+    .container-share-button {
+        background: white;
         color: black;
+        border: 2px solid black;
+        padding: 15px;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 10px;
+    }
+    .container-share-button:hover {
+        background: #f0f0f0;
+    }
+    .container-options-beyond {
+        display: flex;
+        gap: 10px;
+        margin: 10px 0 20px 0;
+    }
+    .tip-option {
+        padding: 10px 20px;
+        border: 1px solid #d1d2d6;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.2s;
+    }
+    .tip-option.selected {
+        background: black;
+        color: white;
+        border-color: black;
+    }
+    .container-suscription {
+        display: flex;
+        gap: 10px;
+        margin: 20px 0;
+    }
+    .container-text-suscription {
+        padding: 10px 20px;
+        border: 1px solid #d1d2d6;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.2s;
+        flex: 1;
         text-align: center;
     }
-    .product-price{
-        font-size: 14px;
-        font-weight: 400;
-        color: black;
-        text-align: center;
-        margin-bottom: 16px;  
+    .container-text-suscription.selected {
+        background: black;
+        color: white;
+        border-color: black;
+    }
+    .container-text-beyond, .container-text-total-amount {
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 15px;
+    }
+    .container-number-total-amount {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const productAddContainers = document.querySelectorAll('.product-add');
+    const containerSelected = document.querySelector('.container-products-selected');
+    const containerTotal = document.querySelector('.container-total');
+    const containerFundraising = document.querySelector('.container-fundraising');
+    const checkoutButton = document.querySelector('.container-button');
+    const shareButton = document.querySelector('.container-share-button');
+    const tipOptions = document.querySelectorAll('.tip-option');
+    const containerNumberTotalAmount = document.querySelector('.container-number-total-amount');
+    const subscriptionOptions = document.querySelectorAll('.container-text-suscription');
+    
+    let selectedProducts = {};
+    let selectedTip = null;
+    let isSubscription = false;
+    const SELLING_PLAN_ID = 4473290888;
+    
+    // Configurar el One Time por defecto
+    const defaultSubOption = document.querySelector('.container-text-suscription[data-type="one-time"]');
+    if (defaultSubOption) defaultSubOption.classList.add('selected');
+
+    subscriptionOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            subscriptionOptions.forEach(opt => opt.classList.remove('selected'));
+            this.classList.add('selected');
+            isSubscription = this.dataset.type === 'subscription';
+        });
+    });
+
+    tipOptions.forEach(tip => {
+        tip.addEventListener('click', function() {
+            if (selectedTip && selectedTip.element === this) {
+                // Deseleccionar si ya estaba seleccionado
+                this.classList.remove('selected');
+                selectedTip = null;
+            } else {
+                // Quitar selección previa si existe
+                if (selectedTip) {
+                    selectedTip.element.classList.remove('selected');
+                }
+                this.classList.add('selected');
+                selectedTip = {
+                    id: this.dataset.id,
+                    price: parseInt(this.dataset.price, 10),
+                    element: this
+                };
+            }
+            updateCartDisplay();
+        });
+    });
+    
+    productAddContainers.forEach(container => {
+        const btnMinus = container.querySelector('.qty-minus');
+        const btnPlus = container.querySelector('.qty-plus');
+        const id = container.dataset.productId;
+        const title = container.dataset.productTitle;
+        const price = parseInt(container.dataset.productPrice, 10);
+        
+        btnPlus.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (selectedProducts[id]) {
+                selectedProducts[id].quantity += 1;
+            } else {
+                selectedProducts[id] = { id, title, price, quantity: 1 };
+            }
+            updateCartDisplay();
+        });
+
+        btnMinus.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (selectedProducts[id] && selectedProducts[id].quantity > 0) {
+                selectedProducts[id].quantity -= 1;
+                if (selectedProducts[id].quantity === 0) {
+                    delete selectedProducts[id];
+                }
+                updateCartDisplay();
+            }
+        });
+    });
+    
+    function updateCartDisplay() {
+        containerSelected.innerHTML = '';
+        let total = 0;
+        
+        Object.values(selectedProducts).forEach(product => {
+            total += product.price * product.quantity;
+            
+            const itemElement = document.createElement('div');
+            itemElement.className = 'selected-item';
+            itemElement.innerHTML = `
+                <div class="selected-item-info">
+                    <span>${product.title} (x${product.quantity})</span>
+                    <span>${formatMoney(product.price * product.quantity)}</span>
+                </div>
+                <button class="remove-item" data-id="${product.id}">Quitar</button>
+            `;
+            containerSelected.appendChild(itemElement);
+        });
+        
+        containerTotal.innerHTML = `<div>Total: ${formatMoney(total)}</div>`;
+        if (containerFundraising) {
+            containerFundraising.innerHTML = `${formatMoney(total * 0.075)} (7.5%) are going to funding`;
+        }
+        
+        let tipAmount = selectedTip ? selectedTip.price : 0;
+        let finalTotal = total + tipAmount;
+        if (containerNumberTotalAmount) {
+            containerNumberTotalAmount.textContent = formatMoney(finalTotal);
+        }
+        
+        // Sincronizar los spans de cantidad en las tarjetas de productos
+        document.querySelectorAll('.product-add').forEach(container => {
+            const id = container.dataset.productId;
+            const qtySpan = container.querySelector('.qty-value');
+            if (selectedProducts[id]) {
+                qtySpan.textContent = selectedProducts[id].quantity;
+            } else {
+                qtySpan.textContent = "0";
+            }
+        });
+        
+        document.querySelectorAll('.remove-item').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const id = this.dataset.id;
+                delete selectedProducts[id];
+                updateCartDisplay();
+            });
+        });
     }
     
-</style>
+    // Inicializar totales y cantidades en 0
+    updateCartDisplay();
+    
+    function formatMoney(cents) {
+        return '$' + (cents / 100).toFixed(2);
+    }
+    
+    if (checkoutButton) {
+        checkoutButton.addEventListener('click', function() {
+            const items = Object.values(selectedProducts).map(p => {
+                let item = {
+                    id: p.id,
+                    quantity: p.quantity
+                };
+                if (isSubscription) {
+                    item.selling_plan = SELLING_PLAN_ID;
+                }
+                return item;
+            });
+
+            if (selectedTip && selectedTip.id) {
+                items.push({
+                    id: selectedTip.id,
+                    quantity: 1
+                });
+            }
+            
+            if (items.length === 0) return;
+            
+            checkoutButton.textContent = 'Agregando...';
+            
+            const rootUrl = window.Shopify && window.Shopify.routes && window.Shopify.routes.root ? window.Shopify.routes.root : '/';
+            
+            fetch(rootUrl + 'cart/add.js', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ items: items })
+            })
+            .then(response => response.json())
+            .then(data => {
+                window.location.href = rootUrl + 'cart';
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                checkoutButton.textContent = 'Error';
+            });
+        });
+    }
+
+    if (shareButton) {
+        shareButton.addEventListener('click', async function() {
+            const shareData = {
+                title: document.title,
+                text: 'Check out this fundraising campaign!',
+                url: window.location.href
+            };
+
+            if (navigator.share) {
+                try {
+                    await navigator.share(shareData);
+                } catch (err) {
+                    console.log('Error compartiendo:', err);
+                }
+            } else {
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                    const originalText = shareButton.textContent;
+                    shareButton.textContent = 'Copied to clipboard!';
+                    setTimeout(() => {
+                        shareButton.textContent = originalText;
+                    }, 2000);
+                });
+            }
+        });
+    }
+});
+</script>
 
 {% schema %}
     {
