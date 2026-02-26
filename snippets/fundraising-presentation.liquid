@@ -160,4 +160,66 @@
         width: 160px;
         border-radius: 50%;
     }
+
+    /* ── Tablet ── */
+    @media (max-width: 1024px) {
+        .container-fundraising-presentation {
+            height: auto;
+            flex-direction: column;
+            padding: 0 30px;
+            gap: 40px;
+            margin: 60px auto;
+        }
+        .title-page {
+            width: 100%;
+            height: auto;
+            order: -1;
+        }
+        .title-page h1 {
+            font-size: 36px;
+        }
+        .images-left, .images-right {
+            width: 100%;
+            height: auto;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .image-left, .image-right {
+            width: 30%;
+            height: auto;
+            gap: 15px;
+        }
+        .image-left-1, .image-left-3, .image-right-2 {
+            margin-left: 0;
+        }
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 768px) {
+        .container-fundraising-presentation {
+            padding: 0 16px;
+            gap: 30px;
+            margin: 50px auto;
+        }
+        .title-page h1 {
+            font-size: 28px;
+        }
+        .images-left, .images-right {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px 10px;
+        }
+        .image-left, .image-right {
+            width: 45%;
+        }
+        .images-left img, .images-right img {
+            height: 120px;
+            width: 120px;
+        }
+        .text-image {
+            width: 110px;
+            font-size: 14px;
+            height: 25px;
+        }
+    }
 </style>
