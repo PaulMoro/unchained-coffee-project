@@ -681,13 +681,22 @@ document.addEventListener('DOMContentLoaded', function() {
             
             fetch(rootUrl + 'cart/add.js', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ items: items })
             })
             .then(response => response.json())
-            .then(data => {
+            .then(() => {
+                return fetch(rootUrl + 'cart/update.js', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        attributes: {
+                            'product_bundle': 'Yes'
+                        }
+                    })
+                });
+            })
+            .then(() => {
                 window.location.href = rootUrl + 'cart';
             })
             .catch((error) => {
