@@ -5,49 +5,31 @@
     </div>
     <div class="container-titles-blogs">
         {% for block in section.blocks %}
-            <a href="{{ block.settings.blog.url }}" class="title-blog">{{ block.settings.blog.title | upcase }}</a>
+            <a href="#blog-{{ forloop.index }}" class="title-blog">{{ block.settings.blog.title | upcase }}</a>
         {% endfor %}
     </div>
-    <div class="title-container-blog title-container-blog-1">{{ section.settings.blog1.title  }}</div>
-    <div class="container-blog container-blog-1">
-        {% for article in section.settings.blog1.articles limit: 4 %}
-            <a class="card-article" href="{{ article.url }}">
-                <div class="image-article">
-                    <img src="{{ article.image | img_url: 'master' }}" alt="{{ article.title }}">
-                </div>
-                <div class="content-article">
-                    <div class="title-article">{{ article.metafields.custom.blog_text }}</div>
-                    <div class="fundraising-article-content">
-                        <div class="progress">
-                            <div class="progress-bar">&nbsp;</div>
-                        </div>
-                        
-                        <div class="progress-text">$2,230 RAISED</div>
+    {% for blog in section.blocks %}
+        <div class="title-container-blog" id="blog-{{ forloop.index }}">{{ blog.settings.blog.title  }}</div>
+        <div class="container-blog ">
+            {% for article in blog.settings.blog.articles %}
+                <a class="card-article" href="{{ article.url }}">
+                    <div class="image-article">
+                        <img src="{{ article.image | img_url: 'master' }}" alt="{{ article.title }}">
                     </div>
-                </div>
-            </a>
-        {% endfor %}
-    </div>
-    <div class="title-container-blog title-container-blog-2">{{ section.settings.blog2.title  }}</div>
-    <div class="container-blog container-blog-2">
-        {% for article in section.settings.blog2.articles limit: 4 %}
-            <a class="card-article" href="{{ article.url }}">
-                <div class="image-article">
-                    <img src="{{ article.image | img_url: 'master' }}" alt="{{ article.title }}">
-                </div>
-                <div class="content-article">
-                    <div class="title-article">{{ article.metafields.custom.blog_text }}</div>
-                    <div class="fundraising-article-content">
-                        <div class="progress">
-                            <div class="progress-bar">&nbsp;</div>
+                    <div class="content-article">
+                        <div class="title-article">{{ article.metafields.custom.blog_text }}</div>
+                        <div class="fundraising-article-content">
+                            <div class="progress">
+                                <div class="progress-bar">&nbsp;</div>
+                            </div>
+                            
+                            <div class="progress-text">$2,230 RAISED</div>
                         </div>
-                        
-                        <div class="progress-text">$2,230 RAISED</div>
                     </div>
-                </div>
-            </a>
-        {% endfor %}
-    </div>
+                </a>
+            {% endfor %}
+        </div>
+    {% endfor %}
 </div>
 
 <style>
@@ -247,16 +229,6 @@
             "type": "text",
             "id": "description",
             "label": "Descripción Pagina"
-        },
-        {
-            "type": "blog",
-            "id": "blog1",
-            "label": "Blog 1"
-        },
-        {
-            "type": "blog",
-            "id": "blog2",
-            "label": "Blog 2"
         }
     ],
     "blocks": [
