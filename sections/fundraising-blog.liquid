@@ -201,17 +201,97 @@
         line-height: 30px;
         width: 100%;
     } 
-    /* Tablet */
-    @media (max-width: 1024px){
-        .container-blog{
+    /* ── Tablet ── */
+    @media (max-width: 1024px) {
+        .main-container {
+            margin-top: 70px;
+            margin-bottom: 70px;
+            gap: 35px;
+            padding: 0 30px;
+            box-sizing: border-box;
+        }
+        .container-title-blog {
+            width: 100%;
+        }
+        .blog-title {
+            font-size: 44px;
+            width: 100%;
+        }
+        .blog-description {
+            font-size: 22px;
+            width: 100%;
+            line-height: 30px;
+        }
+        .container-titles-blogs {
             grid-template-columns: repeat(2, 1fr);
+            width: 100%;
+            column-gap: 30px;
+        }
+        .title-container-blog {
+            width: 100%;
+            font-size: 22px;
+        }
+        .container-blog {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px 30px;
+            padding: 0 30px;
         }
     }
 
-    /* Mobile */
-    @media (max-width: 600px){
-        .container-blog{
+    /* ── Mobile ── */
+    @media (max-width: 600px) {
+        .main-container {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            gap: 24px;
+            padding: 0 16px;
+            box-sizing: border-box;
+        }
+        .container-title-blog {
+            width: 100%;
+            gap: 12px;
+        }
+        .blog-title {
+            font-size: 32px;
+            width: 100%;
+        }
+        .blog-description {
+            font-size: 16px;
+            width: 100%;
+            line-height: 24px;
+        }
+        .container-titles-blogs {
             grid-template-columns: 1fr;
+            width: 100%;
+            column-gap: 0;
+            row-gap: 16px;
+        }
+        .title-blog {
+            padding: 12px 30px;
+            clip-path: none;
+            border-radius: 6px;
+            display: block;
+            text-align: center;
+        }
+        .title-container-blog {
+            width: 100%;
+            font-size: 20px;
+            padding-top: 20px;
+        }
+        .container-blog {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 0 16px;
+        }
+        .image-article {
+            height: 180px;
+        }
+        .title-article {
+            font-size: 14px;
+            line-height: 22px;
+        }
+        .progress-text {
+            font-size: 14px;
         }
     }
 </style>
