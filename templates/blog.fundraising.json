@@ -50,36 +50,42 @@
         },
         "item_44ht7t": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "blog": "fundraising"
           }
         },
         "item_N3LEch": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "blog": "fundraising"
           }
         },
         "item_jqCtAr": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "blog": "fundraising"
           }
         },
         "item_ffVCpG": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "blog": "fundraising"
           }
         },
         "item_CBHy8U": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "blog": "fundraising"
           }
         },
         "item_WLgJNE": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "blog": "fundraising"
           }
