@@ -45,7 +45,8 @@
         "item_be84pF": {
           "type": "item",
           "settings": {
-            "title-item": "Razon"
+            "title-item": "Custom",
+            "image-item": "shopify://shop_images/fundraising.png"
           }
         }
       },
