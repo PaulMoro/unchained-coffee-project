@@ -36,28 +36,13 @@
           "settings": {
             "title-item": ""
           }
-        },
-        "item_KxHzKn": {
-          "type": "item",
-          "settings": {
-            "title-item": ""
-          }
-        },
-        "item_be84pF": {
-          "type": "item",
-          "settings": {
-            "title-item": "Custom",
-            "image-item": "shopify://shop_images/fundraising.png"
-          }
         }
       },
       "block_order": [
         "item_z4UjDK",
         "item_gijhDi",
         "item_9J6YCB",
-        "item_XP9j3T",
-        "item_KxHzKn",
-        "item_be84pF"
+        "item_XP9j3T"
       ],
       "settings": {
         "title": "SUCCESFUL COFFEE FUNDSCRIPTION START HERE",
