@@ -15,7 +15,8 @@
         "item_z4UjDK": {
           "type": "item",
           "settings": {
-            "title-item": "Seleccionar"
+            "title-item": "Prueba Juan",
+            "image-item": "shopify://shop_images/fundraising.png"
           }
         },
         "item_gijhDi": {
