@@ -761,21 +761,35 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (checkoutButton) {
         checkoutButton.addEventListener('click', function() {
+            // 💡 Asegúrate de tener estas variables de Liquid disponibles antes de tu JS.
+            // Si tu código JS está dentro de una etiqueta <script> en un archivo .liquid del blog,
+            // puedes inyectar los metafields así (ajusta el nombre del metafield del porcentaje si es distinto):
+            const idCampana = '{{ article.metafields.custom.owner_coffeefundme }}';
+            const porcentajeCampana = '{{ article.metafields.custom.porcentaje }}'; // e.g. "15" para 15%
+
             const items = Object.values(selectedProducts).map(p => {
                 let item = {
                     id: p.id,
-                    quantity: p.quantity
+                    quantity: p.quantity,
+                    // 🚀 AQUÍ agregamos las propiedades ocultas que llegarán directas a nuestro Webhook
+                    properties: {
+                        '_campana_id': idCampana,
+                        '_campana_porcentaje': porcentajeCampana
+                    }
                 };
-                if (isSubscription) {
+                
+                if (typeof isSubscription !== 'undefined' && isSubscription) {
                     item.selling_plan = SELLING_PLAN_ID;
                 }
                 return item;
             });
 
-            if (selectedTip && selectedTip.id) {
+            if (typeof selectedTip !== 'undefined' && selectedTip && selectedTip.id) {
                 items.push({
                     id: selectedTip.id,
                     quantity: 1
+                    // Las propinas o donativos directos a la tienda no suelen contar para la campaña, 
+                    // así que las dejamos sin "properties".
                 });
             }
             
@@ -837,6 +851,41 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+});
+</script>
+<div id="campaign-progress-container">
+  <h3>Progreso de la Campaña</h3>
+  <p>Recaudado: $<span id="camp-current">0</span> / Meta: $<span id="camp-goal">0</span></p>
+  <progress id="camp-bar" value="0" max="100"></progress>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // 1. Obtener el ID de la campaña desde el metafield de Shopify
+  const idCampana = '{{ article.metafields.custom.owner_coffeefundme }}';
+  
+  if (!idCampana) return;
+
+  // URL final generada por el Worker de Cloudflare para tu proyecto
+  const workerUrl = `https://crowdfunding-backend.paulmontoya15.workers.dev/campaign/${idCampana}`;
+
+  fetch(workerUrl)
+    .then(response => {
+      if (!response.ok) throw new Error("Campaña no encontrada");
+      return response.json();
+    })
+    .then(data => {
+      // data.current_amount y data.goal_amount vienen directamente sincronizados de Supabase
+      const current = parseFloat(data.current_amount);
+      const goal = parseFloat(data.goal_amount);
+      const percent = goal > 0 ? (current / goal) * 100 : 0;
+
+      // Actualizar el HTML
+      document.getElementById('camp-current').textContent = current.toLocaleString();
+      document.getElementById('camp-goal').textContent = goal.toLocaleString();
+      document.getElementById('camp-bar').value = percent;
+    })
+    .catch(error => console.error("Error obteniendo el progreso:", error));
 });
 </script>
 
