@@ -515,6 +515,14 @@
     "collection_home_3CmXRN": {
       "type": "collection-home",
       "blocks": {
+        "collection_66mNpH": {
+          "type": "collection",
+          "settings": {
+            "select_space": "left",
+            "title_collection": "Final Lots",
+            "collection": "final-lots"
+          }
+        },
         "collection_KpkXCw": {
           "type": "collection",
           "disabled": true,
@@ -661,6 +669,7 @@
         }
       },
       "block_order": [
+        "collection_66mNpH",
         "collection_KpkXCw",
         "collection_wL6QYV",
         "collection_wF4GYa",
