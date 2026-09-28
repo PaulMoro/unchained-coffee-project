@@ -104,7 +104,7 @@
         "collection_button_Gxyp4m": {
           "type": "collection_button",
           "settings": {
-            "collection": "espresso-recommended-filter",
+            "collection": "espresso-coffee",
             "custom_title": "Espresso"
           }
         },
@@ -574,7 +574,7 @@
           "settings": {
             "select_space": "left",
             "title_collection": "Espresso",
-            "collection": "espresso-recommended-filter"
+            "collection": "espresso-coffee"
           }
         },
         "collection_XMcwnX": {
@@ -989,7 +989,7 @@
       "type": "featured-collection",
       "name": "Espresso Recommended",
       "settings": {
-        "collection": "espresso-recommended-filter",
+        "collection": "espresso-coffee",
         "products_to_show": 3,
         "title": "Espresso",
         "heading_size": "h2",
